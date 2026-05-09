@@ -1,7 +1,7 @@
 ---
 title: "The Day The Internet Broke"
 date: 2016-08-25
-permalink: /2016/08/25/the-day-the-internet-broke
+permalink: /2016/08/25/the-day-the-internet-broke/
 categories: 
   - "internet-service-provider"
 tags: 
