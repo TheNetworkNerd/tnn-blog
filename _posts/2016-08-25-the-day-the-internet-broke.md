@@ -3,13 +3,13 @@ title: "The Day The Internet Broke"
 date: 2016-08-25
 permalink: /2016/08/25/the-day-the-internet-broke/
 categories: 
-  - "internet-service-provider"
+  - "Internet Service Provider"
 tags: 
-  - "finance"
-  - "internet-service-provider"
-  - "isp"
-  - "process-improvement"
-  - "time-warner"
+  - "Finance"
+  - "Internet Service Provider"
+  - "ISP"
+  - "Process Improvement"
+  - "Time Warner"
 ---
 
 Originally posted on [MangoLassi](https://mangolassi.it/topic/10450/the-day-the-internet-broke) August 8, 2016
