@@ -48,17 +48,15 @@ For best results in vSphere (screenshots here are from vCenter), it's best to po
 
 Then, we add a host USB device to the virtual machine. This will add the USB device and a USB controller to the VM automatically. ![](2_controller.png)
 
-In this case there was only one host USB device from which to choose, so it was selected by default.
+In this case there was only one host USB device from which to choose, so it was selected by default. As soon as the change was confirmed and made in vCenter, I was able to see that once powered on again, the Windows VM recognized a battery was attached. ![](3_systemtray.png) ![](3A_systemtray2.png)
 
-As soon as the change was confirmed and made in vCenter, I was able to see that once powered on again, the Windows VM recognized a battery was attached. ![](3_systemtray.png) ![](3A_systemtray2.png)
-
-And now we install OPMONis. Downloading the trial is easy and requires no personal information be given before you download (which I liked). The installer is tiny. Here's a walk through of the install:  ![](4_install1.png)
+And now we install OPMONis. Downloading the trial is easy and requires no personal information be given before you download (which I liked). The installer is tiny. Here's a walk through of the install.  ![](4_install1.png)
 
 Notice here you'll want the service and the client. OPMONis will run as a Windows service with automatic delayed start. ![](5_WindowsService.png) ![](6_FinishInstall.png)
 
 Post-install, you can see OPMONis now running as a service. I'm guessing the service automatically gets a delayed start to make sure Windows has time to notice the UPS is attached. ![](7_postinstallservice.png)
 
-Now, it is time to launch the OPMONis client to see what this software can do: ![](8_clienticon.png) ![](9_firstopen.png)
+Now, it is time to launch the OPMONis client to see what this software can do. ![](8_clienticon.png) ![](9_firstopen.png)
 
 Upon first open, the first thing you want to do is add your UPS so OPMONis can start monitoring it. ![](10_UPSList.png)
 
