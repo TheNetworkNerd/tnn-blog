@@ -1,6 +1,7 @@
----
+﻿---
 title: "The Day The Internet Broke"
 date: 2016-08-25
+media_subpath: /assets/images
 permalink: /2016/08/25/the-day-the-internet-broke/
 categories: 
   - "Internet Service Provider"

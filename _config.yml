@@ -9,7 +9,7 @@ theme: jekyll-theme-chirpy
 lang: en
 
 # Change to your timezone › https://zones.arilyn.cc
-timezone:
+timezone: America/Chicago
 
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
@@ -19,7 +19,7 @@ title: The NetworkNerd Blog # the main title
 tagline: A Collection of Learnings and Meanderings on Technology and Career # it will display as the subtitle
 
 description: >- # used by seo meta and the atom feed
-  A minimal, responsive and feature-rich Jekyll theme for technical writing.
+  A collection of nerdy things done in nerdy ways to break, fix, and learn technology by Nick Korte
 
 # Fill in the protocol & hostname for your site.
 # E.g. 'https://username.github.io', note that it does not end with a '/'.
@@ -28,22 +28,23 @@ url: "https://thenetworknerd.github.io"
 github:
   username: TheNetworkNerd # change to your GitHub username
 
-twitter:
-  username: NetworkNerd_ # change to your Twitter username
+#twitter:
+ # username: NetworkNerd_ # change to your Twitter username
 
 social:
   # Change to your full name.
   # It will be displayed as the default author of the posts and the copyright owner in the Footer
   name: Nick Korte
-  email: example@domain.com # change to your email address
+  ## email: example@domain.com # change to your email address
   fediverse_handle: # fill in your fediverse handle. E.g. "@username@domain.com"
   links:
     # The first element serves as the copyright owner's link
-    - https://twitter.com/NetworkNerd_ # change to your Twitter homepage
-    - https://github.com/TheNetworkNerd # change to your GitHub homepage
+    #- https://twitter.com/NetworkNerd_ # change to your Twitter homepage
+   - https://github.com/TheNetworkNerd # change to your GitHub homepage
     # Uncomment below to add more social links
     # - https://www.facebook.com/username
-    # - https://www.linkedin.com/in/username
+    #- https://www.linkedin.com/in/username
+   
 
 # Site Verification Settings
 webmaster_verifications:
@@ -99,7 +100,7 @@ theme_mode: # [light | dark]
 cdn:
 
 # the avatar on sidebar, support local or CORS resources
-avatar:
+avatar: "/assets/images/nick_headshot_purple_220x220.jpg"
 
 # The URL of the site-wide social preview image used in SEO `og:image` meta tag.
 # It can be overridden by a customized `page.image` in front matter.
