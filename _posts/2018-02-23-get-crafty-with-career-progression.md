@@ -50,7 +50,7 @@ Regardless of job or employer, you are capable of greater things.  I’m not sa
     - Ask trusted peers for feedback on your strengths and weaknesses.  What do they see you doing?
     - Lack of job satisfaction can and will affect the quality of your work, hurting both you and your employer.
 
-- Talk to people in a similar role at other companies.  [Online communities](“http://34.42.71.182/2017/11/18/the-power-of-finding-your-community/“) and networking events are great for this.
+- Talk to people in a similar role at other companies.  [Online communities]({% link _posts/2017-11-18-the-power-of-finding-your-community.md %}) and networking events are great for this.
     - What are they doing to provide value to the employer?
     - Where are your industry peers looking to go next?
     - What are their personal and professional interests?
