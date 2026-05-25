@@ -27,8 +27,8 @@ Just yesterday, VMware released a [patch to vCenter](http://pubs.vmware.com/Rele
 
 In the spirit of this update's release, I thought I would show how to patch an existing vCenter environment. In this example, we have the vCenter Server Appliance (VCSA) with an external Platform Services Controller (PSC). The reason for implementing in this way is to utilize Enhanced Linked Mode with future vCenter instances at other sites.
 
-#### Before You Start
-Check Backups Before installing any patches, it is wise to have a good backup of all PSCs and the VCSA. One option is to take a [configuration backup of the PSCs and the VCSA](https://www.vladan.fr/vmware-vcsa-6-5-backup-and-restore-how-to/), but an image-level backup would also work. There is also the option to take a snapshot of each of these VMs before applying the patches, and then remove the snapshots once all functionality is verified.
+#### Before You Start, Check Backups
+Before installing any patches, it is wise to have a good backup of all PSCs and the VCSA. One option is to take a [configuration backup of the PSCs and the VCSA](https://www.vladan.fr/vmware-vcsa-6-5-backup-and-restore-how-to/), but an image-level backup would also work. There is also the option to take a snapshot of each of these VMs before applying the patches, and then remove the snapshots once all functionality is verified.
 
 #### Assumptions 
 The steps here assume all of your PSCs and VCSA can connect to the internet to download updates from a VMware repository. Other methods for patching vCenter such as using the ISO will not be completely covered here but follow a similar method. This article also assumes the VCSA is not using vCenter HA.
