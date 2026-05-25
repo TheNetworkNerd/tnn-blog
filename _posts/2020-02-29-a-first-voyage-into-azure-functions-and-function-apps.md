@@ -22,7 +22,7 @@ tags:
   - "Microsoft Azure"
   - "Programming"
   - "Serverless"
-image: "0_featured.jpg"
+image: "0_azurefunc_featured.jpg"
 ---
 
 Since I had little to no exposure to playing with Azure outside of having an O365 subscription, I wanted to change that. Azure has the option to [create a free account](https://azure.microsoft.com/en-us/free/free-account-faq/) with [access to a number of services](https://azure.microsoft.com/en-us/free/free-account-faq/), so I took the low risk plunge.
