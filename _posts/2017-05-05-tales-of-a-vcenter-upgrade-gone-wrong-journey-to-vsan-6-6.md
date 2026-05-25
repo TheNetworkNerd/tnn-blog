@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Tales of a vCenter Upgrade Gone Wrong - Journey to vSAN 6.6"
 date: 2017-05-05
 media_subpath: /assets/images
@@ -37,7 +37,7 @@ Since the hosts were at 6.0U2 and I was chomping at the bit to get started, I gr
 
 At this point we had vCenter 6.0U3 working fine. As you can see from the linked post above, we ended up sending the R620s and the MD3820i back to Dell in exchange for 4 R730s that we would use as a vSAN cluster at site 1. We would eventually follow a similar pattern at other sites.
 
-Since we already had a vCenter and PSC outside the cluster, I decided to upgrade them both to 6.5a while we were waiting on the new R730s to arrive after confirming this would be fully supported by our backup vendor. I used the vCenter Server Appliance installer and the built-in migration assistant to migrate the PSC to 6.5a and migrate the Windows vCenter instance to the vCenter Server Appliance 6.5a.
+Since we already had a vCenter and PSC outside the cluster, I decided to upgrade them both to 6.5a while we were waiting on the new R730s to arrive after confirming this would be fully supported by our backup vendor. I used the vCenter Server Appliance installer and the built-in migration assistant to migrate the PSC to 6.5a and migrate the Windows vCenter instance to the vCenter Server Appliance 6.5a. 
 
 I documented the entire process. The migration assistant worked like a champ to create a new PSC and VCSA running 6.5a with all of my configurations and history saved.
 
