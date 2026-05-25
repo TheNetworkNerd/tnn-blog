@@ -9,6 +9,11 @@ tags:
   - "Disaster Recovery"
   - "Spiceworks"
   - "SQL Server"
+  - "SQL Server 2005"
+  - "SQL Databases"
+  - "SQL Database"
+  - "SQL"
+  - "Documentation"
 ---
 
 Originally posted in the [Spiceworks Community](https://community.spiceworks.com/topic/232181-disaster-recovery-on-the-fly-is-a-disaster-waiting-to-happen) on June 7, 2012
@@ -66,7 +71,7 @@ I’m clueless, even with Google’s help. I’m frustrated. I decide it’s bes
 
 The boss is happy we at least made progress. I document _**everything**_ I’ve done in the help desk ticket I had open for this issue, including a list of what still needs to be done. I go home late in the evening to see my family.
 
-#### The next week
+#### The next Week
 The dying drive survives all week (thanks to the good Lord), but I can’t sleep well at nights thinking about what might happen if she goes down. I keep thinking about what work is left to do. I decide to finish the job Saturday night after production finishes. My window is nearly 24 hours, and I plan to conquer this time.
 
 #### Saturday, April 21 – 11:15 p.m.
@@ -75,7 +80,7 @@ I get the call that the last production guy has left for the night. I back up al
 #### Sunday, April 22 – 3:56 a.m.
 I send out a company blast that everything is up and running again. I take the time to document all the remaining steps needed to rebuild the server successfully, and I go home to sleep… finally.
 
-#### In summary
+#### In Summary
 I learned so many things by completing this project. This is an example of an experience I hope you never have, but I know it happens. Even though I didn’t set up this server initially, I had to fix it, and the fact that I had almost no experience doing something like that for a SQL box and no DR plan to guide me translates to about 400–500 percent of the time that should have been spent on such an exercise. On the bright side, I now have a disaster recovery plan for this server. It’s all in that help desk ticket because I wrote it on the fly, and it didn’t take very much effort.
 
 Sometimes disaster recovery planning gets marked as the lowest priority — until disaster strikes. Hopefully you won’t find yourself in the same boat. If you build it, build it with best practices in mind the first time, or you or someone else will get to build it again.

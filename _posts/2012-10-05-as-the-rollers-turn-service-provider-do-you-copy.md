@@ -15,31 +15,31 @@ Originally posted in the [Spiceworks Community](https://community.spiceworks.co
 
 All the signs were there. People were complaining. Not just some people — most people were complaining. The paper jams were frequent and the service calls almost as frequent. That high-volume workhorse copier in our small office just wasn’t as reliable as it used to be. Should she be put out of her misery? Dave Ramsey says that when the pain of staying the same is greater than the pain of change, change will occur. This is the story of how IT was cut out of the decision making process to find a more reliable copier. The after effects speak for themselves.
 
-#### The movement begins
+#### The Movement Begins
  This copier was the central hub for everything high volume in the 30–50 person office building and was under service contract with the vendor who had sold it to us. The administrative assistants who usually made the call to get it serviced were consistently unhappy with the level of service we had received. The response time was horrible at best, and we had periods of time when the copier was completely unusable due to hardware related problems. All IT could really do to help was try to fish out the paper jams and blow out the inside of the copier with some compressed air to try to get it going again. But, when every second or third impression jams the copier despite your efforts, that’s a problem that needs a technician. When the CFO was getting complaints from his underlings almost daily and discovered the true level of copier service our company was getting, he gave the word to begin the search for a replacement copier and a new service provider.
 
-#### The research 
+#### The Research 
 The administrative assistants were tasked with providing options for the CFO to use to make a decision. The prospective vendors came in touting the bells and whistles that made their brand of copier stand out among the competition, and suddenly the research team was swimming in a sea of options, unsure of what to do next. I had a good rapport with these folks and asked to see what kind of options were on the table from each vendor. After looking at the specs for some of these options, I began to wonder, “Do we really need all of these features? Is 65-page-per-minute for copies something we must have to prevent a user pileup at the copier? Do we need to be able to print folded booklets?”
 
 All of the signs seemed to imply that the vendors had proposed high-end models based on the machine we wanted to replace, and, of course, every proposal included all parts, labor, and consumables for a 5-year period on top of the cost of a new machine. Let’s not forget that each vendor was also going to pay the rest of what we owed on the copier that was being replaced. One vendor’s price even included user training. They would come out and train any new employees to use the copier so that administrative and IT time would not have to be used.
 
 All I could really do was encourage them to think about what features were truly needed rather than just “nice to have” features. I was very new to the industry at the time and didn’t know much about copier specs. The things that were important to me were more RAM than we had, gigabit Ethernet, and scanning capabilities that did not involve client software on everyone’s workstation.
 
-#### The decision
+#### The Decision
 No matter what I tried, I could not get over the amount of money we were about to spend on a new copier, so I did a little research of my own. I had a contact at a company in California that sold copiers for very affordable prices without the maintenance plan being rolled into the package. When I mentioned the specs we needed to my contact, he said to put him in contact with the CFO, and he could get something ordered over the phone that same day. Apparently, the type of copier we wanted was not the kind he could keep in stock for very long.
 
 I approached the CFO about this option and told him it might save us a great deal of money. My contact mentioned above had recommended a local printer technician for some of our needs in the past, and I mentioned using this particular technician for break-fix and maintenance calls on an as needed basis rather than taking the maintenance package that was rolled into the price of the new copier we were about to purchase. The CFO insisted the new copier must come with a maintenance plan, and I had to accept the fact that the decision was out of my hands.
 
 The administrative assistants told me which option was chosen by the CFO and filled me in on when the new copier would arrive.
 
-#### The installation
+#### The Installation
 The big day finally arrived. The old copier was rolled out of office, never to be seen again. Farewell, Panasonic DP-6030. It wasn’t great while it lasted. And then, our top-of-the-line, 65 copies-per-minute new beast of a copier was rolled into the copy room. I took a moment to gaze at this newly crafted thing of beauty that was supposed to make both my life and the lives of my users better.
 
 The copier was fairly simple to get on the network and setup users to print to it, but setting up the scanning was somewhat different than I had ever seen and pretty challenging. The scanner software was not on any of the disks that came with the copier and not available for public download on the copier manufacturer’s website. The only way to get it was to have a technician from our copier vendor login to a secure portal on the manufacturer’s website and download it, and it took a couple of different calls to get someone out here to do it. Insert eyebrow raise here.
 
 Once everyone that had need could print to the copier and the instructions for scanning were readily available, people were pleased with our new equipment.
 
-#### The aftermath
+#### The Aftermath
 The vendor we used was the one that agreed to train new users for us. I don’t remember any training taking place outside of the first 3 months we had the copier.
 
 Within the first 18 months of having the copier, we had one large-scale printing problem from client machines that required a driver update despite having installed the latest and greatest driver upon the initial install. Also, there was supposed to be a private print feature that would allow users to send print jobs to the printer but require an access code to print the documents (mainly, used for secretaries and handling confidential information). The vendor told us that this feature would be available if we updated the print driver again. Once we updated the driver again with zero results, we were told the vendor had to upgrade the printer firmware to make this option work. Even after the driver and firmware updates, the private print feature only worked for 32-bit clients and not 64-bit clients.
@@ -52,7 +52,7 @@ I managed to get copy of the service contract from our vendor and talked to our 
 
 This was December 2011, just 2 years after the initial installation of the copier. Just two short months ago (August 2012), the vendor contacted us and said we were liable to pay out the rest of the service contract and that our cancellation letter would go into effect at the end of the 5-year contracted period. The CFO and I reviewed the contract again (which makes no mention of cancellation fees), and he sent the vendor notice that we were not paying a dime.
 
-#### The lesson
+#### The Lesson
 It seems to be very common in these situations to take down the likes and dislikes of the current solution, combine that with the shiny new features vendor X is offering, and use a compilation of all that information to decide what features are needed in a new copier. But in reality, the focus should be on the true needs of the majority of users rather than the “nice to haves.”
 
 When you’re shopping for a new copier for your office environment, here are some tips that may help you learn from our experience:
