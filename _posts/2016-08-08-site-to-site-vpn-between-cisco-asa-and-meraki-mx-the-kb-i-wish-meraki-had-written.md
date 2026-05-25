@@ -7,7 +7,8 @@ categories:
   - "Meraki"
 tags: 
   - "Cisco"
-  - "Cisco AsSA"
+  - "Cisco ASA"
+  - "Cisco Firewall"
   - "IPSec"
   - "Meraki"
   - "Meraki KB"
@@ -16,7 +17,8 @@ tags:
   - "VPN"
 ---
 
-Originally posted on [MangoLassi](https://mangolassi.it/topic/10175/site-to-site-vpn-between-cisco-asa-and-meraki-mx-the-kb-i-wish-meraki-had-written) August 8, 2016
+***Originally posted on MangoLassi August 8, 2016***
+<!-- old link now no longer reachable is https://mangolassi.it/topic/10175/site-to-site-vpn-between-cisco-asa-and-meraki-mx-the-kb-i-wish-meraki-had-written -->
 
 We lit up a new site earlier this year with Charter fiber and needed to connect it back to HQ. Then another site in our area needed to be connected back to HQ, presenting a firewall decision. Should we look to next generation Cisco ASA gear to replace our aging (and soon out of life) 5505s and 5510, look at a different type of product for a firewall, or look at UTMs as a viable option? Our network has been a hub and spoke for a while now with a 5510 at HQ and 5-6 other ASA 5505s out in the wild.
 
@@ -38,7 +40,7 @@ Enter the pre-shared key for your tunnel. No device certificate is needed here. 
 
 There is no need to change anything here. As the Meraki KB states,
 
-> the MX security appliance can accept any of the following Encryption algorithms: DES, 3DES, AES-128, AES-192 and AES-256. Additionally the MX can accept either SHA1 or MD5 as the authentication hashing algorithm.
+> The MX security appliance can accept any of the following Encryption algorithms: DES, 3DES, AES-128, AES-192 and AES-256. Additionally the MX can accept either SHA1 or MD5 as the authentication hashing algorithm.
 
 ![](algorithms.png)
 
@@ -56,7 +58,11 @@ If you start testing after making these changes to the MX, you will find that th
 
 Here's another article Meraki links to at the bottom of that first article - [https://documentation.meraki.com/MX-Z/Site-to-site_VPN/Troubleshooting_Non-Meraki_Site-to-site_VPN\_Peers](https://documentation.meraki.com/MX-Z/Site-to-site_VPN/Troubleshooting_Non-Meraki_Site-to-site_VPN_Peers). Inside that article they finally tell you the default settings a MX uses when connecting with a 3rd party vendor's gear:
 
-> Cisco Meraki devices have the following requirements for their VPN connections to non-Meraki peers: Preshared keys (no certificates). LAN static routes (no routing protocol for the VPN interface). IKEv1 (IKEv2 not supported) in Main Mode (aggressive mode not supported). Access through UDP ports 500 and 4500.
+> Cisco Meraki devices have the following requirements for their VPN connections to non-Meraki peers: 
+> - Preshared keys (no certificates). 
+> - LAN static routes (no routing protocol for the VPN interface). 
+> - IKEv1 (IKEv2 not supported) in Main Mode (aggressive mode not supported). 
+> - Access through UDP ports 500 and 4500.
 
 Go back to the ASA for a second, and dig into the connection profile you setup earlier. In the Basic settings, you see the IKE Policy list. Click the Manage button next to that to see a listing of all IKE policies. ![](IKE1Policies1.png)
 
@@ -68,4 +74,4 @@ Back inside the same Site-to-Site VPN area of Meraki Dashboard as before, click 
 
 Once that opens, you can adjust all of the parameters so that the lifetime matches and the encryption and authentication settings for both settings match everything being used in your IKE Policies from the Cisco ASA. The settings below are what worked for me. ![](11.png)
 
-Once these changes were made, the tunnel was solid. I learned this the hard way so hopefully this can benefit someone else. I will also say that every MX device you want to connect back to a 3rd party device must be in Hub mode (can't just be in spoke mode). The Non-Meraki peer you setup will be available to connect to any other MX devices in your Meraki Organization.
+Once these changes were made, the tunnel was solid. I learned this the hard way, so hopefully this can benefit someone else. I will also say that every MX device you want to connect back to a 3rd party device must be in Hub mode (can't just be in spoke mode). The non-Meraki peer you setup will be available to connect to any other MX devices in your Meraki Organization.

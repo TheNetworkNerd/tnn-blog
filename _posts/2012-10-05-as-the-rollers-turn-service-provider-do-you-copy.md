@@ -11,7 +11,7 @@ tags:
   - "Vendor Management"
 ---
 
-Originally posted in the [Spiceworks Community](https://community.spiceworks.com/topic/264377-as-the-rollers-turn-service-provider-do-you-copy) on October 4, 2012
+***Originally posted in the [Spiceworks Community](https://community.spiceworks.com/topic/264377-as-the-rollers-turn-service-provider-do-you-copy) on October 4, 2012***
 
 All the signs were there. People were complaining. Not just some people — most people were complaining. The paper jams were frequent and the service calls almost as frequent. That high-volume workhorse copier in our small office just wasn’t as reliable as it used to be. Should she be put out of her misery? Dave Ramsey says that when the pain of staying the same is greater than the pain of change, change will occur. This is the story of how IT was cut out of the decision making process to find a more reliable copier. The after effects speak for themselves.
 
