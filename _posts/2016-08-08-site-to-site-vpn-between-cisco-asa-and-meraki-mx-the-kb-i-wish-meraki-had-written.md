@@ -17,7 +17,7 @@ tags:
   - "VPN"
 ---
 
-***Originally posted on MangoLassi August 8, 2016***
+*Originally posted on MangoLassi August 8, 2016*
 <!-- old link now no longer reachable is https://mangolassi.it/topic/10175/site-to-site-vpn-between-cisco-asa-and-meraki-mx-the-kb-i-wish-meraki-had-written -->
 
 We lit up a new site earlier this year with Charter fiber and needed to connect it back to HQ. Then another site in our area needed to be connected back to HQ, presenting a firewall decision. Should we look to next generation Cisco ASA gear to replace our aging (and soon out of life) 5505s and 5510, look at a different type of product for a firewall, or look at UTMs as a viable option? Our network has been a hub and spoke for a while now with a 5510 at HQ and 5-6 other ASA 5505s out in the wild.

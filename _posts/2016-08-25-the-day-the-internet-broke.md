@@ -13,7 +13,8 @@ tags:
   - "Time Warner"
 ---
 
-Originally posted on [MangoLassi](https://mangolassi.it/topic/10450/the-day-the-internet-broke) August 8, 2016
+*Originally posted on MangoLassi August 8, 2016*
+<!-- original link no longer valid is https://mangolassi.it/topic/10450/the-day-the-internet-broke -->
 
 It was mid-day on a normal Wednesday when I started getting alerts that devices have fallen offline at one of our locations. Seconds later the alerts about the firewall at this location falling offline were hitting my Inbox. Something was awry, and I needed to determine exactly what happened. My team and I are physically stationed at the company headquarters but support several remote sites in the area (and some out of state).
 

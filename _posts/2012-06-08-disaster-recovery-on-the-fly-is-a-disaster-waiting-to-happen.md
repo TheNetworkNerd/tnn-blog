@@ -16,7 +16,7 @@ tags:
   - "Documentation"
 ---
 
-***Originally posted in the [Spiceworks Community](https://community.spiceworks.com/topic/232181-disaster-recovery-on-the-fly-is-a-disaster-waiting-to-happen) on June 7, 2012***
+*Originally posted in the [Spiceworks Community](https://community.spiceworks.com/topic/232181-disaster-recovery-on-the-fly-is-a-disaster-waiting-to-happen) on June 7, 2012*
 
 The story you are about to read is true. There was no need to change the names to protect the innocent. My name is not Friday, and I carry no badge. But, like many others, I am IT.
 
