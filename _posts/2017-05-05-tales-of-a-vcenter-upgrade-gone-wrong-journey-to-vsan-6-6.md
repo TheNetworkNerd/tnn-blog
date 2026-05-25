@@ -43,7 +43,7 @@ I documented the entire process. The migration assistant worked like a champ to 
 
 At this point we were at version 6.5a with vCenter and the PSC.
 
-**When Things Went Haywire** The new R730s arrived in mid-April 2017, and each one had 6.0U3 factory installed. Around that same time, the newest version of vSAN was released as part of vSphere 6.5d, so the first thing I did was upgrade the PSC and VCSA to 6.5d. I have outlined how simple that process is to do in [this post](http://www.thenetworknerd.com/patching-vcenter-to6-5d/).
+**When Things Went Haywire** The new R730s arrived in mid-April 2017, and each one had 6.0U3 factory installed. Around that same time, the newest version of vSAN was released as part of vSphere 6.5d, so the first thing I did was upgrade the PSC and VCSA to 6.5d. I have outlined how simple that process is to do in [this post]({% link _posts/2017-04-17-patching-vcenter-with-external-platform-services-controller-to-version-6-5-0d-journey-to-vsan-6-6.md %}).
 
 We had a PSC and VCSA running the latest and greatest version (6.5d) on a host outside of the cluster we were about to build. I was able to use Update Manager to upgrade all of the new R730 servers to ESXi 6.5 (using the Dell ISO for ESXi 6.5) and then patch them (with a host patch baseline) to 6.5d.
 
