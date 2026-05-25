@@ -13,7 +13,8 @@ tags:
   - "Windows 7 Pro"
 ---
 
-Originally posted on [MangoLassi](https://mangolassi.it/topic/12577/dell-system-detect-and-the-case-of-the-missing-usb-controller) February 15, 2017
+*Originally posted on MangoLassi February 15, 2017*
+<!-- former link, now dead was https://mangolassi.it/topic/12577/dell-system-detect-and-the-case-of-the-missing-usb-controller -->
 
 It was a normal day like any other. I was helping a user with some MS Office related issues via TeamViewer and was giving her laptop a tune up to maximize performance (things like disabling unnecessary startup items, cleaning out temp files, disabling MS Office add-ins, etc.). I thought I would go ahead and see if there were any driver updates to install. She was using a pretty new Latitude E5570 running Windows 7 Pro 64-bit.
 
