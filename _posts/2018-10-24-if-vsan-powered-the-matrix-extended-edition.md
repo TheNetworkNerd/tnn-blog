@@ -49,6 +49,4 @@ https://youtu.be/sNKQEdgapwM
 
 ### Additional Resources
 
-[If vSAN Powered The Matrix - Full Slide Deck](http://34.42.71.182/wp-content/uploads/2018/10/NK_DFWVMUG_October2018_If-vSAN-Powered-The-Matrix_FullSideDeck.pptx)
-
 [Nerd Journey Podcast](http://nerd-journey.com/)

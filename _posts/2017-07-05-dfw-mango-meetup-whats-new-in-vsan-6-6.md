@@ -32,7 +32,6 @@ Here are some corrections to the video:
 
 Additional Resources:
 
-- Powerpoint slides - [What’s New in vSAN 6.6](http://34.42.71.182/wp-content/uploads/2017/07/What’s-New-in-vSAN-6.6.pptx)
 - [VMware HCL - specifically for vSAN components](https://www.vmware.com/resources/compatibility/search.php?deviceCategory=vsan)
 - [vSAN 6.6 Licensing Guide](https://www.vmware.com/content/dam/digitalmarketing/vmware/en/pdf/products/vsan/vmware-vsan-66-licensing-guide.pdf)
 - [vSAN Ready Node Configurator](http://vsanreadynode.vmware.com/RN/RN)

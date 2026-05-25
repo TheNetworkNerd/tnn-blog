@@ -45,6 +45,5 @@ Here are some corrections / additions to the video:
 
 ### Additional Resources
 
-- [If vSAN Powered The Matrix](http://34.42.71.182/wp-content/uploads/2017/09/If-vSAN-Powered-The-Matrix.pptx) - full slide deck
 - [vSAN Terms and Definitions](https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.virtualsan.doc/GUID-1D8956A2-3F46-49C8-9231-38F3A9D09A0F.html)
 - [vSAN Cache Sizing](https://blogs.vmware.com/virtualblocks/2017/01/18/designing-vsan-disk-groups-cache-ratio-revisited/) - also check VMware StorageHub for the latest documentation and sizing guides

@@ -19,8 +19,6 @@ This year I was blessed to present a session on Shadow IT at Spiceworld 2017, an
 
 When I found out the breakout sessions were not going to be recorded this year, I posted this [call to action thread](https://community.spiceworks.com/topic/2044956-spiceworld-2017-presenters-a-call-to-action) for all Spiceworld presenters in hopes that as many of us who could would video the presentation and post in the community and on YouTube.  Many presenters did just that.  This post is my bid to give you the Powerpoint slides, the video, a transcription of some of the best questions and answers, and the questions people sent in via Twitter in one spot.
 
-For those who wanted the slide deck and nothing more, here you go - [IT Manager's Guide to Shadow IT Prevention](http://34.42.71.182/wp-content/uploads/2017/10/IT-Managers-Guide-to-Shadow-IT-Prevention-Nick-Korte.pptx).
-
 For those who want more, all you have to do is keep reading.
 
 ### Dialog from the Presentation
