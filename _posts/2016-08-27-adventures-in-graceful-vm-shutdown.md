@@ -51,11 +51,14 @@ Then, we add a host USB device to the virtual machine. This will add the USB dev
 ![](2_controller.png)
 
 In this case there was only one host USB device from which to choose, so it was selected by default. As soon as the change was confirmed and made in vCenter, I was able to see that once powered on again, the Windows VM recognized a battery was attached.  
-![](3_systemtray.png) ![](3A_systemtray2.png)
+![](3A_systemtray2.png)  
+![](3_systemtray.png) 
 
 And now we install OPMONis. Downloading the trial is easy and requires no personal information be given before you download (which I liked). The installer is tiny. Here's a walk through of the install.  ![](4_install1.png)
 
-Notice here you'll want the service and the client. OPMONis will run as a Windows service with automatic delayed start. ![](5_WindowsService.png) ![](6_FinishInstall.png)
+Notice here you'll want the service and the client. OPMONis will run as a Windows service with automatic delayed start.  
+![](5_WindowsService.png)  
+![](6_FinishInstall.png)
 
 Post-install, you can see OPMONis now running as a service. I'm guessing the service automatically gets a delayed start to make sure Windows has time to notice the UPS is attached. ![](7_postinstallservice.png)
 
