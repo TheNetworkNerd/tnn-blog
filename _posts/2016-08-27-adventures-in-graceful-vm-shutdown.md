@@ -44,11 +44,11 @@ They have a 30-day free trial ([http://opmonis.de/en/licensing](http://opmonis.d
 
 Technically, the software could run on any Windows machine on a network as long as the UPS is connected to it via USB, but I chose to install it on a Server 2012 R2 VM running on the ESXi host mentioned in this post. I had to connect the APC UPS to my ESXi host via USB and pass that USB to the virtual machine that would be running OPMONis.
 
-For best results in vSphere (screenshots here are from vCenter), it's best to power down the virtual machine first. ![](1_newdevice.png) 
+For best results in vSphere (screenshots here are from vCenter), it's best to power down the virtual machine first. \ ![](1_newdevice.png) 
 
-Then, we add a host USB device to the virtual machine. This will add the USB device and a USB controller to the VM automatically. ![](2_controller.png)
+Then, we add a host USB device to the virtual machine. This will add the USB device and a USB controller to the VM automatically. \ ![](2_controller.png)
 
-In this case there was only one host USB device from which to choose, so it was selected by default. As soon as the change was confirmed and made in vCenter, I was able to see that once powered on again, the Windows VM recognized a battery was attached. ![](3_systemtray.png) ![](3A_systemtray2.png)
+In this case there was only one host USB device from which to choose, so it was selected by default. As soon as the change was confirmed and made in vCenter, I was able to see that once powered on again, the Windows VM recognized a battery was attached. \ ![](3_systemtray.png) \ ![](3A_systemtray2.png)
 
 And now we install OPMONis. Downloading the trial is easy and requires no personal information be given before you download (which I liked). The installer is tiny. Here's a walk through of the install.  ![](4_install1.png)
 
