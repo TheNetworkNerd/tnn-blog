@@ -28,7 +28,7 @@ Business leaders tend to think a UPS will solve all of the problems in a power o
 
 That doesn’t seem like a big problem until the power comes on again. Sometimes you get lucky, and everything works as it did previously. Sometimes you find the ERP system database or other important files have been corrupted. No matter what problems happen after this kind of power event, you get to fix it, and you’re still the one who overlooked getting those servers shutdown gracefully. Since we are likely talking about host servers running virtual machines, that could mean hundreds of VMs were just powered off.
 
-**A Project to Address the Problem**
+#### A Project to Address the Problem
 
 We recently deployed an ESXi host at one of our remote offices. We got a refurbished server through Xbyte for the job and a refurbished APC UPS through CoastTec. We did not add a network management card to the UPS.
 
@@ -44,79 +44,53 @@ They have a 30-day free trial ([http://opmonis.de/en/licensing](http://opmonis.d
 
 Technically, the software could run on any Windows machine on a network as long as the UPS is connected to it via USB, but I chose to install it on a Server 2012 R2 VM running on the ESXi host mentioned in this post. I had to connect the APC UPS to my ESXi host via USB and pass that USB to the virtual machine that would be running OPMONis.
 
-For best results in vSphere (screenshots here are from vCenter), it's best to power down the virtual machine first. Then, we add a host USB device to the virtual machine: 
-![](1_newdevice.png)
+For best results in vSphere (screenshots here are from vCenter), it's best to power down the virtual machine first. ![](1_newdevice.png) 
 
-This will add the USB device and a USB controller to the VM automatically: 
-![](2_controller.png)
+Then, we add a host USB device to the virtual machine. This will add the USB device and a USB controller to the VM automatically: ![](2_controller.png)
 
 In this case there was only one host USB device from which to choose, so it was selected by default.
 
-As soon as the change was confirmed and made in vCenter, I was able to see that once powered on again, the Windows VM recognized a battery was attached: 
-![](3_systemtray.png)
+As soon as the change was confirmed and made in vCenter, I was able to see that once powered on again, the Windows VM recognized a battery was attached: ![](3_systemtray.png) ![](3A_systemtray2.png)
 
-![](3A_systemtray2.png)
+And now we install OPMONis. Downloading the trial is easy and requires no personal information be given before you download (which I liked). The installer is tiny. Here's a walk through of the install:  ![](4_install1.png)
 
-And now we install OPMONis. Downloading the trial is easy and requires no personal information be given before you download (which I liked). The installer is tiny. Here's a walk through of the install: 
-![](4_install1.png)
+Notice here you'll want the service and the client. OPMONis will run as a Windows service with automatic delayed start. ![](5_WindowsService.png) ![](6_FinishInstall.png)
 
-Notice here you'll want the service and the client. OPMONis will run as a Windows service with automatic delayed start. 
-![](5_WindowsService.png)
+Post-install, you can see OPMONis now running as a service. I'm guessing the service automatically gets a delayed start to make sure Windows has time to notice the UPS is attached. ![](7_postinstallservice.png)
 
-![](6_FinishInstall.png)
+Now, it is time to launch the OPMONis client to see what this software can do: ![](8_clienticon.png) ![](9_firstopen.png)
 
-Post-install, you can see OPMONis now running as a service. I'm guessing the service automatically gets a delayed start to make sure Windows has time to notice the UPS is attached.
+Upon first open, the first thing you want to do is add your UPS so OPMONis can start monitoring it. ![](10_UPSList.png)
 
-![](7_postinstallservice.png)
+If Windows can see the UPS device as a battery, then OPMONis should be able to see it in the list here to add and be monitored. ![](11_UPSDeviceDetect.png)
 
-Now, it is time to launch the OPMONis client to see what this software can do: 
-![](8_clienticon.png)
+As you can see here, OPMONis recognized the APC UPS, shows it is 100% charged, and shows that I have 59 minutes of uptime based on the power usage of the connected equipment. In my case, the shutdown threshold is 15 minutes of time remaining. Once we're down to 15 minutes of juice left, OPMONis will shutdown my equipment. ![](12_UPSListUpdated.png)
 
-![](9_firstopen.png)
+But wait! I never added any equipment to be shutdown. From the main OPMONis menu, go to the System Administration settings: ![](13_settings.png)
 
-Upon first open, the first thing you want to do is add your UPS so OPMONis can start monitoring it. 
-![](10_UPSList.png)
+At the moment, there are no systems setup to be shutdown by OPMONis, so we click the plus sign to add a system. ![](14_NoSystems.png)
 
-If Windows can see the UPS device as a battery, then OPMONis should be able to see it in the list here to add and be monitored. 
-![](11_UPSDeviceDetect.png)
-
-As you can see here, OPMONis recognized the APC UPS, shows it is 100% charged, and shows that I have 59 minutes of uptime based on the power usage of the connected equipment. In my case, the shutdown threshold is 15 minutes of time remaining. Once we're down to 15 minutes of juice left, OPMONis will shutdown my equipment. 
-![](12_UPSListUpdated.png)
-
-But wait! I never added any equipment to be shutdown. From the main OPMONis menu, go to the System Administration settings: 
-![](13_settings.png)
-
-At the moment, there are no systems setup to be shutdown by OPMONis, so we click the plus sign to add a system. 
-![](14_NoSystems.png)
-
-As you can see, I can add a Windows machine (physical or virtual), a Linux machine (physical or virtual), a paid ESXi host, a Free ESXi host, a paid ESXi Client VM, or a Free ESXi Client VM. 
-![](15_ESXihost.png)
+As you can see, I can add a Windows machine (physical or virtual), a Linux machine (physical or virtual), a paid ESXi host, a Free ESXi host, a paid ESXi Client VM, or a Free ESXi Client VM. ![](15_ESXihost.png)
 
 I started off thinking I should add each of my virtual machines individually as ESXi Client VMs, but by the time they shutdown, OPMONis wouldn't be able to shutdown the host too because the VM running OPMONis would be offline.
 
-I decided to add my ESXi host and do some testing to see how this would work. Of course, you will need a user with permissions to issue a host shutdown command over the network (assuming you have the correct firewall ports open on your ESXI host to allow this). 
-![](16_shutdownconfig.png)
+I decided to add my ESXi host and do some testing to see how this would work. Of course, you will need a user with permissions to issue a host shutdown command over the network (assuming you have the correct firewall ports open on your ESXI host to allow this). ![](16_shutdownconfig.png)
 
 You see that check box marked "Await Execution?" If you add several systems for shutdown and order them as desired, you can check the Await Execution box and have OPMONis wait for one machine to shutdown before proceeding to the next one in the list.
 
-Suppose we add a Windows machine to the list (as in OPMONis will attempt to shut it down via WMI): 
-![](17_WindowsVM.png)
+Suppose we add a Windows machine to the list (as in OPMONis will attempt to shut it down via WMI): ![](17_WindowsVM.png)
 
 As you can see from the screenshot of DFWESXi1, Await Execution was not checked. That means OPMONis will, once the battery threshold is reached, attempt to shutdown both of these machines at the same time. Beware of that option as I believe it is checked by default when you add a new system to the list in this area.
 
-For the purpose of testing, I removed all systems except for the ESXi host in question. Notice from the Systems Administration menu that I'm currently operating in Automatic mode. I can click the settings button to switch to manual mode and make OPMONis try to shutdown everything in my list of systems for testing purposes. 
-![](18_SystemsList.png)
+For the purpose of testing, I removed all systems except for the ESXi host in question. Notice from the Systems Administration menu that I'm currently operating in Automatic mode. I can click the settings button to switch to manual mode and make OPMONis try to shutdown everything in my list of systems for testing purposes. ![](18_SystemsList.png)
 
-When you switch to manual mode, you get asked to confirm that you really want to switch to manual mode before the change is made. Once confirmed, here is what you see: 
-![](19_Manualmode.png)
+When you switch to manual mode, you get asked to confirm that you really want to switch to manual mode before the change is made. Once confirmed, here is what you see: ![](19_Manualmode.png)
 
-So then I tested, and tested, and tested again...until I got it right. There's something you have to remember about ESXi hosts, especially when you are not in a HA cluster. Each host has virtual machine startup / shutdown settings (go to the host in vCenter -> Manage -> VM Startup Shutdown or Configuration -> Virtual Machine Startup / Shutdown in the vSphere Client). Pay very, very close attention to the shutdown action for your VMs, making sure it is set to Guest Shutdown: 
-![](20_guestshutdown.png)
+So then I tested, and tested, and tested again...until I got it right. There's something you have to remember about ESXi hosts, especially when you are not in a HA cluster. Each host has virtual machine startup / shutdown settings (go to the host in vCenter -> Manage -> VM Startup Shutdown or Configuration -> Virtual Machine Startup / Shutdown in the vSphere Client). Pay very, very close attention to the shutdown action for your VMs, making sure it is set to Guest Shutdown: ![](20_guestshutdown.png)
 
 That's the first step. By default, vSphere seems to use a shutdown delay of 120 seconds per VM. That means if you were to issue a shutdown command to the host using the vSphere Client, the host would try to shutdown the guest OS of each VM in your Startup / Shutdown settings for 2 minutes before just powering them off. If the guest OS shutdown of a VM takes less than 120 seconds, the host will proceed to shutdown the guest OS of the next VM.
 
-What I did was run the manual shutdown using OPMONis while connected to the host with the vSphere Client. Performing this manual shutdown while watching the events on the ESXi host is a great way to see when each VM gets a command to shutdown the guest OS, when the VM is confirmed to be powered off, and when the next guest OS shutdown starts. Since I was running the vCenter Server Appliance as a VM on this host, I found it actually took longer than 2 minutes to shutdown and had to manually specify a longer shutdown delay for that VM so it could completely shutdown gracefully before the host force powered it off. **Make sure you know how long it takes for your VMs to shutdown gracefully if shutting down an ESXi host with OPMONis.** 
-![](21_shutdownlist-1024x302.png)
+What I did was run the manual shutdown using OPMONis while connected to the host with the vSphere Client. Performing this manual shutdown while watching the events on the ESXi host is a great way to see when each VM gets a command to shutdown the guest OS, when the VM is confirmed to be powered off, and when the next guest OS shutdown starts. Since I was running the vCenter Server Appliance as a VM on this host, I found it actually took longer than 2 minutes to shutdown and had to manually specify a longer shutdown delay for that VM so it could completely shutdown gracefully before the host force powered it off. **Make sure you know how long it takes for your VMs to shutdown gracefully if shutting down an ESXi host with OPMONis.** ![](21_shutdownlist-1024x302.png)
 
 #### How OPMONis Met This Need
 
