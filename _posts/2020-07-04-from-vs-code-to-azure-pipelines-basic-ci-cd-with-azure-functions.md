@@ -276,16 +276,12 @@ If we click on the function created and get its URL, does it actually run in a b
 
 This wouldn't be any fun without a grand finale.  Can we make a change to the function's code and have it pushed out automatically using our pipelines?  We won't show every step, but here's what I suggest doing now:
 
-1. - Go back to VS Code, and make a change to the code for the function we deployed.  We will make a noticeable edit to the responseMessage string in FN1-HTTP1-NN3.cs and save the changes. ![](45_OneChange-1024x76.png)
+- Go back to VS Code, and make a change to the code for the function we deployed.  We will make a noticeable edit to the responseMessage string in FN1-HTTP1-NN3.cs and save the changes. ![](45_OneChange-1024x76.png)
 
- 
+- Commit changes, and then synchronize them with the Azure repo.
 
-1. - Commit changes, and then synchronize them with the Azure repo.
-
- 
-
-1. - Confirm build and release pipelines succeed. ![](46_BuildPipeline-1024x198.png) ![](47_Release.png)
-2. - Try re-running the function after this to see if there is a change. ![](48_AnotherSuccess-1024x69.png)
+- Confirm build and release pipelines succeed. ![](46_BuildPipeline-1024x198.png) ![](47_Release.png)
+- Try re-running the function after this to see if there is a change. ![](48_AnotherSuccess-1024x69.png)
 
 That last part was quick, but prove to yourself that changing the code will update the function on the Azure side automatically...all through the power of Azure Repos and Pipelines.  This only scratches the surface of the types of CI / CD capabilities possible with Azure DevOps, but we will stop here for now.
 
