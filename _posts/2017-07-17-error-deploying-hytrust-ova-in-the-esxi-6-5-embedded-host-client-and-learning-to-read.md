@@ -17,7 +17,6 @@ tags:
   - "VMware vSphere"
   - "VMware vSphere 6.5"
   - "vSphere"
-image: "OVA_Featured.png"
 ---
 
 Have you ever thought you found a bug in a software product?  In my case, I was almost certain I had found one but learned the problem was me.  I want to share a story from this past week that helped me learn to read a bit more carefully before reporting a bug and some interesting observations made as a result of my mistakes.  Hopefully this will help someone.
@@ -28,37 +27,56 @@ We were trying to deploy a 2-node Hytrust cluster to use with vSphere VM Encrypt
 
 - Login to the ESXi embedded host client at https://ipaddressofhost/ui/#/login.
 
-- Click the option to Create / Register VM. ![](1_Create.RegisterVM.png)
+- Click the option to Create / Register VM.  
+![](1_Create.RegisterVM.png)
 
-- The creation type needs to be Deploy a virtual machine from an OVF or OVA file.![](2_DeployfromOVForOVA.png)
+- The creation type needs to be Deploy a virtual machine from an OVF or OVA file.  
+![](2_DeployfromOVForOVA.png)
 
-- Select the OVA file, and make sure it is recognized by the embedded host client. ![](3_ChooseOVAFile.png)
+- Select the OVA file, and make sure it is recognized by the embedded host client.  
+![](3_ChooseOVAFile.png)
 
-- Select the storage on which the OVA will be deployed.  In my case it was a local datastore.![](4_SelectStorage.png)
+- Select the storage on which the OVA will be deployed.  In my case it was a local datastore.  
+![](4_SelectStorage.png)
 
-- Soon after clicking Next from the menu above, option 4 changed from License agreements to Deployment options as seen here.  I thought that was a little odd but kept going with the deployment.![](5_ChooseNetwork.png)
+- Soon after clicking Next from the menu above, option 4 changed from License agreements to Deployment options as seen here.  I thought that was a little odd but kept going with the deployment.  
+![](5_ChooseNetwork.png)
 
-- After clicking Next on the screen above, I was immediately met with the following error: ![](6_NextafterDeploymentOptions.png)For purposes of searchability, here's the full text error:
+- After clicking Next on the screen above, I was immediately met with the following error:  
+![](6_NextafterDeploymentOptions.png)  
+
+For purposes of searchability, here's the full text error:
 
 > _Unfortunately, we hit an error that we weren't expecting.The client may continue working, but at this point, we recommend refreshing your browser and submitting a bug report.Press the Esc key to hide this dialog and continue without refreshing._
 > 
-> When I clicked on the details button, here's what I saw: ![](7_ErrorDetails.png)
+> When I clicked on the details button, here's what I saw:  
+> ![](7_ErrorDetails.png)
 > 
 > Again for searchability:
 > 
-> _Cause: TypeError: Cannot read property 'replace' of null_ _Version: 1.18.0_ _Build: 5270848_ _ESXi: 6.5.0_ _Browser: Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36_
+> _Cause: TypeError: Cannot read property 'replace' of null_ 
+>_Version: 1.18.0_ _Build: 5270848_ 
+>_ESXi: 6.5.0_ 
+> _Browser: Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36_
 > 
 > _Exception stack:_
 > 
-> _TypeError: Cannot read property 'replace' of null_ _at https://192.168.10.36/ui/scripts/main.js:368:10583_ _at Object.r \[as forEach\] (https://192.168.10.36/ui/scripts/main.js:318:21020)_ _at https://192.168.10.36/ui/scripts/main.js:368:10342_ _at Object.r \[as forEach\] (https://192.168.10.36/ui/scripts/main.js:318:21126)_ _at getPropertyFields (https://192.168.10.36/ui/scripts/main.js:368:10099)_ _at new <anonymous> (https://192.168.10.36/ui/scripts/main.js:368:12872)_ _at Object.e \[as invoke\] (https://192.168.10.36/ui/scripts/main.js:319:3874)_ _at w.instance (https://192.168.10.36/ui/scripts/main.js:319:23885)_ _at https://192.168.10.36/ui/scripts/main.js:319:15273_ _at r (https://192.168.10.36/ui/scripts/main.js:318:21126)_
-> 
->  
+> _TypeError: Cannot read property 'replace' of null_
+> _at https://192.168.10.36/ui/scripts/main.js:368:10583_ 
+>_at Object.r \[as forEach\] (https://192.168.10.36/ui/scripts/main.js:318:21020)_ 
+>_at https://192.168.10.36/ui/scripts/main.js:368:10342_ _at Object.r \[as forEach\] (https://192.168.10.36/ui/scripts/main.js:318:21126)_ 
+>_at getPropertyFields (https://192.168.10.36/ui/scripts/main.js:368:10099)_ 
+>_at new <anonymous> (https://192.168.10.36/ui/scripts/main.js:368:12872)_ 
+>_at Object.e \[as invoke\] (https://192.168.10.36/ui/scripts/main.js:319:3874)_ 
+>_at w.instance (https://192.168.10.36/ui/scripts/main.js:319:23885)_ 
+>_at https://192.168.10.36/ui/scripts/main.js:319:15273_ 
+>_at r (https://192.168.10.36/ui/scripts/main.js:318:21126)_
 
 ### Maybe This is a Bug?
 
 I thought at first maybe it was a fluke, so I reloaded the embedded host client on this host and tried to deploy again, which led me to the same error.  I tried the other host outside the cluster and was met with the same error.  I tried with Chrome, IE, and even Firefox and was met with this error every time.  But the odd part was I knew the OVA was good because we already deployed it once with vCenter inside our cluster with no problems.  I even tried a previous version of the OVA using the same steps and again received the error mentioned previously.
 
-At this point, I thought I'd try the C# vSphere Client just for fun to see if it worked for the deployment (even though not supported).  I was able to open the C# client and select the option to deploy the OVA and even made it to the screen where you're prompted for network settings as seen here.  I didn't actually complete the deployment in the C# client, however.
+At this point, I thought I'd try the C# vSphere Client just for fun to see if it worked for the deployment (even though not supported).  I was able to open the C# client and select the option to deploy the OVA and even made it to the screen where you're prompted for network settings as seen here.  I didn't actually complete the deployment in the C# client, however.   
 
 ![](8_DeployvsphereClient.png)
 
@@ -68,7 +86,7 @@ I thought based on this the hosts could actually read the OVA and that there mus
 
 When the technician called, I showed him the deployment failed inside the embedded host client in different browsers and on different hosts.  He had me try from a different computer, and we were met with the same error.  Next, he had me (using the embedded host client) create a very small VM with no OS installed and export it to OVF.  We were able to immediately import that OVF template and use it to create a new VM.  Based on that, he did not seem to think the issue was the embedded host client.  When I mentioned the C# client seemingly working for deployment, he said it was very inconsistent (even in their own internal labs) as to when the old C# client would actually work to connect to a 6.5 host and when it would not work.  I didn't complete the deployment in the C# client since it isn't supported, and I truly wanted to know what the root problem was with the steps I followed.
 
-We talked about the OVA being for Hytrust.  And then the technician pointed out something that made me feel like a complete idiot for wasting his time.  On page 22 of the install guide for Hytrust v4.0, there was verbage in the OVA installation section which specifically says the OVA will only work if you are using vCenter.  If you're using a host not managed by vCenter, you must deploy Hytrust using their ISO.
+We talked about the OVA being for Hytrust.  And then the technician pointed out something that made me feel like a complete idiot for wasting his time.  On page 22 of the install guide for Hytrust v4.0, there was verbage in the OVA installation section which specifically says the OVA will only work if you are using vCenter.  If you're using a host not managed by vCenter, you must deploy Hytrust using their ISO.  
 
 ![](9_HytrustGuidep22.png)
 

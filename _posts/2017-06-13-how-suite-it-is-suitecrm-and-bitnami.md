@@ -26,8 +26,6 @@ At this point I could only surmise we were missing something small, perhaps some
 dead links now-->
 
 ### There's This Thing Called Bitnami  
-![](Bitnami_Featured_Image_1.png)  
-
 At that point, I was really close to just installing Fedora and following Jared's guide, but then I remembered something a friend had told me about Bitnami.  He had recommended using their optimized Wordpress instance to run on Google Cloud for a different project.  If you've never heard of [Bitnami](https://bitnami.com/), they do application packaging, and when they do it, they create [customized versions of popular applications](https://bitnami.com/stacks)  that can be quickly deployed on your own infrastructure or favorite cloud provider. Here are the flavors available for most applications (completely free of charge):
 
 - Linux / Mac / Windows installer
@@ -119,7 +117,7 @@ Now we're in business and can login to the application with the admin user creat
 
 ### What Else Do I Need to Know?
 
-- Bitnami has a tremendous number of installers available - [https://bitnami.com/stacks](https://bitnami.com/stacks).  I highly recommend taking advantage of their online demos (only available for 1 hour) for applications you have not used or would just like to try.
+- Bitnami has a tremendous number of installers available - [https://bitnami.com/stacks](https://bitnami.com/stacks).  I highly recommend taking advantage of their online demos (only available for 1 hour) for applications you have not used or would just like to try.  
 
 - It's very easy to do a push install of a Bitnami packaged application to a cloud provider like Google Cloud, for example.  Take a look at all of the cloud providers with which they will integrate - [https://bitnami.com/cloud](https://bitnami.com/cloud).  They have documentation that will show you how to connect to the cloud provider of your choice and deploy an application.
 
@@ -127,4 +125,4 @@ Now we're in business and can login to the application with the admin user creat
 
 - For more detail on SMTP configuration for SuiteCRM and how to update the SuiteCRM application, see [this post](https://docs.bitnami.com/installer/apps/suitecrm/).  The screenshots look a bit dated compared to what the SuiteCRM interface looks like after I did the install.  I'll admit to not having tested the upgrade of SuiteCRM since this was a new install.
 
-- I don't claim to have found Bitnami on my own.  Check out [John White's writeup on his move to Bitnami and Google Cloud](http://vjourneyman.com/hosting-branding-changes) that really gave me the idea for this post.
+- I don't claim to have found Bitnami on my own.  Check out [John White's writeup on his move to Bitnami and Google Cloud](http://vjourneyman.com/hosting-branding-changes) that really gave me the idea for this post.  
