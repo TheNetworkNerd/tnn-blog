@@ -54,23 +54,23 @@ For purposes of searchability, here's the full text error:
 > 
 > Again for searchability:
 > 
-> _Cause: TypeError: Cannot read property 'replace' of null_ 
->_Version: 1.18.0_ _Build: 5270848_ 
->_ESXi: 6.5.0_ 
-> _Browser: Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36_
+> _Cause: TypeError: Cannot read property 'replace' of null_  
+> _Version: 1.18.0_ _Build: 5270848_  
+> _ESXi: 6.5.0_   
+> _Browser: Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36_  
 > 
 > _Exception stack:_
 > 
-> _TypeError: Cannot read property 'replace' of null_
-> _at https://192.168.10.36/ui/scripts/main.js:368:10583_ 
->_at Object.r \[as forEach\] (https://192.168.10.36/ui/scripts/main.js:318:21020)_ 
->_at https://192.168.10.36/ui/scripts/main.js:368:10342_ _at Object.r \[as forEach\] (https://192.168.10.36/ui/scripts/main.js:318:21126)_ 
->_at getPropertyFields (https://192.168.10.36/ui/scripts/main.js:368:10099)_ 
->_at new <anonymous> (https://192.168.10.36/ui/scripts/main.js:368:12872)_ 
->_at Object.e \[as invoke\] (https://192.168.10.36/ui/scripts/main.js:319:3874)_ 
->_at w.instance (https://192.168.10.36/ui/scripts/main.js:319:23885)_ 
->_at https://192.168.10.36/ui/scripts/main.js:319:15273_ 
->_at r (https://192.168.10.36/ui/scripts/main.js:318:21126)_
+> _TypeError: Cannot read property 'replace' of null_  
+> _at https://192.168.10.36/ui/scripts/main.js:368:10583_   
+> _at Object.r \[as forEach\] (https://192.168.10.36/ui/scripts/main.js:318:21020)_   
+> _at https://192.168.10.36/ui/scripts/main.js:368:10342_ _at Object.r \[as forEach\] (https://192.168.10.36/ui/scripts/main.js:318:21126)_   
+> _at getPropertyFields (https://192.168.10.36/ui/scripts/main.js:368:10099)_  
+> _at new <anonymous> (https://192.168.10.36/ui/scripts/main.js:368:12872)_   
+> _at Object.e \[as invoke\] (https://192.168.10.36/ui/scripts/main.js:319:3874)_  
+> _at w.instance (https://192.168.10.36/ui/scripts/main.js:319:23885)_  
+> _at https://192.168.10.36/ui/scripts/main.js:319:15273_  
+> _at r (https://192.168.10.36/ui/scripts/main.js:318:21126)_  
 
 ### Maybe This is a Bug?
 
