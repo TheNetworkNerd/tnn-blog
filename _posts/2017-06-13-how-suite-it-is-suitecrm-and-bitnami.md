@@ -8,22 +8,25 @@ categories:
 tags: 
   - "Application Deployment"
   - "Bitnami"
+  - "Packaged Applications"
   - "Containers"
   - "SuiteCRM"
   - "Virtualization"
   - "Windows"
   - "Windows Server 2012"
-image: "Bitnami_Featured_Image_1.png"
 ---
 
 A few weeks ago I was tasked with installing SuiteCRM for a proof of concept.  Since the environment was primarily Windows, we went with a brand new Server 2012 R2 VM that was fully patched (environment had no license to use Server 2016).  We tried following the [documentation for SuiteCRM](https://suitecrm.com/wiki/index.php/Installation) but found it to be less than helpful.  No matter what we did (whether trying to use TomCat or IIS), we couldn't get the install.php page to launch to complete the install.  We certainly were not opposed to running this application on a Linux box, but there is beauty in uniformity, especially when your administrators are stronger with Windows support.  So, for a week or two this project was put on hold while we tried to find a way around the road block.
 
-At this point I could only surmise we were missing something small, perhaps something about which the documentation was not clear.  Then I happened to see these posts on [MangoLassi.it](http://Mangolassi.it) in which posters agreed the SuiteCRM documentation just is not that helpful.  In the second link below, Jared Busch started a great how-to for installing SuiteCRM on Fedora.
+At this point I could only surmise we were missing something small, perhaps something about which the documentation was not clear.  Then I happened to some these posts on [MangoLassi.it](http://Mangolassi.it) in which posters agreed the SuiteCRM documentation just is not that helpful.  Jared Busch started a great how-to for installing SuiteCRM on Fedora, for example.
 
+<!--
 - [https://mangolassi.it/topic/13667/suitecrm-install-guide-anyone](https://mangolassi.it/topic/13667/suitecrm-install-guide-anyone)
-- [https://mangolassi.it/topic/13731/how-to-install-suitecrm-7-8-3-on-fedora-25-minimal](https://mangolassi.it/topic/13731/how-to-install-suitecrm-7-8-3-on-fedora-25-minimal)
+- [https://mangolassi.it/topic/13731/how-to-install-suitecrm-7-8-3-on-fedora-25-minimal](https://mangolassi.it/topic/13731/how-to-install-suitecrm-7-8-3-on-fedora-25-minimal) 
+dead links now-->
 
-### There's This Thing Called Bitnami
+### There's This Thing Called Bitnami  
+![](Bitnami_Featured_Image_1.png)  
 
 At that point, I was really close to just installing Fedora and following Jared's guide, but then I remembered something a friend had told me about Bitnami.  He had recommended using their optimized Wordpress instance to run on Google Cloud for a different project.  If you've never heard of [Bitnami](https://bitnami.com/), they do application packaging, and when they do it, they create [customized versions of popular applications](https://bitnami.com/stacks)  that can be quickly deployed on your own infrastructure or favorite cloud provider. Here are the flavors available for most applications (completely free of charge):
 
