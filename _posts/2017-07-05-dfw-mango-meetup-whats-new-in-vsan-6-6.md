@@ -17,7 +17,7 @@ tags:
 
 With the GA of vSAN 6.6 in late April, I was asked to give a talk at the DFW Mango Meetup back in May about all the new features in this release.  The power actually went out where we were presenting, so I had to use my laptop to present with no projector.  You can find the full presentation video [here](https://www.youtube.com/watch?v=uw\_-HZHX90c) along with some corrections below.
 
-{% include embed/{youtube}.html id='{uw\_-HZHX90c}' %}
+{% include embed/{youtube}.html id='uw\_-HZHX90c' %}
 
 Here are some corrections to the video:
 
