@@ -8,8 +8,8 @@ categories:
 tags: 
   - "MangoLassi"
   - "VMware vSAN 6.6"
-  - "VMware Vsphere"
-  - "VMware Vsphere 6.5"
+  - "VMware vSphere"
+  - "VMware vSphere 6.5"
   - "VMware vSAN"
   - "vSAN"
   - "vSAN 6.6"
