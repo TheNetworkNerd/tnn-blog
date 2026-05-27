@@ -10,13 +10,12 @@ tags:
   - "VMware vSAN 6.6"
   - "VMware Vsphere"
   - "VMware Vsphere 6.5"
+  - "VMware vSAN"
   - "vSAN"
   - "vSAN 6.6"
 ---
 
-With the GA of vSAN 6.6 in late April, I was asked to give a talk at the [DFW Mango Meetup](https://mangolassi.it/topic/13370/dfw-mango-meetup-may-2017) back in May about all the new features in this release.  The power actually went out where we were presenting, so I had to use my laptop to present with no projector.  I have attached the slide deck below for anyone who wants it and some corrections to the video.
-
-https://www.youtube.com/watch?v=uw\_-HZHX90c
+With the GA of vSAN 6.6 in late April, I was asked to give a talk at the DFW Mango Meetup back in May about all the new features in this release.  The power actually went out where we were presenting, so I had to use my laptop to present with no projector.  You can find the full presentation video [here](https://www.youtube.com/watch?v=uw\_-HZHX90c) along with some corrections below.
 
 Here are some corrections to the video:
 
