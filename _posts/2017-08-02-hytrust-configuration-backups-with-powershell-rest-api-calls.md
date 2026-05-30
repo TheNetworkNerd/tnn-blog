@@ -19,7 +19,6 @@ tags:
   - "VMware"
   - "vSphere 6.5"
   - "VMware vSphere"
-image: "HytrustLogo.png"
 ---
 
 ![](Featured_KeyControlFlow.png)
