@@ -17,8 +17,13 @@ tags:
   - "Scripting"
   - "VM Encryption"
   - "VMware"
-image: "Featured_KeyControlFlow.png"
+  - "vSphere 6.5"
+  - "VMware vSphere"
+image: "HytrustLogo.png"
 ---
+
+![](Featured_KeyControlFlow.png)
+
 
 What do you do when one of your most critical applications isn't supported by your backup vendor?  Do you find a new backup vendor, change applications, figure out a different solution, or cry silently in the fetal position on the server room floor? This, like any other problem, needed a solution, and this post is to share that solution with others.  Keep reading.
 
@@ -46,11 +51,22 @@ There had to be a way to script this.  As luck would have it, the Hytrust appli
 
 The first thing to do when connecting to a system like this is to login.  The $headers variable below needed to be added to login successfully via the API call with a Hytrust username and password.  My understanding is a user with secroot access is needed for all steps shown below to succeed.
 
-`#Specify the fqdn of the server that you want backed up (could be either cluster node) $server="fqdn of my server" #Build the headers #The username and password parameters are specified in the programmer reference for Hytrust $headers=@{} $headers.add("username","myuser") $headers.add("password","mypassword") #Invoke the proper method to login and capture the authentication token as a variable (must be used to authenticate later API calls) $Token = Invoke-Restmethod -method POST -Uri "https://$server/v4/kc/login/" -body $headers`
+```powershell
+#Specify the fqdn of the server that you want backed up (could be either cluster node) 
+$server="fqdn of my server" 
+
+#Build the headers #The username and password parameters are specified in the programmer reference for Hytrust 
+$headers=@{} $headers.add("username","myuser") $headers.add("password","mypassword") 
+
+#Invoke the proper method to login and capture the authentication token as a variable (must be used to authenticate later API calls) 
+$Token = Invoke-Restmethod -method POST -Uri "https://$server/v4/kc/login/" -body $headers`
+```
 
 Based on what you see here, if you were to run
 
-`Invoke-Restmethod -method POST -Uri "https://$server/v4/kc/login/" -body $headers`
+```powershell
+Invoke-Restmethod -method POST -Uri "https://$server/v4/kc/login/" -body $headers`
+```
 
 from a Powershell window, you will be met with the following error:
 
@@ -66,25 +82,34 @@ Right out of the gate, we had an error trying to login to a Hytrust node using a
 
 - Login to one node of the Hytrust cluster (should not matter which one).
 
-- After logging in with a user that has permissions to manipulate the cluster's KMIP configuration, click on the KMIP menu. ![](3_SettingsEnable.png)
+- After logging in with a user that has permissions to manipulate the cluster's KMIP configuration, click on the KMIP menu.  
+![](3_SettingsEnable.png)
 
-- Now make sure KMIP functionality is enabled for your cluster (needed when using VM Encryption), and apply the changes. ![](4_KMIP_Enable.png)
+- Now make sure KMIP functionality is enabled for your cluster (needed when using VM Encryption), and apply the changes.  
+![](4_KMIP_Enable.png)
 
-- After the changes have been applied, click on Users.  This will take you to KMIP users. ![](5_KMIPUsersOption.png)
+- After the changes have been applied, click on Users.  This will take you to KMIP users.  
+![](5_KMIPUsersOption.png)
 
-- If you had to enable KMIP above, you probably don't have any KMIP users created.  If you're already using VM Encryption, you should have a user created in this area and can go straight to the step for downloading certificates.  To create a new user, go to Actions -> Create User. ![](6_KMIP_CreateUser1.png)
+- If you had to enable KMIP above, you probably don't have any KMIP users created.  If you're already using VM Encryption, you should have a user created in this area and can go straight to the step for downloading certificates.  To create a new user, go to Actions -> Create User.  
+![](6_KMIP_CreateUser1.png)
 
-- Give the user a name (whatever you want), and click Create.  There is no need to enter a password.  Notice the certs for this user will expire after 1 year by default (which could be changed if you want). ![](7_KMIP_CreatUser2.png)
+- Give the user a name (whatever you want), and click Create.  There is no need to enter a password.  Notice the certs for this user will expire after 1 year by default (which could be changed if you want).  
+![](7_KMIP_CreatUser2.png)
 
-- Now that you see the newly created user on the list of KMIP users, click to select the user.  Then, go to Actions -> Download Ceritificate. ![](8_KMIP_DownloadUserCertificate.png)
+- Now that you see the newly created user on the list of KMIP users, click to select the user.  Then, go to Actions -> Download Ceritificate.  
+![](8_KMIP_DownloadUserCertificate.png)
 
-- This process should download a ZIP file to your computer containing two certificates - the CA certificate for Hytrust and a user-specific certificate for KMIP communication with another server (such as vCenter). ![](9_CACert.png)
+- This process should download a ZIP file to your computer containing two certificates - the CA certificate for Hytrust and a user-specific certificate for KMIP communication with another server (such as vCenter).  
+![](9_CACert.png)
 
 - Now, import the cacert.pem file into Trusted Root Certificate Authorities store on the computer you are using per [this article](https://technet.microsoft.com/en-us/library/cc754841\(v=ws.11\).aspx#BKMK_addlocal).
 
 Once the above steps have been completed, running the command
 
-`$Token = Invoke-Restmethod -method POST -Uri "https://$server/v4/kc/login/" -body $headers`
+```powershell
+$Token = Invoke-Restmethod -method POST -Uri "https://$server/v4/kc/login/" -body $headers`
+```
 
 will place the proper authentication token into our $Token variable for use with future API calls.  If we were to show the contents of the $Token variable, it would look something like the screenshot you see below.  The result comes to us in the form of an array.  The access\_token field is unique to this specific login session (which will stay active for 1 hour by default unless you renew the token or logoff).
 
@@ -92,7 +117,14 @@ will place the proper authentication token into our $Token variable for use with
 
 ### The Second Hurdle
 
-At this point we were ready to make the magic happen and run a backup.  After running the following commands `#Build iDictionary object for calls to system_backup method $Params =@{} $Params.add("verify","false") Invoke-Restmethod -method POST -Uri "https://$server/v4/system_backup/" -headers $Token -body $Params`
+At this point we were ready to make the magic happen and run a backup.  After running the following commands 
+
+```powershell
+#Build iDictionary object for calls to system_backup method 
+$Params =@{} 
+$Params.add("verify","false") 
+Invoke-Restmethod -method POST -Uri "https://$server/v4/system_backup/" -headers $Token -body $Params
+```
 
 this error was generated:
 
@@ -104,31 +136,39 @@ Again, for searchability, we have:
 
 This specific issue was caused by the fact that $Token is a PSCustomObject variable, but we needed a variable of type iDictionary to use instead.  That is basically another array object in which we'll store the access\_token string from the array stored in the $Token variable.  Here's the bit of code I added to get around the problem and add the proper values into the variable $Token2:
 
-`#Build new iDictionary object for the headers to future API calls $Token2=@{} $Token2.add("Auth-Token",$Token.access_token)`
+```powershell
+#Build new iDictionary object for the headers to future API calls 
+$Token2=@{} $Token2.add("Auth-Token",$Token.access_token)`
+```
 
-I must confess I only knew to add the specific "Auth-Token" string as part of the iDictionary variable above after finding additional details on how the access token returned by the login call is used.
-
+I must confess I only knew to add the specific "Auth-Token" string as part of the iDictionary variable above after finding additional details on how the access token returned by the login call is used.  
 ![](12_AccessTokenDetails.png)
 
 Our newly built command using $Token2 here will generate a success message.  It creates a .bu file you can download from the cluster node to which you are connected.
 
-`Invoke-Restmethod -method POST -Uri "https://$server/v4/system_backup/" -headers $Token2 -body $Params`
+```powershell
+Invoke-Restmethod -method POST -Uri "https://$server/v4/system_backup/" -headers $Token2 -body $Params`
+```
 
-Here's the success message you would see from the Powershell console:
+Here's the success message you would see from the Powershell console:  
 
 ![](13_Result_Success.png)
 
-If you have a SMTP server configured for your cluster, you should get an e-mail that a backup was created.  But now we need to download that backup.  If you take the command above and change the method to GET instead of POST, you will see what looks like The Matrix in the Powershell console window.
-
+If you have a SMTP server configured for your cluster, you should get an e-mail that a backup was created.  But now we need to download that backup.  If you take the command above and change the method to GET instead of POST, you will see what looks like The Matrix in the Powershell console window.  
 ![](14_TheMatrix.png)
 
 Make sure to add the -OutFile parameter like this:
 
-`#Download the backup to a file (needs to have a .bu extension) in the location of your choice Invoke-Restmethod -method GET -Uri "https://$server/v4/system_backup/" -headers $Token2 -body $Params -OutFile $FileName`
+```powershell
+#Download the backup to a file (needs to have a .bu extension) in the location of your choice 
+Invoke-Restmethod -method GET -Uri "https://$server/v4/system_backup/" -headers $Token2 -body $Params -OutFile $FileName
+```
 
 This should generate another success message in the Powershell console.  The variable $FileName contains the full path to the backup file (something like C:\\MyBackup.bu for example), and you should get a success message from running the command assuming you have proper rights to the backup location specified.  Since the access token is good for one hour, go ahead and run the command below to logout:
 
-`#Logout so the token is no longer valid Invoke-Restmethod -method POST -Uri "https://$server/v4/kc/logout/" -headers $Token2`
+```powershell
+#Logout so the token is no longer valid Invoke-Restmethod -method POST -Uri "https://$server/v4/kc/logout/" -headers $Token2`
+```
 
 ### Finishing Touches and Risk Mitigation
 
@@ -154,4 +194,69 @@ Since using APIs was completely new to me, here are some links I used to get sta
 
 Here's the full sanitized script that will retain all backups created in the last 7 days in a directory of your choice.  I probably could have put it on GitHub but did not go there this time.
 
-`#Powershell Script to login to Hytrust VM and take a backup # #This script assumes you have the cacert for your Hytrust VM installed as a trusted root CA on the machine that is running Powershell # #Created by Nick Korte on 7/27/2017 # #Version History # v1.00 - Build # #Remove old backup files (anything older than 7 days) $BackupDir = "Insert File Location Here" $DaysOld = "-7" $CurrentDate = Get-Date $DeleteDate = $CurrentDate.AddDays($DaysOld) Get-ChildItem $BackupDir | Where-Object { $_.LastWriteTime -lt $DeleteDate } | Remove-Item # # #Specify the fqdn of the server that you want backed up $server="fqdn of my server" # #Short server name for backup file name generation $shortserver="server netbios name" # # #Build the headers #The username and password parameters are specified in the programmer reference for Hytrust $headers=@{} $headers.add("username","myuser") $headers.add("password","mypassword") # #Invoke the proper method to login and capture the authentication token as a variable (must be used to authenticate later API calls) $Token = Invoke-Restmethod -method POST -Uri "https://$server/v4/kc/login/" -body $headers # #Build new iDictionary object for the headers to future API calls $Token2=@{} $Token2.add("Auth-Token",$Token.access_token) # #Build iDictionary object for calls to system_backup method $Params =@{} $Params.add("verify","false") # #Take a system backup - this only creates the backup and does not download it Invoke-Restmethod -method POST -Uri "https://$server/v4/system_backup/" -headers $Token2 -body $Params # #Construct date for file name yyyymmdd $MyDate1 = get-date -uformat %Y $MyDate2 = get-date -uformat %m $MyDate3 = get-date -uformat %d $MyDate = $MyDate1 + $MyDate2 + $MyDate3 # #Construct time for file name hhmmss $MyTime1 = get-date -uformat %H $MyTime2 = get-date -uformat %M $MyTime3 = get-date -uformat %S $MyTime = $MyTime1 + $MyTime2 + $MyTime3 # #File name will be yyyymmdd.hhmmss_servername.bu $FileName = $BackupDir + "\" + $MyDate + "." + $MyTime + "_" + $shortserver + ".bu" # #Download the backup to a file (needs to have a .bu extension) in the location of your choice Invoke-Restmethod -method GET -Uri "https://$server/v4/system_backup/" -headers $Token2 -body $Params -OutFile $FileName # #Logout so the token is no longer valid Invoke-Restmethod -method POST -Uri "https://$server/v4/kc/logout/" -headers $Token2`
+```powershell
+#Powershell Script to login to Hytrust VM and take a backup
+#
+#This script assumes you have the cacert for your Hytrust VM installed as a trusted root CA on the machine that is running Powershell
+#
+#Created by Nick Korte on 7/27/2017
+#
+#Version History
+# v1.00 - Build
+#
+#Remove old backup files (anything older than 7 days)
+$BackupDir = "Insert File Location Here"
+$DaysOld = "-7"
+$CurrentDate = Get-Date
+$DeleteDate = $CurrentDate.AddDays($DaysOld)
+Get-ChildItem $BackupDir | Where-Object { $_.LastWriteTime -lt $DeleteDate } | Remove-Item
+#
+#
+#Specify the fqdn of the server that you want backed up
+$server="fqdn of my server"
+#
+#Short server name for backup file name generation
+$shortserver="server netbios name"
+#
+#
+#Build the headers
+#The username and password parameters are specified in the programmer reference for Hytrust
+$headers=@{}
+$headers.add("username","myuser")
+$headers.add("password","mypassword")
+#
+#Invoke the proper method to login and capture the authentication token as a variable (must be used to authenticate later API calls)
+$Token = Invoke-Restmethod -method POST -Uri "https://$server/v4/kc/login/" -body $headers
+#
+#Build new iDictionary object for the headers to future API calls
+$Token2=@{}
+$Token2.add("Auth-Token",$Token.access_token)
+#
+#Build iDictionary object for calls to system_backup method
+$Params =@{}
+$Params.add("verify","false")
+#
+#Take a system backup - this only creates the backup and does not download it
+Invoke-Restmethod -method POST -Uri "https://$server/v4/system_backup/" -headers $Token2 -body $Params
+#
+#Construct date for file name yyyymmdd
+$MyDate1 = get-date -uformat %Y
+$MyDate2 = get-date -uformat %m
+$MyDate3 = get-date -uformat %d
+$MyDate = $MyDate1 + $MyDate2 + $MyDate3
+#
+#Construct time for file name hhmmss
+$MyTime1 = get-date -uformat %H
+$MyTime2 = get-date -uformat %M
+$MyTime3 = get-date -uformat %S
+$MyTime = $MyTime1 + $MyTime2 + $MyTime3
+#
+#File name will be yyyymmdd.hhmmss_servername.bu
+$FileName = $BackupDir + "\" + $MyDate + "." + $MyTime + "_" + $shortserver + ".bu"
+#
+#Download the backup to a file (needs to have a .bu extension) in the location of your choice
+Invoke-Restmethod -method GET -Uri "https://$server/v4/system_backup/" -headers $Token2 -body $Params -OutFile $FileName
+#
+#Logout so the token is no longer valid
+Invoke-Restmethod -method POST -Uri "https://$server/v4/kc/logout/" -headers $Token2
+```
