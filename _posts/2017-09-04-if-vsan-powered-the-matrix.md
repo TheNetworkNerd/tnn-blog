@@ -23,7 +23,7 @@ After finding out I was approved to attend VMworld this year, I signed up to pre
 
 The idea for the talk was pretty simple.  If vSAN powered The Matrix, would we plan it carefully like an enterprise technology rather than trying to run it on whatever hardware is available in the server closet?  Is cost really a barrier to people using this technology, or are there ways to save money and still harness the power of VMware vSAN?  What are some other pitfalls to be aware of?  [Watch the video](https://www.youtube.com/watch?v=EHJlHPu6h0Y), and see for yourself (session VMTN6733U).  I hope you will find it helpful.
 
-{% include embed/{Platform}.html id='EHJlHPu6h0Y' %}
+{% include embed/youtube.html id='EHJlHPu6h0Y' %}
 
  
 
