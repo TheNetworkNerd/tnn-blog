@@ -16,8 +16,13 @@ tags:
   - "VMworld US"
   - "VMworld US 2017"
   - "vSAN"
-image: "WhatIfIToldYou.jpg"
+  - "VMware vSAN"
+  - "VMworld Conference"
+  - "Technology Conferences"
+  - "Tech Conferences"
 ---
+
+![](WhatIfIToldYou.jpg)
 
 After finding out I was approved to attend VMworld this year, I signed up to present a vBrownBag Tech Talk on VMware vSAN.  Just a few weeks before the conference, I was lucky to secure an official slot on the agenda for Thursday afternoon.
 
