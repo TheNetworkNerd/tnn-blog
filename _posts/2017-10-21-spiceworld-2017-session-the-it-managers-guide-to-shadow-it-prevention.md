@@ -86,6 +86,6 @@ There are comments from the attendees that you may not be able to make out from 
 
 ### And Now for the Video...
 
-![video link)(https://youtu.be/wpiAKmmP15U)
+[Watch the Presentation on YouTube](https://youtu.be/wpiAKmmP15U)
 
 {% include embed/youtube.html id='wpiAKmmP15U' %}
