@@ -13,6 +13,8 @@ tags:
   - "VMTN"
   - "VMUG"
   - "VMware"
+  - "Technical Community"
+  - "Technical Communities"
 image: "CommunityMesh.png"
 ---
 
@@ -38,7 +40,7 @@ Up until 2013, Spiceworks was all I knew.  It was the one stop shop for everyth
 
 As a VMware administrator, I also got involved in attending the [VMUG](https://www.vmug.com/) events.  These were new and different from SpiceCorps, and the discussions seemed to be geared toward companies that invested a great deal in VMware licensing or had very large environments.  As a member of a small IT department, I didn't know what it was like to have a dedicated VMware administrator separate from the storage administrator or the backup administrator.  But it was still interesting to talk to those people about how their environments were different than mine and how they had made it to that point in their career.
 
-I started participating in new communities like [MangoLassi](https://mangolassi.it) in 2014.  I posted a little in the [VMTN](https://communities.vmware.com/community/vmtn) forums but could not seem to keep up with it well.  My wife encouraged me to join Twitter in 2015([@NetworkNerd\_](https://twitter.com/networknerd_)) even though I was very much against it at the time and couldn't really see the value.
+I started participating in new communities like [MangoLassi](https://mangolassi.it) in 2014.  I posted a little in the [VMTN](https://communities.vmware.com/community/vmtn) forums but could not seem to keep up with it well.  My wife encouraged me to join Twitter in 2015 ([@NetworkNerd\_](https://twitter.com/networknerd_)) even though I was very much against it at the time and couldn't really see the value.
 
 I started Tweeting slowly.  A couple of times I was able to get a support ticket for work escalated because of my participation on Twitter.  I started following vendors that interested me such as VMware, Veeam, Mimecast, Epicor, and StorageCraft.  I would login from time to time and read up on the current news from these companies to stay abreast of the changing technology landscape.
 
