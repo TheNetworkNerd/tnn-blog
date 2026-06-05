@@ -14,8 +14,9 @@ tags:
   - "VMworld 2017"
   - "VMworld US"
   - "VMworld US 2017"
-image: "VMworld2017_2.png"
 ---
+
+![](VMworld2017_2.png)
 
 I've seen a number of blogs lately recommending sessions to attend for this year's VMworld.  And then there are a number of blogs people have written for the first time attendee which have been extremely helpful.  Since I seem to be deriving a ton of value from various podcasts lately, I thought I would post a few that are specific to VMworld in one spot so attendees old and new can enjoy.  I've also included a podcast from The Geek Whisperers (one of my absolute favorites) for general recommendations on managing time at conferences.
 

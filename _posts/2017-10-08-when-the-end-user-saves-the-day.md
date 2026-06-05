@@ -8,6 +8,8 @@ categories:
 tags: 
   - "End User"
   - "Humility"
+  - "Tech Support"
+  - "Help Desk"
 image: "excellence-error.jpg"
 ---
 

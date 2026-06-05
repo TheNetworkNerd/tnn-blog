@@ -9,7 +9,13 @@ categories:
 tags: 
   - "Shadow IT"
   - "Spiceworld"
+  - "Spiceworld Conference"
   - "Spiceworld 2017"
+  - "Technology Conference"
+  - "Technology Conferences"
+  - "Tech Conference"
+  - "Tech Conferences"
+  - "Presentation"
 image: "YouTubeThumbnail-SW2017.jpg"
 ---
 
@@ -17,7 +23,7 @@ This year I was blessed to present a session on Shadow IT at Spiceworld 2017, an
 
 ### What Do You Mean Breakout Sessions Were not Recorded This Year?
 
-When I found out the breakout sessions were not going to be recorded this year, I posted this [call to action thread](https://community.spiceworks.com/topic/2044956-spiceworld-2017-presenters-a-call-to-action) for all Spiceworld presenters in hopes that as many of us who could would video the presentation and post in the community and on YouTube.  Many presenters did just that.  This post is my bid to give you the Powerpoint slides, the video, a transcription of some of the best questions and answers, and the questions people sent in via Twitter in one spot.
+When I found out the breakout sessions were not going to be recorded this year, I posted this [call to action thread](https://community.spiceworks.com/topic/2044956-spiceworld-2017-presenters-a-call-to-action) for all Spiceworld presenters in hopes that as many of us who could would video the presentation and post in the community and on YouTube.  Many presenters did just that.  This post is my bid to give you the video, a transcription of some of the best questions and answers, and the questions people sent in via Twitter in one spot.
 
 For those who want more, all you have to do is keep reading.
 
@@ -70,8 +76,6 @@ There are comments from the attendees that you may not be able to make out from 
 
 - An attendee recommended looking into Splunk for centralized logging and possibly even SIEM.
 
- 
-
 - What's the best way to see if someone is using Dropbox, Drive, etc. with unauthorized company data?
     - Monitor to see if these applications are installed on workstations (i.e. software inventory) or if users are visiting the sites for these services on company computers.  If you have the right filtering technologies in place for company computers, it is possible to block all traffic to these services regardless of where someone takes their laptop.  But I will also say companies like Dropbox might tell you which users within the company have registered with the service using a company e-mail address.  If you can prove the software is installed and that employees are using Dropbox personal plans registered to company e-mail addresses, this could be great leverage for getting budget to purchase a business plan with administrative controls and auditing.
 
@@ -82,4 +86,6 @@ There are comments from the attendees that you may not be able to make out from 
 
 ### And Now for the Video...
 
-https://youtu.be/wpiAKmmP15U
+![video link)(https://youtu.be/wpiAKmmP15U)
+
+{% include embed/youtube.html id='wpiAKmmP15U' %}
