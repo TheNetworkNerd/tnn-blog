@@ -13,8 +13,11 @@ tags:
   - "VMware vSAN Licensing"
   - "vSAN"
   - "vSAN 6.6"
-image: "Captain_vSAN.png"
+  - "VMware"
+  - "vCenter"
 ---
+
+![](Captain_vSAN.png)
 
 Excitement was in the air for the technology team of Beast Mode, Inc.  After months of planning, some shiny new [vSAN ReadyNodes](http://vsanreadynode.vmware.com/RN/RN) finally arrived at the datacenter.  The implementation team gathered to rack and cable the new cluster and all other necessary equipment.  Even though ESXi was installed on the hosts with basic network settings configured, there was no datastore on which to install vCenter.  They had yet to configure the vSAN cluster.
 
@@ -52,9 +55,7 @@ His voice filled the room.  But it was calming and not angry, sympathetic and n
 
 ![](11_MyVMwareTotalof4_Detail.png)
 
- 
-
-"Change the dropdown that says 'View License Keys' so that 'Combine License Keys' is selected, Henry."
+ "Change the dropdown that says 'View License Keys' so that 'Combine License Keys' is selected, Henry."
 
 ![](12_CombineLicenseKeys.png)
 
@@ -66,15 +67,11 @@ His voice filled the room.  But it was calming and not angry, sympathetic and n
 
 ![](14_Combine4Keys_3.png)
 
- 
-
 "Just confirm you have read and understand the warning, Henry.  Then click Continue."
 
 ![](15_Combine4Keys_2.png)
 
- 
-
-Henry was excited.  "I see our new key!  It looks like we can even e-mail this for our records if we want.  I'll go ahead and click Ok."
+ Henry was excited.  "I see our new key!  It looks like we can even e-mail this for our records if we want.  I'll go ahead and click Ok."
 
 ![](16_Combine4Keys_4_NewKey.png)
 
@@ -98,7 +95,7 @@ And this time, when they applied the license to the 4-node cluster, there were n
 
 ![](21_ClusterLicensedFeaturesFinal.png)
 
-"Team, this is where I leave you," said Captain vSAN.  "The problems will come, but never stop looking for answers.  Seek to educate others, and remember the things I taught you.  Perhaps we will meet again someday."  Before anyone could thank him, Captain vSAN was gone just as quickly as he had arrived.
+"Team, this is where I leave you," said Captain vSAN.  "The problems will come, but never stop looking for answers.  Seek to educate others, and remember the things I taught you.  Perhaps we will meet again someday." Before anyone could thank him, Captain vSAN was gone just as quickly as he had arrived.
 
 Minutes later, John walked back into the room.  No one realized he was nowhere to be found during all of the excitement until now.  "How's the project going, folks?"  The team let John know what Captain vSAN had done to help them solve the cluster license mystery and shared what they had learned.  "I can't believe I missed it," said John.  "Maybe I'll get to meet him some day."
 

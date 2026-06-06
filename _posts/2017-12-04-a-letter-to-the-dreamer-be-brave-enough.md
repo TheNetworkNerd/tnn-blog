@@ -9,8 +9,13 @@ tags:
   - "Dreams"
   - "Job"
   - "VMware"
-image: "BeBraveEnough-e1512359755790.png"
+  - "Job Change"
+  - "Interview Process"
+  - "Job Interview"
+  - "Hiring Process"
 ---
+
+![](BeBraveEnough-e1512359755790.png)
 
 When is the last time you remember having a dream of some sort of achievement?  Maybe it was what you wanted to be when you grew up as of Kindergarten graduation, or perhaps it was something else.  Are the young the only ones who dream? Are they the only ones who would pursue a dream?  With age comes responsibility.  Marriage, children, a mortgage, and a job that supports the family are all part of it.  And as responsibility comes, we tend do give up on our dreams.  We give up our own dreams for those of our children.  The dream becomes, as Langston Hughes put it, [deferred](https://www.poetryfoundation.org/poems/46548/harlem).
 

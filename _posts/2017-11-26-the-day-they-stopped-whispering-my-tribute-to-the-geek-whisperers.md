@@ -12,6 +12,10 @@ tags:
   - "VMworld 2017"
   - "VMworld US"
   - "VMworld US 2017"
+  - "Technology Careers"
+  - "Tech Career"
+  - "Tech Careers"
+  - "The Geek Whisperers"
 image: "GeekWhisperersFinal.png"
 ---
 

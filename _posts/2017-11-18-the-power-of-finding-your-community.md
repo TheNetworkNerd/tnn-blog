@@ -15,6 +15,7 @@ tags:
   - "VMware"
   - "Technical Community"
   - "Technical Communities"
+  - "Community"
 image: "CommunityMesh.png"
 ---
 
