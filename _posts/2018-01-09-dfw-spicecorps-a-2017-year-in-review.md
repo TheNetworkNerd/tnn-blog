@@ -36,41 +36,41 @@ In case you weren't able to make it, here's an overview of 2017 in our SpiceCorp
 ### What Were Our Topics at Each Meeting?
 
 - [March 23, 2017](https://community.spiceworks.com/meeting/show/2349) - Fort Worth
-    - Flash, Object, and Cloud Storage - Making It Work Together in Your Data Center
+    - **Flash, Object, and Cloud Storage - Making It Work Together in Your Data Center**
         - George Crump of Storage Switzerland
-    - Enhance Spiceworks Reporting with Power BI
+    - **Enhance Spiceworks Reporting with Power BI**
         - Flaviu Borcoman
     - [Read the meeting notes](https://community.spiceworks.com/meeting/notes/2349)
 
 - [April 25, 2017](https://community.spiceworks.com/meeting/show/2359) - Rackmount Solutions Offices
-    - The Science of Soundproof Cabinets
+    - **The Science of Soundproof Cabinets**
         - Rackmount Solutions
-    - Using VMware Horizon View
+    - **Using VMware Horizon View**
         - Marc Stevens
     - [Read the meeting notes](https://community.spiceworks.com/meeting/notes/2359)
 
 - [June 29, 2017](https://community.spiceworks.com/meeting/show/2443) - Dallas Makerspace
-    - Open mic night for general discussions
+    - **Open mic night for general discussions**
     - [Read the meeting notes](https://community.spiceworks.com/meeting/notes/2443)
 
 - [July 25, 2017](https://community.spiceworks.com/meeting/show/2461) - Dave and Buster's
-    - Technical overview of Arctic Wolf's security-as-a-service offering
+    - **Technical overview of Arctic Wolf's security-as-a-service offering**
     - [Read the meeting notes](https://community.spiceworks.com/meeting/notes/2461)
 
 - [September 12, 2017](https://community.spiceworks.com/meeting/show/2498) - Hardie's Fruit and Vegetable Company
-    - How I Use Google G Suite for My Business
+    - **How I Use Google G Suite for My Business**
         - Ray Hicks, Greg Carreon, and Chris Lambert
         - {% include embed/youtube.html id='VMKfsT9ITEk' compact=1 %}
-    - Office 365 Panel Discussion
+    - **Office 365 Panel Discussion**
         - Marc Stevens, Scott Alan Miller
         - {% include embed/youtube.html id='TkMhlnZLkI4' compact=1 %}
     - [Read the meeting notes](https://community.spiceworks.com/topic/2053346-dfw-spicecorps-9-12-2017-google-g-suite-vs-microsoft-office-365) (includes presentation highlights and links to recorded presentations).
 
 - [November 16, 2017](https://community.spiceworks.com/meeting/show/2534) - North Richland Hills Library
-    - A Recruiter's Advice to the IT Pro
+    - **A Recruiter's Advice to the IT Pro**
         - Mark Franklin
         - {% include embed/youtube.html id='4t-0bmhgsFc' compact=1 %}
-    - Career Panel - Is Management the only Way?
+    - **Career Panel - Is Management the only Way?**
         - Brian Nelson, Jason Shiplett, David Johnson, Brian Watson
         - {% include embed/youtube.html id='IydxYgJl7BQ' compact=1 %}
     - [Read the meeting notes](https://community.spiceworks.com/topic/2090834-dfw-spicecorps-11-16-2017-career-night) (includes presentation highlights and links to recorded presentations).
