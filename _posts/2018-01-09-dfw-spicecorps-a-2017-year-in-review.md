@@ -60,15 +60,19 @@ In case you weren't able to make it, here's an overview of 2017 in our SpiceCorp
 - [September 12, 2017](https://community.spiceworks.com/meeting/show/2498) - Hardie's Fruit and Vegetable Company
     - How I Use Google G Suite for My Business
         - Ray Hicks, Greg Carreon, and Chris Lambert
+        - {% include embed/youtube.html id='VMKfsT9ITEk' compact=1 %}
     - Office 365 Panel Discussion
         - Marc Stevens, Scott Alan Miller
+        - {% include embed/youtube.html id='TkMhlnZLkI4' compact=1 %}
     - [Read the meeting notes](https://community.spiceworks.com/topic/2053346-dfw-spicecorps-9-12-2017-google-g-suite-vs-microsoft-office-365) (includes presentation highlights and links to recorded presentations).
 
 - [November 16, 2017](https://community.spiceworks.com/meeting/show/2534) - North Richland Hills Library
     - A Recruiter's Advice to the IT Pro
         - Mark Franklin
+        - {% include embed/youtube.html id='4t-0bmhgsFc&t=83s' compact=1 %}
     - Career Panel - Is Management the only Way?
         - Brian Nelson, Jason Shiplett, David Johnson, Brian Watson
+        - {% include embed/youtube.html id='IydxYgJl7BQ' compact=1 %}
     - [Read the meeting notes](https://community.spiceworks.com/topic/2090834-dfw-spicecorps-11-16-2017-career-night) (includes presentation highlights and links to recorded presentations).
  
 

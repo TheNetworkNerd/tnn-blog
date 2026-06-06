@@ -69,7 +69,8 @@ Here's a list of my favorite episodes:
     
 - The Dom Delfino Episodes - these are both too good to be counted as separate list items. 
     - [Episode 85 - Be Great Right Now](http://geek-whisperers.com/2015/05/be-great-right-now-with-dom-delfino-ep-85/)  
-    - [Episode 121 - The Domolosophy of Management](http://geek-whisperers.com/2016/09/the-domolosophy-of-management-with-dom-delfino-ep-121/) What will Dom Delfino never do again?
+    - [Episode 121 - The Domolosophy of Management](http://geek-whisperers.com/2016/09/the-domolosophy-of-management-with-dom-delfino-ep-121/) 
+        - What will Dom Delfino never do again?
 
 - [Episode 88 - How to Recognize Your Career Options](http://geek-whisperers.com/2015/06/how-to-recognize-your-career-options-ep-88-waneel-lakhani/)
     - This is very good advice from someone who has been down a number of career paths.
