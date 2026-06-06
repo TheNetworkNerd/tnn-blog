@@ -7,7 +7,9 @@ categories:
   - "VMware"
 tags: 
   - "Blogs"
+  - "Technical Blogs"
   - "Product Releases"
+  - "VMware Product Releases"
   - "VMware vSAN 6.7"
   - "VMware vSphere"
   - "VMware vSphere 6.7"
@@ -16,8 +18,9 @@ tags:
   - "vSAN 6.7"
   - "vSphere"
   - "vSphere 6.7"
-image: "1_vSphere_6.7.png"
 ---
+
+![](1_vSphere_6.7.png)
 
 It's no surprise that VMware vSphere 6.7 was just released.  Hot on the heels of this release was vSphere 6.5U2.  If you're like me, sometimes it is difficult to stay on top of the latest blogs when new releases hit unless you're polling Twitter daily.  To help us all stay in the know, this post will serve as an aggregated list of blogs related to the release of vSphere / vSAN / vRealize Operations 6.7 and vSphere 6.5U2.  You'll also find other product releases have dropped in under the radar such as vRealize Automation 7.4, SRM and vSphere Replication 8.1, vRealize Business for Cloud 7.4, and Log Insight 4.6.
 
@@ -29,9 +32,7 @@ Make yourself a fresh cup of java, and get ready to learn about what's new and e
     - Upgrading from 6.5U2 to 6.7 is **NOT** supported.
 - [VMware Roundtable Community Podcast #433 - vSphere 6.5U2 w/Nigel Hickey & vBrownbag Alastair Cooke](http://recordings.talkshoe.com.s3-website-us-east-1.amazonaws.com/TC-19367/TS-1248733.mp3)
 
- 
-
-#### vSphere 6.7
+ #### vSphere 6.7
 
 - General
     - [Introducing VMware vSphere 6.7](https://blogs.vmware.com/vsphere/2018/04/introducing-vmware-vsphere-6-7.html)
