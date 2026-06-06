@@ -12,8 +12,11 @@ tags:
   - "VMware"
   - "VMware vCenter"
   - "VxRail"
-image: "1_StartVxRailInstall.png"
+  - "Deployment Planning"
+  - "Decision Tradeoffs"
 ---
+
+![](1_StartVxRailInstall.png)
 
 Picture yourself in front of a rack of [VxRail](https://www.dellemc.com/en-us/converged-infrastructure/vxrail/index.htm) appliances.  Ah, the bright shine of freshly racked and cabled new gear!  The network team has VLANs ready.  The operations team has picked out naming conventions for host names and virtual machines.  Storage capacity will be more than enough to support growth efforts for the next year.  It's finally time to dive into the hyper-converged infrastructure pool of goodness.
 
