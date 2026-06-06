@@ -69,7 +69,7 @@ In case you weren't able to make it, here's an overview of 2017 in our SpiceCorp
 - [November 16, 2017](https://community.spiceworks.com/meeting/show/2534) - North Richland Hills Library
     - A Recruiter's Advice to the IT Pro
         - Mark Franklin
-        - {% include embed/youtube.html id='4t-0bmhgsFc&t=83s' compact=1 %}
+        - {% include embed/youtube.html id='4t-0bmhgsFc' compact=1 %}
     - Career Panel - Is Management the only Way?
         - Brian Nelson, Jason Shiplett, David Johnson, Brian Watson
         - {% include embed/youtube.html id='IydxYgJl7BQ' compact=1 %}
