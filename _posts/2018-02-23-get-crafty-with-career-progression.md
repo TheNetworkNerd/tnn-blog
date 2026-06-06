@@ -7,8 +7,15 @@ categories:
   - "Career"
 tags: 
   - "Career"
-image: "GetCrafty.png"
+  - "Tech Careers"
+  - "Technology Careers"
+  - "Reflection"
+  - "Career Planning"
+  - "Career Progression"
+  - "Technical Career Progression"
 ---
+
+![](GetCrafty.png)
 
 A recent discussion with a friend inspired this post.
 
