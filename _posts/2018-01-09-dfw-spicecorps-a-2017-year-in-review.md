@@ -6,16 +6,22 @@ permalink: /2018/01/09/dfw-spicecorps-a-2017-year-in-review/
 categories: 
   - "Career"
   - "Community"
-image: "SpiceCorpsLogo.png"
+tags:
+ - "SpiceCorps"
+ - "Technical Community"
+ - "Tech Community"
+ - "Community"
+ - "Meetup Group"
+ - "User Group"
 ---
+
+![](SpiceCorpsLogo.png)
 
 Regardless of your field, if you aren't a member of a professional networking group / community, I hope 2018 will be the year you choose to get involved.  There are [powerful benefits]({% link _posts/2017-11-18-the-power-of-finding-your-community.md %}) to your career for participating.
 
 I'm the kind of guy who participates in IT communities and happen to be the co-leader of the [SpiceCorps of Dallas / Fort Worth](https://community.spiceworks.com/spicecorps/dallas-fort-worth).  What is SpiceCorps, you ask?  At the core, [SpiceCorps](https://community.spiceworks.com/spicecorps) are local meetings of IT professionals to discuss technology, career, and support one another as we navigate the fast and furious world of IT.  These groups were formed by members of the [Spiceworks community](https://community.spiceworks.com/) after the first [Spiceworld](https://www.spiceworks.com/spiceworld/) in 2008, originally meeting to discuss the Spiceworks application.  Over time, the conversations evolved into general IT discussion and became what you see today.
 
-In case you weren't able to make it, here's an overview of 2017 in our SpiceCorps.  For some meetings we didn't do a good job of taking detailed notes on presentation content, while in other cases we hit the home run by filming.
-
- 
+In case you weren't able to make it, here's an overview of 2017 in our SpiceCorps.  For some meetings we didn't do a good job of taking detailed notes on presentation content, while in other cases we hit the home run by filming. 
 
 ### Fun Facts about the SpiceCorps of Dallas / Fort Worth
 
@@ -26,8 +32,6 @@ In case you weren't able to make it, here's an overview of 2017 in our SpiceCorp
 - Three of the meetings were sponsored by vendors - [Storage Switzerland](https://storageswiss.com/), [Rackmount Solutions](https://www.rackmountsolutions.net/), and [Arctic Wolf](https://arcticwolf.com/).  In these meetings, we ask vendors to help find a venue, provide us with food and beverage, and deliver technical content about the problems their technology solves.  Then we pick their brains on how it works.
 - Three of the meetings were unsponsored.  That means we found our own venue and chose the content, utilizing members of the SpiceCorps as presenters.
 - One meeting specifically had no set agenda and was an open discussion forum.  We talked for at least 2 hours and ended up with content ideas for future meetings.
-
- 
 
 ### What Were Our Topics at Each Meeting?
 
@@ -66,7 +70,6 @@ In case you weren't able to make it, here's an overview of 2017 in our SpiceCorp
     - Career Panel - Is Management the only Way?
         - Brian Nelson, Jason Shiplett, David Johnson, Brian Watson
     - [Read the meeting notes](https://community.spiceworks.com/topic/2090834-dfw-spicecorps-11-16-2017-career-night) (includes presentation highlights and links to recorded presentations).
-
  
 
 ### How Can I Get Involved?
@@ -80,7 +83,6 @@ If you like what you saw above and want to talky nerdy with IT pros in Dallas / 
 Please reach out to either me or my co-leader Brian Watson through the Spiceworks community, on Twitter / LinkedIn, or drop a comment on this blog post.
 
  
-
 ### What if I'm not in Dallas / Fort Worth but would like to find a SpiceCorps?
 
 You can [search for a SpiceCorps](https://community.spiceworks.com/spicecorps/find-your-it-meet-up) in your area or [start one](https://community.spiceworks.com/spicecorps/be-a-spiceleader) if there isn't one close to you.
