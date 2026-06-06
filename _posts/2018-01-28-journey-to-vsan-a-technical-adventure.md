@@ -13,8 +13,13 @@ tags:
   - "VMware Vsphere"
   - "vSAN"
   - "vSphere"
-image: "vSAN_Licensing.png"
+  - "vSAN Licensing"
+  - "VMware vSAN Editions"
+  - "Technical Validation"
+  - "vSAN ReadyNodes"
 ---
+
+![](vSAN_Licensing.png)
 
 Imagine having just configured some LUNs on your new PowerVault MD3820i.  Encryption key management has been configured, and 20 SEDs (self-encrypting drives) are spinning and ready for use with vSphere.  There are 4 SSDs in the PowerVault to use for caching that just need to be configured.
 
@@ -46,9 +51,7 @@ The original BOM was:
 - vCenter Standard
 - Four PowerConnect switches
 
- 
-
-The new BOM was:
+ The new BOM was:
 
 - Four single-CPU PowerEdge servers (modified ReadyNodes), each with 2 disk groups (SSD for cache, HDDs for capacity)
 - vSAN Standard for 4 sockets
@@ -60,8 +63,6 @@ The new BOM was:
 ### Lessons Learned
 
 Technical validation is a big deal when making any purchase.  Sometimes the vendor doesn't get it right.  Sometimes we as IT buyers don't get it right.  When mistakes are made, consider all of the options before asking for more budget.  Be willing to work with your vendor (assuming you have a good relationship with them) to try and right the ship.   I guarantee both parties will learn and grow from the experience.
-
- 
 
 ### Helpful Links
 
