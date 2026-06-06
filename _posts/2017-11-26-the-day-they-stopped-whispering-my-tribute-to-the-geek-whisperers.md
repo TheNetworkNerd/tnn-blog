@@ -43,68 +43,57 @@ Even though episodes about marketing and public relations may not be directly ap
 
 Here's a list of my favorite episodes:
 
-- [Episode 1 - The Twitters Won't Tweet Itself](http://geek-whisperers.com/2013/02/podcast-1-the-twitters-wont-tweet-itself/) Start here just to understand the background of the hosts.  Maybe that will set the stage for the perspective they bring.
-    
+- [Episode 1 - The Twitters Won't Tweet Itself](http://geek-whisperers.com/2013/02/podcast-1-the-twitters-wont-tweet-itself/)
+Start here just to understand the background of the hosts.  Maybe that will set the stage for the perspective they bring.
 
-- [Episode 34 - Interview with a Unicorn](http://geek-whisperers.com/2014/01/episode-34-interview-with-a-unicorn-or-practitioner-tips/) Get an idea of what a unicorn is as Amy Lewis defines it, and absorb some great tips from Chris Wahl.
+- [Episode 34 - Interview with a Unicorn](http://geek-whisperers.com/2014/01/episode-34-interview-with-a-unicorn-or-practitioner-tips/)
+Get an idea of what a unicorn is as Amy Lewis defines it, and absorb some great tips from Chris Wahl.
 
 - [Episode 54 - Using the Force to Create Your Dream Job](http://geek-whisperers.com/2014/07/using-the-force-to-create-your-dream-job-episode-54/)
+This is a great episode.  Listen to how Amy, John, and Matt created new roles for themselves.
     
-    This is a great episode.  Listen to how Amy, John, and Matt created new roles for themselves.
-    
-
-- [Episode 57 - The Non-Linear Career Path](http://geek-whisperers.com/2014/09/the-nonlinear-career-path-episode-57/) The guest on this episode fell into IT and just kept coming back.
+- [Episode 57 - The Non-Linear Career Path](http://geek-whisperers.com/2014/09/the-nonlinear-career-path-episode-57/)
+The guest on this episode fell into IT and just kept coming back.
 
 - [Episode 69 - Marketing, Blogging, and Community - Talking with Duncan Epping](http://geek-whisperers.com/2014/12/marketing-blogging-community-talking-with-duncan-epping-episode-69/)
+Duncan Epping got into blogging first and then technology.  I found it super interesting.
     
-    Duncan Epping got into blogging first and then technology.  I found it super interesting.
-    
-
 - [Episode 73 - You're only as Good as Your Last Good Deed](http://geek-whisperers.com/2015/01/youre-only-as-good-as-your-last-good-deed-nick-weaver-ep-73/)
-    
-    Nick Weaver carried himself to that next career level by embracing his individualism and his willingness to take on any challenge.
-    
+Nick Weaver carried himself to that next career level by embracing his individualism and his willingness to take on any challenge.   
 
-- [Episode 74 - The Geek Who Listened to Whisperers](http://geek-whisperers.com/2015/01/the-geek-who-listened-to-whisperers-keith-townsend-episode-74/) Keith Townsend changed his career path by quitting his job and pursuing a MBA.
+- [Episode 74 - The Geek Who Listened to Whisperers](http://geek-whisperers.com/2015/01/the-geek-who-listened-to-whisperers-keith-townsend-episode-74/)
+Keith Townsend changed his career path by quitting his job and pursuing a MBA.
 
 - [Episode 75 - The CEO of Your Own Career](http://geek-whisperers.com/2015/02/the-ceo-of-your-own-career-josh-atwell-ep-75/)
+This one is packed with great advice from Josh Atwell.
     
-    This one is packed with great advice from Josh Atwell.
-    
-
-- The Dom Delfino Episodes - these are both too good to be counted as separate list items. [Episode 85 - Be Great Right Now](http://geek-whisperers.com/2015/05/be-great-right-now-with-dom-delfino-ep-85/)  [Episode 121 - The Domolosophy of Management](http://geek-whisperers.com/2016/09/the-domolosophy-of-management-with-dom-delfino-ep-121/) What will Dom Delfino never do again?
+- The Dom Delfino Episodes - these are both too good to be counted as separate list items. 
+    - [Episode 85 - Be Great Right Now](http://geek-whisperers.com/2015/05/be-great-right-now-with-dom-delfino-ep-85/)  
+    - [Episode 121 - The Domolosophy of Management](http://geek-whisperers.com/2016/09/the-domolosophy-of-management-with-dom-delfino-ep-121/) What will Dom Delfino never do again?
 
 - [Episode 88 - How to Recognize Your Career Options](http://geek-whisperers.com/2015/06/how-to-recognize-your-career-options-ep-88-waneel-lakhani/)
+This is very good advice from someone who has been down a number of career paths.
     
-    This is very good advice from someone who has been down a number of career paths.
+- [Episode 97 - Life as an EMC Leader with Chad Sakac](http://geek-whisperers.com/2015/10/life-as-an-emc-leader-with-chad-sakac-ep-97/)
+The guest on this episode is a super smart guy who eventually became an executive.  It's filled with great advice in my opinion.
     
-
-- [Episode 97 - Life as an EMC Leader with Chad Sakac](http://geek-whisperers.com/2015/10/life-as-an-emc-leader-with-chad-sakac-ep-97/) The guest on this episode is a super smart guy who eventually became an executive.  It's filled with great advice in my opinion.
-    
-
 - [Episode 104 - Failure and Failing in Public](http://geek-whisperers.com/2016/02/failure-failing-in-public-ep-104/)
+This is one really hit home with me after [I failed a certification test]({% link _posts/2017-08-14-learning-from-failure-and-the-third-try-vcp-dcv-6-delta.md %}) earlier this year.  Maybe something in it will resonate with you.
     
-    This is one really hit home with me after [I failed a certification test]({% link _posts/2017-08-14-learning-from-failure-and-the-third-try-vcp-dcv-6-delta.md %}) earlier this year.  Maybe something in it will resonate with you.
+- The Silicon Valley VMUG Episodes - these are too good to separate. 
+    - [Episode 109 - Geek Whispering at the Silicon Valley VMUG](http://geek-whisperers.com/2016/04/geek-whispering-at-the-silicon-valley-vmug-tues-apr-12/)
+    - [Episode 110 - Investing in Career Insurance: VMware User Group Recap](http://geek-whisperers.com/2016/04/investing-in-career-insurance-vmware-user-group-recap-episode-110/) The Geek Whisperers advise people to tell stories and invest in career insurance.
     
-
-- The Silicon Valley VMUG Episodes - these are too good to separate. [Episode 109 - Geek Whispering at the Silicon Valley VMUG](http://geek-whisperers.com/2016/04/geek-whispering-at-the-silicon-valley-vmug-tues-apr-12/)
-    
-    [Episode 110 - Investing in Career Insurance: VMware User Group Recap](http://geek-whisperers.com/2016/04/investing-in-career-insurance-vmware-user-group-recap-episode-110/) The Geek Whisperers advise people to tell stories and invest in career insurance.
-    
-
 - [Episode 119 - Keep Learning and Keeping Connections after Changing Jobs](http://geek-whisperers.com/2016/09/keep-learning-and-keeping-connections-after-changing-jobs-werin-banks-episode-119/)
-    
-    I really like the way Erin Banks kept in touch with the people she used to work with and how she leaned on those people to help her.
+I really like the way Erin Banks kept in touch with the people she used to work with and how she leaned on those people to help her.
     
 
 - [Episode 125 - Models of Contribution Throughout Your Career](http://geek-whisperers.com/2016/11/models-of-contribution-throughout-your-career-episode-125/)
-    
-    Have you progressed beyond stage 1?  Does progressing mean management is the only way?
+Have you progressed beyond stage 1?  Does progressing mean management is the only way?
     
 
 - [Episode 133 - Staying Technical and Customer Facing](http://geek-whisperers.com/2017/06/staying-technical-and-customer-facing-with-leah-schoeb-episode-133/)
-    
-    Leah took an inventory of what she's really good at and used it to help her find that next job.
+Leah took an inventory of what she's really good at and used it to help her find that next job.
     
 
 ### Did They Really Stop Whispering?
