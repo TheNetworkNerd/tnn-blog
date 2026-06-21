@@ -8,8 +8,13 @@ categories:
 tags: 
   - "Mentoring"
   - "Podcasts"
-image: "master_apprentice_yoda.png"
+  - "Mentorship"
+  - "Datanauts"
+  - "Career"
+  - "Careers"
+  - "Tech Careers"
 ---
+![](master_apprentice_yoda.png)
 
 Like many nerds out there, I enjoy tech podcasts.  [Datanauts](http://packetpushers.net/series/datanauts-podcast/) is one of my favorites and a must listen for the technology professional.  A recent episode on [masters and mentorship](http://packetpushers.net/podcast/podcasts/datanauts-131-masters-mentorship/#) was one of their absolute best, and the career discussions on it can be applied to any field.  In this episode, guest Don Jones makes a thought provoking comment:  "you can be master and apprentice all at the same time."
 

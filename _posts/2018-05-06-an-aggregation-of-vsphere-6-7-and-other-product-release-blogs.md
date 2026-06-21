@@ -18,6 +18,7 @@ tags:
   - "vSAN 6.7"
   - "vSphere"
   - "vSphere 6.7"
+  - "vExpert"
 ---
 
 ![](1_vSphere_6.7.png)
@@ -32,7 +33,7 @@ Make yourself a fresh cup of java, and get ready to learn about what's new and e
     - Upgrading from 6.5U2 to 6.7 is **NOT** supported.
 - [VMware Roundtable Community Podcast #433 - vSphere 6.5U2 w/Nigel Hickey & vBrownbag Alastair Cooke](http://recordings.talkshoe.com.s3-website-us-east-1.amazonaws.com/TC-19367/TS-1248733.mp3)
 
- #### vSphere 6.7
+#### vSphere 6.7
 
 - General
     - [Introducing VMware vSphere 6.7](https://blogs.vmware.com/vsphere/2018/04/introducing-vmware-vsphere-6-7.html)

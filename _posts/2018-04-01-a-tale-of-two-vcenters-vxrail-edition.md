@@ -14,6 +14,8 @@ tags:
   - "VxRail"
   - "Deployment Planning"
   - "Decision Tradeoffs"
+  - "Dell"
+  - "Dell VxRail"
 ---
 
 ![](1_StartVxRailInstall.png)

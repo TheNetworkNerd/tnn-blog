@@ -15,6 +15,9 @@ tags:
   - "Wavefront"
   - "Product Integration"
   - "GCP"
+  - "Metrics"
+  - "Observability"
+  - "Metrics Analysis"
 image: "23_Wavefront_CreateEvent.png"
 ---
 
