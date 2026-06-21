@@ -14,6 +14,7 @@ tags:
   - "VMware"
   - "VMware vSAN"
   - "vSAN"
+  - "Public Speaking"
 image: "matrix-3109795_640.jpg"
 ---
 
@@ -40,11 +41,9 @@ Here are some corrections / additions to the video:
 - 38:35 - The problem truly is choice.  The way you consume vSAN is up to you and depends on how and where you want to spend your time.  Keep in mind no choice will produce successful outcomes without proper planning.  Some may call these additional consumption options for vSAN the equivalent of taking the blue pill (which is never addressed point blank in the video).  In my opinion, though the depth of knowledge required may vary based on choice of consumption model, some knowledge of vSAN will be required in each case.
 
  
+{% include embed/youtube.html id='sNKQEdgapwM' %}
 
- 
-
-https://youtu.be/sNKQEdgapwM
-
+<!-- https://youtu.be/sNKQEdgapwM -->
  
 
 ### Additional Resources

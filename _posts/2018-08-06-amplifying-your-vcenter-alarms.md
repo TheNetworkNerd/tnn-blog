@@ -62,6 +62,6 @@ Whether you have just deployed vCenter or have used it for years, some small twe
 
 - Notice the alarm details now show the actions we specified.  Those actions only apply to this specific alarm.
 
- ### Quick Summary
+### Quick Summary
 
 Pre-configured alarms are a good thing, but they are only helpful when configured properly.  Don't be the person who sets an alarm but never knows it went off.  Take the time to configure actions for the alarms you as the vSphere administrator deem most critical to operating your datacenter to avoid being taken by surprise.  Check out the [vSphere 6.7 Monitoring and Performance Guide](https://docs.vmware.com/en/VMware-vSphere/6.7/vsphere-esxi-vcenter-server-67-monitoring-performance-guide.pdf) for everything you need to know to edit the pre-configured alarms, create your own, and master all things related to alarms.
