@@ -8,6 +8,7 @@ categories:
 tags: 
   - "vCenter"
   - "vCenter Alarms"
+  - "vCenter Alerting"
   - "VMware vSphere"
   - "VMware vSphere 6.7"
   - "vSphere"
@@ -37,7 +38,6 @@ There are a number of [pre-configured alarms in vSphere 6.7](https://docs.vmware
 A common mistake vSphere admins make is not realizing the only actions taken for all pre-configured alarms are an entry in the [vCenter event log](https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.monitoring.doc/GUID-4BCC37BC-58CB-45ED-AA3B-7CC79BCEDBBC.html) and a popup notifying the admin that an alarm has activated.  Unless one happens to be watching vCenter events like a hawk or at least has vCenter open constantly, how will you know when an alarm has fired?  As it now stands, you won't.
 
 Every pre-configured alarm has actions an admin can specify.  Is taking an action always appropriate, and when it is, what type of action is merited?  How many alarms need to scream at you about defcon 1 level problems, and how many are you ok with knowing about the next time you login to vCenter?  The choice, my friend, is up to you.
-
  
 
 ### Adding Action to a Pre-configured Alert
@@ -46,30 +46,22 @@ Whether you have just deployed vCenter or have used it for years, some small twe
 
 - First, make sure vCenter is setup to send e-mail notifications per [this article](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.vcenterhost.doc/GUID-467DA288-7844-48F5-BB44-99DE6F6160A4.html).
 
-- Inside the vSphere Web Client, select vCenter in the navigator pane.  Then select Monitor -> Issues -> Alarm Definitions.  Here you can see all pre-configured alarms (all of which should be enabled) that apply at the vCenter level.  A different set of alarms would show up here if you had selected a cluster of hosts, for example.![](1_HostCPUAlarm.png)
+- Inside the vSphere Web Client, select vCenter in the navigator pane.  Then select Monitor -> Issues -> Alarm Definitions.  Here you can see all pre-configured alarms (all of which should be enabled) that apply at the vCenter level.  A different set of alarms would show up here if you had selected a cluster of hosts, for example. ![](1_HostCPUAlarm.png)
 
-- As seen above, the Host CPU usage alarm is enabled.  Click the Edit button to see more detail.  In the General section, we see this alarm is monitoring host objects specifically.![](2_General.png)
+- As seen above, the Host CPU usage alarm is enabled.  Click the Edit button to see more detail.  In the General section, we see this alarm is monitoring host objects specifically.  ![](2_General.png)
 
 - In the Triggers section, we see the conditions under which this alarm activates.  The alarm will activate as a warning condition if host CPU is above 75% for 5 minutes, but if the host CPU is above 90% for 5 minutes, the alarm will activate as a critical condition.  These thresholds can be edited, and more conditions can be added if you so choose.  The alarm should be activated when additional investigation might be needed. ![](3_Triggers.png)
 
 - If we continue to the Actions section, one can easily see there are no actions configured for this alarm. ![](4_Actions.png)
 
- 
-
 - If you forgot to setup vCenter to send e-mail before making changes to an alarm, you will see a warning like this in the Actions section: ![](5_emailsender.png)
 
- 
-
-- Suppose we add an action to send an e-mail to adminteam@mydomain.com based on the previously defined triggers.  When the host CPU percentage increases from the warning threshold (75%) to the critical threshold (90%), the admin team will get an e-mail every 5 minutes while the trigger is true.  Then, once the host CPU percentage goes from critical back to warning, the admin team will only get one e-mail.  Click Finish to save the changes..![](6_EmailAction.png)
-
- 
+- Suppose we add an action to send an e-mail to adminteam@mydomain.com based on the previously defined triggers.  When the host CPU percentage increases from the warning threshold (75%) to the critical threshold (90%), the admin team will get an e-mail every 5 minutes while the trigger is true.  Then, once the host CPU percentage goes from critical back to warning, the admin team will only get one e-mail.  Click Finish to save the changes..  ![](6_EmailAction.png)
 
 - Keep in mind this is just an example.  Many other options could have been configured here, including sending e-mails to different teams based on the different thresholds defined in our triggers. ![](7_AlarmDetails.png)
 
 - Notice the alarm details now show the actions we specified.  Those actions only apply to this specific alarm.
 
- 
-
-### Quick Summary
+ ### Quick Summary
 
 Pre-configured alarms are a good thing, but they are only helpful when configured properly.  Don't be the person who sets an alarm but never knows it went off.  Take the time to configure actions for the alarms you as the vSphere administrator deem most critical to operating your datacenter to avoid being taken by surprise.  Check out the [vSphere 6.7 Monitoring and Performance Guide](https://docs.vmware.com/en/VMware-vSphere/6.7/vsphere-esxi-vcenter-server-67-monitoring-performance-guide.pdf) for everything you need to know to edit the pre-configured alarms, create your own, and master all things related to alarms.
