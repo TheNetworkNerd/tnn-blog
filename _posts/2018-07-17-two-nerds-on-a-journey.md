@@ -9,8 +9,18 @@ tags:
   - "Nerd Journey"
   - "Podcast"
   - "Podcasts"
-image: "NerdJourney_logo_Small.jpg"
+  - "Tech Careers"
+  - "Career"
+  - "Careers"
+  - "Technical Career Progression"
+  - "Podcasting"
+  - "Career Progression"
+  - "Starting a Podcast"
+  - "Creating Content"
+  - "Podcast Launch"
 ---
+
+![](NerdJourney_logo_Small.jpg)
 
 When is the last time you embarked on a journey?  A journey is likened to a lengthy adventure with a number of challenges to overcome along the way which result in personal development.  Movies like _Homeward Bound: The Incredible Journey_ or _Journey to the Center of the Earth_ serve as excellent illustrations of what a journey might entail.
 

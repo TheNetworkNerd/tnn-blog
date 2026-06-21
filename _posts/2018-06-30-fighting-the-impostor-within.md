@@ -8,6 +8,12 @@ categories:
   - "Community"
 tags: 
   - "Impostor Syndrome"
+  - "Mental Health"
+  - "Career"
+  - "Careers"
+  - "Professional Struggle"
+  - "Tech Careers"
+  - "Tech Career"
 image: "Elizabethtown2.png"
 ---
 
