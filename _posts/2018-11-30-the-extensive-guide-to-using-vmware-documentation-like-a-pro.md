@@ -26,9 +26,12 @@ When a software company has a large number of products, it can be difficult to f
     - Build numbers just don't correlate to version numbers well, but there is hope.  This KB contains correlation links for multiple products, including VxRail and Cloud Foundation.
 
 - [VMware Compatibility Guide](https://www.vmware.com/resources/compatibility/search.php)
-    - It's not just about checking to see if a server and its processor are on the compatibility list.  Check NIC cards and firmware versions, supported BIOS levels, storage controllers, storage devices and their firmware, graphics cards, VVOLs support, and much more.  The "what are you looking for" box has many options. Take advantage.  ![](1-WhatAreYoulookingFor.png)
-    - Next to the box above you will see the words "Compatibility Guides."  ![](2_CompatibilityGuides.png)
-    - If you click the dropdown arrow next to those words, something absolutely magical happens.  ![](3-CompatibilityGuidesExpand.png)
+    - It's not just about checking to see if a server and its processor are on the compatibility list.  Check NIC cards and firmware versions, supported BIOS levels, storage controllers, storage devices and their firmware, graphics cards, VVOLs support, and much more.  The "what are you looking for" box has many options. Take advantage.   
+    ![](1-WhatAreYoulookingFor.png)
+    - Next to the box above you will see the words "Compatibility Guides."    
+    ![](2_CompatibilityGuides.png)
+    - If you click the dropdown arrow next to those words, something absolutely magical happens.   
+    ![](3-CompatibilityGuidesExpand.png)
     - Have you ever wanted to see what new items were added to the compatibility guide or download a copy for reference?  Alas, now you can.  Anything in the menu above is clickable and opens in a new browser window with an address bar.
 
 - [Product Interoperability Matrix](https://partnerweb.vmware.com/comp_guide2/sim/interop_matrix.php#interop&2=&1=)
@@ -54,11 +57,13 @@ When a software company has a large number of products, it can be difficult to f
         - What support offerings are available for each product in the portfolio?
 
 - [VMware Ports and Protocols](https://ports.vmware.com/home)
-    - Have you ever wondered what ports a specific product uses?  What if you could search by product, port, protocol, export the results, and experience it all in dark mode?  ![](VMwarePortsandProtocols-1024x460.png)
+    - Have you ever wondered what ports a specific product uses?  What if you could search by product, port, protocol, export the results, and experience it all in dark mode?   
+    ![](VMwarePortsandProtocols-1024x460.png)
 
 - [Config Max Tool](https://configmax.vmware.com/home)
     - Remember the configuration maximums that used to live in large PDF documents that we studied for VCP exams?  Now they exist in an online tool for your consumption.  This site is more than meets the eye.
-        - **Pro Tip:**  Sure, you can view configuration maximums for a specific product version, but you can also _compare_ the maximums between different versions of products to see if anything changed.  The screenshot below shows a comparison of some of the maximums for the extra small deployment of vROps across 3 different versions (all exportable to CSV).  ![](VMwareConfigMaximums_4-1024x643.png)
+        - **Pro Tip:**  Sure, you can view configuration maximums for a specific product version, but you can also _compare_ the maximums between different versions of products to see if anything changed.  The screenshot below shows a comparison of some of the maximums for the extra small deployment of vROps across 3 different versions (all exportable to CSV).   
+         ![](VMwareConfigMaximums_4-1024x643.png)
 - [VMware Product Guide](https://www.vmware.com/content/dam/digitalmarketing/vmware/en/pdf/product/vmware-product-guide.pdf)
     - This is the consistently updated guide to license terms and conditions for on-premises products.
     - As a compliment to this guide, the VMware EULA for on-premises products and Terms of Service for cloud and hosted services can be found [here](http://www.vmware.com/download/eula).
@@ -96,12 +101,15 @@ It seems like product documentation is scattered among several sites.  Here are
     - **Pro Tip:** Type _tags: vROps 7.0_ in the search box for a list of all content specific to vRealize Operations 7.0.
 
 - [Digital Workspace Tech Zone](https://techzone.vmware.com)
-    - This is the site for all things under the end user computing umbrella and easily one of the coolest sites we have.  That's everything related to Workspace ONE and Horizon.  Browse through the plethora of reference architectures, technical overviews, tutorials, videos, technical tools, and blogs to master all things under the EUC umbrella.  New content is consistently being added to this site.  Be sure to login to the site with your myvmware.com account to rate and pin content!  ![](TechZone_6-1024x409.png)
-    - **Pro Tip:** Take advantage of the customized activity paths for [Horizon](https://techzone.vmware.com/becoming-horizon-hero-0) or [Workspace ONE](https://techzone.vmware.com/becoming-workspace-one-hero) to help you become a hero in one or both areas.  Start with the beginner content, and proceed to intermediate and advanced when ready.  ![](4_ActivityPaths.png)
+    - This is the site for all things under the end user computing umbrella and easily one of the coolest sites we have.  That's everything related to Workspace ONE and Horizon.  Browse through the plethora of reference architectures, technical overviews, tutorials, videos, technical tools, and blogs to master all things under the EUC umbrella.  New content is consistently being added to this site.  Be sure to login to the site with your myvmware.com account to rate and pin content!    
+    ![](TechZone_6-1024x409.png)
+    - **Pro Tip:** Take advantage of the customized activity paths for [Horizon](https://techzone.vmware.com/becoming-horizon-hero-0) or [Workspace ONE](https://techzone.vmware.com/becoming-workspace-one-hero) to help you become a hero in one or both areas.  Start with the beginner content, and proceed to intermediate and advanced when ready.    
+    ![](4_ActivityPaths.png)
 
 - [Networking and Security Tech Zone](https://nsx.techzone.vmware.com/)
     - Similar to Digital Workspace Tech Zone, this is the place to find blogs, videos, demos, and guides in the networking and security space.  Educate yourself on AppDefense, NSX, VeloCloud, HCX, vRNI, or NSX Cloud.
-    - In addition to some very granular searchability (as shown below), there are customized learning paths here as well.  ![](NetSecurityTechZone_3-1024x342.png)
+    - In addition to some very granular searchability (as shown below), there are customized learning paths here as well.   
+     ![](NetSecurityTechZone_3-1024x342.png)
 
 - [VeloCloud](https://www.velocloud.com/sd-wan-resources)
     - In addition to the content in Networking and Security Tech Zone, check out a number of solution overviews, case studies, eBooks, webinars, and podcasts specific to VeloCloud and SD-WAN.
@@ -112,7 +120,8 @@ It seems like product documentation is scattered among several sites.  Here are
 
 - [VMware Cloud Products](https://cloud.vmware.com)
     - This site doesn't just cover [VMware Cloud on AWS](https://cloud.vmware.com/vmc-aws), but it's probably the most well known.  This product in particular has an online [FAQ](https://cloud.vmware.com/vmc-aws/faq) as well as a public-facing [roadmap](https://cloud.vmware.com/vmc-aws/roadmap).
-    - There are many more products in the cloud portfolio like Log Insight Cloud, HCX, and Wavefront.  Most of them have a FAQ page and a Resources page anyone can leverage to learn more about the product.  ![](5_LogIntelligence.png)
+    - There are many more products in the cloud portfolio like Log Insight Cloud, HCX, and Wavefront.  Most of them have a FAQ page and a Resources page anyone can leverage to learn more about the product.  
+     ![](5_LogIntelligence.png)
 
 - [Wavefront](https://docs.wavefront.com/)
     - Interestingly enough, Wavefront documentation has its own repository.  The documentation includes helpful videos, information on integrations, and a query language reference.
@@ -123,7 +132,8 @@ It seems like product documentation is scattered among several sites.  Here are
 
 - [vSphere Central](https://vspherecentral.vmware.com)
     - This is the place to find walkthroughs, demos, and highlights of new features in vSphere.
-    - **Pro Tip:** Check out the vSphere Upgrade section to help plan your next upgrade.  And don't forget [Nigel Hickey's vSphere upgrade blog series](https://blogs.vmware.com/vsphere/2018/12/the-vsphere-upgrade-blog-series-wrap-up.html).  ![](6-vSphere6.7.png)
+    - **Pro Tip:** Check out the vSphere Upgrade section to help plan your next upgrade.  And don't forget [Nigel Hickey's vSphere upgrade blog series](https://blogs.vmware.com/vsphere/2018/12/the-vsphere-upgrade-blog-series-wrap-up.html).   
+    ![](6-vSphere6.7.png)
 
 - [My Workspace ONE Support Site](https://support.workspaceone.com/)
     - This site has its own sets of documentation for Workspace ONE as well as [knowledge base articles](https://support.workspaceone.com/kb?sort=newest), [webinars](https://resources.workspaceone.com/marketing/webinars?sort=newest&version=1811), and [community forums](https://support.workspaceone.com/forums?sort=newest).
@@ -156,7 +166,8 @@ It seems like product documentation is scattered among several sites.  Here are
 
 Another great source of helpful documentation is in blog form.
 
-- Did you know there is an aggregation of VMware blogs?  The screenshot below does not do it justice, so check out [https://blogs.vmware.com/all-vmware-blogs](https://blogs.vmware.com/all-vmware-blogs) to see what you've been missing.  If you're a Chrome user, there is a [RSS Feed Reader](https://chrome.google.com/webstore/detail/rss-feed-reader/pnjaodmkngahhkoihejjehlcdlnohgmp?hl=en) which could come in handy for this.  ![](7-AllVMwareBlogs.png)
+- Did you know there is an aggregation of VMware blogs?  The screenshot below does not do it justice, so check out [https://blogs.vmware.com/all-vmware-blogs](https://blogs.vmware.com/all-vmware-blogs) to see what you've been missing.  If you're a Chrome user, there is a [RSS Feed Reader](https://chrome.google.com/webstore/detail/rss-feed-reader/pnjaodmkngahhkoihejjehlcdlnohgmp?hl=en) which could come in handy for this.  
+ ![](7-AllVMwareBlogs.png)
 
 
 - While I cannot guarantee the list of blogs above will be completely comprehensive, I do want to point out some which people may not know exist:

@@ -62,7 +62,8 @@ Here are some navigational tips:
 - Drag and drop items in the left-hand pane to re-order or make one a subtopic of another.
 - Remove items from the collection in two ways:
     - Remove a single item by highlighting the topic in the left-hand pane and clicking "Remove From MyLibrary" in the right-hand pane.
-    - Remove multiple items by selecting them in the left-hand pane and clicking the remove button at the top of the left-hand pane (which turns red once you select at least one item).  ![](10-RemoveItem.png)
+    - Remove multiple items by selecting them in the left-hand pane and clicking the remove button at the top of the left-hand pane (which turns red once you select at least one item).   
+    ![](10-RemoveItem.png)
 - If you have multiple collections that contain topics, you can switch between the collections by clicking the collection name in the left-hand pane.
 - To delete an entire collection, go back to the MyLibrary page, and click the delete option next to the collection's name.
 - There was no way (that I could find) to move a topic from one collection to another.  This is why I would recommend checking the default collection before adding anything to MyLibrary.

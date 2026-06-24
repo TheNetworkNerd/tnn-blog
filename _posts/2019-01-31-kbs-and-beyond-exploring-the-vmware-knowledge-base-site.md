@@ -39,7 +39,6 @@ At first glance, that list of items on the welcome menu won't blow you away.  I
 Once you click GOT IT to make the welcome menu disappear, try a search.  Let's try a search for workspace one and see what happens.  
 ![](3_WS1Search.png)
 
- 
 As soon as we click search, notice how the scenery changes.  We now have some recent activity captured.  And we have a ton of results (as you would expect from a search so general).  From here, narrow the search by product, version, language, or date.  The default sort is by relevance instead of date.  
 ![](4_PostSearchClick.png)
 
