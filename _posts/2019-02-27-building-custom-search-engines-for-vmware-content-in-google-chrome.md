@@ -9,6 +9,7 @@ tags:
   - "Custom Search Engines"
   - "Documentation"
   - "Google Chrome"
+  - "Chrome"
   - "Search Engines"
   - "vExpert"
   - "VMware"

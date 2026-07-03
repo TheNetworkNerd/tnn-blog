@@ -12,6 +12,7 @@ tags:
   - "Wellness"
   - "Exercise"
   - "Health"
+  - "Injury"
 image: "Stronger3.jpg"
 ---
 
