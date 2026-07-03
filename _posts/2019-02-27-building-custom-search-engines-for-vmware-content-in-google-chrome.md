@@ -49,7 +49,10 @@ We're presented with 3 fields at this point.  We're going to fill them out in a
 
 **Keyword:** vmkb
 
-**URL with %s in place of query:** https://kb.vmware.com/s/global-search/%40uri#q=%s&t=Knowledge&sort=relevancy
+**URL with %s in place of query:** 
+```
+https://kb.vmware.com/s/global-search/%40uri#q=%s&t=Knowledge&sort=relevancy
+```
 
 And if you prefer a screenshot, here it is.
 
@@ -75,12 +78,12 @@ Press enter to perform the search, and you will be whisked away to the VMware Kn
 
 That's fine as a baby step, but we're not going to stop there.  If you recall from [my previous post]({% link _posts/2019-01-31-kbs-and-beyond-exploring-the-vmware-knowledge-base-site.md %}), the default search on the VMware Knowledge Base site searches KB articles only.  But if we click the All Sources option after performing a search, we can search VMware documentation, community pages, KB articles, and blogs from [VMware Blog Beat](https://blogs.vmware.com/).  Look at how the browser address bar changes for the same search terms (vSAN disk groups) if we click All Sources:
 ```
-https://kb.vmware.com/s/global-search/%40uri#q=vSAN%20disk%20groups**&t=MoreContent&sort=relevancy**.
+https://kb.vmware.com/s/global-search/%40uri#q=vSAN%20disk%20groups**&t=MoreContent&sort=relevancy**
 ```
 
 If we wanted all searches that leverage the search engine in Chrome to search this way, it would require modifying our existing search engine accordingly.  Before we do that, let's try some additional experimentation.  We can tweak the KB site to let us search for blogs, remember?  If we search for vSAN disk groups once more but choose the source to be only blogs, here's what the address bar looks like:
 ```
-https://kb.vmware.com/s/global-search/%40uri#q=vSAN%20disk%20groups**&t=MoreContent&sort=relevancy&f:@commonsource=\[Blogs\]**.
+https://kb.vmware.com/s/global-search/%40uri#q=vSAN%20disk%20groups**&t=MoreContent&sort=relevancy&f:@commonsource=\[Blogs\]**
 ```
 
 What if we want to pull back results with vSAN disk groups in the title?  First, make sure you read the [prefixes and operators KB](https://kb.vmware.com/s/article/55692) for some ninja tricks.  Then execute the search manually from the VMware Knowledge Base site as in the screenshot below.
@@ -89,14 +92,14 @@ What if we want to pull back results with vSAN disk groups in the title?  First
 
 That changes the address bar once more to the following:
 ```
-https://kb.vmware.com/s/global-search/%40uri#q=**%40title%3D%22vSAN%20disk%20groups%22&t=MoreContent&sort=relevancy&f:@commonsource=\[Blogs\]**.
+https://kb.vmware.com/s/global-search/%40uri#q=**%40title%3D%22vSAN%20disk%20groups%22&t=MoreContent&sort=relevancy&f:@commonsource=\[Blogs\]**
 ```
 
 Notice here that the operator (@title and the opening and closing quotation marks) got encoded as part of the browser address.  That's fine.  When searching, it's advantageous to use the operators and prefixes as you like without hard coding them into your custom search engine in Chrome.  This begs the question...what is the best way to setup my custom search engine in Chrome to get the most value?
 
 Consider the areas you're visiting most often from a general Google search.  To me, the ability to search [VMware Blog Beat](https://blogs.vmware.com/) is absolute gold, so I will likely want to search for blogs no matter what.  I find official VMware docs useful as well, so I'd want that repository searched too.  While I enjoy a good KB article, I am going to leave it out of the results for now.   Again, this is totally subjective.  If we perform the same search as in the screenshot above (@title=#vSAN disk groups") and select only Docs and Blog as the sources, here's what the address bar shows:
 ```
-https://kb.vmware.com/s/global-search/%40uri#q=%40title%3D%22vSAN%20disk%20groups%22&t=MoreContent&sort=relevancy**&f:@commonsource=\[Docs,Blogs\]**.
+https://kb.vmware.com/s/global-search/%40uri#q=%40title%3D%22vSAN%20disk%20groups%22&t=MoreContent&sort=relevancy**&f:@commonsource=\[Docs,Blogs\]**
 ```
  
 
@@ -108,7 +111,10 @@ Go back to the custom search engine we created in Chrome, and it is time to make
 
 **Keyword:** vmdoc
 
-**URL with %s in place of query:** https://kb.vmware.com/s/global-search/%40uri#q=%s&t=MoreContent&sort=relevancy&f:@commonsource=\[Docs,Blogs\]
+**URL with %s in place of query:** 
+```
+https://kb.vmware.com/s/global-search/%40uri#q=%s&t=MoreContent&sort=relevancy&f:@commonsource=\[Docs,Blogs\]
+```
 
 And if you prefer a screenshot, here it is.
 
@@ -122,12 +128,12 @@ Now give it a shot.  Test it by typing vmdoc in a new Chrome tab, hitting the s
 
 I figured if we could make a custom search engine using the VMware Knowledge Base site, why not try the [VMware Docs site](https://docs.vmware.com/) also?  On the Docs site home page specifically, it's easy enough to do a simple search.  If we were to do a search for vSAN disk groups, the address bar looks like this:
 ```
-https://docs.vmware.com/en/search/#/vSAN%20disk%20groups.
+https://docs.vmware.com/en/search/#/vSAN%20disk%20groups
 ```
 
 That's cool and gives us results from product documentation, KB articles, technical papers, videos, and even [VMware {code}](https://code.vmware.com/) content.  I could see it making sense to setup a custom search engine to do a search like the one above, but it only saves minimal time.  Like any decent search site, there are additional filters once you see search results.  So I tried clicking one filter and then multiple filters.  But something very odd happened.  The address bar showed an extra parameter called partialfields with no rhyme or reason as to how the value is determined based on the filter you choose.  Here's what the address bar looked like after searching for vSAN disk groups from the Docs home page and then filtering to show only VMware {code} content:
 ```
-https://docs.vmware.com/en/search/#/vSAN%20disk%20groups?partialfields=MYewdgLgppDKIFcBOwoF4BqBZA7gQySgFIAmABiIHYAhUAE2MoBEg.
+https://docs.vmware.com/en/search/#/vSAN%20disk%20groups?partialfields=MYewdgLgppDKIFcBOwoF4BqBZA7gQySgFIAmABiIHYAhUAE2MoBEg
 ```
 
 ![](9_DocswFilters.png)
@@ -140,7 +146,7 @@ Wait a minute!  The Docs site has an Advanced Search area.  You can get to Adv
 
 Unfortunately, the Advanced Search was a bust in terms of custom search engine potential.  Regardless of the parameters selected or words used to search, the address bar gets changed in very odd, unpredictable ways like this:
 ```
-https://docs.vmware.com/advanced-search.html?advanced=N4IghgNiBcIG4GUCCA5ABAEwJYGcDWaA5gE4D2ArgA44gC+QA&lang=en.
+https://docs.vmware.com/advanced-search.html?advanced=N4IghgNiBcIG4GUCCA5ABAEwJYGcDWaA5gE4D2ArgA44gC+QA&lang=en
 ```
 
 As far as the Docs site is concerned, the only custom search engine potential is for the simple search functionality we showed earlier.  Here are the parameters to use if you're curious (remembering the keyword can be whatever you want) and the accompanying screenshot:
@@ -149,7 +155,10 @@ As far as the Docs site is concerned, the only custom search engine potential is
 
 **Keyword:** docs
 
-**URL with %s in place of query:** https://docs.vmware.com/en/search/#/%s
+**URL with %s in place of query:** 
+```
+https://docs.vmware.com/en/search/#/%s
+```
 
 ![](11_SearchEngineDocsSite.png)
 

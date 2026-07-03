@@ -8,6 +8,8 @@ categories:
 tags: 
   - "Analytics"
   - "AWS"
+  - "EC2"
+  - "AWS EC2"
   - "Metrics"
   - "Proxy"
   - "Ubuntu"

@@ -54,7 +54,10 @@ When we were working in Chrome, we had 3 fields to work with for a custom search
 
 To translate that into Firefox's parameters, the keyword has the same meaning.  This will be what we type in the Firefox browser address bar to begin our search.  The tags field won't do much to serve our purpose, so ignore it.  But that location field has to be tweaked.  The location field in Firefox should be the same thing as "URL with %s in place of query" was in Chrome.  Here are the parameters in plain text.  These parameters will allow you to perform a search of the VMware Knowledge Base site and search only Docs and Blogs, sorting the results by relevancy.  Click Save when your changes are complete.
 
-**Location:** https://kb.vmware.com/s/global-search/%40uri#q=%s&t=MoreContent&sort=relevancy&f:@commonsource=\[Docs,Blogs\]
+**Location:** 
+```
+https://kb.vmware.com/s/global-search/%40uri#q=%s&t=MoreContent&sort=relevancy&f:@commonsource=\[Docs,Blogs\]
+```
 
 **Keyword:** vmdoc
 
