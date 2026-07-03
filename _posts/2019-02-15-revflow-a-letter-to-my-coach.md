@@ -10,6 +10,8 @@ tags:
   - "ReFit"
   - "Rev and Flow"
   - "Wellness"
+  - "Exercise"
+  - "Health"
 image: "Stronger3.jpg"
 ---
 
@@ -27,15 +29,13 @@ Last year my wife told me about a new REFIT curriculum called [REV+FLOW](https:/
 
 Since taking a desk job years ago and having a kid I have become less and less active.  Since working from home in a field facing role over the last year, my activity level has lessened to a greater extent.  My wife knows deep down I don't want to be the fat dad who can't run and play with his child.  I want to be healthier so I am not the old man with a massive gut who can barely move around some day.
 
- 
+
 
 ### Fear
 
 While I did not immediately dismiss the suggestion, I was afraid.  Would I really be able to do the moves?  And even more so, would I be able to do the moves without hurting myself?  Would my wife laugh at me?  I had never been to a REFIT class outside of the videos my wife had showed me and what she had demonstrated at home, so it was difficult to know how different something like REV+FLOW be.  That's not the only fear.  If I decided to go, I would be the only male.  Perhaps that is a perk for some, but to me, humiliating myself in a room full of females who likely could do the moves better than me was not something on my bucket list.  In fact, it was completely intimidating.
 
 I kept thinking about going.  There's a flip side to the intimidation feeling of being in the minority.  Would the ladies attending feel uneasy with a single male being there too?  Would it make them as uncomfortable as it might make me?  At this point I had only my combined rational and irrational fears keeping me from agreeing to go.  Finally, I told my wife the only way I would go is if the instructor could assure me no one else would feel weird about me being there.  She said the instructor was fine with it and that the rest of the class would be too.  Since I wasn't some random guy and happened to be married to another REFIT instructor, it made things less weird.  How great would it be to set an example for our daughter and for her to see mom and dad both working out so they can be healthier?  It's our job, after all, to teach her these things.  Even though I would be doing this for me, I would be doing this for our whole family.
-
- 
 
 ### The First Class
 
@@ -47,8 +47,6 @@ I don't remember much else about the first class except a very strong urge to th
 
 ![](Stronger_Tired.jpg)
 
- 
-
 ### The First Round
 
 After that first class, I experienced soreness throughout my entire body like nothing I had ever done.  Everything hurt.  It hurt to move.  The soreness continued for days.  By the time we went for the second class, I was still a little sore.  But this time I knew what to expect.  That doesn't mean I knew the routines perfectly, but having done all the moves once already brought a sense of comfort and normalcy.  Not everything would be brand new.  But it was actually harder the second time.  Not only did everything hurt after the second class just like the first time, there was a lot of soreness that needed to be dealt with during the workout as well.  But again, I survived.  I still felt like puking but was able to avoid it.
@@ -58,8 +56,6 @@ For a while I struggled with what to eat before doing that kind of work out and 
 Saturdays became routine.  REV+FLOW was just what I did on Saturday morning.  Often times I would be so tired after coming home and eating lunch that I would have to take a nap for a while.  It was kicking my tail in a major way more than just about anything I have done (even when I was running).  Even though I was sore, I felt better, physically and mentally.  My wife and I tried to make it to as many classes as was possible.  I really enjoyed getting the exercise, and I never once injured myself.  I may not have done everything perfectly, but I was giving it all I had.  The crazy thing was not one person ever treated me differently because I was the only male there.  I'm not sure why that is surprising, but it surprised me nonetheless.
 
 We were told there would be a second round at the beginning of the new year, and classes would be offered more than just on Saturday.  As you can probably guess, I was open to doing the next round.
-
- 
 
 ### The Second Round
 
@@ -72,8 +68,6 @@ The second round started with a beta class.  Those who attended the last sessio
 At one point my muscles got so tight I was crooked (as in could not stand up straight).  The chiropractor got me fixed and said it was tight muscles.  My hip flexors and leg and thigh muscles  needed to be stretched better, so I started leveraging my travel foam roller both before and after class along with some [Airrosti recommended stretches for low back pain](https://www.airrosti.com/mobility-monday-low-back-pain-with-julie-foucher/).  That was definitely helping the muscles stay loose.  I even did a workout or two in a hotel room when I missed class due to travel.
 
 My wife told me the ladies asked where I was when I couldn't make it.  They wanted to make sure I hadn't quit on them.  That made me feel great, honestly.  I still wasn't completely sure how they felt (even in the second round) about having one random guy there.  Someone made the comment one day that I don't talk to anyone when I go to class.  Here's what no one seems to understand.  When I walk in that building, I enter the zone.  I'm there to get stronger, to survive the class without throwing up, but most of all to prove something to myself...that I can do it.  And to do that, to focus on doing the moves the right way, it takes every amount of effort and focus I have.  When I'm working out, there is no one else.  I focus on the instructor and do what I can to get stronger.  There will be no lack of effort if I can help it.  It's not personal.  It's just my game face.  And...I have to make sure I stretch before and after class so I will be able to walk the next day.
-
- 
 
 ### The Injury
 

@@ -12,6 +12,7 @@ tags:
   - "vExpert"
   - "VMware"
   - "VMware Documentation"
+  - "Browser Customization"
 image: "featured_Firefox.jpg"
 ---
 
@@ -26,7 +27,6 @@ The article above shows an example of adding YouTube as a search engine from the
 Wait a minute...what if we just go into Firefox options and look at the search engine list?  Shouldn't we be able to add one from there?  I encourage you to try it.  You will quickly find that this is quite different from Google Chrome.  There's not a way to add a custom search engine from here.  We could click on "Find more search engine options" to see if something like what we want exists already.  But, indeed it does not.  With this method we've hit a brick wall.
 
 ![](1_Firefox-Options.png)
-
  
 
 ### Searching for a Different Approach
@@ -38,7 +38,6 @@ First, create a bookmark for the [VMware Knowledge Base site](https://kb.vmware.
 ![](2_MakeBookMark.png)
 
  
-
 If I open the bookmarks bar, I can easily spot the bookmark that was just saved.
 
 ![](3_ConfirmedBookmark.png)
@@ -53,8 +52,6 @@ When we were working in Chrome, we had 3 fields to work with for a custom search
 - Keyword
 - URL with %s in place of query
 
- 
-
 To translate that into Firefox's parameters, the keyword has the same meaning.  This will be what we type in the Firefox browser address bar to begin our search.  The tags field won't do much to serve our purpose, so ignore it.  But that location field has to be tweaked.  The location field in Firefox should be the same thing as "URL with %s in place of query" was in Chrome.  Here are the parameters in plain text.  These parameters will allow you to perform a search of the VMware Knowledge Base site and search only Docs and Blogs, sorting the results by relevancy.  Click Save when your changes are complete.
 
 **Location:** https://kb.vmware.com/s/global-search/%40uri#q=%s&t=MoreContent&sort=relevancy&f:@commonsource=\[Docs,Blogs\]
@@ -66,18 +63,17 @@ And if you prefer a screenshot, here it is:
 ![](5_BookmarkPropertieswithSearch.png)
 
  
-
 ### Checking Our Work
 
 Now, let's see if we were right with our parameters.  If you followed the steps from the blog on [custom search engines in Chrome]({% link _posts/2019-02-27-building-custom-search-engines-for-vmware-content-in-google-chrome.md %}), you know we used these exact parameters as an example.  Call that our control group.  Let's see if we get the same list of results from using our new custom search in Firefox.  Try typing **vmdoc @title=”vSAN disk groups”** and then press enter in Chrome, and then do the same thing in Firefox.  Are the results the same?  They should be if we have configured everything correctly for both browsers.  A similar method can be used in Firefox to build a custom search engine (or bookmark / search shortcut) for the [VMware Docs site](https://docs.vmware.com/).
-
  
 
 ### A Tangent on Config Files
 
 While I was looking for ways to add search engines, I learned the config files for Firefox that control custom search engines are inside a .mozlz4 file named search.json.mozlz4.  When searching for this file on a Windows 10 computer, it was located inside C:\\Users\\%username%\\AppData\\Roaming\\Mozilla\\Firefox\\Profiles\\4xjhkwhr.default.  I'm not sure if the path will be exactly the same on every computer or if the .default directory is made with a random character string.  The path appeared to be the same for all users of a specific Windows 10 computer I used for testing.  The .mozlz4 file mentioned above is not something you can just crack open with a text editor.  This a compressed file that can be decompressed, edited, and recompressed if you want to go there.  [This post](https://support.mozilla.org/en-US/questions/1244862) speaks to that a little if you're interested.
 
-I ended up finding a Firefox Add-on called [mozlz4-edit](https://addons.mozilla.org/en-US/firefox/addon/mozlz4-edit/) that will allow you to add a custom search engine to Firefox.  The icon as shown in a browser looks like this:  ![](6_mozlz4-edit.png)
+I ended up finding a Firefox Add-on called [mozlz4-edit](https://addons.mozilla.org/en-US/firefox/addon/mozlz4-edit/) that will allow you to add a custom search engine to Firefox.  The icon as shown in a browser looks like this:   
+![](6_mozlz4-edit.png)
 
 When you launch the Add-on, you can click Open file, and then navigate to the location of search.json.mozlz4.
 
@@ -96,16 +92,13 @@ That tells me there are more engines baked in but that just don't show up for us
 ![](9_HiddenEngine.png)
 
  
-
 If you go back to the top set of buttons and click on Configuration, there is more code to analyze when the window shown below opens.  It looks like a master list of search engine URLs, and if you read carefully, this is a copy of a JSON file posted on GitHub!
 
 ![](10_Engines.png)
 
 I know this last part may not have been as relevant, but I found it interesting.  Hopefully you did as well.  I'll also add that I found this plugin before I saw the post on how to edit a bookmark and leverage a keyword to create a custom search engine, so I am thankful I ended up doing things the easiest way possible.
 
- 
-
-### Further Reading
+ ### Further Reading
 
 This blog is part 5 of a series on VMware documentation.  Check out the previous posts:
 
