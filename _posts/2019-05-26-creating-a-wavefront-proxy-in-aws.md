@@ -31,26 +31,22 @@ The first part of my project is to successfully deploy a Wavefront proxy.  Sinc
 At this point, assume I have a Ubuntu 18.04 server spun up on the free tier of EC2 reachable via SSH.  Before making changes to the Ubuntu server, there are some steps to complete from within Wavefront.  After logging into Wavefront, go to Browse -> Proxies.  Keep in mind we are taking this route because the data I want to send to Wavefront (which I have yet to reveal) is not something for which there is a built-in integration.  It's time to dive down the do-it-yourself path.
 
 ![](Wavefront-Proxy-Install.png)
-
  
 
 From the Proxies page, click the button marked "ADD NEW PROXY."
 
 ![](2_AddNewProxy.png)
 
- 
 
 Now we're getting somewhere.  We are immediately met with some instructions for getting a proxy installed.  The script shown below (minus the API token) is supposed to work in Ubuntu, so we shall see.
 
 ![](3_AddProxyScript.png)
 
- 
 
 Before proceeding, don't close the browser tab with Wavefront open.  This page is checking for proxies to connect back to Wavefront using the API token from the script above and will provide a nice way to check our work as we continue the proxy install and configuration process.
 
 ![](3.5_NewProxyCheck.png)
 
- 
 
 At this point, I've used Putty to open a SSH session to the Ubuntu server in EC2.  The code above is written properly to span multiple lines in a terminal session and can be pasted and executed without an issue.  I made the mistake of taking out the carriage returns to put the code on a single line before pasting into Putty but forgot to remove the "\\" characters (oops).  The command failed as you might imagine, so I got to reboot the Ubuntu server and follow the directions properly to get things working.  Here's what the install process looks like once the command is executed successfully.  The screenshots look better than just a text dump and code tags.
 
@@ -62,14 +58,11 @@ The white box near the bottom of the screenshot above should be the API token fr
 
 ![](6_ProxyInstallReadout.png)
 
- 
-
 Now that the install appears to have succeeded, go back to that Wavefront page left open from earlier.  The screenshot below shows our proxy was successfully detected.  Notice that Wavefront picked up the private DNS (internal host name) of my Ubuntu server.  Go ahead and click "DONE."
 
 ![](7_ProxySuccess.png)
 
  
-
 ### Post-Installation Observations
 
 At this point, we've returned to the main Proxies page and can see our proxy in the list.  Any other configured proxies would be listed here along with status (shows to be Active).  From the looks of things, the proxy is ready to collect data and send to Wavefront.
@@ -77,23 +70,19 @@ At this point, we've returned to the main Proxies page and can see our proxy in 
 ![](8_ProxyListShows.png)
 
  
-
 It may not be extremely clear from the screenshot above, but the host name of our proxy is a clickable link.  There is a small chart icon next to it.  What does that mean exactly, and what happens if we click the link?
 
 ![](9_ProxyStats.png)
 
- 
 
 Whoa!  Wavefront is actually collecting metrics for the proxy.  Hold your cursor over any point on the line plot to see all of the data points being collected for the proxy (5 of them, each one marked as active in the Queries area below the chart).  If something was not working properly, this would be a good place to visit for some additional troubleshooting.  The chart type can be changed as can many other things, but we won't make any changes at this time.
 
 ![](10_DataCollectedfromProxy.png)
 
  
-
 ### What Next?
 
 At this point there is a Wavefront proxy deployed on a Ubuntu server in AWS EC2 connected and ready to send data to Wavefront.  So what data should I send to the proxy?  Well, I did recently setup [Pi-hole](https://pi-hole.net/) for my home network.  I wonder what would happen if I sent the Pi-hole logs to Wavefront for analysis?  Stay tuned for the next blog as I continue my work on this project.
-
  
 
 ### Further Reading
