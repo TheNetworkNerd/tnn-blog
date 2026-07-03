@@ -10,7 +10,9 @@ tags:
   - "Nerd Journey"
   - "Podcast"
   - "Podcasts"
-image: "NerdJourney_logo_Small.jpg"
+  - "Podcaster"
+  - "Podcasting"
+image: "NerdJourney_1YearReflect.png"
 ---
 
 What would you do if a friend suggested the two of you start a podcast?  That's exactly what happened to me back in December 2017 right before changing jobs.  When you've never helped create or co-host a podcast, you truly have no idea what it takes.  I had been a podcast guest once before, but that's it.  I certainly didn't know exactly what it would be like, but I wasn't going to say no.  My only hope was that I would have some intelligent things to say in regard to the topics we would be discussing.  And I wouldn't just be co-hosting a podcast with a friend.  I'd be co-hosting it with a friend who has become a mentor to me.  Can you see how that might automatically cause a little impostor syndrome?  After all, what credibility did I have to talk about career progression?
@@ -19,7 +21,9 @@ What would you do if a friend suggested the two of you start a podcast?  That's
 
 The official launch of the [Nerd Journey Podcast](http://nerd-journey.com/) was on July 17, 2018 (see the post on that [here]({% link _posts/2018-07-17-two-nerds-on-a-journey.md %})).  What listeners may not realize is that we started our practice recordings much earlier (as early as December 2017).  In fact, we made sure there were plenty of episodes ready for release before the official launch.  It was important to get into the habit of recording regularly and developing topics for episodes.
 
-Around the time of the launch, my family and I took a trip to Galveston, TX.  Of course, I made sure to take a laptop with me.  Like many others, I have trouble truly disconnecting while on vacation unless I'm somewhere with no wifi.  But, in this case, I didn't spend my evenings while on vacation catching up on work e-mail and tasks...I spent it working on the podcast.  In that span of several days, I worked on show notes and suggested edit points so John could power through the editing.  We even recorded an episode while I was on vacation ([Episode 11](http://nerd-journey.com/nerd-journey-011-questions-to-ask-in-an-interview-and-hero-complex/)) for good measure.  This was all an effort to front load the release process and take some pressure off the upcoming month's hectic schedule.  We may have launched a little later than expected, but we got the production out the door and have been able to maintain weekly shows for a year thus far.
+Around the time of the launch, my family and I took a trip to Galveston, TX.  Of course, I made sure to take a laptop with me.  Like many others, I have trouble truly disconnecting while on vacation unless I'm somewhere with no wifi.  But, in this case, I didn't spend my evenings while on vacation catching up on work e-mail and tasks...I spent it working on the podcast.  In that span of several days, I worked on show notes and suggested edit points so John could power through the editing.  We even recorded an episode while I was on vacation ([Episode 11](http://nerd-journey.com/nerd-journey-011-questions-to-ask-in-an-interview-and-hero-complex/)) for good measure.  This was all an effort to front load the release process and take some pressure off the upcoming month's hectic schedule.  We may have launched a little later than expected, but we got the production out the door and have been able to maintain weekly shows for a year thus far.  
+
+![](NerdJourney_logo_Small.jpg)
 
 ### Making the Time
 

@@ -45,11 +45,9 @@ I'll assume you read the article on how to add a search engine to Chrome and hav
 
 We're presented with 3 fields at this point.  We're going to fill them out in a very specific way so that we can use a keyword in Chrome to search the VMware Knowledge Base site for whatever term(s) we want.  Use the parameters below.  I am pasting them in plain text here so you can copy them and speed up the process.  The keyword field can be anything you like.  I chose vmkb for the purposes of this exercise.  The last field was the most challenging to get right, and it's part of the reason I showed two different examples above to reveal the pattern.  Notice the placement of the **%s** below compared to the keywords our searches above.  Remember also that **%20** in the browser address bar replaces spaces in search terms.  See [this link](https://www.w3schools.com/tags/ref_urlencode.asp) for more information on that.
 
-**Search engine:** https://kb.vmware.com/s
-
-**Keyword:** vmkb
-
-**URL with %s in place of query:** 
+- **Search engine:** https://kb.vmware.com/s
+- **Keyword:** vmkb
+- **URL with %s in place of query:** 
 ```
 https://kb.vmware.com/s/global-search/%40uri#q=%s&t=Knowledge&sort=relevancy
 ```
@@ -107,11 +105,9 @@ https://kb.vmware.com/s/global-search/%40uri#q=%40title%3D%22vSAN%20disk%20group
 
 Go back to the custom search engine we created in Chrome, and it is time to make some adjustments.  Here are the parameters we will need to do a search of Docs and Blogs only.  Let's go ahead and change the keyword from vmkb to vmdoc as well.
 
-**Search engine:** https://kb.vmware.com/s
-
-**Keyword:** vmdoc
-
-**URL with %s in place of query:** 
+- **Search engine:** https://kb.vmware.com/s
+- **Keyword:** vmdoc
+- **URL with %s in place of query:** 
 ```
 https://kb.vmware.com/s/global-search/%40uri#q=%s&t=MoreContent&sort=relevancy&f:@commonsource=\[Docs,Blogs\]
 ```
@@ -151,11 +147,9 @@ https://docs.vmware.com/advanced-search.html?advanced=N4IghgNiBcIG4GUCCA5ABAEwJY
 
 As far as the Docs site is concerned, the only custom search engine potential is for the simple search functionality we showed earlier.  Here are the parameters to use if you're curious (remembering the keyword can be whatever you want) and the accompanying screenshot:
 
-**Search engine:** https://docs.vmware.com/
-
-**Keyword:** docs
-
-**URL with %s in place of query:** 
+- **Search engine:** https://docs.vmware.com/
+- **Keyword:** docs
+- **URL with %s in place of query:** 
 ```
 https://docs.vmware.com/en/search/#/%s
 ```
