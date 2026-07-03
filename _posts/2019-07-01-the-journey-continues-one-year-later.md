@@ -12,7 +12,7 @@ tags:
   - "Podcasts"
   - "Podcaster"
   - "Podcasting"
-image: "NerdJourney_1YearReflect.png"
+image: "NerdJourney_1YearReflection.png"
 ---
 
 What would you do if a friend suggested the two of you start a podcast?  That's exactly what happened to me back in December 2017 right before changing jobs.  When you've never helped create or co-host a podcast, you truly have no idea what it takes.  I had been a podcast guest once before, but that's it.  I certainly didn't know exactly what it would be like, but I wasn't going to say no.  My only hope was that I would have some intelligent things to say in regard to the topics we would be discussing.  And I wouldn't just be co-hosting a podcast with a friend.  I'd be co-hosting it with a friend who has become a mentor to me.  Can you see how that might automatically cause a little impostor syndrome?  After all, what credibility did I have to talk about career progression?
