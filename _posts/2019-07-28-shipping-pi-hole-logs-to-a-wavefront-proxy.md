@@ -16,8 +16,6 @@ image: "0_shiplogs.jpg"
 
 If you read [my last post]({% link _posts/2019-05-26-creating-a-wavefront-proxy-in-aws.md %}), there's a Wavefront proxy running on a Ubuntu server in EC2 ready to collect data, transform it, and send it to Wavefront.   There is a way to create [metrics from logs](https://www.wavefront.com/creating-metrics-logs/), and my goal is to get Pi-hole logs into Wavefront for analysis.  Based on [this video](https://www.youtube.com/watch?v=qll_7mwVmI0&feature=youtu.be), there are two ways to send log data to a Wavefront proxy - using raw TCP or using [Filebeat](https://www.elastic.co/guide/en/beats/filebeat/current/how-filebeat-works.html).  So how does one decide?
 
- 
-
 ### Choosing the Right Tool to Ship Logs
 
 From what I learned, the raw TCP option may be better suited if you have a syslog platform like [Splunk](https://www.splunk.com/) in place.  Interestingly enough, Splunk can [forward its data to third-party systems](https://docs.splunk.com/Documentation/Splunk/7.2.6/Forwarding/Forwarddatatothird-partysystemsd) with just a few configuration tweaks.  Since [vRealize Log Insight](https://www.vmware.com/products/vrealize-log-insight.html) can [forward event data to Splunk using TCP](https://blogs.vmware.com/services-education-insights/2018/02/configuring-vrealize-log-insight-event-forwarding-splunk.html), I'd imagine using it for forwarding data to Wavefront could be done pretty easily as well.  There are likely an array of other syslog platforms that have the same capability.
@@ -30,13 +28,13 @@ In that post FiyaFly makes the point that there should be some other logging too
 
 Maybe you're thinking what I am at this point.  I've spent too long trying to choose the right tool instead of choosing one that will do the job so I can accomplish my goal.  Since I spent the most time looking over syslog-ng configuration examples and it happened to be an easily installable package, that is the tool I chose.  It had specific capabilities to collect log messages from files that seemed intuitive, and that's what was needed for this project.
 
- 
-
 ### Installing syslog-ng on Raspbian
 
 At this point I'm logging into my Raspberry Pi via SSH to run the installer for syslog-ng:
 
-`sudo apt-get install syslog-ng`
+```bash
+sudo apt-get install syslog-ng
+```
 
 During the install (which succeeded), I noticed rsyslog was removed.  This is likely to prevent some kind of conflicting behavior since rsyslog is part of Raspbian by default.
 
@@ -44,13 +42,13 @@ During the install (which succeeded), I noticed rsyslog was removed.  This is l
 
 Now that syslog-ng has been installed, is it actually running?  Run the following command to check.
 
-`sudo service syslog-ng status`
+```bash
+sudo service syslog-ng status
+```
 
 Based on the screenshot below, the service is running.  That's progress.  But at this point, it isn't configured to monitor and send the specific log files of interest to the Wavefront proxy.
 
 ![](2_syslog-ng_status.png)
-
- 
 
 ### Which Log Files to Send?
 
@@ -61,23 +59,32 @@ Before making any changes to syslog-ng, I want to identify the specific files th
 - /var/log/pihole\_updateGravity.log
 - /var/log/syslog - for optional system information
 
- 
-
-### Back to the Cloud
+ ### Back to the Cloud
 
 Before we start sending logs to the proxy (a Ubuntu VM running in EC2), it would be wise to ensure all proper ports are open.  According to [this document](https://docs.wavefront.com/integrations_log_data.html), the proxy needs to be configured to accept incoming log data.  I've restricted SSH access to the proxy to only my home network's ip address using AWS tooling but have not opened any ports within Ubuntu.  Let's login to the proxy via SSH and look at the [Wavefront proxy configuration file](https://docs.wavefront.com/proxies_configuring.html).  Since this proxy runs on Ubuntu, the configuration file is /etc/wavefront/wavefront-proxy/wavefront.conf.
 
-To edit the file, run `sudo vi /etc/wavefront/wavefront-proxy/wavefront.conf`
+To edit the file, run 
+```bash
+sudo vi /etc/wavefront/wavefront-proxy/wavefront.conf
+```
 
 Then, use the proper vi commands (which we won't get into here) to add the two lines below to the file, save it, and then exit.  These lines can go just about anywhere in the file (most lines are commented out by default), but don't make other changes at this time.  Notice the path specified by the logsIngestionConfigFile parameter matches the Wavefront install directory, and we're specifying port 5055 for syslog-ng to use as a target for raw TCP logs.  The yaml file can technically be named anything we want and does not exist until manually created (to be done later).  This function of this file is to take specific data from the log files you are sending and turn it into time series metrics for analysis in Wavefront.  Think of it as a blank slate for now.
 
-`rawLogsPort=5055 logsIngestionConfigFile=/etc/wavefront/wavefront-proxy/logsIngestion.yaml`
+```bash
+rawLogsPort=5055 logsIngestionConfigFile=/etc/wavefront/wavefront-proxy/logsIngestion.yaml
+```
 
 Since we just changed a configuration file, it's best to go ahead and restart the wavefront-proxy service to ensure the configuration takes effect.  Run the following command:
 
-`sudo service wavefront-proxy restart`
+```bash
+sudo service wavefront-proxy restart
+```
 
-If you so desire, run `sudo service wavefront-proxy status` to check the service status.  You will see from the screenshot shown here that the service was just started again.
+If you so desire, run 
+```bash
+sudo service wavefront-proxy status
+```
+ to check the service status.  You will see from the screenshot shown here that the service was just started again.
 
 ![](3_wavefront-proxy_restart.png)
 
@@ -86,7 +93,6 @@ To be thorough, check [iptables](https://help.ubuntu.com/community/IptablesHowTo
 ![](5_iptables.png)
 
  
-
 ### Don't Forget Cloud Provider Security Measures
 
 We specified port 5055 as the port for log ingestion on our proxy, but TCP traffic on port 5055 has to be able to get to the Ubuntu operating system from the Raspberry Pi at my house.  Since the Ubuntu machine is running in AWS EC2, there's an additional layer to consider.  When I first created this VM, the default security group only had a single inbound rule allowing SSH traffic from my home network (nothing else allowed inbound).  I needed to add another inbound rule to that same security group to allow TCP traffic on port 5055 to reach the VM.  This should mean we have a clear path from the Raspberry Pi to AWS to the Ubuntu VM for log transmission from my home network only.
@@ -94,7 +100,6 @@ We specified port 5055 as the port for log ingestion on our proxy, but TCP traff
 ![](4_AWSSecurityGroups.png)
 
 That's three different places we had to either check or make a configuration change to ensure port 5055 was open for inbound TCP traffic - at the cloud provider level (AWS security groups), at the operating system firewall level (checking iptables within Ubuntu), and within the proxy configuration file (ensuring the rawLogsPort was set accordingly within wavefront.conf).
-
  
 
 ### Digging into the syslog-ng Configuration...and Baby Steps
@@ -103,13 +108,13 @@ At this point we have the proper logs identified to send to our Wavefront proxy 
 
 Stepping into this slowly, we know one of the log files to send from the Raspberry Pi is /var/log/pihole.log, so I'll start by showing how to configure syslog-ng to send only this log file and build on it later.  Keep in mind the following three blocks of code can be placed together or separated within the syslog-ng.conf file.  The source and destination blocks are basically variable declarations (declaring and and setting the values of s\_pihole\_log and d\_wavefront\_proxy as source and destination variables respectively).  It is the log statement below that sends data.
 
-`#Define the object s_pihole_log as a source. #Use the file() source driver to open and read messages from /var/log/pihole.log. source s_pihole_log { file("/var/log/pihole.log"); };`
+```
+#Define the object s_pihole_log as a source. #Use the file() source driver to open and read messages from /var/log/pihole.log. source s_pihole_log { file("/var/log/pihole.log"); };
+#Define the object d_wavefront_proxy as a log destination. #Use the tcp destination driver to send logs to our Wavefront proxy over TCP port 5055. #We're using X.X.X.X as the ip address of the Wavefront proxy. destination d_wavefront_proxy {tcp("X.X.X.X" port(5055)); };
+#Send logs from the source object s_pihole_log to the destination object d_wavefront_proxy. log { source(s_pihole_log); destination(d_wavefront_proxy); };
+```
 
-`#Define the object d_wavefront_proxy as a log destination. #Use the tcp destination driver to send logs to our Wavefront proxy over TCP port 5055. #We're using X.X.X.X as the ip address of the Wavefront proxy. destination d_wavefront_proxy {tcp("X.X.X.X" port(5055)); };`
-
-`#Send logs from the source object s_pihole_log to the destination object d_wavefront_proxy. log { source(s_pihole_log); destination(d_wavefront_proxy); };`
-
-Once these lines have been added to syslog-ng.conf, save the configuration file.  Then, go ahead and restart syslog-ng:  `sudo service syslog-ng restart`
+Once these lines have been added to syslog-ng.conf, save the configuration file.  Then, go ahead and restart syslog-ng:  `sudo service syslog-ng restart'
 
 If all steps were performed correctly, syslog-ng should be reading from pihole.log and sending the data to our Wavefront proxy.
 
