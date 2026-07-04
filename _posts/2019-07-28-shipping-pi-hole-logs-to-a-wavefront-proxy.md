@@ -114,7 +114,11 @@ Stepping into this slowly, we know one of the log files to send from the Raspber
 #Send logs from the source object s_pihole_log to the destination object d_wavefront_proxy. log { source(s_pihole_log); destination(d_wavefront_proxy); };
 ```
 
-Once these lines have been added to syslog-ng.conf, save the configuration file.  Then, go ahead and restart syslog-ng:  `sudo service syslog-ng restart'
+Once these lines have been added to syslog-ng.conf, save the configuration file.  Then, go ahead and restart syslog-ng:  
+
+```bash
+sudo service syslog-ng restart
+```
 
 If all steps were performed correctly, syslog-ng should be reading from pihole.log and sending the data to our Wavefront proxy.
 
