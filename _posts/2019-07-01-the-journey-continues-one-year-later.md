@@ -12,6 +12,10 @@ tags:
   - "Podcasts"
   - "Podcaster"
   - "Podcasting"
+  - "Content Creator"
+  - "Career"
+  - "Tech Careers"
+  - "Careers"
 image: "NerdJourney_1YearReflection.png"
 ---
 
