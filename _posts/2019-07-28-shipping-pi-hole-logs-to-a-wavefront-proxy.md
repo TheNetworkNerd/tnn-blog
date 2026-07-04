@@ -11,7 +11,7 @@ tags:
   - "VMware Wavefront"
   - "Wavefront"
   - "Wavefront Proxy"
-image: "0_featured.jpg"
+image: "0_shiplogs.jpg"
 ---
 
 If you read [my last post]({% link _posts/2019-05-26-creating-a-wavefront-proxy-in-aws.md %}), there's a Wavefront proxy running on a Ubuntu server in EC2 ready to collect data, transform it, and send it to Wavefront.   There is a way to create [metrics from logs](https://www.wavefront.com/creating-metrics-logs/), and my goal is to get Pi-hole logs into Wavefront for analysis.  Based on [this video](https://www.youtube.com/watch?v=qll_7mwVmI0&feature=youtu.be), there are two ways to send log data to a Wavefront proxy - using raw TCP or using [Filebeat](https://www.elastic.co/guide/en/beats/filebeat/current/how-filebeat-works.html).  So how does one decide?
