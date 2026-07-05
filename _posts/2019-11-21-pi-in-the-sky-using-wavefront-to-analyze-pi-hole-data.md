@@ -18,6 +18,12 @@ tags:
   - "VMware Wavefront"
   - "Wavefront"
   - "Wavefront Proxy"
+  - "Blog Series"
+  - "Public Speaking"
+  - "Presentation"
+  - "Conference"
+  - "Tech Conference"
+  - "Conference Presentation"
 image: "pi-3414765_640.jpg"
 ---
 
