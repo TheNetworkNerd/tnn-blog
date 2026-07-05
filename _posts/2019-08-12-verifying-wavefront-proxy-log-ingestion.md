@@ -31,7 +31,7 @@ I had already referenced [this document](https://docs.wavefront.com/proxies_con
 
 Why not check to see if there is some indication of log data being received in this log?  Since all paths from the Raspberry Pi to the proxy should be open, start watching the live log by logging into the proxy via SSH and running the following command: 
 ```bash
-tail -f /var/log/wavefront/wavefront.log`
+tail -f /var/log/wavefront/wavefront.log
 ```
 As you can see, most everything here references port 2878 (which we are not using for metric ingestion).  That's not extremely helpful, unfortunately.  
 
@@ -39,7 +39,7 @@ As you can see, most everything here references port 2878 (which we are not usin
 
 I thought at this point it might require more detailed logging.  In the document referenced above on configuring proxies, there is a pushLogLevel parameter inside wavefront.conf that is set to SUMMARY by default.  Would setting that parameter to DETAILED show anything different in the log (more info in [this document](https://docs.wavefront.com/proxies_configuring.html#proxy-configuration-properties))?  I decided to try it. Run the following command to edit wavefront.conf: 
 ```bash
-sudo vi /etc/wavefront/wavefront-proxy/wavefront.conf`
+sudo vi /etc/wavefront/wavefront-proxy/wavefront.conf
 ```
 
 Change the pushLogLevel parameter to DETAILED (picture of this line shown below as well), save your changes, and exit wavefront.conf. `pushLogLevel=DETAILED`  
@@ -48,7 +48,7 @@ Change the pushLogLevel parameter to DETAILED (picture of this line shown below 
 
 Then, restart the wavefront-proxy service: 
 ```bash
-sudo service wavefront-proxy restart`
+sudo service wavefront-proxy restart
 ```
 
 If we go back and tail wavefront.log again, the output looks like this:   
@@ -152,6 +152,7 @@ With 46 internal metrics to wade through, there had to be something helpful.  K
 - `~proxy.logsharvesting.parsed`
 - `~proxy.logsharvesting.unparsed`
 - `~proxy.logsharvesting.raw-received`  
+
 The `~proxy.logs-ingester.\*` metrics were more for counting the number of points (or non-internal metrics) that have been  sent by the proxy to Wavefront (currently zero).
 
 As for the 3 internal metrics mentioned, ~proxy.logsharvesting.raw-received should be a count of how many log lines have been received by the proxy.  It is not shown here because there was a slight bug in the proxy code at the time of writing.  Similarly, ~proxy.logsharvesting.unparsed would be a count of log lines received but not yet parsed (net yet scraped for data to turn into metrics) by the rules added to our logsIngestion.yaml file.  Does it make sense that ~proxy.logsharvesting.parsed is holding steady at zero?  It should.  We haven't told our Wavefront proxy to parse the logs at all...yet.

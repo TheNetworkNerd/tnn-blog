@@ -56,7 +56,7 @@ Aug 10 00:00:38 dnsmasq[914]: forwarded rdvs.alljoyn.org to 1.0.0.1
 Aug 10 00:00:38 dnsmasq[914]: reply rdvs.alljoyn.org is NXDOMAIN
 Aug 10 00:00:38 dnsmasq[914]: query[A] rdvs.alljoyn.org from 10.0.0.128
 Aug 10 00:00:38 dnsmasq[914]: cached rdvs.alljoyn.org is NXDOMAIN
-Aug 10 00:00:40 dnsmasq[914]: query[A] api-global.netflix.com from 10.0.0.5`
+Aug 10 00:00:40 dnsmasq[914]: query[A] api-global.netflix.com from 10.0.0.5
 ```
 But, young Skywalker, you are not a jedi yet.  Before we can create any time series data from these logs, we need to dive into grok.
  
