@@ -155,13 +155,13 @@ With 46 internal metrics to wade through, there had to be something helpful.  K
 
 The `~proxy.logs-ingester.\*` metrics were more for counting the number of points (or non-internal metrics) that have been  sent by the proxy to Wavefront (currently zero).
 
-As for the 3 internal metrics mentioned, ~proxy.logsharvesting.raw-received should be a count of how many log lines have been received by the proxy.  It is not shown here because there was a slight bug in the proxy code at the time of writing.  Similarly, ~proxy.logsharvesting.unparsed would be a count of log lines received but not yet parsed (net yet scraped for data to turn into metrics) by the rules added to our logsIngestion.yaml file.  Does it make sense that ~proxy.logsharvesting.parsed is holding steady at zero?  It should.  We haven't told our Wavefront proxy to parse the logs at all...yet.
+As for the 3 internal metrics mentioned, `~proxy.logsharvesting.raw-received` should be a count of how many log lines have been received by the proxy.  It is not shown here because there was a slight bug in the proxy code at the time of writing.  Similarly, ~proxy.logsharvesting.unparsed would be a count of log lines received but not yet parsed (net yet scraped for data to turn into metrics) by the rules added to our logsIngestion.yaml file.  Does it make sense that ~proxy.logsharvesting.parsed is holding steady at zero?  It should.  We haven't told our Wavefront proxy to parse the logs at all...yet.
 
 Fortunately for us, this finally answers the question "did my logs make it to the proxy?"  Now we can definitively say that the logs are making it to the proxy.
 
 ### An Important Note
 
-Remember the part of this article where we created logsIngestion.yaml and added a single line to clear some errors related to the wavefront-proxy service?  If this particular step is left out of the process, internal metrics for ~proxy.logsharvesting.\* don't populate...at all.  So even if you made it to the Sources area mentioned above without having completed that step, it would look like the proxy never received any log data.
+Remember the part of this article where we created logsIngestion.yaml and added a single line to clear some errors related to the wavefront-proxy service?  If this particular step is left out of the process, internal metrics for `~proxy.logsharvesting.\*` don't populate...at all.  So even if you made it to the Sources area mentioned above without having completed that step, it would look like the proxy never received any log data.
 
 Take a look at the screenshot below to illustrate.  The gap in the lines on the chart is from the period where logsIngestion.yaml did not exist or was completely empty.  Notice also the green line compared to the blue line.  The internal metric ~proxy.logsharvesting.unparsed (really just a counter) started back at zero after a restart of the wavefront-proxy service.
 

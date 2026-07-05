@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Fishing for Wavefront Metrics with Grok Patterns"
 date: 2019-08-16
 media_subpath: /assets/images
@@ -68,10 +68,10 @@ Interestingly enough, the word grok was first introduced in a book called _Stra
 Grok is a parsing filter based on patterns.  If I filter information, that means I narrow the focus to only look at what is most important.  In our case, important items will be specific data from logs that can be used as metrics.  In Wavefront (as in Logstash), data is parsed from logs based on grok patterns.  A grok pattern is a data format description.  For example, there are grok patterns for things like ip addresses (both ipv4 and ipv6), host names, file paths, usernames, and many more.  Consider the specific format of an ipv4 address in your mind.  The grok pattern for an ipv4 address is defined this way:
 
 ```
-IPV4 (?<![0-9])(?:(?:25[0-5]|2[0-4][0-9]|[0-1]?[0-9]{1,2})[.](?:25[0-5]|2[0-4][0-9]|[0-1]?[0-9]{1,2})[.](?:25[0-5]|2[0-4][0-9]|[0-1]?[0-9]{1,2})[.](?:25[0-5]|2[0-4][0-9]|[0-1]?[0-9]{1,2}))(?![0-9])`
+IPV4 (?<![0-9])(?:(?:25[0-5]|2[0-4][0-9]|[0-1]?[0-9]{1,2})[.](?:25[0-5]|2[0-4][0-9]|[0-1]?[0-9]{1,2})[.](?:25[0-5]|2[0-4][0-9]|[0-1]?[0-9]{1,2})[.](?:25[0-5]|2[0-4][0-9]|[0-1]?[0-9]{1,2}))(?![0-9])
 ```
 
-If that syntax gives you a headache, I definitely understand.  The beauty of this grok pattern is that I can use it to identify and parse an ipv4 address from a single line of text in a log file.  I don't have to know how to detect whether there is an ipv4 address in my log file.  I can use the grok pattern to do the detective work for me and return the ip address (or some other value I want) for further analysis.  In the case of the Pi-hole logs, you can easily see above that requests are being made by different ip addresses on my home network.  What if we could count the number of times each ip address makes a request and track those over time?  Grok patterns can help here, but we'll have to first learn proper syntax.
+If that syntax gives you a headache, I definitely understand.  The beauty of this grok pattern is that I can use it to identify and parse an ipv4 address from a single line of text in a log file.  I don't have to know how to detect whether there is an ipv4 address in my log file.  I can use the grok pattern to do the detective work for me and return the ip address (or some other value I want) for further analysis.  In the case of the Pi-hole logs, you can easily see above that requests are being made by different ip addresses on my home network.  What if we could count the number of times each ip address makes a request and track those over time?  Grok patterns can help here, but we need to first learn proper syntax.
 
 Some of the grok syntax basics can be found [here](https://www.elastic.co/guide/en/logstash/current/plugins-filters-grok.html), but that wasn't enough for me.  There is also a [Grok debugger](https://grokdebug.herokuapp.com/) with links to a number of grok patterns for reference, but [this list of grok patterns](https://github.com/wavefrontHQ/java/blob/master/proxy/src/main/resources/patterns/patterns) is supported by Wavefront proxies.  Notice these are a fork of Logstash grok patterns.  I recommend looking through the supported patterns before trying to use them.  Per the Wavefront documentation, there is potential to add new grok patterns if we want, but take baby steps with me for now.  I found [this post](https://logz.io/blog/logstash-grok/) extremely helpful in learning the basics of grok patterns.
 
