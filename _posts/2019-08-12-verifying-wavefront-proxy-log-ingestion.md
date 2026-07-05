@@ -12,42 +12,50 @@ tags:
   - "VMware Wavefront"
   - "Wavefront"
   - "Wavefront Proxy"
+  - "Logging"
+  - "Logs"
+  - "Linux"
 image: "0_analytics-3088958_640.jpg"
 ---
 
 In my [last post in this series]({% link _posts/2019-07-28-shipping-pi-hole-logs-to-a-wavefront-proxy.md %}), it looks like we have everything in place for the Wavefront proxy to receive Pi-hole log data (only sending data from pihole.log for now), but how can we confirmed the logs were received by the proxy before working to create metrics from the log contents?  This particular part stumped me big time as I was going through it.  I thought it might be helpful to share attempted dead ends to show the thought process.
 
- 
 
 ### A Simple Metric Test
 
 [This document](https://docs.wavefront.com/proxies_installing.html) shows a way to test if a Wavefront proxy is sending and receiving data, but the test only helps if you're ingesting metric data in the [Wavefront Data Format](https://docs.wavefront.com/wavefront_data_format.html) via port 2878.  In our case metrics will come from logs sent to the proxy, and the proxy will ingest log data specifically via TCP port 5055.  There's a first dead end.
 
- 
-
 ### Diving into Logs
 
-I had already referenced [this document](https://docs.wavefront.com/proxies_configuring.html#proxy-configuration-properties) to get the path to wavefront.conf, but it also specifies where the proxy logs are stored for Ubuntu:  `/var/log/wavefront/wavefront.log` Why not check to see if there is some indication of log data being received in this log?  Since all paths from the Raspberry Pi to the proxy should be open, start watching the live log by logging into the proxy via SSH and running the following command: `tail -f /var/log/wavefront/wavefront.log`
+I had already referenced [this document](https://docs.wavefront.com/proxies_configuring.html#proxy-configuration-properties) to get the path to wavefront.conf, but it also specifies where the proxy logs are stored for Ubuntu:  `/var/log/wavefront/wavefront.log` 
 
-As you can see, most everything here references port 2878 (which we are not using for metric ingestion).  That's not extremely helpful, unfortunately.
+Why not check to see if there is some indication of log data being received in this log?  Since all paths from the Raspberry Pi to the proxy should be open, start watching the live log by logging into the proxy via SSH and running the following command: 
+```bash
+tail -f /var/log/wavefront/wavefront.log`
+```
+As you can see, most everything here references port 2878 (which we are not using for metric ingestion).  That's not extremely helpful, unfortunately.  
 
 ![](1_wavefront_log_summary-1024x543.png)
 
-I thought at this point it might require more detailed logging.  In the document referenced above on configuring proxies, there is a pushLogLevel parameter inside wavefront.conf that is set to SUMMARY by default.  Would setting that parameter to DETAILED show anything different in the log (more info in [this document](https://docs.wavefront.com/proxies_configuring.html#proxy-configuration-properties))?  I decided to try it. Run the following command to edit wavefront.conf: `sudo vi /etc/wavefront/wavefront-proxy/wavefront.conf`
+I thought at this point it might require more detailed logging.  In the document referenced above on configuring proxies, there is a pushLogLevel parameter inside wavefront.conf that is set to SUMMARY by default.  Would setting that parameter to DETAILED show anything different in the log (more info in [this document](https://docs.wavefront.com/proxies_configuring.html#proxy-configuration-properties))?  I decided to try it. Run the following command to edit wavefront.conf: 
+```bash
+sudo vi /etc/wavefront/wavefront-proxy/wavefront.conf`
+```
 
-Change the pushLogLevel parameter to DETAILED (picture of this line shown below as well), save your changes, and exit wavefront.conf. `pushLogLevel=DETAILED`
+Change the pushLogLevel parameter to DETAILED (picture of this line shown below as well), save your changes, and exit wavefront.conf. `pushLogLevel=DETAILED`  
 
 ![](1.5_pushLogLevel-1024x72.png)
 
-Then, restart the wavefront-proxy service: `sudo service wavefront-proxy restart`
+Then, restart the wavefront-proxy service: 
+```bash
+sudo service wavefront-proxy restart`
+```
 
-If we go back and tail wavefront.log again, the output looks like this:
+If we go back and tail wavefront.log again, the output looks like this:   
 
 ![](2_wavefront_log_detailed-1024x535.png)
 
 Now there are DEBUG messages in addition to the INFO messages we saw previously.  But again, there's nothing here about whether our logs made it to the proxy (even after tailing the log for a few minutes).  That's a second dead end.  At this point, one might think we should set the pushLogLevel parameter back to SUMMARY, but I left it at DETAILED just in case.
-
- 
 
 ### Fixing a Misconfiguration
 
@@ -90,12 +98,9 @@ After clicking on that tile, our view changes a bit.  Since ~proxy is a type of
 ![](6_WavefrontUsage1-1024x464.png)
 
  
-
 If we click on the Metrics tab, many of the charts are showing no data.  Does it make sense why that might be?  Any time we see "points" in the screenshot below, that means metrics (as in non-internal metrics that have been sent from the proxy to Wavefront).  If you recall from our project thus far, we haven't pulled any metrics out of the logs we're sending, so there should be no metrics processed at the collector gateway to our Wavefront instance (i.e. the ~collector internal metric should not show any points received).  Doing a search of the metrics list below had nothing labeled ~proxy.
 
 ![](7_WavefrontUsage2_-1024x423.png)
-
- 
 
 Wait a minute.  What about the Dashboards tab?  Maybe there's something useful there.  Click on the Wavefront Usage link below to see.
 
@@ -114,8 +119,6 @@ The Proxy Health dashboards (Points, Spans, Distributions) aren't going to be us
 ![](11_ProxyTroubleshooting-1024x434.png)
 
 I won't go into the other sets of dashboards in this area because they don't answer the question of whether the logs made it to our Wavefront proxy.  I have to say when I found the Wavefront Integration Dashboard, it was pretty exciting.  But in the case of this project, this area is just another dead end.  There has to be another way.  My hope is at some point a Proxy Health section of this integration specifically for log ingestion will be added to aid in troubleshooting.
-
- 
 
 ### The Answer Lies in the Metrics?
 
@@ -136,16 +139,14 @@ It's easy to see there are recent metrics to observe from our screenshot below.�
 Since we only care about whether logs were received by the proxy, search the Metrics area for log.  As shown below, there are 46 metrics (called internal metrics, names of which begin with ~) related to logs reported by this proxy.
 
 ![](13_MetricSearchLog-1024x527.png)
-
  
-
 As the screenshot above states, selecting any metric in the list will add a chart to the area on the right (which will update every few seconds).  For every chart, hover your cursor over any part of the chart to see different options for time frame of data shown (otherwise these options are not visible).  If we wanted to zoom in / zoom out on the data, that can easily be done for specific chart with the + or - buttons.  As you can see from the chart on the right below, we are looking at a 2 hour time window by default (also the reason you see 2h underlined).  The X in the upper right corner of the chart is where you can click to remove the chart from view and deselect it from the metric list.  Keep in mind any changes made to the specific time frame shown for a chart stay in place until the chart is either removed or reset (an option you see only after changing the default time frame).  Additionally, by clicking on the internal metric name in the upper left-hand corner of the chart, you can look at a larger version of this chart (navigates to a different page inside the Wavefront UI) for deeper analysis.
 
 ![](14_LogsParsedUnparsed-1024x297.png)
 
 While tinkering in the area above, I found you can select any number of metrics for which you want to see charts.  The chart canvas (or grey area on the right of the above screenshot) just gets larger and allows you to scroll down to see more charts (each of them updating every few seconds).
 
-With 46 internal metrics to wade through, there had to be something helpful.  Keep in mind every internal metric we discuss here is viewed through the lens of what the proxy itself (our Ubuntu VM) can see / detect.  The most helpful metrics I found were these three: ~proxy.logsharvesting.parsed, ~proxy.logsharvesting.unparsed, and ~proxy.logsharvesting.raw-received.  The ~proxy.logs-ingester.\* metrics were more for counting the number of points (or non-internal metrics) that have been  sent by the proxy to Wavefront (currently zero).
+With 46 internal metrics to wade through, there had to be something helpful.  Keep in mind every internal metric we discuss here is viewed through the lens of what the proxy itself (our Ubuntu VM) can see / detect.  The most helpful metrics I found were these three: `~proxy.logsharvesting.parsed, ~proxy.logsharvesting.unparsed, and ~proxy.logsharvesting.raw-received`.  The ~proxy.logs-ingester.\* metrics were more for counting the number of points (or non-internal metrics) that have been  sent by the proxy to Wavefront (currently zero).
 
 As for the 3 internal metrics mentioned, ~proxy.logsharvesting.raw-received should be a count of how many log lines have been received by the proxy.  It is not shown here because there was a slight bug in the proxy code at the time of writing.  Similarly, ~proxy.logsharvesting.unparsed would be a count of log lines received but not yet parsed (net yet scraped for data to turn into metrics) by the rules added to our logsIngestion.yaml file.  Does it make sense that ~proxy.logsharvesting.parsed is holding steady at zero?  It should.  We haven't told our Wavefront proxy to parse the logs at all...yet.
 
@@ -160,11 +161,9 @@ Take a look at the screenshot below to illustrate.  The gap in the lines on the
 ![](18_MissingData-1024x285.png)
 
  
-
 In the next post we'll explore how to turn data from the logs the proxy is receiving into metrics.
 
  
-
 ### Further Reading
 
 This blog is part 3 in a series on analyzing Pi-hole log data with Wavefront.  Check out the other posts in the series:

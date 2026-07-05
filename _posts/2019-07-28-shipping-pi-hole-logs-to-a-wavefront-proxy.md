@@ -112,9 +112,17 @@ At this point we have the proper logs identified to send to our Wavefront proxy 
 Stepping into this slowly, we know one of the log files to send from the Raspberry Pi is /var/log/pihole.log, so I'll start by showing how to configure syslog-ng to send only this log file and build on it later.  Keep in mind the following three blocks of code can be placed together or separated within the syslog-ng.conf file.  The source and destination blocks are basically variable declarations (declaring and and setting the values of s\_pihole\_log and d\_wavefront\_proxy as source and destination variables respectively).  It is the log statement below that sends data.
 
 ```
-#Define the object s_pihole_log as a source. #Use the file() source driver to open and read messages from /var/log/pihole.log. source s_pihole_log { file("/var/log/pihole.log"); };
-#Define the object d_wavefront_proxy as a log destination. #Use the tcp destination driver to send logs to our Wavefront proxy over TCP port 5055. #We're using X.X.X.X as the ip address of the Wavefront proxy. destination d_wavefront_proxy {tcp("X.X.X.X" port(5055)); };
-#Send logs from the source object s_pihole_log to the destination object d_wavefront_proxy. log { source(s_pihole_log); destination(d_wavefront_proxy); };
+#Define the object s_pihole_log as a source. 
+#Use the file() source driver to open and read messages from /var/log/pihole.log. 
+source s_pihole_log { file("/var/log/pihole.log"); };
+
+#Define the object d_wavefront_proxy as a log destination. 
+#Use the tcp destination driver to send logs to our Wavefront proxy over TCP port 5055. 
+#We're using X.X.X.X as the ip address of the Wavefront proxy. destination d_wavefront_proxy 
+{tcp("X.X.X.X" port(5055)); };
+
+#Send logs from the source object s_pihole_log to the destination object d_wavefront_proxy. 
+log { source(s_pihole_log); destination(d_wavefront_proxy); };
 ```
 
 Once these lines have been added to syslog-ng.conf, save the configuration file.  Then, go ahead and restart syslog-ng:  

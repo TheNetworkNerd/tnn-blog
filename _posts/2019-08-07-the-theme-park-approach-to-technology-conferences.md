@@ -10,6 +10,9 @@ tags:
   - "Professional Networking"
   - "Spiceworld"
   - "VMworld"
+  - "Conferences"
+  - "Tech Conferences"
+  - "Technology Conferences"
 image: "0_featured_2.png"
 ---
 
@@ -31,7 +34,6 @@ Think about why you attend conferences.  Are you there to party, to meet indust
 
 ![](20190809_160716533_iOS.jpg)
 
- 
 
 ### Appropriate Dress
 
@@ -49,8 +51,6 @@ At conferences, the sessions form the meat of the daily schedule.  Some are ver
 
 If multiple people at your company are attending the conference, consider attending different sessions and comparing notes afterward to increase the exposure to different content for all parties.
 
- 
-
 ### The Fastpass
 
 At theme parks, most rides and attractions operate all day. A Fastpass (many other names for this) holds your spot in line during a specific time slot to avoid the long wait. Normally a Fastpass can only be used on the most popular rides, and you can only hold so many Fastpasses at a time.
@@ -61,7 +61,6 @@ Some sessions of a particular type only allow you to select so many of them in y
 
 ![](20190809_160628459_iOS.jpg)
 
- 
 
 ### Special Events
 
@@ -73,8 +72,6 @@ I'd equate this to evening events like a concert, a party, or an exclusive vendo
 
 Some theme parks (like the Disney parks) may have a special ceremony to open the park for the day, but there's no specific gathering for all attendees that truly equates to a keynote at a conference.  Conferences don't happen every day, so the keynote contains a specifically crafted message for attendees.  A keynote is usually a talk from a well-known industry speaker (or vendor executive) that contains information on technology trends and futures, announcement of new product and feature releases, some information on what to expect from the conference, or an opportunity to share an experience with the audience.  These sessions usually get the most attention from bloggers and the media.
 
- 
-
 ### Souvenir Shops
 
 There is no centralized solution exchange / vendor expo at a theme park, but there are souvenir shops scattered throughout.  While they are not staffed with marketing personnel or engineers to evangelize and demo products, they are staffed with people who will take your money if you find the right souvenir.  This is your chance to look around and see what products are available for purchase. It's likely there will be no free swag at a theme park unless you're a season pass holder, happen to be at the park on a special day, or happen to be participating in pin trading at a Disney park.
@@ -82,16 +79,12 @@ There is no centralized solution exchange / vendor expo at a theme park, but the
 When you visit vendor booths at a conference, get yourself some free swag.  Hopefully you have room in your suitcase or special swag bag for it.  But while at a booth, take time to learn about the products and services offered by that vendor, even if it seems unrelated to your current set of projects.  This information could come in handy at a later time, and if nothing else, it is more exposure to what is happening in the industry.  For those vendors you use and know, it can't hurt to go over to their booth and tell the staff what you find useful and what could be improved in their products(s).  If you're struggling with a vendor's product, get some technical advice from the booth staff or contact information for someone who can help.  Inquire about beta testing new products if you're fond of the vendor's products.
 
 If you're on the lookout for career advancement opportunities, ask people at the booths about their background and how they made it to where they are today.  Ask what they plan to do next and why they like what they do.  This is a professional networking opportunity as well.  It's possible to spend an entire day or more in the solutions exchange talking with vendors, but this is not an aspect of the conference that should be skipped.
-
  
-
 ### The Character Breakfast
 
 Theme parks like Disney make a killing on this.  Pay extra money to ensure you have time to eat and take pictures with characters.  This is focused networking at its best.  Sometimes it is only one or two characters for an intimate setting, while in other instances it could be an array of characters you could meet during your meal.  When taking small children to theme parks, this type of activity can be one of the most exciting times of the day.
 
 Meal times at conferences allow meeting and networking with new people.  There may be specific people you want to meet at the conference (people well known in the industry or someone you have corresponded with on social media but have not met in person).  Be intentional in your interactions, and take an opportunity to meet people you might not normally get to meet.  Sitting with people you don't know at meal times is a tactic I like to employ.   Additionally, having a quiet meal away from the conference is a great way to further a connection with someone you know or to make a new professional connection.  Listen to Aaron Delp's advice for intentional networking from this  [Geek Whisperers podcast episode](http://geek-whisperers.com/2017/01/engineering-your-time-at-conferences-with-aaron-delp-episode-128/).  But unlike a temporal character meeting at a theme park, professional networking can lead to long lasting and unexpected connections.  After all, [John White](https://www.linkedin.com/in/vjourneyman) and I met at Spiceworld many years ago by chance.
-
- 
 
 ### Pacing Yourself
 
@@ -108,8 +101,6 @@ On a hot day at a theme park, no one can afford to get dehydrated.  You'll find
 At a conference, you normally find water, coffee, and soft drink stations scattered throughout the halls of the venue.  Take advantage of hydrating when you get the chance.  Sitting in the chilly conference venue most of the day can easily dehydrate attendees.  Coffee is great, but if you drink too much of it without a decent amount of water as well, the benefits may not be there.  Try taking some kind of water bottle to your next conference so you don't have to keep up with small paper or plastic cups.  Session rooms normally have water stations as well.
 
 The worst thing about staying hydrated is having to take frequent restroom breaks.  And when does everyone take that break?  They go between sessions.  This may sound odd, but scope out the bathroom facilities at the meeting venue.  There are some areas with more foot traffic and others that normally are not that busy (i.e. the outer edges of the conference hallways or on another floor entirely).  This is something I specifically look for at theme parks as well to avoid traffic jams.  If you're at a really big conference, finding a restroom may be a downright hassle depending on the conference facilities.  Be prepared.
-
- 
 
 ### Having Fun and Acting Silly
 
