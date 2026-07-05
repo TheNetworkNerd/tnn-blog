@@ -59,7 +59,7 @@ Now there are DEBUG messages in addition to the INFO messages we saw previously.
 
 ### Fixing a Misconfiguration
 
-Remember the two lines we added to wavefront.conf in [part 2 of this blog series](http://logsIngestionConfigFile=/etc/wavefront/wavefront-proxy/logsIngestion.yaml)?  In making those changes, we referenced a config file that did not yet exist.  I later found (through a little luck and some tinkering) that the absence of this file throws some errors when the wavefront-proxy service gets restarted, and those effects cascade.  But if you aren't tailing the logs, you might miss it completely.  Rather than run into problems later, we can avoid them by addressing this now.  First, here's what the wavefront.log shows upon restart of the wavefront-proxy service.
+Remember the two lines we added to wavefront.conf in [part 2 of this blog series]({% link _posts/2019-07-28-shipping-pi-hole-logs-to-a-wavefront-proxy.md %})?  In making those changes, we referenced a config file that did not yet exist.  I later found (through a little luck and some tinkering) that the absence of this file throws some errors when the wavefront-proxy service gets restarted, and those effects cascade.  But if you aren't tailing the logs, you might miss it completely.  Rather than run into problems later, we can avoid them by addressing this now.  First, here's what the wavefront.log shows upon restart of the wavefront-proxy service.
 
 ![](15_NoYamlforLogsIngestion-1024x286.png)
 
@@ -69,7 +69,9 @@ Notice the specific line in the log is labeled with ERROR instead of INFO or DEB
 
 While we did clear the original error about the file not existing, there are now errors about the file being empty.  How do we get past this if we don't understand what goes in this yaml file?  I tried adding a single line comment to the file (use the character # to comment a line), but the new error did not disappear.  Take a look at [this example](https://docs.wavefront.com/integrations_log_data.html#configuring-the-wavefront-proxy-to-ingest-log-data) from the Wavefront documentation.  What if we add that first line to logsIngestion.yaml?
 
-`aggregationIntervalSeconds: 5 # Metrics are aggregated and sent at this interval`
+```
+aggregationIntervalSeconds: 5 # Metrics are aggregated and sent at this interval
+```
 
 Once this has been added to the file, save your changes.  Now, keep tailing wavefront.log while restarting the wavefront-proxy service.  Here's how things change:
 
@@ -146,7 +148,11 @@ As the screenshot above states, selecting any metric in the list will add a char
 
 While tinkering in the area above, I found you can select any number of metrics for which you want to see charts.  The chart canvas (or grey area on the right of the above screenshot) just gets larger and allows you to scroll down to see more charts (each of them updating every few seconds).
 
-With 46 internal metrics to wade through, there had to be something helpful.  Keep in mind every internal metric we discuss here is viewed through the lens of what the proxy itself (our Ubuntu VM) can see / detect.  The most helpful metrics I found were these three: `~proxy.logsharvesting.parsed, ~proxy.logsharvesting.unparsed, and ~proxy.logsharvesting.raw-received`.  The ~proxy.logs-ingester.\* metrics were more for counting the number of points (or non-internal metrics) that have been  sent by the proxy to Wavefront (currently zero).
+With 46 internal metrics to wade through, there had to be something helpful.  Keep in mind every internal metric we discuss here is viewed through the lens of what the proxy itself (our Ubuntu VM) can see / detect.  The most helpful metrics I found were these three: 
+- `~proxy.logsharvesting.parsed`
+- `~proxy.logsharvesting.unparsed`
+- `~proxy.logsharvesting.raw-received`  
+The `~proxy.logs-ingester.\*` metrics were more for counting the number of points (or non-internal metrics) that have been  sent by the proxy to Wavefront (currently zero).
 
 As for the 3 internal metrics mentioned, ~proxy.logsharvesting.raw-received should be a count of how many log lines have been received by the proxy.  It is not shown here because there was a slight bug in the proxy code at the time of writing.  Similarly, ~proxy.logsharvesting.unparsed would be a count of log lines received but not yet parsed (net yet scraped for data to turn into metrics) by the rules added to our logsIngestion.yaml file.  Does it make sense that ~proxy.logsharvesting.parsed is holding steady at zero?  It should.  We haven't told our Wavefront proxy to parse the logs at all...yet.
 

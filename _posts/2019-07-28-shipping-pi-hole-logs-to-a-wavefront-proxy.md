@@ -62,7 +62,7 @@ Before making any changes to syslog-ng, I want to identify the specific files th
 - /var/log/pihole\_updateGravity.log
 - /var/log/syslog - for optional system information
 
- ### Back to the Cloud
+### Back to the Cloud
 
 Before we start sending logs to the proxy (a Ubuntu VM running in EC2), it would be wise to ensure all proper ports are open.  According to [this document](https://docs.wavefront.com/integrations_log_data.html), the proxy needs to be configured to accept incoming log data.  I've restricted SSH access to the proxy to only my home network's ip address using AWS tooling but have not opened any ports within Ubuntu.  Let's login to the proxy via SSH and look at the [Wavefront proxy configuration file](https://docs.wavefront.com/proxies_configuring.html).  Since this proxy runs on Ubuntu, the configuration file is /etc/wavefront/wavefront-proxy/wavefront.conf.
 
@@ -74,7 +74,8 @@ sudo vi /etc/wavefront/wavefront-proxy/wavefront.conf
 Then, use the proper vi commands (which we won't get into here) to add the two lines below to the file, save it, and then exit.  These lines can go just about anywhere in the file (most lines are commented out by default), but don't make other changes at this time.  Notice the path specified by the logsIngestionConfigFile parameter matches the Wavefront install directory, and we're specifying port 5055 for syslog-ng to use as a target for raw TCP logs.  The yaml file can technically be named anything we want and does not exist until manually created (to be done later).  This function of this file is to take specific data from the log files you are sending and turn it into time series metrics for analysis in Wavefront.  Think of it as a blank slate for now.
 
 ```bash
-rawLogsPort=5055 logsIngestionConfigFile=/etc/wavefront/wavefront-proxy/logsIngestion.yaml
+rawLogsPort=5055
+logsIngestionConfigFile=/etc/wavefront/wavefront-proxy/logsIngestion.yaml
 ```
 
 Since we just changed a configuration file, it's best to go ahead and restart the wavefront-proxy service to ensure the configuration takes effect.  Run the following command:
@@ -118,8 +119,8 @@ source s_pihole_log { file("/var/log/pihole.log"); };
 
 #Define the object d_wavefront_proxy as a log destination. 
 #Use the tcp destination driver to send logs to our Wavefront proxy over TCP port 5055. 
-#We're using X.X.X.X as the ip address of the Wavefront proxy. destination d_wavefront_proxy 
-{tcp("X.X.X.X" port(5055)); };
+#We're using X.X.X.X as the ip address of the Wavefront proxy. 
+destination d_wavefront_proxy {tcp("X.X.X.X" port(5055)); };
 
 #Send logs from the source object s_pihole_log to the destination object d_wavefront_proxy. 
 log { source(s_pihole_log); destination(d_wavefront_proxy); };

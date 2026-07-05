@@ -118,7 +118,8 @@ Notice each pattern has proper syntax and is separated by a space.  Since the i
 
 Based on the screenshot above, we've parsed all the way to the 28.  Since the grok pattern TIME was defined using the grok patterns for HOUR, MINUTE, and SECOND (think of these as subpatterns) we see the data listed together as a time ("00:00:28") but also broken out for each subpattern.  If hours, minutes, or seconds were of particular interest, we could have used those patterns separately.  But at the moment, we're trying to get to the interesting stuff.
 
-The next part of the log line is `dnsmasq[914]: query[A]`  What can we add to parse this out?  Try the following:
+The next part of the log line is `dnsmasq[914]: query[A]`  
+What can we add to parse this out?  Try the following:
 
 ```
 %{MONTH} %{MONTHDAY} %{TIME} %{WORD}\[%{NUMBER}\]\: %{WORD}\[%{WORD}\]
