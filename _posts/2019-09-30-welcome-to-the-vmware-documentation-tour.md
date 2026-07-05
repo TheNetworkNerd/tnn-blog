@@ -11,12 +11,12 @@ tags:
   - "vExpert"
   - "VMware"
   - "VMware Documentation"
+  - "Mind Map"
+  - "Documentation Map"
 image: "book-3089857_640.jpg"
 ---
 
 Several months ago I started building a guide to using VMware documentation that was first a single blog post, launched into a blog series, and then morphed into a presentation at the Boston VMUG UserCon in September 2019.  I realized while preparing that there was a better way to organize the content and a number of things I missed.  This post is to launch the updated series for the benefit of the community.
-
- 
 
 ### We're Going on Tour!
 
@@ -25,8 +25,6 @@ If you want to know where to find VMware documentation and take advantage of som
 Maybe you're the type of person who prefers not to take a tour without first seeing the map of all tour stops.  Please reference the mind map shown here for a rough idea where the series is headed.  Many thanks to [Paul McSharry](https://twitter.com/pmcsharry) for recommending [MindMeister](http://mindmeister.com) for this purpose.  Click [here](https://mm.tt/1334759372?t=5ycwbDDXo1) to view the interactive version of this mind map.
 
 ![](VMwareDocumentationMap-1024x825.png)
-
- 
 
 As for what we will cover in the series, here's a brief description of each part:
 
@@ -46,6 +44,4 @@ As for what we will cover in the series, here's a brief description of each part
 - Part 5 – [Building Custom Search Engines for VMware Content in Mozilla Firefox]({% link _posts/2019-03-29-building-custom-search-engines-for-vmware-content-in-mozilla-firefox.md %})
     - This post is similar to the last one but will show the steps for Firefox.
 
- 
-
-Even though this series has several parts, we're only just scratching the surface.  Watch for updates to this post as I plan to continue to add stops on the tour for the benefit of all.  If there's something specific you feel should be added, please let me know.
+ Even though this series has several parts, we're only just scratching the surface.  Watch for updates to this post as I plan to continue to add stops on the tour for the benefit of all.  If there's something specific you feel should be added, please let me know.

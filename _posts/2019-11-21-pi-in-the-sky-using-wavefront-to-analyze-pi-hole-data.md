@@ -41,15 +41,11 @@ I ran through the presentation a few times to ensure I could get it under the 12
 
 So here it is...a 12-minute presentation that took many hours of work to create.  I hope it will be helpful to others in the community.  Maybe one day there will be an extended version after I can make more progress.
 
- 
+ {% include embed/youtube.html id='Zo1lNVHLTwg' compact=1 %}
 
-https://www.youtube.com/watch?v=Zo1lNVHLTwg
-
- 
+<!-- original link is https://www.youtube.com/watch?v=Zo1lNVHLTwg -->
 
 If you would like a copy of the slides from the presentation above, you can find them on [my GitHub page](https://github.com/TheNetworkNerd/Presentations/tree/master/Pi%20in%20the%20Sky).  I would like to say a special thanks to Aaron Bolthouse, Bill Roth, and Vasily Varontsov for their help as I was pursuing the technical work needed to prepare for this presentation.  Without their help, it never would have happened.
-
- 
 
 ### Further Reading
 

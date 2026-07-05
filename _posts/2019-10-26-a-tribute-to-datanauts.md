@@ -11,6 +11,9 @@ tags:
   - "Datanauts"
   - "Podcast"
   - "Podcasts"
+  - "Tech Podcasts"
+  - "Career Podcasts"
+  - "Gratitude"
 image: "lamps-1030901_640.jpg"
 ---
 
