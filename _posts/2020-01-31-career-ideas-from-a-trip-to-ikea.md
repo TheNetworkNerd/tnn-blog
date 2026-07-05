@@ -7,9 +7,12 @@ categories:
   - "Career"
 tags: 
   - "Career"
+  - "Career Advice"
+  - "Career Thoughts"
   - "Compensation Package"
   - "IKEA"
   - "Job"
+  - "Jobs"
 image: "0_Featured_IKEAFront.jpg"
 ---
 
@@ -17,7 +20,7 @@ On a recent [Nerd Journey episode](http://nerd-journey.com/your-position-has-bee
 
 Even if you're not a fan of shopping, taking a stroll through IKEA is pretty interesting.  The store layout is setup to show shoppers what could be, acting as a psychological sea of possibility.  Sure, furniture stores have been leveraging this tactic for some time, but it's not the same as IKEA's approach.  The shopping experience begins with a trip through the show room.  Walking down the main aisle one would see different rooms on either side - a bedroom, a living room, a kitchen, a closet, or perhaps an office...each carefully constructed down to the last detail.
 
-\[caption id="attachment\_1677" align="alignnone" width="720"\]![](1_IKEA_Table-1024x683.jpg) Image Source - pixabay\[/caption\]
+![](1_IKEA_Table-1024x683.jpg)
 
 Consider the above image.  All decor in this particular display room was pre-selected for the purpose of making it look appealing to a buyer.  Most everything you see in a room like this is for sale (the light, the chairs, the table, etc.).  This is a combination of items arranged in such a way which may or may not spark joy for shoppers, and even if the overall scene does not spark joy, the visual encourages the viewer to examine the specifics.
 
