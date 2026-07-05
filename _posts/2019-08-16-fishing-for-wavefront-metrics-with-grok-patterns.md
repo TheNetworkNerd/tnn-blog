@@ -9,6 +9,7 @@ tags:
   - "Grok"
   - "Grok Patterns"
   - "Logging"
+  - "Log Analysis"
   - "Logs"
   - "Log Files"
   - "Log Shipping"
