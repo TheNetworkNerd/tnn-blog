@@ -47,7 +47,7 @@ I ran through the presentation a few times to ensure I could get it under the 12
 
 So here it is...a 12-minute presentation that took many hours of work to create.  I hope it will be helpful to others in the community.  Maybe one day there will be an extended version after I can make more progress.
 
- {% include embed/youtube.html id='Zo1lNVHLTwg' compact=1 %}
+{% include embed/youtube.html id='Zo1lNVHLTwg' compact=1 %}
 
 <!-- original link is https://www.youtube.com/watch?v=Zo1lNVHLTwg -->
 
