@@ -11,6 +11,9 @@ tags:
   - "VMware Wavefront"
   - "Wavefront"
   - "Wavefront Proxy"
+  - "Log Shipping"
+  - "Pi-hole"
+  - "Linux"
 image: "0_shiplogs.jpg"
 ---
 
@@ -127,7 +130,6 @@ If all steps were performed correctly, syslog-ng should be reading from pihole.l
 It appears we have the pathways clear and logs shipping to the proxy via TCP 5055, but there has to be something on the proxy side that confirms log data is being received, right?  Keep in mind at this point we have not specified any metrics to collect from the logs.  All we have done is tell syslog-ng what to send, where to send it, and asked it to execute.  Stay tuned for the next post in this series where we will dive into verifying the logs made it to the proxy successfully.
 
  
-
 ### Further Reading
 
 This blog is part 2 in a series on analyzing Pi-hole log data with Wavefront.  Check out the other posts in the series:
