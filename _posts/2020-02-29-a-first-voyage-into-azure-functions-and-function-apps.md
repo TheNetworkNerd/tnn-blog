@@ -158,13 +158,22 @@ Once we paste the full URL (`https://networknerd0.azurewebsites.net/api/FN1-HTTP
 
 ![](22_FunctionURL-1024x109.png)
 
-Take a look at that URL for a second.  The first part (`https://networknerd0.azurewebsites.net`) is something we tested earlier in the article and was created this way since networknerd0 is the name of the FunctionApp.  The function we created is named FN1-HTTP1-Test (also part of this URL).  Because of the way we set the Authorization level for this function, the last part of the URL (`?code=cDQam9yMNMYLdebbtPtjMcNzjdwwA4oV2MSuaeferOs1zDvt5FH7DQ==`) is a querystring that passes the API key for this function into a parameter named code.  This would not be the case if we had chosen the Anonymous Authorization level previously (no API key).  This is good information, but it does not quite explain the message above.
+Take a look at that URL for a second.  The first part is something we tested earlier in the article and was created this way since networknerd0 is the name of the FunctionApp:
+```
+https://networknerd0.azurewebsites.net
+```
+
+The function we created is named FN1-HTTP1-Test (also part of this URL).  Because of the way we set the Authorization level for this function, the last part of the URL 
+```
+?code=cDQam9yMNMYLdebbtPtjMcNzjdwwA4oV2MSuaeferOs1zDvt5FH7DQ==
+```
+is a querystring that passes the API key for this function into a parameter named code.  This would not be the case if we had chosen the Anonymous Authorization level previously (no API key).  This is good information, but it does not quite explain the message above.
 
 Let's look at the code again (snippet below).  Line 11 declares a string variable called name and sets it to be a specific value - req.Query\["name"\].  If you look at line 8, req is an object representing an instance of the [HttpRequest class](https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.http.httprequest?view=aspnetcore-3.1).  Objects of this class have specific properties, each corresponding to types of data contained in a [HTTP request](https://developer.mozilla.org/en-US/docs/Web/HTTP/Messages).  The object req has a Query property, for example, that can be retrieved.  The [Query property](https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.http.httprequest.query?view=aspnetcore-3.1#Microsoft_AspNetCore_Http_HttpRequest_Query) (which is referenced by req.Query) contains everything in the query string of our URL.  On line 11 we're searching the URL query string for a parameter called "name" and storing the value of that parameter in our variable.
 
 Lines 13 and 14 do some manipulation of req.Body (i.e. [Body property](https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.http.httprequest.body?view=aspnetcore-3.1#Microsoft_AspNetCore_Http_HttpRequest_Body) of req is the equivalent of HTTP request body).  This property of the req object returns a [Stream](https://docs.microsoft.com/en-us/dotnet/api/system.io.stream) object.  The Stream needs to be read character by character until its end (result of which looks to be some kind of JSON string that is then [deserialized](https://docs.microsoft.com/en-us/dotnet/api/system.web.script.serialization.javascriptserializer.deserializeobject?view=netframework-4.8#System_Web_Script_Serialization_JavaScriptSerializer_DeserializeObject_System_String_)).  Notice the operator ?? in line 15.  This is a [null-coalescing operator](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/null-coalescing-operator).  So if name is not null (i.e. not empty), nothing on the right-hand side of ?? will be evaluated.  Also, the ?. operator is a [null-conditional operator](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/member-access-operators#null-conditional-operators--and-).  If name were null (i.e. no name parameter in the query string), data.?name would end up being null.  Once line 15 executes it means the variable called name is either null or contains a value.  If that was a mouthful, just know that both the query string and the request body are searched to determine if a name parameter was passed in upon a client accessing the URL.
 
-```vb
+```C#
 #r "Newtonsoft.Json"
 
 using System.Net; 
@@ -211,7 +220,7 @@ Suppose we want to add another parameter to the query string and have this funct
 
 Here's the code snippet in addition to that screenshot for reference:
 
-```vb
+```C#
 #r "Newtonsoft.Json"
 
 using System.Net; 
