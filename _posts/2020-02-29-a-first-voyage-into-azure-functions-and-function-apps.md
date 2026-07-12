@@ -173,7 +173,7 @@ Let's look at the code again (snippet below).  Line 11 declares a string varia
 
 Lines 13 and 14 do some manipulation of req.Body (i.e. [Body property](https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.http.httprequest.body?view=aspnetcore-3.1#Microsoft_AspNetCore_Http_HttpRequest_Body) of req is the equivalent of HTTP request body).  This property of the req object returns a [Stream](https://docs.microsoft.com/en-us/dotnet/api/system.io.stream) object.  The Stream needs to be read character by character until its end (result of which looks to be some kind of JSON string that is then [deserialized](https://docs.microsoft.com/en-us/dotnet/api/system.web.script.serialization.javascriptserializer.deserializeobject?view=netframework-4.8#System_Web_Script_Serialization_JavaScriptSerializer_DeserializeObject_System_String_)).  Notice the operator ?? in line 15.  This is a [null-coalescing operator](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/null-coalescing-operator).  So if name is not null (i.e. not empty), nothing on the right-hand side of ?? will be evaluated.  Also, the ?. operator is a [null-conditional operator](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/member-access-operators#null-conditional-operators--and-).  If name were null (i.e. no name parameter in the query string), data.?name would end up being null.  Once line 15 executes it means the variable called name is either null or contains a value.  If that was a mouthful, just know that both the query string and the request body are searched to determine if a name parameter was passed in upon a client accessing the URL.
 
-```C#
+```csharp
 #r "Newtonsoft.Json"
 
 using System.Net; 
@@ -220,7 +220,7 @@ Suppose we want to add another parameter to the query string and have this funct
 
 Here's the code snippet in addition to that screenshot for reference:
 
-```C#
+```csharp
 #r "Newtonsoft.Json"
 
 using System.Net; 
