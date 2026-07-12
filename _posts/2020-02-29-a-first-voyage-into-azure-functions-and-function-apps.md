@@ -154,29 +154,44 @@ Now we're getting somewhere.  That URL looks lengthy, so copy it to the clipboa
 
 ![](21_GetFunctionURL_2.png)
 
-Once we paste the full URL (https://networknerd0.azurewebsites.net/api/FN1-HTTP1-Test?code=cDQam9yMNMYLdebbtPtjMcNzjdwwA4oV2MSuaeferOs1zDvt5FH7DQ==) into a browser, here's what we get:
+Once we paste the full URL (`https://networknerd0.azurewebsites.net/api/FN1-HTTP1-Test?code=cDQam9yMNMYLdebbtPtjMcNzjdwwA4oV2MSuaeferOs1zDvt5FH7DQ==`) into a browser, here's what we get:
 
 ![](22_FunctionURL-1024x109.png)
 
-Take a look at that URL for a second.  The first part (https://networknerd0.azurewebsites.net) is something we tested earlier in the article and was created this way since networknerd0 is the name of the FunctionApp.  The function we created is named FN1-HTTP1-Test (also part of this URL).  Because of the way we set the Authorization level for this function, the last part of the URL (?code=cDQam9yMNMYLdebbtPtjMcNzjdwwA4oV2MSuaeferOs1zDvt5FH7DQ==) is a querystring that passes the API key for this function into a parameter named code.  This would not be the case if we had chosen the Anonymous Authorization level previously (no API key).  This is good information, but it does not quite explain the message above.
+Take a look at that URL for a second.  The first part (`https://networknerd0.azurewebsites.net`) is something we tested earlier in the article and was created this way since networknerd0 is the name of the FunctionApp.  The function we created is named FN1-HTTP1-Test (also part of this URL).  Because of the way we set the Authorization level for this function, the last part of the URL (`?code=cDQam9yMNMYLdebbtPtjMcNzjdwwA4oV2MSuaeferOs1zDvt5FH7DQ==`) is a querystring that passes the API key for this function into a parameter named code.  This would not be the case if we had chosen the Anonymous Authorization level previously (no API key).  This is good information, but it does not quite explain the message above.
 
 Let's look at the code again (snippet below).  Line 11 declares a string variable called name and sets it to be a specific value - req.Query\["name"\].  If you look at line 8, req is an object representing an instance of the [HttpRequest class](https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.http.httprequest?view=aspnetcore-3.1).  Objects of this class have specific properties, each corresponding to types of data contained in a [HTTP request](https://developer.mozilla.org/en-US/docs/Web/HTTP/Messages).  The object req has a Query property, for example, that can be retrieved.  The [Query property](https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.http.httprequest.query?view=aspnetcore-3.1#Microsoft_AspNetCore_Http_HttpRequest_Query) (which is referenced by req.Query) contains everything in the query string of our URL.  On line 11 we're searching the URL query string for a parameter called "name" and storing the value of that parameter in our variable.
 
 Lines 13 and 14 do some manipulation of req.Body (i.e. [Body property](https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.http.httprequest.body?view=aspnetcore-3.1#Microsoft_AspNetCore_Http_HttpRequest_Body) of req is the equivalent of HTTP request body).  This property of the req object returns a [Stream](https://docs.microsoft.com/en-us/dotnet/api/system.io.stream) object.  The Stream needs to be read character by character until its end (result of which looks to be some kind of JSON string that is then [deserialized](https://docs.microsoft.com/en-us/dotnet/api/system.web.script.serialization.javascriptserializer.deserializeobject?view=netframework-4.8#System_Web_Script_Serialization_JavaScriptSerializer_DeserializeObject_System_String_)).  Notice the operator ?? in line 15.  This is a [null-coalescing operator](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/null-coalescing-operator).  So if name is not null (i.e. not empty), nothing on the right-hand side of ?? will be evaluated.  Also, the ?. operator is a [null-conditional operator](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/member-access-operators#null-conditional-operators--and-).  If name were null (i.e. no name parameter in the query string), data.?name would end up being null.  Once line 15 executes it means the variable called name is either null or contains a value.  If that was a mouthful, just know that both the query string and the request body are searched to determine if a name parameter was passed in upon a client accessing the URL.
 
-`#r "Newtonsoft.Json"`
+```vb
+#r "Newtonsoft.Json"
 
-`using System.Net; using Microsoft.AspNetCore.Mvc; using Microsoft.Extensions.Primitives; using Newtonsoft.Json;  public static async Task Run(HttpRequest req, ILogger log) { log.LogInformation("C# HTTP trigger function processed a request."); string name = req.Query["name"];  string requestBody = await new StreamReader(req.Body).ReadToEndAsync(); dynamic data = JsonConvert.DeserializeObject(requestBody); name = name ?? data?.name;  return name != null ? (ActionResult)new OkObjectResult($"Hello, {name}") : new BadRequestObjectResult("Please pass a name on the query string or in the request body"); }`
+using System.Net; 
+using Microsoft.AspNetCore.Mvc; 
+using Microsoft.Extensions.Primitives; 
+using Newtonsoft.Json;  
+public static async Task Run(HttpRequest req, ILogger log) 
+{ 
+    log.LogInformation("C# HTTP trigger function processed a request."); 
+    string name = req.Query["name"];  
+    string requestBody = await new StreamReader(req.Body).ReadToEndAsync(); 
+    dynamic data = JsonConvert.DeserializeObject(requestBody); name = name ?? data?.name;  
+    return name != null ? (ActionResult)new OkObjectResult($"Hello, {name}") : new BadRequestObjectResult("Please pass a name on the query string or in the request body");
+}
+```
 
 If we look specifically at the return statement of the function above, we see that if name is not null, we should see the "Hello, ..." message.    But there's a [conditional operator](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/language-specification/expressions#conditional-operator) in play as well, which tells us if name happens to be null, we will see the message "Please pass a name on the query string or in the request body" instead.
 
 Here's the URL of the function we started with:
-
-`https://networknerd0.azurewebsites.net/api/FN1-HTTP1-Test?code=cDQam9yMNMYLdebbtPtjMcNzjdwwA4oV2MSuaeferOs1zDvt5FH7DQ==`
+```
+https://networknerd0.azurewebsites.net/api/FN1-HTTP1-Test?code=cDQam9yMNMYLdebbtPtjMcNzjdwwA4oV2MSuaeferOs1zDvt5FH7DQ==
+```
 
 And here's the URL with the name parameter added (appending the characters &name=NetworkNerrd to the end of the URL).
-
-`https://networknerd0.azurewebsites.net/api/FN1-HTTP1-Test?code=cDQam9yMNMYLdebbtPtjMcNzjdwwA4oV2MSuaeferOs1zDvt5FH7DQ==&name=NetworkNerd`
+```
+https://networknerd0.azurewebsites.net/api/FN1-HTTP1-Test?code=cDQam9yMNMYLdebbtPtjMcNzjdwwA4oV2MSuaeferOs1zDvt5FH7DQ==&name=NetworkNerd
+```
 
 What will we see now if we visit the new URL?  
 
@@ -196,9 +211,32 @@ Suppose we want to add another parameter to the query string and have this funct
 
 Here's the code snippet in addition to that screenshot for reference:
 
-`#r "Newtonsoft.Json"`
+```vb
+#r "Newtonsoft.Json"
 
-`using System.Net; using Microsoft.AspNetCore.Mvc; using Microsoft.Extensions.Primitives; using Newtonsoft.Json;  public static async Task Run(HttpRequest req, ILogger log) { log.LogInformation("C# HTTP trigger function processed a request.");  //query string parameter named name string name = req.Query["name"];  //query string parameter named purpose string purpose = req.Query["purpose"]; //Check request body for name parameter string requestBody = await new StreamReader(req.Body).ReadToEndAsync(); dynamic data = JsonConvert.DeserializeObject(requestBody); name = name ?? data?.name; purpose = purpose ?? data?.purpose; //make sure name and purpose are not null before displaying the Hello message return name != null && purpose != null ? (ActionResult)new OkObjectResult($"Hello, {name}. This function is for {purpose}.") : new BadRequestObjectResult("Please pass both a name and a purpose on the query string or in the request body"); }`
+using System.Net; 
+using Microsoft.AspNetCore.Mvc; 
+using Microsoft.Extensions.Primitives; 
+using Newtonsoft.Json;  
+public static async Task Run(HttpRequest req, ILogger log) 
+{ 
+    log.LogInformation("C# HTTP trigger function processed a request.");  
+    //query string parameter named name 
+    string name = req.Query["name"];  
+    
+    //query string parameter named purpose 
+    string purpose = req.Query["purpose"]; 
+    
+    //Check request body for name parameter 
+    string requestBody = await new StreamReader(req.Body).ReadToEndAsync(); 
+    dynamic data = JsonConvert.DeserializeObject(requestBody); 
+    name = name ?? data?.name; 
+    purpose = purpose ?? data?.purpose; 
+    
+    //make sure name and purpose are not null before displaying the Hello message 
+    return name != null && purpose != null ? (ActionResult)new OkObjectResult($"Hello, {name}. This function is for {purpose}.") : new BadRequestObjectResult("Please pass both a name and a purpose on the query string or in the request body");
+ }
+```
 
 As far as code changes go, here's what was changed from what we saw earlier:
 
@@ -211,7 +249,9 @@ As far as code changes go, here's what was changed from what we saw earlier:
 
 The changes have been saved, and it's testing time.  We'll start by testing as we did earlier in the article.  If we want the purpose parameter to be "testing and blogging,", our URL would look like this:
 
-`https://networknerd0.azurewebsites.net/api/FN1-HTTP1-Test?code=cDQam9yMNMYLdebbtPtjMcNzjdwwA4oV2MSuaeferOs1zDvt5FH7DQ==&name=NetworkNerd&purpose=testing%20and%20blogging`
+```
+https://networknerd0.azurewebsites.net/api/FN1-HTTP1-Test?code=cDQam9yMNMYLdebbtPtjMcNzjdwwA4oV2MSuaeferOs1zDvt5FH7DQ==&name=NetworkNerd&purpose=testing%20and%20blogging
+```
 
 And here's the result in a browser.  Notice since we used spaces in our purpose parameter, they are represented by %20 in the URL (and would automatically be inserted even if you typed spaces when you added the purpose parameter to the URL).
 
@@ -265,7 +305,6 @@ Hopefully it's obvious we have barely scratched the surface with Azure functions
 ### Further Reading
 
 I found the following articles very helpful as I was writing this post and wanted to share if you're looking to learn more about Function Apps.
-
 - [Azure Functions 2.0 – Real World Use Case for Serverless Architecture](https://dzone.com/articles/azure-functions-20-real-world-use-case-for-serverl)
     - Read this post to get a feel for why multiple serverless functions might be stitched together throughout a business process.
 - [Azure Functions Tips: Grouping Functions into Function Apps](https://blog.marcduiker.nl/2017/11/21/azure-functions-grouping-functions-in-function-apps.html)
