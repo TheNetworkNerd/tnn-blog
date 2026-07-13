@@ -14,6 +14,7 @@ tags:
   - "Azure Functions"
   - "C#"
   - "Code"
+  - "Deploying Azure Functions"
   - "FaaS"
   - "Function Apps"
   - "Functions As A Service"
@@ -24,8 +25,10 @@ tags:
   - "Serverless"
   - "Visual Studio Code"
   - "VS Code"
-image: "0_AzureFunctions.png"
+image: "0_AzureFunctionsVSCode.png"
 ---
+
+<-- Original featured image was 0_AzureFunctions.png -->
 
 This is part 2 of my quest to explore Azure Functions for self-education in functions-as-a-service.  The goal of this post is to use VS Code to deploy, test, and edit a simple Azure Function.
 
@@ -37,25 +40,18 @@ Go back to the Azure portal, and locate our previously created Function App (nam
 
 ![](1_AddFunction.png)
 
- 
-
 This next screen is a familiar one.  We could choose a template, but let's run through the Quickstart again.
 
 ![](2_ChooseTemplate-1024x386.png)
-
- 
 
 Once the Quickstart menu opens, choose the option for [VS Code](https://code.visualstudio.com/download) (or Visual Studio Code) as our development environment, and click Continue.
 
 ![](3_AzureFunctionsfor.NETStep1-1024x545.png)
 
- 
-
 On the next screen, let's choose Directly publish from VS Code for the time being (in the spirit of walking before we run).  Then click Continue.  We will use VS Code to build the functions, do as much as we can to verify they work as expected, and then push them up to Azure.
 
 ![](4_AzureFunctionsfor.NETStep2_DirectPush.png)
 
- 
 
 ### Installing the Dependencies
 
@@ -63,13 +59,13 @@ On the next screen we find there's more to the process than just installing VS C
 
 ![](5_AzureFunctionsfor.NETStep3DependencyInstall-1024x555.png)
 
- 
-
 To give context, all steps mentioned here were performed on a laptop running Windows 10 Home 18363. First, installing [Visual Studio Code](https://code.visualstudio.com/download) was easy.  I downloaded Node.js version 12.16.1 from [here](https://nodejs.org/en/download/) and installed it with no issues (link should point to latest LTS version installer for Windows / Mac).  Before running the npm command above, I downloaded and installed [.NET Core 3.1](https://dotnet.microsoft.com/download) (selected option to Download .NET Core SDK since [this post](https://docs.microsoft.com/en-us/azure/azure-functions/functions-develop-vs-code?tabs=csharp#additional-requirements-for-running-a-project-locally) indicates we need .NET Core CLI to run projects locally, which is included in the SDK per [this post](https://docs.microsoft.com/en-us/dotnet/core/tools/?tabs=netcore2x)).
 
 Next, run the code as mentioned in the previous screenshot.  The screenshot below shows the install as being successful.
 
-`npm install -g azure-functions-core-tools`
+```bash
+npm install -g azure-functions-core-tools
+```
 
 ![](6_AzureFunctionsCoreToolsInstall-1024x365.png)
 
@@ -86,7 +82,6 @@ After signing in to Azure successfully with an account that has access to the su
 ![](9_AzureSignInVSCodeAuth.png)
 
  
-
 ### Creating a Project
 
 Back in VS Code, we can see the Function App named neworknerd0 which was previously created under our Azure subscription.  Click the option to create a project.
@@ -96,8 +91,6 @@ Back in VS Code, we can see the Function App named neworknerd0 which was previou
 At this point, specify a folder for storing all required project files and information.  In this case, I chose to create a folder named Azure Functions Project 1 (located inside Documents\\VSCode on my laptop).  The folder location and name are completely up to you.  For project language, we will select C#.
 
 ![](11_ProjectLanguage.png)
-
- 
 
 Technically, we can create the project without creating any functions, but go ahead and leverage this workflow to create a function.  Which template should we use this time?  Since we discussed HttpTrigger functions last time, let's stick with this template to get the process down.
 
@@ -141,9 +134,9 @@ If only things would just work the first time we try, right?  As you probably g
 
 For searchability, I'll wrap the actual text in code tags.
 
-`> Executing task in folder VSCode: C:\Program Files\dotnet\dotnet.exe clean /property:GenerateFullPaths=true /consoleloggerparameters:NoSummary < Microsoft (R) Build Engine version 16.5.0+d4cbfca49 for .NET Core Copyright (C) Microsoft Corporation. All rights reserved. Build started 4/11/2020 5:48:33 PM. Terminal will be reused by tasks, press any key to close it. > Executing task in folder VSCode: C:\Program Files\dotnet\dotnet.exe build /property:GenerateFullPaths=true /consoleloggerparameters:NoSummary < Microsoft (R) Build Engine version 16.5.0+d4cbfca49 for .NET Core Copyright (C) Microsoft Corporation. All rights reserved. C:\Users\Nick\Documents\VSCode\Azure Functions Project 1\Azure Functions Project 1.csproj : warning NU1603: Microsoft.Azure.WebJobs.Extensions 3.0.5 depends on Microsoft.Azure.WebJobs.Host.Storage (>= 3.0.11) but Microsoft.Azure.WebJobs.Host.Storage 3.0.11 was not found. An approximate best match of Microsoft.Azure.WebJobs.Host.Storage 3.0.13 was resolved. Restore completed in 1.8 sec for C:\Users\Nick\Documents\VSCode\Azure Functions Project 1\Azure Functions Project 1.csproj. C:\Users\Nick\Documents\VSCode\Azure Functions Project 1\Azure Functions Project 1.csproj : warning NU1603: Microsoft.Azure.WebJobs.Extensions 3.0.5 depends on Microsoft.Azure.WebJobs.Host.Storage (>= 3.0.11) but Microsoft.Azure.WebJobs.Host.Storage 3.0.11 was not found. An approximate best match of Microsoft.Azure.WebJobs.Host.Storage 3.0.13 was resolved. Azure Functions Project 1 -> C:\Users\Nick\Documents\VSCode\Azure Functions Project 1\bin\Debug\netcoreapp2.1\bin\Azure Functions Project 1.dll C:\Users\Nick\.nuget\packages\microsoft.net.sdk.functions\1.0.31\build\Microsoft.NET.Sdk.Functions.Build.targets(41,5): error : It was not possible to find any compatible framework version [C:\Users\Nick\Documents\VSCode\Azure Functions Project 1\Azure Functions Project 1.csproj] C:\Users\Nick\.nuget\packages\microsoft.net.sdk.functions\1.0.31\build\Microsoft.NET.Sdk.Functions.Build.targets(41,5): error : The framework 'Microsoft.NETCore.App', version '2.1.0' was not found. [C:\Users\Nick\Documents\VSCode\Azure Functions Project 1\Azure Functions Project 1.csproj] C:\Users\Nick\.nuget\packages\microsoft.net.sdk.functions\1.0.31\build\Microsoft.NET.Sdk.Functions.Build.targets(41,5): error : - The following frameworks were found: [C:\Users\Nick\Documents\VSCode\Azure Functions Project 1\Azure Functions Project 1.csproj] C:\Users\Nick\.nuget\packages\microsoft.net.sdk.functions\1.0.31\build\Microsoft.NET.Sdk.Functions.Build.targets(41,5): error : 3.1.3 at [C:\Program Files\dotnet\shared\Microsoft.NETCore.App] [C:\Users\Nick\Documents\VSCode\Azure Functions Project 1\Azure Functions Project 1.csproj] C:\Users\Nick\.nuget\packages\microsoft.net.sdk.functions\1.0.31\build\Microsoft.NET.Sdk.Functions.Build.targets(41,5): error : [C:\Users\Nick\Documents\VSCode\Azure Functions Project 1\Azure Functions Project 1.csproj] C:\Users\Nick\.nuget\packages\microsoft.net.sdk.functions\1.0.31\build\Microsoft.NET.Sdk.Functions.Build.targets(41,5): error : You can resolve the problem by installing the specified framework and/or SDK. [C:\Users\Nick\Documents\VSCode\Azure Functions Project 1\Azure Functions Project 1.csproj] C:\Users\Nick\.nuget\packages\microsoft.net.sdk.functions\1.0.31\build\Microsoft.NET.Sdk.Functions.Build.targets(41,5): error : [C:\Users\Nick\Documents\VSCode\Azure Functions Project 1\Azure Functions Project 1.csproj] C:\Users\Nick\.nuget\packages\microsoft.net.sdk.functions\1.0.31\build\Microsoft.NET.Sdk.Functions.Build.targets(41,5): error : The specified framework can be found at: [C:\Users\Nick\Documents\VSCode\Azure Functions Project 1\Azure Functions Project 1.csproj] C:\Users\Nick\.nuget\packages\microsoft.net.sdk.functions\1.0.31\build\Microsoft.NET.Sdk.Functions.Build.targets(41,5): error : - https://aka.ms/dotnet-core-applaunch?framework=Microsoft.NETCore.App&framework_version=2.1.0&arch=x64&rid=win10-x64 [C:\Users\Nick\Documents\VSCode\Azure Functions Project 1\Azure Functions Project 1.csproj] C:\Users\Nick\.nuget\packages\microsoft.net.sdk.functions\1.0.31\build\Microsoft.NET.Sdk.Functions.Build.targets(41,5): error : [C:\Users\Nick\Documents\VSCode\Azure Functions Project 1\Azure Functions Project 1.csproj] C:\Users\Nick\.nuget\packages\microsoft.net.sdk.functions\1.0.31\build\Microsoft.NET.Sdk.Functions.Build.targets(41,5): error : Metadata generation failed. [C:\Users\Nick\Documents\VSCode\Azure Functions Project 1\Azure Functions Project 1.csproj] The terminal process terminated with exit code: 1`
-
- 
+```
+> Executing task in folder VSCode: C:\Program Files\dotnet\dotnet.exe clean /property:GenerateFullPaths=true /consoleloggerparameters:NoSummary < Microsoft (R) Build Engine version 16.5.0+d4cbfca49 for .NET Core Copyright (C) Microsoft Corporation. All rights reserved. Build started 4/11/2020 5:48:33 PM. Terminal will be reused by tasks, press any key to close it. > Executing task in folder VSCode: C:\Program Files\dotnet\dotnet.exe build /property:GenerateFullPaths=true /consoleloggerparameters:NoSummary < Microsoft (R) Build Engine version 16.5.0+d4cbfca49 for .NET Core Copyright (C) Microsoft Corporation. All rights reserved. C:\Users\Nick\Documents\VSCode\Azure Functions Project 1\Azure Functions Project 1.csproj : warning NU1603: Microsoft.Azure.WebJobs.Extensions 3.0.5 depends on Microsoft.Azure.WebJobs.Host.Storage (>= 3.0.11) but Microsoft.Azure.WebJobs.Host.Storage 3.0.11 was not found. An approximate best match of Microsoft.Azure.WebJobs.Host.Storage 3.0.13 was resolved. Restore completed in 1.8 sec for C:\Users\Nick\Documents\VSCode\Azure Functions Project 1\Azure Functions Project 1.csproj. C:\Users\Nick\Documents\VSCode\Azure Functions Project 1\Azure Functions Project 1.csproj : warning NU1603: Microsoft.Azure.WebJobs.Extensions 3.0.5 depends on Microsoft.Azure.WebJobs.Host.Storage (>= 3.0.11) but Microsoft.Azure.WebJobs.Host.Storage 3.0.11 was not found. An approximate best match of Microsoft.Azure.WebJobs.Host.Storage 3.0.13 was resolved. Azure Functions Project 1 -> C:\Users\Nick\Documents\VSCode\Azure Functions Project 1\bin\Debug\netcoreapp2.1\bin\Azure Functions Project 1.dll C:\Users\Nick\.nuget\packages\microsoft.net.sdk.functions\1.0.31\build\Microsoft.NET.Sdk.Functions.Build.targets(41,5): error : It was not possible to find any compatible framework version [C:\Users\Nick\Documents\VSCode\Azure Functions Project 1\Azure Functions Project 1.csproj] C:\Users\Nick\.nuget\packages\microsoft.net.sdk.functions\1.0.31\build\Microsoft.NET.Sdk.Functions.Build.targets(41,5): error : The framework 'Microsoft.NETCore.App', version '2.1.0' was not found. [C:\Users\Nick\Documents\VSCode\Azure Functions Project 1\Azure Functions Project 1.csproj] C:\Users\Nick\.nuget\packages\microsoft.net.sdk.functions\1.0.31\build\Microsoft.NET.Sdk.Functions.Build.targets(41,5): error : - The following frameworks were found: [C:\Users\Nick\Documents\VSCode\Azure Functions Project 1\Azure Functions Project 1.csproj] C:\Users\Nick\.nuget\packages\microsoft.net.sdk.functions\1.0.31\build\Microsoft.NET.Sdk.Functions.Build.targets(41,5): error : 3.1.3 at [C:\Program Files\dotnet\shared\Microsoft.NETCore.App] [C:\Users\Nick\Documents\VSCode\Azure Functions Project 1\Azure Functions Project 1.csproj] C:\Users\Nick\.nuget\packages\microsoft.net.sdk.functions\1.0.31\build\Microsoft.NET.Sdk.Functions.Build.targets(41,5): error : [C:\Users\Nick\Documents\VSCode\Azure Functions Project 1\Azure Functions Project 1.csproj] C:\Users\Nick\.nuget\packages\microsoft.net.sdk.functions\1.0.31\build\Microsoft.NET.Sdk.Functions.Build.targets(41,5): error : You can resolve the problem by installing the specified framework and/or SDK. [C:\Users\Nick\Documents\VSCode\Azure Functions Project 1\Azure Functions Project 1.csproj] C:\Users\Nick\.nuget\packages\microsoft.net.sdk.functions\1.0.31\build\Microsoft.NET.Sdk.Functions.Build.targets(41,5): error : [C:\Users\Nick\Documents\VSCode\Azure Functions Project 1\Azure Functions Project 1.csproj] C:\Users\Nick\.nuget\packages\microsoft.net.sdk.functions\1.0.31\build\Microsoft.NET.Sdk.Functions.Build.targets(41,5): error : The specified framework can be found at: [C:\Users\Nick\Documents\VSCode\Azure Functions Project 1\Azure Functions Project 1.csproj] C:\Users\Nick\.nuget\packages\microsoft.net.sdk.functions\1.0.31\build\Microsoft.NET.Sdk.Functions.Build.targets(41,5): error : - https://aka.ms/dotnet-core-applaunch?framework=Microsoft.NETCore.App&framework_version=2.1.0&arch=x64&rid=win10-x64 [C:\Users\Nick\Documents\VSCode\Azure Functions Project 1\Azure Functions Project 1.csproj] C:\Users\Nick\.nuget\packages\microsoft.net.sdk.functions\1.0.31\build\Microsoft.NET.Sdk.Functions.Build.targets(41,5): error : [C:\Users\Nick\Documents\VSCode\Azure Functions Project 1\Azure Functions Project 1.csproj] C:\Users\Nick\.nuget\packages\microsoft.net.sdk.functions\1.0.31\build\Microsoft.NET.Sdk.Functions.Build.targets(41,5): error : Metadata generation failed. [C:\Users\Nick\Documents\VSCode\Azure Functions Project 1\Azure Functions Project 1.csproj] The terminal process terminated with exit code: 1
+```
 
 The actual text output shows some warnings and many, many errors.  As I mentioned earlier in this post, I installed .NET Core 3.1 earlier.  It was my understanding that this included .NET Core 2.1 (which was referenced in the Quickstart instructions).  In fact, the link on the Quickstart page takes you to the .NET Core 3.1 download page.  But in the error messages above, we are clearly missing something having to do with the .NET Core, and [this link](https://aka.ms/dotnet-core-applaunch?framework=Microsoft.NETCore.App&framework_version=2.1.0&arch=x64&rid=win10-x64) is referenced.  Once again, the link gets directed to a .NET Core 3.1 download page.  It took a little searching, but [this page](https://dotnet.microsoft.com/download/dotnet-core/2.1) is the right one to use for downloading .NET Core 2.1.  Once I downloaded and installed it on my machine, all of the errors above were cleared, but new ones popped up in their place.
 
@@ -151,9 +144,9 @@ The actual text output shows some warnings and many, many errors.  As I mention
 
 Once again for searchability, here's the text output.
 
-`Executing task in folder VSCode: C:\Program Files\dotnet\dotnet.exe build /property:GenerateFullPaths=true /consoleloggerparameters:NoSummary < Microsoft (R) Build Engine version 16.5.0+d4cbfca49 for .NET Core Copyright (C) Microsoft Corporation. All rights reserved. C:\Users\Nick\Documents\VSCode\Azure Functions Project 1\Azure Functions Project 1.csproj : warning NU1603: Microsoft.Azure.WebJobs.Extensions 3.0.5 depends on Microsoft.Azure.WebJobs.Host.Storage (>= 3.0.11) but Microsoft.Azure.WebJobs.Host.Storage 3.0.11 was not found. An approximate best match of Microsoft.Azure.WebJobs.Host.Storage 3.0.13 was resolved. Restore completed in 65.39 ms for C:\Users\Nick\Documents\VSCode\Azure Functions Project 1\Azure Functions Project 1.csproj. C:\Users\Nick\Documents\VSCode\Azure Functions Project 1\Azure Functions Project 1.csproj : warning NU1603: Microsoft.Azure.WebJobs.Extensions 3.0.5 depends on Microsoft.Azure.WebJobs.Host.Storage (>= 3.0.11) but Microsoft.Azure.WebJobs.Host.Storage 3.0.11 was not found. An approximate best match of Microsoft.Azure.WebJobs.Host.Storage 3.0.13 was resolved. Azure Functions Project 1 -> C:\Users\Nick\Documents\VSCode\Azure Functions Project 1\bin\Debug\netcoreapp2.1\bin\Azure Functions Project 1.dll Terminal will be reused by tasks, press any key to close it. > Executing task in folder VSCode: func host start < func : File C:\Users\Nick\AppData\Roaming\npm\func.ps1 cannot be loaded because running scripts is disabled on this system. For more information, see about_Execution_Policies at https:/go.microsoft.com/fwlink/?LinkID=135170. At line:1 char:1 + func host start + ~~~~ + CategoryInfo : SecurityError: (:) [], PSSecurityException + FullyQualifiedErrorId : UnauthorizedAccess The terminal process terminated with exit code: 1 Terminal will be reused by tasks, press any key to close it.`
-
- 
+```
+Executing task in folder VSCode: C:\Program Files\dotnet\dotnet.exe build /property:GenerateFullPaths=true /consoleloggerparameters:NoSummary < Microsoft (R) Build Engine version 16.5.0+d4cbfca49 for .NET Core Copyright (C) Microsoft Corporation. All rights reserved. C:\Users\Nick\Documents\VSCode\Azure Functions Project 1\Azure Functions Project 1.csproj : warning NU1603: Microsoft.Azure.WebJobs.Extensions 3.0.5 depends on Microsoft.Azure.WebJobs.Host.Storage (>= 3.0.11) but Microsoft.Azure.WebJobs.Host.Storage 3.0.11 was not found. An approximate best match of Microsoft.Azure.WebJobs.Host.Storage 3.0.13 was resolved. Restore completed in 65.39 ms for C:\Users\Nick\Documents\VSCode\Azure Functions Project 1\Azure Functions Project 1.csproj. C:\Users\Nick\Documents\VSCode\Azure Functions Project 1\Azure Functions Project 1.csproj : warning NU1603: Microsoft.Azure.WebJobs.Extensions 3.0.5 depends on Microsoft.Azure.WebJobs.Host.Storage (>= 3.0.11) but Microsoft.Azure.WebJobs.Host.Storage 3.0.11 was not found. An approximate best match of Microsoft.Azure.WebJobs.Host.Storage 3.0.13 was resolved. Azure Functions Project 1 -> C:\Users\Nick\Documents\VSCode\Azure Functions Project 1\bin\Debug\netcoreapp2.1\bin\Azure Functions Project 1.dll Terminal will be reused by tasks, press any key to close it. > Executing task in folder VSCode: func host start < func : File C:\Users\Nick\AppData\Roaming\npm\func.ps1 cannot be loaded because running scripts is disabled on this system. For more information, see about_Execution_Policies at https:/go.microsoft.com/fwlink/?LinkID=135170. At line:1 char:1 + func host start + ~~~~ + CategoryInfo : SecurityError: (:) [], PSSecurityException + FullyQualifiedErrorId : UnauthorizedAccess The terminal process terminated with exit code: 1 Terminal will be reused by tasks, press any key to close it.
+```
 
 This time we have one error and some warnings.  Let's start with the error first and try to clear it.  Following the [link from the error message](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_execution_policies?view=powershell-7) takes us to a page on Powershell execution policies.  Part of running the function somehow involves Powershell, so we'll have to make a tweak.  Open Powershell (running as Administrator), and run set-executionpolicy remotesigned.  Type y and press Enter to say yes to the prompt about changing the execution policy.  That is the default policy for Windows Servers and will work for our purposes to (hopefully) clear the error.
 
@@ -171,8 +164,6 @@ Running the function again locally was a success (no warnings, no errors)!  We 
 
 ![](25_SuccessfulRun.png)
 
- 
-
 Following the link yields exactly what we would expect.  There was no name parameter passed into the query string, so we see the standard message that was part of the HttpTrigger template used.  The URL path matches the same pattern we've seen previously.  But, as you will notice below, even though we set the HTTP authorization level to Function when the function was created, there is no API key in the URL since this function is running completely local to the laptop being used.  The API key would not be present until we deploy the code to Azure.
 
 ![](26_LocalFunctionCallNoQueryString.png)
@@ -186,7 +177,6 @@ So long as the function continues to run in VS Code (i.e. you don't press CTRL +
 ![](28_VSCodeTerminalWindow-1024x323.png)
 
  
-
 ### Deploying to Azure
 
 As stated earlier, the function we created exists only on the laptop used to create it and has not yet been pushed up to Azure.  Let's find out how that part works.  Back inside VS Code, go back to the Azure Functions extension area (step 1 in screenshot below).  Expand our Azure subscription as well as the local project we previously created that contains the new function.
@@ -235,7 +225,10 @@ As the process kicked off, here's what things looked like in VS Code (notificati
 
 ![](39_DeploymentComplete.png)
 
-Once the deployment finished, here's what was shown in the Output window in VS Code: `1:57:41 PM networknerd0: Creating zip package... 1:57:45 PM networknerd0: Starting deployment... 1:57:49 PM networknerd0: Fetching changes. 1:57:50 PM networknerd0: Cleaning up temp folders from previous zip deployments and extracting pushed zip file D:\local\Temp\zipdeploy\jdoalsxz.zip (3.16 MB) to D:\local\Temp\zipdeploy\extracted 1:57:53 PM networknerd0: Updating submodules. 1:57:53 PM networknerd0: Preparing deployment for commit id '6b5f0e1fd0'. 1:57:55 PM networknerd0: Generating deployment script. 1:57:55 PM networknerd0: Using the following command to generate deployment script: 'azure site deploymentscript -y --no-dot-deployment -r "D:\local\Temp\zipdeploy\extracted" -o "D:\home\site\deployments\tools" --basic --sitePath "D:\local\Temp\zipdeploy\extracted"'. 1:58:01 PM networknerd0: Generating deployment script for Web Site 1:58:01 PM networknerd0: Generated deployment script files 1:58:01 PM networknerd0: Running deployment command... 1:58:01 PM networknerd0: Command: "D:\home\site\deployments\tools\deploy.cmd" 1:58:03 PM networknerd0: Handling Basic Web Site deployment. 1:58:06 PM networknerd0: Creating app_offline.htm 1:58:06 PM networknerd0: KuduSync.NET from: 'D:\local\Temp\zipdeploy\extracted' to: 'D:\home\site\wwwroot' 1:58:06 PM networknerd0: Copying file: 'Azure Functions Project 1.deps.json' 1:58:06 PM networknerd0: Copying file: 'host.json' 1:58:06 PM networknerd0: Copying file: 'bin\Azure Functions Project 1.dll' 1:58:06 PM networknerd0: Copying file: 'bin\Azure Functions Project 1.pdb' 1:58:06 PM networknerd0: Copying file: 'bin\extensions.json' 1:58:06 PM networknerd0: Copying file: 'bin\function.deps.json' 1:58:06 PM networknerd0: Copying file: 'bin\Microsoft.AspNetCore.Authentication.Abstractions.dll' 1:58:06 PM networknerd0: Copying file: 'bin\Microsoft.AspNetCore.Authentication.Core.dll' 1:58:06 PM networknerd0: Copying file: 'bin\Microsoft.AspNetCore.Authorization.dll' 1:58:06 PM networknerd0: Copying file: 'bin\Microsoft.AspNetCore.Authorization.Policy.dll' 1:58:06 PM networknerd0: Copying file: 'bin\Microsoft.AspNetCore.Hosting.Abstractions.dll' 1:58:06 PM networknerd0: Copying file: 'bin\Microsoft.AspNetCore.Hosting.Server.Abstractions.dll' 1:58:06 PM networknerd0: Copying file: 'bin\Microsoft.AspNetCore.Http.Abstractions.dll' 1:58:06 PM networknerd0: Copying file: 'bin\Microsoft.AspNetCore.Http.dll' 1:58:06 PM networknerd0: Copying file: 'bin\Microsoft.AspNetCore.Http.Extensions.dll' 1:58:06 PM networknerd0: Copying file: 'bin\Microsoft.AspNetCore.Http.Features.dll' 1:58:07 PM networknerd0: Copying file: 'bin\Microsoft.AspNetCore.JsonPatch.dll' 1:58:07 PM networknerd0: Copying file: 'bin\Microsoft.AspNetCore.Mvc.Abstractions.dll' 1:58:07 PM networknerd0: Copying file: 'bin\Microsoft.AspNetCore.Mvc.Core.dll' 1:58:07 PM networknerd0: Copying file: 'bin\Microsoft.AspNetCore.Mvc.Formatters.Json.dll' 1:58:07 PM networknerd0: Copying file: 'bin\Microsoft.AspNetCore.Mvc.WebApiCompatShim.dll' 1:58:07 PM networknerd0: Copying file: 'bin\Microsoft.AspNetCore.ResponseCaching.Abstractions.dll' 1:58:07 PM networknerd0: Copying file: 'bin\Microsoft.AspNetCore.Routing.Abstractions.dll' 1:58:07 PM networknerd0: Copying file: 'bin\Microsoft.AspNetCore.Routing.dll' 1:58:07 PM networknerd0: Copying file: 'bin\Microsoft.AspNetCore.WebUtilities.dll' 1:58:07 PM networknerd0: Copying file: 'bin\Microsoft.Azure.WebJobs.dll' 1:58:07 PM networknerd0: Copying file: 'bin\Microsoft.Azure.WebJobs.Extensions.dll' 1:58:07 PM networknerd0: Copying file: 'bin\Microsoft.Azure.WebJobs.Extensions.Http.dll' 1:58:07 PM networknerd0: Copying file: 'bin\Microsoft.Azure.WebJobs.Host.dll' 1:58:07 PM networknerd0: Copying file: 'bin\Microsoft.Azure.WebJobs.Host.Storage.dll' 1:58:07 PM networknerd0: Copying file: 'bin\Microsoft.Build.Framework.dll' 1:58:07 PM networknerd0: Copying file: 'bin\Microsoft.Build.Utilities.Core.dll' 1:58:07 PM networknerd0: Copying file: 'bin\Microsoft.DotNet.PlatformAbstractions.dll' 1:58:08 PM networknerd0: Copying file: 'bin\Microsoft.Extensions.Configuration.Abstractions.dll' 1:58:08 PM networknerd0: Copying file: 'bin\Microsoft.Extensions.Configuration.Binder.dll' 1:58:08 PM networknerd0: Copying file: 'bin\Microsoft.Extensions.Configuration.dll' 1:58:08 PM networknerd0: Copying file: 'bin\Microsoft.Extensions.Configuration.EnvironmentVariables.dll' 1:58:08 PM networknerd0: Copying file: 'bin\Microsoft.Extensions.Configuration.FileExtensions.dll' 1:58:08 PM networknerd0: Copying file: 'bin\Microsoft.Extensions.Configuration.Json.dll' 1:58:08 PM networknerd0: Copying file: 'bin\Microsoft.Extensions.DependencyInjection.Abstractions.dll' 1:58:08 PM networknerd0: Copying file: 'bin\Microsoft.Extensions.DependencyInjection.dll' 1:58:08 PM networknerd0: Copying file: 'bin\Microsoft.Extensions.DependencyModel.dll' 1:58:08 PM networknerd0: Copying file: 'bin\Microsoft.Extensions.FileProviders.Abstractions.dll' 1:58:08 PM networknerd0: Copying file: 'bin\Microsoft.Extensions.FileProviders.Physical.dll' 1:58:08 PM networknerd0: Copying file: 'bin\Microsoft.Extensions.FileSystemGlobbing.dll' 1:58:08 PM networknerd0: Copying file: 'bin\Microsoft.Extensions.Hosting.Abstractions.dll' 1:58:09 PM networknerd0: Copying file: 'bin\Microsoft.Extensions.Hosting.dll' 1:58:09 PM networknerd0: Copying file: 'bin\Microsoft.Extensions.Logging.Abstractions.dll' 1:58:09 PM networknerd0: Omitting next output lines... 1:58:10 PM networknerd0: Finished successfully. 1:58:10 PM networknerd0: Running post deployment command(s)... 1:58:10 PM networknerd0: Triggering recycle (preview mode disabled). 1:58:13 PM networknerd0: Syncing 2 function triggers with payload size 250 bytes successful. 1:58:14 PM networknerd0: Deployment successful. 1:58:56 PM networknerd0: Querying triggers... 1:59:19 PM networknerd0: WARNING: Some http trigger urls cannot be displayed in the output window because they require an authentication token. Instead, you may copy them from the Azure Functions explorer.`
+Once the deployment finished, here's what was shown in the Output window in VS Code: 
+```
+1:57:41 PM networknerd0: Creating zip package... 1:57:45 PM networknerd0: Starting deployment... 1:57:49 PM networknerd0: Fetching changes. 1:57:50 PM networknerd0: Cleaning up temp folders from previous zip deployments and extracting pushed zip file D:\local\Temp\zipdeploy\jdoalsxz.zip (3.16 MB) to D:\local\Temp\zipdeploy\extracted 1:57:53 PM networknerd0: Updating submodules. 1:57:53 PM networknerd0: Preparing deployment for commit id '6b5f0e1fd0'. 1:57:55 PM networknerd0: Generating deployment script. 1:57:55 PM networknerd0: Using the following command to generate deployment script: 'azure site deploymentscript -y --no-dot-deployment -r "D:\local\Temp\zipdeploy\extracted" -o "D:\home\site\deployments\tools" --basic --sitePath "D:\local\Temp\zipdeploy\extracted"'. 1:58:01 PM networknerd0: Generating deployment script for Web Site 1:58:01 PM networknerd0: Generated deployment script files 1:58:01 PM networknerd0: Running deployment command... 1:58:01 PM networknerd0: Command: "D:\home\site\deployments\tools\deploy.cmd" 1:58:03 PM networknerd0: Handling Basic Web Site deployment. 1:58:06 PM networknerd0: Creating app_offline.htm 1:58:06 PM networknerd0: KuduSync.NET from: 'D:\local\Temp\zipdeploy\extracted' to: 'D:\home\site\wwwroot' 1:58:06 PM networknerd0: Copying file: 'Azure Functions Project 1.deps.json' 1:58:06 PM networknerd0: Copying file: 'host.json' 1:58:06 PM networknerd0: Copying file: 'bin\Azure Functions Project 1.dll' 1:58:06 PM networknerd0: Copying file: 'bin\Azure Functions Project 1.pdb' 1:58:06 PM networknerd0: Copying file: 'bin\extensions.json' 1:58:06 PM networknerd0: Copying file: 'bin\function.deps.json' 1:58:06 PM networknerd0: Copying file: 'bin\Microsoft.AspNetCore.Authentication.Abstractions.dll' 1:58:06 PM networknerd0: Copying file: 'bin\Microsoft.AspNetCore.Authentication.Core.dll' 1:58:06 PM networknerd0: Copying file: 'bin\Microsoft.AspNetCore.Authorization.dll' 1:58:06 PM networknerd0: Copying file: 'bin\Microsoft.AspNetCore.Authorization.Policy.dll' 1:58:06 PM networknerd0: Copying file: 'bin\Microsoft.AspNetCore.Hosting.Abstractions.dll' 1:58:06 PM networknerd0: Copying file: 'bin\Microsoft.AspNetCore.Hosting.Server.Abstractions.dll' 1:58:06 PM networknerd0: Copying file: 'bin\Microsoft.AspNetCore.Http.Abstractions.dll' 1:58:06 PM networknerd0: Copying file: 'bin\Microsoft.AspNetCore.Http.dll' 1:58:06 PM networknerd0: Copying file: 'bin\Microsoft.AspNetCore.Http.Extensions.dll' 1:58:06 PM networknerd0: Copying file: 'bin\Microsoft.AspNetCore.Http.Features.dll' 1:58:07 PM networknerd0: Copying file: 'bin\Microsoft.AspNetCore.JsonPatch.dll' 1:58:07 PM networknerd0: Copying file: 'bin\Microsoft.AspNetCore.Mvc.Abstractions.dll' 1:58:07 PM networknerd0: Copying file: 'bin\Microsoft.AspNetCore.Mvc.Core.dll' 1:58:07 PM networknerd0: Copying file: 'bin\Microsoft.AspNetCore.Mvc.Formatters.Json.dll' 1:58:07 PM networknerd0: Copying file: 'bin\Microsoft.AspNetCore.Mvc.WebApiCompatShim.dll' 1:58:07 PM networknerd0: Copying file: 'bin\Microsoft.AspNetCore.ResponseCaching.Abstractions.dll' 1:58:07 PM networknerd0: Copying file: 'bin\Microsoft.AspNetCore.Routing.Abstractions.dll' 1:58:07 PM networknerd0: Copying file: 'bin\Microsoft.AspNetCore.Routing.dll' 1:58:07 PM networknerd0: Copying file: 'bin\Microsoft.AspNetCore.WebUtilities.dll' 1:58:07 PM networknerd0: Copying file: 'bin\Microsoft.Azure.WebJobs.dll' 1:58:07 PM networknerd0: Copying file: 'bin\Microsoft.Azure.WebJobs.Extensions.dll' 1:58:07 PM networknerd0: Copying file: 'bin\Microsoft.Azure.WebJobs.Extensions.Http.dll' 1:58:07 PM networknerd0: Copying file: 'bin\Microsoft.Azure.WebJobs.Host.dll' 1:58:07 PM networknerd0: Copying file: 'bin\Microsoft.Azure.WebJobs.Host.Storage.dll' 1:58:07 PM networknerd0: Copying file: 'bin\Microsoft.Build.Framework.dll' 1:58:07 PM networknerd0: Copying file: 'bin\Microsoft.Build.Utilities.Core.dll' 1:58:07 PM networknerd0: Copying file: 'bin\Microsoft.DotNet.PlatformAbstractions.dll' 1:58:08 PM networknerd0: Copying file: 'bin\Microsoft.Extensions.Configuration.Abstractions.dll' 1:58:08 PM networknerd0: Copying file: 'bin\Microsoft.Extensions.Configuration.Binder.dll' 1:58:08 PM networknerd0: Copying file: 'bin\Microsoft.Extensions.Configuration.dll' 1:58:08 PM networknerd0: Copying file: 'bin\Microsoft.Extensions.Configuration.EnvironmentVariables.dll' 1:58:08 PM networknerd0: Copying file: 'bin\Microsoft.Extensions.Configuration.FileExtensions.dll' 1:58:08 PM networknerd0: Copying file: 'bin\Microsoft.Extensions.Configuration.Json.dll' 1:58:08 PM networknerd0: Copying file: 'bin\Microsoft.Extensions.DependencyInjection.Abstractions.dll' 1:58:08 PM networknerd0: Copying file: 'bin\Microsoft.Extensions.DependencyInjection.dll' 1:58:08 PM networknerd0: Copying file: 'bin\Microsoft.Extensions.DependencyModel.dll' 1:58:08 PM networknerd0: Copying file: 'bin\Microsoft.Extensions.FileProviders.Abstractions.dll' 1:58:08 PM networknerd0: Copying file: 'bin\Microsoft.Extensions.FileProviders.Physical.dll' 1:58:08 PM networknerd0: Copying file: 'bin\Microsoft.Extensions.FileSystemGlobbing.dll' 1:58:08 PM networknerd0: Copying file: 'bin\Microsoft.Extensions.Hosting.Abstractions.dll' 1:58:09 PM networknerd0: Copying file: 'bin\Microsoft.Extensions.Hosting.dll' 1:58:09 PM networknerd0: Copying file: 'bin\Microsoft.Extensions.Logging.Abstractions.dll' 1:58:09 PM networknerd0: Omitting next output lines... 1:58:10 PM networknerd0: Finished successfully. 1:58:10 PM networknerd0: Running post deployment command(s)... 1:58:10 PM networknerd0: Triggering recycle (preview mode disabled). 1:58:13 PM networknerd0: Syncing 2 function triggers with payload size 250 bytes successful. 1:58:14 PM networknerd0: Deployment successful. 1:58:56 PM networknerd0: Querying triggers... 1:59:19 PM networknerd0: WARNING: Some http trigger urls cannot be displayed in the output window because they require an authentication token. Instead, you may copy them from the Azure Functions explorer.
+```
 
 That last line from the Output window likely fired because we chose to stick with Function as the HTTP authorization level when creating this function.  Also, notice how our left-hand tree has updated to show the newly added function on the Azure side.  There is still a local copy in our project folder as well.
 
@@ -246,7 +239,6 @@ If we furthermore expand Deployments in the tree, we can see the push deployment
 ![](41_DeploymentsTree_1.png)
 
  
-
 ### Checking Our Work In Azure
 
 Going back to our Function App networknerd0 in the Azure portal shows our newly deployed function as you would expect, but for some reason the Functions are marked as Read Only.
@@ -276,7 +268,6 @@ If we copy that URL to the clipboard and paste into a browser, does it work as e
 And if we add the name parameter to the query string, we get an expected result.
 
 ![](47_BrowserTest2-1024x57.png)
-
  
 
 ### Testing a Code Change and Redeploy
@@ -289,15 +280,13 @@ All we need to test with is a small change.  Let's change the response messages
 
 ![](49_CodeBlock-1024x79.png)
 
-Change the code to the following, and save the changes. `string responseMessage = string.IsNullOrEmpty(name) ? "Seeing this message means the function executed successfully, but try passing a name parameter into the query string." : $"Mr. / Mrs. {name} successfully passed a name parameter into the query string when executing this function. ";`
-
- 
+Change the code to the following, and save the changes. 
+```string responseMessage = string.IsNullOrEmpty(name) ? "Seeing this message means the function executed successfully, but try passing a name parameter into the query string." : $"Mr. / Mrs. {name} successfully passed a name parameter into the query string when executing this function. ";
+```
 
 Now, let's re-run this code locally to confirm it works as expected before we publish to Azure.  After running it locally, we conduct two different tests (one with no name parameter and one with a name parameter) whose results are shown in the following screen shots.
 
 ![](50_Rerun1-1024x85.png)
-
- 
 
 ![](51_Rerun2.png)
 
@@ -308,8 +297,6 @@ Once the deploy succeeded, we saw a new deployment event in VS Code as you would
 ![](52_NewDeploy.png)
 
 If we test the function again by visiting the URLs assigned by Azure (which will be the same as before when we tested), the results should match our output from testing locally.  I confirmed on my own that everything worked post-deployment but did not provide screenshots for brevity.
-
- 
 
 ### Lessons Learned
 
@@ -322,8 +309,6 @@ I chose not to dig into using Git just yet in this post because I wanted to get 
 I had no idea doing a deployment from VS Code to a Function App would cause the app and functions inside it to be read-only inside the portal, but it happened.  The approach will have to be all or nothing it seems...using a code editor to perform all deployments and the portal only for different administrative tasks or using the portal for everything.  Remember that all functions inside a Function App will be affected even if you only deploy a single function with VS Code.
 
 It was harder to get the development environment tweaked than I thought it might be, but I learned many things along the way.
-
- 
 
 ### Other Posts in This Series
 
