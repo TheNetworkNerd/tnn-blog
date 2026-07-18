@@ -16,11 +16,13 @@ tags:
   - "Azure Repos"
   - "C#"
   - "Code"
+  - "Code Repository"
   - "Commit"
   - "Faas"
   - "Function Apps"
   - "Functions As A Service"
   - "Git"
+  - "Git Commit"
   - "LearningtoCode"
   - "Microsoft"
   - "Microsoft Azure"
@@ -44,7 +46,6 @@ Back in [part 1]({% link _posts/2020-02-29-a-first-voyage-into-azure-functions-a
 
 In [my last pos]({% link _posts/2020-03-31-deploying-azure-functions-with-visual-studio-code.md %})t, we configured VS code to build, test, and deploy functions directly to an Azure Function App.  In the spirit of once again walking before we run, let's go back to the Azure portal and add some hooks into code repositories.  As before, I’ll be documenting both successes and failures throughout this post, so you may want to read it completely before following all steps in order.
 
- 
 
 ### Revisiting the Azure Portal
 
@@ -52,45 +53,32 @@ For this exercise I've created a brand new Function App called networknerd1 with
 
 ![](1_AddFunction-1-1024x470.png)
 
- 
-
 From here, select the option to Use Deployment Center instead of Direct publish.  Then click Continue.
 
 ![](2_UseDeploymentCenter-1024x584.png)
-
- 
 
 This screen looks extremely familiar.  All the work needed to get VS Code working and overcome errors is documented [here]({% link _posts/2020-03-31-deploying-azure-functions-with-visual-studio-code.md %}).  For now, we will skip the process of creating and testing a new Azure function inside VS Code.  But there's a new option to finish and Go to the Deployment Center.  Let's see what happens next.
 
 ![](3_FinishandGotoDeployCenter-974x1024.png)
 
- 
-
 The Deployment Center menu allows us to select many different options.  Select Azure Repos and click Continue.
 
-![](4_DeploymentCenter1AzureRepos-1024x514.png)
-
- 
+![](4_DeploymentCenter1AzureRepos.png)
 
 On the next screen, select Azure Pipelines as the build provider.  Then click Continue.
 
 ![](5_DeploymentCenter2AzurePipelines-1024x523.png)
 
- 
-
 Oops.  The Azure repos and pipelines functionalities are part of Azure DevOps.  We've not done configuration to setup Azure DevOps.  There is no time like the present to keep going.  Click the button to create an Azure DevOps organization.
 
 ![](6_NoAzureDevOpsOrg.png)
 
- 
 
 ### Configuring Azure DevOps
 
 Clicking the "Create one now" button above opened a new tab showing [this document](https://docs.microsoft.com/en-us/azure/devops/organizations/accounts/create-organization?view=azure-devops) containing a number of best practices, explanations of concepts, and pre-requisites for using Azure DevOps.  Within the document there is a link to [sign in to Azure DevOps](https://go.microsoft.com/fwlink/?LinkId=307137), so let's see what happens when we try it.  After clicking the link, we're presented with the following screen.  The e-mail address tied to your Azure portal account should show here as well.  Click Continue to proceed.
 
 ![](7_AzureDevOpsContinue.png)
-
- 
 
 This is automatically creating an Azure DevOps organization.  And we really only need 1 organization to get started.
 
@@ -100,8 +88,6 @@ What we see now are the details of an Azure DevOps organization construct named 
 
 ![](9_OrganizationAutoCreate-1024x511.png)
 
- 
-
 There are so many organization settings we could explore here, but for now focus on changing the organization name to something better.  I went with networknerd-org1.  The Privacy URL field is for adding a link to a privacy policy (read more on that [here](https://docs.microsoft.com/en-us/azure/devops/organizations/accounts/add-privacy-policy-url?view=azure-devops)), so leave it blank.  Add a description, set the time zone, and click Save.
 
 ![](10_ChangeOrgSettingsSave-1024x752.png)
@@ -110,13 +96,10 @@ Changing an organization name can have some wicked side effects, but for us it h
 
 ![](11_OrgRenameConfirm.png)
 
- 
-
 The changes we made worked.  Don't success messages (in green) make the heart happy?  Keep in mind the change affected the URL of this Azure DevOps organization.  Leave the organization details open in your browser window because we will need to come back to it.
 
 ![](12_SuccessMessage.png)
 
- 
 
 ### Going Back to the Deployment Center
 
@@ -132,17 +115,12 @@ This is new territory.  At this point we have an AzureDevOps organization creat
 
 ![](12_3_DeploymentCenterStep3-1024x800.png)
 
- 
-
- 
 
 ### Creating an Azure DevOps Project
 
 According to the documentation referenced earlier, we need at least one project created to start using Azure Repos or Azure Pipelines.  Since we are still on the organization settings page from earlier progress inside Azure DevOps, click Projects in the left-hand window.  At present, this organization has no projects within it.  Click the New Project button to create one.
 
 ![](13_NewProject-1024x198.png)
-
- 
 
 To read up on projects and how to structure them, check out [this doc](https://docs.microsoft.com/en-us/azure/devops/organizations/projects/about-projects?view=azure-devops).  A more detailed process for creating a new project can be found [here](https://docs.microsoft.com/en-us/azure/devops/organizations/projects/create-project?view=azure-devops&tabs=preview-page).  For a name, let's choose networknerd-project1.  Notice the green check mark shows that we have not used any illegal characters.  We'll choose to make the project private for security purposes.  For version control, we will stick with Git (the default - read [this](https://docs.microsoft.com/en-us/azure/devops/repos/tfvc/comparison-git-tfvc?view=azure-devops) for how to decide).  And we'll leave Work item process set to Basic (the default - read about the options [here](https://docs.microsoft.com/en-us/azure/devops/boards/work-items/guidance/choose-process?view=azure-devops&tabs=basic-process)).  Click Create.
 
@@ -164,7 +142,6 @@ From the organization level, here's the view.  If there were multiple projects,
 
 ![](18_OrgLevelView-1024x545.png)
 
- 
 
 ### Working with Azure Repos
 
@@ -236,7 +213,6 @@ It seemed like that did nothing, and the truth is...it did nothing.  There were
 
 ![](29_NoGitInstalled.png)
 
- 
 
 ### Installing Git
 
@@ -264,7 +240,6 @@ As the [documentation](https://docs.microsoft.com/en-us/azure/devops/repos/git/s
 
 ![](35_GitCredentialManager.png)
 
- 
 
 ### Cloning the Azure Repo - Another Try
 
@@ -320,7 +295,26 @@ While the staging happened (and looks to have succeeded), the output window for 
 
 ![](45_GitMessageatStaging-1024x459.png)
 
-Here's the full text output for searchability: `git.stage 1 git.stage.scmResources 1 > git add -A -- C:\Users\Nick\Documents\VSCode\Azure Repos\networknerd-repo1\VSCodeTestScreenshot.png > git status -z -u > git symbolic-ref --short HEAD > git rev-parse master > git rev-parse --symbolic-full-name master@{u} > git rev-list --left-right master...refs/remotes/origin/master > git for-each-ref --format %(refname) %(objectname) --sort -committerdate > git remote --verbose Failed to watch ref 'c:\Users\Nick\Documents\VSCode\Azure Repos\networknerd-repo1\.git\refs\remotes\origin\master', is most likely packed. Error: ENOENT: no such file or directory, watch 'c:\Users\Nick\Documents\VSCode\Azure Repos\networknerd-repo1\.git\refs\remotes\origin\master' at FSWatcher.start (internal/fs/watchers.js:165:26) at Object.watch (fs.js:1270:11) at Object.t.watch (c:\Users\Nick\AppData\Local\Programs\Microsoft VS Code\resources\app\extensions\git\dist\main.js:1:598268) at T.updateTransientWatchers (c:\Users\Nick\AppData\Local\Programs\Microsoft VS Code\resources\app\extensions\git\dist\main.js:1:83870) at e.fire (c:\Users\Nick\AppData\Local\Programs\Microsoft VS Code\resources\app\out\vs\workbench\services\extensions\node\extensionHostProcess.js:48:517) at e.updateModelState (c:\Users\Nick\AppData\Local\Programs\Microsoft VS Code\resources\app\extensions\git\dist\main.js:1:102740) > git config --get commit.template`
+Here's the full text output for searchability: 
+```
+git.stage 1 
+git.stage.scmResources 1 
+> git add -A -- C:\Users\Nick\Documents\VSCode\Azure Repos\networknerd-repo1\VSCodeTestScreenshot.png 
+> git status -z -u 
+> git symbolic-ref --short HEAD 
+> git rev-parse master 
+> git rev-parse --symbolic-full-name master@{u} 
+> git rev-list --left-right master...refs/remotes/origin/master 
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate 
+> git remote --verbose Failed to watch ref 'c:\Users\Nick\Documents\VSCode\Azure Repos\networknerd-repo1\.git\refs\remotes\origin\master', is most likely packed. 
+Error: ENOENT: no such file or directory, watch 'c:\Users\Nick\Documents\VSCode\Azure Repos\networknerd-repo1\.git\refs\remotes\origin\master'
+at FSWatcher.start (internal/fs/watchers.js:165:26) 
+at Object.watch (fs.js:1270:11) at Object.t.watch (c:\Users\Nick\AppData\Local\Programs\Microsoft VS Code\resources\app\extensions\git\dist\main.js:1:598268) 
+at T.updateTransientWatchers (c:\Users\Nick\AppData\Local\Programs\Microsoft VS Code\resources\app\extensions\git\dist\main.js:1:83870) 
+at e.fire (c:\Users\Nick\AppData\Local\Programs\Microsoft VS Code\resources\app\out\vs\workbench\services\extensions\node\extensionHostProcess.js:48:517) 
+at e.updateModelState (c:\Users\Nick\AppData\Local\Programs\Microsoft VS Code\resources\app\extensions\git\dist\main.js:1:102740) 
+> git config --get commit.template
+```
 
 [This post](https://github.com/microsoft/vscode/issues/79776) indicates file watcher errors are ok, so let's press forward. We can see in the lower left corner of VS code that we are working with the master branch in the local repo right now.  This is clickable and will allow you to choose another branch to work with or add a branch if needed before committing.  We'll commit to the master branch for now.
 
@@ -389,7 +383,6 @@ If we then do a Sync on the VS Code side, will the file now show up as expected?
 ![](60_ShowinVSCode.png)
 
 And that is where our post will end.  We've confirmed VS Code can pull from and commit to the Azure repo in question (networknerd-repo1).  At this point we're not ready to configure the Deployment Center parameters from the beginning of this post.  First, we'll need to setup [Azure Pipelines](https://azure.microsoft.com/en-us/services/devops/pipelines/).  Until next time....
-
  
 
 ### Other Posts in This Series
@@ -403,7 +396,6 @@ And that is where our post will end.  We've confirmed VS Code can pull from and
 - Part 7 - [Introduction to Distributed Tracing with Tanzu Observability and Azure Functions]({% link _posts/2021-01-10-introduction-to-distributed-tracing-with-tanzu-observability-and-azure-functions.md %})
 - Part 8 – Coming soon!
 
- 
 
 ### Further Reading
 
