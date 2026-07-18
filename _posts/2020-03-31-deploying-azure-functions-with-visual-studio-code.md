@@ -160,7 +160,17 @@ Once again for searchability, here's the text output.
 
 ```
 Executing task in folder VSCode: C:\Program Files\dotnet\dotnet.exe build /property:GenerateFullPaths=true /consoleloggerparameters:NoSummary 
-< Microsoft (R) Build Engine version 16.5.0+d4cbfca49 for .NET Core Copyright (C) Microsoft Corporation. All rights reserved. C:\Users\Nick\Documents\VSCode\Azure Functions Project 1\Azure Functions Project 1.csproj : warning NU1603: Microsoft.Azure.WebJobs.Extensions 3.0.5 depends on Microsoft.Azure.WebJobs.Host.Storage (>= 3.0.11) but Microsoft.Azure.WebJobs.Host.Storage 3.0.11 was not found. An approximate best match of Microsoft.Azure.WebJobs.Host.Storage 3.0.13 was resolved. Restore completed in 65.39 ms for C:\Users\Nick\Documents\VSCode\Azure Functions Project 1\Azure Functions Project 1.csproj. C:\Users\Nick\Documents\VSCode\Azure Functions Project 1\Azure Functions Project 1.csproj : warning NU1603: Microsoft.Azure.WebJobs.Extensions 3.0.5 depends on Microsoft.Azure.WebJobs.Host.Storage (>= 3.0.11) but Microsoft.Azure.WebJobs.Host.Storage 3.0.11 was not found. An approximate best match of Microsoft.Azure.WebJobs.Host.Storage 3.0.13 was resolved. Azure Functions Project 1 -> C:\Users\Nick\Documents\VSCode\Azure Functions Project 1\bin\Debug\netcoreapp2.1\bin\Azure Functions Project 1.dll Terminal will be reused by tasks, press any key to close it. > Executing task in folder VSCode: func host start < func : File C:\Users\Nick\AppData\Roaming\npm\func.ps1 cannot be loaded because running scripts is disabled on this system. For more information, see about_Execution_Policies at https:/go.microsoft.com/fwlink/?LinkID=135170. At line:1 char:1 + func host start + ~~~~ + CategoryInfo : SecurityError: (:) [], PSSecurityException + FullyQualifiedErrorId : UnauthorizedAccess The terminal process terminated with exit code: 1 Terminal will be reused by tasks, press any key to close it.
+< Microsoft (R) Build Engine version 16.5.0+d4cbfca49 for .NET Core Copyright (C) Microsoft Corporation. All rights reserved. 
+C:\Users\Nick\Documents\VSCode\Azure Functions Project 1\Azure Functions Project 1.csproj : warning NU1603: Microsoft.Azure.WebJobs.Extensions 3.0.5 depends on Microsoft.Azure.WebJobs.Host.Storage (>= 3.0.11) but Microsoft.Azure.WebJobs.Host.Storage 3.0.11 was not found. 
+An approximate best match of Microsoft.Azure.WebJobs.Host.Storage 3.0.13 was resolved. 
+Restore completed in 65.39 ms for C:\Users\Nick\Documents\VSCode\Azure Functions Project 1\Azure Functions Project 1.csproj. 
+C:\Users\Nick\Documents\VSCode\Azure Functions Project 1\Azure Functions Project 1.csproj : warning NU1603: Microsoft.Azure.WebJobs.Extensions 3.0.5 depends on Microsoft.Azure.WebJobs.Host.Storage (>= 3.0.11) but Microsoft.Azure.WebJobs.Host.Storage 3.0.11 was not found. 
+An approximate best match of Microsoft.Azure.WebJobs.Host.Storage 3.0.13 was resolved. 
+Azure Functions Project 1 -> C:\Users\Nick\Documents\VSCode\Azure Functions Project 1\bin\Debug\netcoreapp2.1\bin\Azure Functions Project 1.dll Terminal will be reused by tasks, press any key to close it. 
+> Executing task in folder VSCode: func host start < func : File C:\Users\Nick\AppData\Roaming\npm\func.ps1 cannot be loaded because running scripts is disabled on this system. 
+For more information, see about_Execution_Policies at https:/go.microsoft.com/fwlink/?LinkID=135170. 
+At line:1 char:1 + func host start + ~~~~ + CategoryInfo : SecurityError: (:) [], PSSecurityException + FullyQualifiedErrorId : UnauthorizedAccess The terminal process terminated with exit code: 1 
+Terminal will be reused by tasks, press any key to close it.
 ```
 
 This time we have one error and some warnings.  Let's start with the error first and try to clear it.  Following the [link from the error message](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_execution_policies?view=powershell-7) takes us to a page on Powershell execution policies.  Part of running the function somehow involves Powershell, so we'll have to make a tweak.  Open Powershell (running as Administrator), and run set-executionpolicy remotesigned.  Type y and press Enter to say yes to the prompt about changing the execution policy.  That is the default policy for Windows Servers and will work for our purposes to (hopefully) clear the error.
@@ -365,7 +375,10 @@ All we need to test with is a small change.  Let's change the response messages
 ![](49_CodeBlock-1024x79.png)
 
 Change the code to the following, and save the changes. 
-```string responseMessage = string.IsNullOrEmpty(name) ? "Seeing this message means the function executed successfully, but try passing a name parameter into the query string." : $"Mr. / Mrs. {name} successfully passed a name parameter into the query string when executing this function. ";
+```
+string responseMessage = string.IsNullOrEmpty(name) 
+? "Seeing this message means the function executed successfully, but try passing a name parameter into the query string." 
+: $"Mr. / Mrs. {name} successfully passed a name parameter into the query string when executing this function. ";
 ```
 
 Now, let's re-run this code locally to confirm it works as expected before we publish to Azure.  After running it locally, we conduct two different tests (one with no name parameter and one with a name parameter) whose results are shown in the following screen shots.
