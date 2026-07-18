@@ -51,15 +51,15 @@ In [my last pos]({% link _posts/2020-03-31-deploying-azure-functions-with-visual
 
 For this exercise I've created a brand new Function App called networknerd1 with no functions inside (instructions for doing this part can be found [here]({% link _posts/2020-02-29-a-first-voyage-into-azure-functions-and-function-apps.md %})).  Remember deploying functions from VS Code made every function inside the Function App read-only in the portal, so we're starting fresh.  To add a function to networknerd1 using the Azure portal, we can leverage the Quickstart menu again.  We'll select the option to use VS Code (as we did previously) and then click Continue.
 
-![](1_AddFunction-1-1024x470.png)
+![](1_AddFunction-1.png)
 
 From here, select the option to Use Deployment Center instead of Direct publish.  Then click Continue.
 
-![](2_UseDeploymentCenter-1024x584.png)
+![](2_UseDeploymentCenter.png)
 
 This screen looks extremely familiar.  All the work needed to get VS Code working and overcome errors is documented [here]({% link _posts/2020-03-31-deploying-azure-functions-with-visual-studio-code.md %}).  For now, we will skip the process of creating and testing a new Azure function inside VS Code.  But there's a new option to finish and Go to the Deployment Center.  Let's see what happens next.
 
-![](3_FinishandGotoDeployCenter-974x1024.png)
+![](3_FinishandGotoDeployCenter.png)
 
 The Deployment Center menu allows us to select many different options.  Select Azure Repos and click Continue.
 
@@ -67,7 +67,7 @@ The Deployment Center menu allows us to select many different options.  Select 
 
 On the next screen, select Azure Pipelines as the build provider.  Then click Continue.
 
-![](5_DeploymentCenter2AzurePipelines-1024x523.png)
+![](5_DeploymentCenter2AzurePipelines.png)
 
 Oops.  The Azure repos and pipelines functionalities are part of Azure DevOps.  We've not done configuration to setup Azure DevOps.  There is no time like the present to keep going.  Click the button to create an Azure DevOps organization.
 
@@ -90,7 +90,7 @@ What we see now are the details of an Azure DevOps organization construct named 
 
 There are so many organization settings we could explore here, but for now focus on changing the organization name to something better.  I went with networknerd-org1.  The Privacy URL field is for adding a link to a privacy policy (read more on that [here](https://docs.microsoft.com/en-us/azure/devops/organizations/accounts/add-privacy-policy-url?view=azure-devops)), so leave it blank.  Add a description, set the time zone, and click Save.
 
-![](10_ChangeOrgSettingsSave-1024x752.png)
+![](10_ChangeOrgSettingsSave.png)
 
 Changing an organization name can have some wicked side effects, but for us it has none since the organization is empty. Retype the organization name we want to change to (networknerd-org1), check the box that we understand the consequences, and click Save.
 
