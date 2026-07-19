@@ -32,6 +32,7 @@ tags:
   - "Pull Request"
   - "Push"
   - "Serverless"
+  - "Technical Prerequisites"
   - "Source Control"
   - "Version Control"
   - "Visual Studio Code"
@@ -45,7 +46,6 @@ Back in [part 1]({% link _posts/2020-02-29-a-first-voyage-into-azure-functions-a
 
 In my [last post]({% link _posts/2020-04-25-push-and-pull-using-vs-code-with-azure-repos.md %}) we started down the path of configuring [Azure Repos](https://docs.microsoft.com/en-us/azure/devops/repos/) and [Azure Pipelines](https://azure.microsoft.com/en-us/services/devops/pipelines/) for the purpose of deploying Azure functions from VS Code using these services.  In this post, we pick up the process just after having tested and confirmed our Azure repo networknerd-repo1 is properly integrated with VS Code.  I had intended to document all steps in the same way as in previous posts (all steps, including hurdles to jump), but since Azure Pipelines got the best of me for the better part of a couple of weeks, I'll do my best to help readers avoid banging their head against the wall as long as I did.  Consider this my attempt at an Azure Pipelines prequel.
 
- 
 
 ### Back at the Repo
 
@@ -53,7 +53,6 @@ If we look back at the repo networknerd-repo1 that was cloned to my laptop and p
 
 ![](1_SetupBuild-1024x269.png)
 
- 
 
 ### A New Function App and a Step Back
 
@@ -67,8 +66,6 @@ First, follow the steps in [this post]({% link _posts/2020-02-29-a-first-voyage-
 
 ![](3_PortalFunctionCreated-1024x383.png)
 
- 
-
 #### Method 2 - Create a New Function in VS Code and Push Directly to Azure
 
 Go back to [this post]({% link _posts/2020-03-31-deploying-azure-functions-with-visual-studio-code.md %}) for reference.  Inside VS Code, use the Azure Functions extension, and create a new project.  I chose to store mine in C:\\Users\\Nick\\Documents\\Direct Push so it is outside the local repository we've been syncing to Azure Repos in previous posts (changes made here for illustration and will not be moved to that repo).  Create a new function within networknerd2, and name it FN2-HTTP2-VSCode.  Use NetworkNerd.Functions as the namespace, and choose Function for the access rights.  I chose to open the project in a new window instead of adding to the current workspace.  Feel free to run a local build and make sure everything works as expected at this point.  You'll notice Git is picking up changes, but we won't be syncing them to any repo.  Also notice there are several files created locally on my laptop in addition to just the .cs file with the function code.
@@ -80,7 +77,6 @@ Just as the process in the post linked above mentions, we'll edit the settings.j
 ![](5_FunctionCreated-1024x361.png)
 
  
-
 #### Looking at the Files in Azure in a Different Way
 
 There's another way we can look at the files for these specific functions inside the Azure portal which may help us better understand what is happening.  Select the Function App networknerd2, and click Platform features.
@@ -95,9 +91,37 @@ We see the same file structure here too (a run.csx file and a function.json file
 
 ![](8_OpenAppServiceEditor.png)
 
-According to the [Azure Functions developer guide](https://docs.microsoft.com/en-us/azure/azure-functions/functions-reference), the file structure we see above for our Function App (networknerd2) must match the following structure, and it does...for the most part.  But how do we explain the difference in files present? `FunctionApp | - host.json | - MyFirstFunction | | - function.json | | - ... | - MySecondFunction | | - function.json | | - ... | - SharedCode | - bin`
+According to the [Azure Functions developer guide](https://docs.microsoft.com/en-us/azure/azure-functions/functions-reference), the file structure we see above for our Function App (networknerd2) must match the following structure, and it does...for the most part.  But how do we explain the difference in files present? 
+```
+FunctionApp 
+| - host.json 
+| - MyFirstFunction 
+| | - function.json 
+| | - ... 
+| - MySecondFunction 
+| | - function.json 
+| | - ... 
+| - SharedCode 
+| - bin
+```
 
-Well, a .csx file is a C# script file.  By default, this is the format used when you create a function in the Azure portal.  According to the [C# script developer reference](https://docs.microsoft.com/en-us/azure/azure-functions/functions-reference-csharp#folder-structure), the folder structure for a C# script project is shown in the following code block.  So, for our first function (FN1-HTTP1-AzurePortal), the proper files show up as expected (a run.csx file and a function.json file inside a folder with the function name).  The .proj file is a C# class library (not something we can create in the Azure portal). `FunctionsProject | - MyFirstFunction | | - run.csx | | - function.json | | - function.proj | - MySecondFunction | | - run.csx | | - function.json | | - function.proj | - host.json | - extensions.csproj | - bin` Now, the second function (FN2-HTTP2-VSCode) is a little different.  There was no .csx file in VS Code (only a .cs file) because we chose C# as the default language for a new project with the Azure Functions extension (step not shown here but detailed in [this post]({% link _posts/2020-03-31-deploying-azure-functions-with-visual-studio-code.md %})).  After doing a local build of this function in VS Code, the function.json file gets created as does an entire bin directory (also a directory named bin created inside the Debug folder structure as well as the Release folder structure).
+Well, a .csx file is a C# script file.  By default, this is the format used when you create a function in the Azure portal.  According to the [C# script developer reference](https://docs.microsoft.com/en-us/azure/azure-functions/functions-reference-csharp#folder-structure), the folder structure for a C# script project is shown in the following code block.  So, for our first function (FN1-HTTP1-AzurePortal), the proper files show up as expected (a run.csx file and a function.json file inside a folder with the function name).  The .proj file is a C# class library (not something we can create in the Azure portal). 
+```
+FunctionsProject 
+| - MyFirstFunction 
+| | - run.csx 
+| | - function.json 
+| | - function.proj 
+| - MySecondFunction 
+| | - run.csx 
+| | - function.json 
+| | - function.proj 
+| - host.json 
+| - extensions.csproj 
+| - bin
+``` 
+
+Now, the second function (FN2-HTTP2-VSCode) is a little different.  There was no .csx file in VS Code (only a .cs file) because we chose C# as the default language for a new project with the Azure Functions extension (step not shown here but detailed in [this post]({% link _posts/2020-03-31-deploying-azure-functions-with-visual-studio-code.md %})).  After doing a local build of this function in VS Code, the function.json file gets created as does an entire bin directory (also a directory named bin created inside the Debug folder structure as well as the Release folder structure).
 
 ![](9_VSCodeTree-1024x541.png)
 
@@ -106,10 +130,15 @@ If we compare function.json as shown above to the function.json file we see in t
 ![](10_AppServiceEditor-1024x440.png)
 
 According to the [Azure Functions C# developer reference](https://docs.microsoft.com/en-us/azure/azure-functions/functions-dotnet-class-library#functions-class-library-project), the folder structure in Azure for a C# project should look like the code block below, and for FN2-HTTP2-VSCODE, it certainly does.
-
-`framework.version | - bin | - MyFirstFunction | | - function.json | - MySecondFunction | | - function.json | - host.json`
-
- 
+```
+framework.version 
+| - bin 
+| - MyFirstFunction 
+| | - function.json 
+| - MySecondFunction 
+| | - function.json 
+| - host.json
+```
 
 ### When Curiosity Peaks, Dig Deeper
 
@@ -145,7 +174,11 @@ If we select the decompiled DLL and drill down, we can see the code for our func
 
 ![](18_DLLFunctionContents-1024x549.png)
 
-The entry point from our function.json file references the custom namespace we used (NetworkNerd.Functions) when the function was created followed by the function name and then a .Run (full text shown directly below). `"scriptFile": "../bin/Direct Push.dll", "entryPoint": "NetworkNerd.Functions.FN2_HTTP2_VSCode.Run"`
+The entry point from our function.json file references the custom namespace we used (NetworkNerd.Functions) when the function was created followed by the function name and then a .Run (full text shown directly below). 
+```
+"scriptFile": "../bin/Direct Push.dll", 
+"entryPoint": "NetworkNerd.Functions.FN2_HTTP2_VSCode.Run"
+```
 
 Here's a fun fact.  Inside VS Code, press F5 when the .cs file for FN2\_HTTP2\_VSCode is open to test function code execution on your local machine.  Additionally, we could drill down several levels below what the file tree above shows for FN2\_HTTP2\_VSCode.  Here's an example screenshot of how things would look after cracking open "C:\\Users\\Nick\\Documents\\Direct Push\\bin\\Release\\netcoreapp2.1\\publish\\bin\\Direct Push.dll" with ILSPY and fully expanding the tree.  I can only attribute the structure to the way VS Code runs its C# compiler to create DLL files for Azure Functions.
 
@@ -153,7 +186,6 @@ Here's a fun fact.  Inside VS Code, press F5 when the .cs file for FN2\_HTTP2\_
 
 Did we have to dig into that DLL file at all?  No.  More than anything, this exercise was to show you that even though the code was compiled in VS Code and then pushed up to Azure, it exists in a slightly different form and with a different file structure (that, and it cannot be edited anywhere but inside VS Code).  And if I'm being honest, my curiosity got the best of me.
 
- 
 
 ### When Two Roads Diverge
 
@@ -177,7 +209,6 @@ A Script Function App means you're planning to use code that is in the form of a
 
 Forget Working Directory for a second.  What's the best selection for Function App Type?  The answer is not a short one, and because of this, we will look to tackle it in my next post(s).  All I will say for now is that this one dropdown box and its settings plagued me for hours before finally getting things straight.  But we'll save the details for next time.  Hopefully you needed the background in this post as much as I did.
 
- 
 
 ### Other Posts in This Series
 
@@ -188,4 +219,3 @@ Forget Working Directory for a second.  What's the best selection for Function 
 - Part 5 - [From VS Code to Azure Pipelines – Basic CI/CD with Azure Functions]({% link _posts/2020-07-04-from-vs-code-to-azure-pipelines-basic-ci-cd-with-azure-functions.md %})
 - Part 6 - [The Next Wave: Exploring Tanzu Observability’s Integration with Azure Functions]({% link _posts/2020-07-20-the-next-wave-exploring-tanzu-observabilitys-integration-with-azure-functions.md %})
 - Part 7 - [Introduction to Distributed Tracing with Tanzu Observability and Azure Functions]({% link _posts/2021-01-10-introduction-to-distributed-tracing-with-tanzu-observability-and-azure-functions.md %})
-- Part 8 – Coming soon!
