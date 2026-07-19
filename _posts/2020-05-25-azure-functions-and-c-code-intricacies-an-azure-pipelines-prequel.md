@@ -74,8 +74,7 @@ Go back to [this post]({% link _posts/2020-03-31-deploying-azure-functions-with-
 
 Just as the process in the post linked above mentions, we'll edit the settings.json file inside C:\\Users\\Nick\\Documents\\Direct Push\\.vscode again to use the proper Azure Functions project runtime (~3) and save changes.  Then, find the locally built function (FN2-HTTP2-VSCode), and click the option to Deploy to Function App from VS Code.  Be sure to select networknerd2 as the Function App.  Once the deployment succeeds, go back to the Azure portal and look at the function we deployed.  Notice the difference in files stored in Azure.  We see only a folder named the same as the function and a function.json file.  Is this somehow expected behavior?  Let's investigate.
 
-![](5_FunctionCreated-1024x361.png)
-
+![](5_FunctionCreated-1024x361.png)  
  
 #### Looking at the Files in Azure in a Different Way
 

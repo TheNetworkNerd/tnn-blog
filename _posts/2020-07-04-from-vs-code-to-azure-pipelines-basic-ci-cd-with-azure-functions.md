@@ -20,6 +20,7 @@ tags:
   - "C# Scripts"
   - "CI/CD"
   - "Code"
+  - "Code Pipelines"
   - "Code Release"
   - "Commit"
   - "Continuous Deployment"
@@ -51,7 +52,6 @@ Back in [part 1]({% link _posts/2020-02-29-a-first-voyage-into-azure-functions-a
 In my [last post]({% link _posts/2020-05-25-azure-functions-and-c-code-intricacies-an-azure-pipelines-prequel.md %}), we left our brave adventurers in the Azure Deployment Center with some decisions to make about the build process once source code hits the Azure Repo networknerd-repo1.  At present, we have a shiny new Function App named networknerd3 which contains no functions.  There are many pages of [documentation about Azure Pipelines](https://docs.microsoft.com/en-us/azure/devops/pipelines/?view=azure-devops) out there, but there aren't many that discuss using VS Code with Azure Repos and Azure Pipelines specifically for Azure Functions.
 
  
-
 ### It Starts with VS Code
 
 We'll begin by returning to VS Code just as we left it (focused on the local copy of our Azure Repo).
@@ -84,7 +84,12 @@ Once the restore completed, here's the message shown in the OUTPUT window.  Tha
 
 And here's the full text version for reference.
 
-`c:\Users\Nick\Documents\VSCode\Azure Repos\networknerd-repo1\VS Code Testing\networknerd3\networknerd3.csproj : warning NU1603: Microsoft.Azure.WebJobs.Extensions 3.0.5 depends on Microsoft.Azure.WebJobs.Host.Storage (>= 3.0.11) but Microsoft.Azure.WebJobs.Host.Storage 3.0.11 was not found. An approximate best match of Microsoft.Azure.WebJobs.Host.Storage 3.0.13 was resolved. Restore completed in 1.15 sec for c:\Users\Nick\Documents\VSCode\Azure Repos\networknerd-repo1\VS Code Testing\networknerd3\networknerd3.csproj.`
+```
+c:\Users\Nick\Documents\VSCode\Azure Repos\networknerd-repo1\VS Code Testing\networknerd3\networknerd3.csproj : warning NU1603: 
+Microsoft.Azure.WebJobs.Extensions 3.0.5 depends on Microsoft.Azure.WebJobs.Host.Storage (>= 3.0.11) but Microsoft.Azure.WebJobs.Host.Storage 3.0.11 was not found. 
+An approximate best match of Microsoft.Azure.WebJobs.Host.Storage 3.0.13 was resolved. 
+Restore completed in 1.15 sec for c:\Users\Nick\Documents\VSCode\Azure Repos\networknerd-repo1\VS Code Testing\networknerd3\networknerd3.csproj.
+```
 
 We'll go ahead and change the azureFunctions.projectRuntime to "~3" inside the proper settings.json file in our repo since it was set back to "~2" when this project was created and save those changes.
 
@@ -100,10 +105,18 @@ If we go back to the FN1-HTTP1-NN3.cs file and press F5 to run a build, we find 
 
 And here's the full text warnings for reference and searchability.
 
-`C:\Users\Nick\Documents\VSCode\Azure Repos\networknerd-repo1\VS Code Testing\networknerd3\networknerd3.csproj : warning NU1603: Microsoft.Azure.WebJobs.Extensions 3.0.5 depends on Microsoft.Azure.WebJobs.Host.Storage (>= 3.0.11) but Microsoft.Azure.WebJobs.Host.Storage 3.0.11 was not found. An approximate best match of Microsoft.Azure.WebJobs.Host.Storage 3.0.13 was resolved. Restore completed in 691.64 ms for C:\Users\Nick\Documents\VSCode\Azure Repos\networknerd-repo1\VS Code Testing\networknerd3\networknerd3.csproj. C:\Users\Nick\Documents\VSCode\Azure Repos\networknerd-repo1\VS Code Testing\networknerd3\networknerd3.csproj : warning NU1603: Microsoft.Azure.WebJobs.Extensions 3.0.5 depends on Microsoft.Azure.WebJobs.Host.Storage (>= 3.0.11) but Microsoft.Azure.WebJobs.Host.Storage 3.0.11 was not found. An approximate best match of Microsoft.Azure.WebJobs.Host.Storage 3.0.13 was resolved. networknerd3 -> C:\Users\Nick\Documents\VSCode\Azure Repos\networknerd-repo1\VS Code Testing\networknerd3\bin\Debug\netcoreapp2.1\bin\networknerd3.dll`
+```
+C:\Users\Nick\Documents\VSCode\Azure Repos\networknerd-repo1\VS Code Testing\networknerd3\networknerd3.csproj : warning NU1603: 
+Microsoft.Azure.WebJobs.Extensions 3.0.5 depends on Microsoft.Azure.WebJobs.Host.Storage (>= 3.0.11) but Microsoft.Azure.WebJobs.Host.Storage 3.0.11 was not found. 
+An approximate best match of Microsoft.Azure.WebJobs.Host.Storage 3.0.13 was resolved. 
+Restore completed in 691.64 ms for C:\Users\Nick\Documents\VSCode\Azure Repos\networknerd-repo1\VS Code Testing\networknerd3\networknerd3.csproj. 
+C:\Users\Nick\Documents\VSCode\Azure Repos\networknerd-repo1\VS Code Testing\networknerd3\networknerd3.csproj : warning NU1603: 
+Microsoft.Azure.WebJobs.Extensions 3.0.5 depends on Microsoft.Azure.WebJobs.Host.Storage (>= 3.0.11) but Microsoft.Azure.WebJobs.Host.Storage 3.0.11 was not found. 
+An approximate best match of Microsoft.Azure.WebJobs.Host.Storage 3.0.13 was resolved. 
+networknerd3 -> C:\Users\Nick\Documents\VSCode\Azure Repos\networknerd-repo1\VS Code Testing\networknerd3\bin\Debug\netcoreapp2.1\bin\networknerd3.dll
+```
 
 The question is...should we care about these warnings?  My suspicion is the answer is no.  We'll see if I'm right as we press forward.  If not, I will show how to come back and fix the problem.
-
  
 
 ### Back to the Deployment Center
@@ -127,7 +140,6 @@ As shown below, there was both and build and a release pipeline created for the 
 ![](14_PipelinesCreated-1024x384.png)
 
  
-
 ### A Tale of Two Pipelines
 
 If we follow the link for Build Pipeline from the screen above, we see what follows inside Azure DevOps.  Our build pipeline is named networknerd3 - CI.  That name is automatically generated and can easily be changed.  This pipeline exists inside Azure DevOps organization networknerd-org1 and project networknerd-project1.  We saw above that a build was triggered, and it appears from what we see here something failed.  The CI added to the pipeline name stands for [continuous integration](https://en.wikipedia.org/wiki/Continuous_integration).
@@ -148,7 +160,6 @@ If we had clicked on the Release Pipeline link above, we would see that a releas
 
 The CD added to the pipeline's name when it was created stands for [continuous delivery](https://en.wikipedia.org/wiki/Continuous_delivery).  And if you noticed in the screenshot from our work in Deployment Center, continuous delivery was setup for us automatically.  That means once a build pipeline runs successfully, it produces a file in the working directory of our repo (specified earlier as VS Code Testing), and the release pipeline takes it and uses it to update the code for anything inside the context of the Function App networknerd3 that has changed since the previous release.
 
- 
 
 ### Letting the Code Flow
 
@@ -180,11 +191,23 @@ There's some kind of search firing off at this step that targets a .sln file and
 
 ![](25_BuildSolutionError-1024x509.png)
 
-Here's the raw log for searchability: `2020-07-03T21:58:45.8180561Z ##[section]Starting: Build solution 2020-07-03T21:58:45.8301989Z ============================================================================== 2020-07-03T21:58:45.8302350Z Task : Visual Studio build 2020-07-03T21:58:45.8302676Z Description : Build with MSBuild and set the Visual Studio version property 2020-07-03T21:58:45.8302985Z Version : 1.166.2 2020-07-03T21:58:45.8303221Z Author : Microsoft Corporation 2020-07-03T21:58:45.8303586Z Help : https://docs.microsoft.com/azure/devops/pipelines/tasks/build/visual-studio-build 2020-07-03T21:58:45.8304015Z ============================================================================== 2020-07-03T21:58:48.0082862Z ##[error]Solution not found using search pattern 'D:\a\1\s\**\*.sln'. 2020-07-03T21:58:48.0421403Z ##[section]Finishing: Build solution`
+Here's the raw log for searchability: 
+```2020-07-03T21:58:45.8180561Z ##[section]Starting: Build solution 
+2020-07-03T21:58:45.8301989Z 
+============================================================================== 
+2020-07-03T21:58:45.8302350Z Task : Visual Studio build 
+2020-07-03T21:58:45.8302676Z Description : Build with MSBuild and set the Visual Studio version property 
+2020-07-03T21:58:45.8302985Z Version : 1.166.2 
+2020-07-03T21:58:45.8303221Z Author : Microsoft Corporation 
+2020-07-03T21:58:45.8303586Z Help : https://docs.microsoft.com/azure/devops/pipelines/tasks/build/visual-studio-build 
+2020-07-03T21:58:45.8304015Z 
+============================================================================== 
+2020-07-03T21:58:48.0082862Z ##[error]Solution not found using search pattern 'D:\a\1\s\**\*.sln'. 
+2020-07-03T21:58:48.0421403Z ##[section]Finishing: Build solution
+```
 
 This part stumped me for so much longer that I thought it would.  Think back to the files we committed to our repo.  None of them were .sln files. In fact, a .sln file is something created by [Visual Studio](https://docs.microsoft.com/en-us/visualstudio/extensibility/internals/solution-dot-sln-file).  It turns out [VS Code can open a .sln file](https://code.visualstudio.com/docs/languages/csharp), but I didn't find where VS Code has the capability to create them.  We did create a .csproj file though using the Azure Functions extension in VS Code that was uploaded along with our commit.  Maybe we can leverage that somehow.
 
- 
 
 ### A Little Pipeline Repair Needed
 
@@ -256,7 +279,6 @@ As shown here, an Azure Function App Deploy task was completed successfully.  A
 
 ![](41_Release-1Detail-1024x330.png)
 
- 
 
 ### Checking Our Work
 
@@ -270,13 +292,12 @@ If we click on the function created and get its URL, does it actually run in a b
 
 ![](44_SuccessfulRun2-1024x62.png)
 
- 
 
 ### One Last Tweak
 
 This wouldn't be any fun without a grand finale.  Can we make a change to the function's code and have it pushed out automatically using our pipelines?  We won't show every step, but here's what I suggest doing now:
 
-- Go back to VS Code, and make a change to the code for the function we deployed.  We will make a noticeable edit to the responseMessage string in FN1-HTTP1-NN3.cs and save the changes. ![](45_OneChange-1024x76.png)
+- Go back to VS Code, and make a change to the code for the function we deployed.  We will make a noticeable edit to the responseMessage string in FN1-HTTP1-NN3.cs and save the changes.   ![](45_OneChange-1024x76.png)
 
 - Commit changes, and then synchronize them with the Azure repo.
 
@@ -285,7 +306,6 @@ This wouldn't be any fun without a grand finale.  Can we make a change to the f
 
 That last part was quick, but prove to yourself that changing the code will update the function on the Azure side automatically...all through the power of Azure Repos and Pipelines.  This only scratches the surface of the types of CI / CD capabilities possible with Azure DevOps, but we will stop here for now.
 
- 
 
 ### Other Posts in This Series
 
@@ -296,9 +316,7 @@ That last part was quick, but prove to yourself that changing the code will upda
 - Part 5 - This post
 - Part 6 - [The Next Wave: Exploring Tanzu Observability’s Integration with Azure Functions]({% link _posts/2020-07-20-the-next-wave-exploring-tanzu-observabilitys-integration-with-azure-functions.md %})
 - Part 7 - [Introduction to Distributed Tracing with Tanzu Observability and Azure Functions]({% link _posts/2021-01-10-introduction-to-distributed-tracing-with-tanzu-observability-and-azure-functions.md %})
-- Part 8 – Coming soon!
 
- 
 
 ### Further Reading
 
