@@ -117,7 +117,7 @@ networknerd3 -> C:\Users\Nick\Documents\VSCode\Azure Repos\networknerd-repo1\VS 
 ```
 
 The question is...should we care about these warnings?  My suspicion is the answer is no.  We'll see if I'm right as we press forward.  If not, I will show how to come back and fix the problem.
- 
+
 
 ### Back to the Deployment Center
 
@@ -192,7 +192,8 @@ There's some kind of search firing off at this step that targets a .sln file and
 ![](25_BuildSolutionError-1024x509.png)
 
 Here's the raw log for searchability: 
-```2020-07-03T21:58:45.8180561Z ##[section]Starting: Build solution 
+```
+2020-07-03T21:58:45.8180561Z ##[section]Starting: Build solution 
 2020-07-03T21:58:45.8301989Z 
 ============================================================================== 
 2020-07-03T21:58:45.8302350Z Task : Visual Studio build 
@@ -297,10 +298,8 @@ If we click on the function created and get its URL, does it actually run in a b
 
 This wouldn't be any fun without a grand finale.  Can we make a change to the function's code and have it pushed out automatically using our pipelines?  We won't show every step, but here's what I suggest doing now:
 
-- Go back to VS Code, and make a change to the code for the function we deployed.  We will make a noticeable edit to the responseMessage string in FN1-HTTP1-NN3.cs and save the changes.   ![](45_OneChange-1024x76.png)
-
+- Go back to VS Code, and make a change to the code for the function we deployed.  We will make a noticeable edit to the responseMessage string in FN1-HTTP1-NN3.cs and save the changes.   ![](45_OneChange-1024x76.png)  
 - Commit changes, and then synchronize them with the Azure repo.
-
 - Confirm build and release pipelines succeed. ![](46_BuildPipeline-1024x198.png) ![](47_Release.png)
 - Try re-running the function after this to see if there is a change. ![](48_AnotherSuccess-1024x69.png)
 
