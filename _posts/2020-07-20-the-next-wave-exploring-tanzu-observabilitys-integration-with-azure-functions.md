@@ -15,6 +15,7 @@ tags:
   - "Azure DevOps"
   - "Azure Function Apps"
   - "Azure Functions"
+  - "Azure Integration"
   - "Azure Pipelines"
   - "Azure Repos"
   - "Build Pipelines"

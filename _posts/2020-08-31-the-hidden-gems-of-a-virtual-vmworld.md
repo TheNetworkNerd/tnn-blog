@@ -22,6 +22,9 @@ tags:
   - "Presentations"
   - "Ryan Clair"
   - "Tanzu"
+  - "Tech Conference"
+  - "Tech Conferences"
+  - "Technical Conference"
   - "Tech Talks"
   - "vBrownBag"
   - "vCommunity"
@@ -64,7 +67,6 @@ I'd recommend checking out the solution keynotes as well (also delivered live).�
 Remember there is a free pass (called general in the content catalog) and a [premier pass](https://www.vmworld.com/en/pricing.html) this year.  Anything marked Premier Pass Only is delivered live and can be scheduled.  If you're on the fence, the guided workshops and labs are extremely helpful and delivered by seasoned technical folks from VMware.  The round table sessions are also quite good.  I've attended both at previous in-person VMworlds.
 
 On a personal note, I would also add [Ryan Clair](https://twitter.com/ryandotclair)'s [Demo of All Things Tanzu](https://my.vmworld.com/widget/vmware/vmworld2020/catalog?search=MAP2316) session to your list for a great show and tell overview of the Tanzu portfolio.
-
  
 
 ### Special Conference Activities and News
@@ -75,9 +77,7 @@ The [VMworld Activities page](https://www.vmworld.com/en/Engage/activities.html)
 
 The [VMworld Social page](https://www.vmworld.com/en/Engage/social-2020.html) shows all hashtags to follow on Twitter and Instagram for the latest updates from the conference.  Add #vExpert to your list as well.  I would bookmark and keep an eye on the [VMworld Blog](https://blogs.vmware.com/vmworld/) as well for announcements and an overview of conference events.  You can expect a number of technical bloggers to cover the major announcements and post them on Twitter both during and after the show.
 
- 
-
-### Listen to Recommendations
+### Take Some Recommendations
 
 #### Read
 
@@ -106,35 +106,31 @@ The [VMworld Social page](https://www.vmworld.com/en/Engage/social-2020.html) sh
 
 - If you prefer video content, there's a nice [New to VMworld video](https://www.vmworld.com/en/plan-your-experience.html) on the VMworld site.
 
- 
 
 ### Go Underground
 
 Deep inside VMworld, there is an underground run by community members.  I'm speaking of VMunderground, of course.  Each year just before VMworld there is a community event called Opening Acts (completely free to attend) which usually consists of a series of panel discussions with technical community members.  I've attended Opening Acts a couple of times, and the content was very good.  Read [this post](https://blog.vmunderground.com/openingacts-2020/) for the latest details on this year's virtual Opening Acts. I would recommend following the [VMunderground blog](https://blog.vmunderground.com/), the [VMundergound Twitter](https://twitter.com/vmunderground/), and the [Opening Acts Twitter](https://twitter.com/openingacts/) for the latest details and updates. If you're still not convinced, see [this post](https://blog.vmunderground.com/2019/08/) detailing last year's Opening Acts, or watch the 2019 panel discussions on the [Opening Acts YouTube Channel](https://www.youtube.com/channel/UCqOkxPfVlEGHFiWS52g4ilQ).
-
  
 
 ### Bring Your Brown Bag
 
 If you've never heard of [vBrownBag](https://vbrownbag.com/brownbags/what-is-vbrownbag/), they produce a TON of quality technical content.  In fact, I used their sessions to help me study for my VCP-DCV 6 a few years ago.  vBrownBag has consistently produced [Tech Talks at VMworld](https://vbrownbag.com/2020/08/vbrownbag-community-at-vmworld-2020/) and done the same for other technology conferences.  A Tech Talk is usually a 12 - 30 minute talk anyone can sign up to do (content just has to be technical and not a sales pitch). This year they will be broadcasting Tech Talks starting 9/28 at 9 AM.  Bookmark the live feed and session schedule [here](https://vbrownbag.com/brownbags/vbrownbags-live/), and mark your calendar!
 
- 
 
 ### Visit the Virtual Conference Center
 
 There is so much networking that happens at VMworld among members of the tech community, and it will be difficult to duplicate in a virtual environment.  But it seems the community has answered the call to ensure this year's conference won't be missing that element.  Read Jeremiah Dooley's [blog post](https://jeramiah.net/2020/08/community-vmworld-2020-time-to-volunteer/) about the launch of a parallel event run by the community, for the community.  Make sure you [join the Oribital Jigsaw community](https://discord.gg/U8H7AS2) on Discord, and [watch this welcome video](https://www.youtube.com/watch?v=3Ds4giD8Q-o&feature=youtu.be) detailing what you will find there.
 
+
 ### Challenge Yourself
 
 Are you up for a challenge?  Don't forget to read up on the [VMworld Challenge](https://blogs.vmware.com/vmworld/2020/09/explore-learn-and-win-vmworld-challenge.html) for chances to win free stuff.
 
- 
 
 ### Attend a Design Session - October 1 - 2
 
 Did you know VMware has an official Design team that is looking to engage with customers at the conference?  This is your chance to (virtually) talk with the people who build the user interfaces for VMworld products, try prototypes, and give your feedback.  Check out the full details in [this blog post](https://blogs.vmware.com/vmworld/2020/08/design-studio-vmworld-2020.html).
 
- 
 
 ### Embrace the Code - October 1 - 2
 
@@ -142,7 +138,6 @@ Maybe you haven't heard, but there's another free event on the heels of VMworld 
 
 There's also a Hackathon (full details on the format and how to sign up are [here](https://vmwarecodeconnect.github.io/CodeConnect2020/#hackathon)).  I mean it when I say skill level does not matter here.  Anyone can join and contribute.  If you don't believe me, [read the article I wrote]({% link _posts/2017-09-24-conf-heartbeat-vmworld-vmugusercon-spiceworld.md %}) about being captain of a team at the 2017 VMworld Hackathon.  So if you're looking to get into something new and really fun, give it a try.  You won't be sorry.  And if you've thought about organizing your own hackathon, check out [this lessons learned presentation](https://www.youtube.com/watch?v=RTqvuHloXro) from Wences Michel.
 
- 
 
 ### Embark on an Odyssey
 
@@ -151,7 +146,6 @@ Odyssey is a series of short Hands-On-Labs that require you to complete specific
 There will be an Odyssey competition this year starting on 9/14 **for attendees with a premier conference pass**.  The VMworld Odyssey tournament format, recommended prerequisites, and participation instructions are detailed [here](https://blogs.vmware.com/hol/2020/08/vmworld-2020-guided-workshops-vmware-odyssey-and-more.html).  You will need to register for the conference and add the Odyssey sessions to your agenda.  If I had to guess, I would imagine VMworld would be a good time to launch some brand new Odyssey games, especially for this competition.
 
 If you can't shell out the cash for a premier pass or missed the deadline, you can check out existing Odyssey Hands-On-Labs on your own for free.  The catalog of Odyssey games can be found [here](http://labs.hol.vmware.com/HOL/catalogs/catalog/1416) and is also reachable from the [main Odyssey site](https://odyssey.vmware.com/).  If an Odyssey competition sounds like fun, talk to your local VMware User Group (VMUG) leader or a VMware SE.  Read [Wences Michel's write up](https://m1labs.co/2019/12/23/successful-dfw-vmug-odyssey-competition-dec-2019/) on the fun we had at the DFW VMUG in December 2019.
-
  
 
 ### Consider Yourself Special
@@ -159,13 +153,11 @@ If you can't shell out the cash for a premier pass or missed the deadline, you c
 No matter what the master schedule says, there is always more to do.  Ask your VMware account team about special sessions and briefings that aren't advertised to the general public.  If you don't know your VMware account team, it's time to get to know them.
 
  
-
 ### Get Yourself a Map
 
 Wait...why do you need a map?  You need the vTrailMap, of course.  If you don't know [Yadin Porter de Leon](https://www.linkedin.com/in/porterdeleon/), aside from having an amazing radio voice, he is the founder of the Level Up Project and creator of the vTrailMap, a guide book for how to get involved in what we call the vCommunity.  Follow [this Tweet](https://twitter.com/Tech_LevelUp/status/1293566835632173057?s=20) and the [Level Up Project](https://twitter.com/Tech_LevelUp) for more detail on how to get a copy of the vTrailMap as we get closer to the conference.
 
 Another great map was constructed by [Nate Hudson](https://gr8n8tr0n.cloud/).  He created an interactive [mindmap for how to approach VMworld 2020](https://www.mindmeister.com/1560564662/vmworld-2020-sep-29-oct-1?fullscreen=1), providing a visual representation of all there is on the conference agenda.
-
  
 
 ### Sign up for VMUG (VMware User Group)
@@ -173,7 +165,6 @@ Another great map was constructed by [Nate Hudson](https://gr8n8tr0n.cloud/).  
 One of the best ways to level up your VMware knowledge and further your career is joining VMUG.  Use [this link](https://www.vmug.com/membership/membership-benefits) to join if you're not a member today (free).  The original idea of VMUG was to connect with other VMware users in your area.  Click [here](https://www.vmug.com/get-involved/benefits-of-vmug-communities) to find your local VMUG chapters after joining, and look into being a part of / following multiple VMUG chapters to get alerts about upcoming meetings and access to chapter message boards.  Local VMUG chapters have regular meetups as well as a yearly UserCon (1-day free, mini conference).  With COVID in play, VMUG events are virtual for the rest of the year.  And if you've never attended a UserCon, start with the Boston UserCon on 9/15 (all details [here](https://www.vmug.com/events2/vmug-usercon/2020-boston-usercon)).  Check out the [master UserCon schedule](https://www.vmug.com/events2/vmug-usercon) and [master local VMUG meeting schedule](https://www.vmug.com/events2/local-meetings).  Remember for now anything of interest is fair game to attend!
 
 Each year there is a VMUG party as part of VMworld.  Full details on saving your spot for the party can be found [here](https://www.vmug.com/events2/vmworld-2020).
-
  
 
 ### Watch the On-Demand Video Library for Updates
@@ -181,7 +172,6 @@ Each year there is a VMUG party as part of VMworld.  Full details on saving you
 At some point the VMworld 2020 sessions will all show up in the [VMworld on-demand video library](https://www.vmworld.com/en/video-library/search.html#year=2019).  Remember that slide deck full of resource links you wish you had a copy of from an awesome VMworld session?  In many cases you can find a PDF of the presenter's slide deck stored along with the video.  The on-demand library does require that you sign in with your VMworld account, however.  Even if you couldn't attend the conference and don't have a VMworld account, you can create one for free and get access to all the content.
 
 ![](1_DownloadPreso-1024x516.png)
-
  
 
 ### This Could Be Your Stage
