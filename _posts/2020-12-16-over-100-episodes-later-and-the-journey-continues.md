@@ -121,27 +121,27 @@ If you're interested in hearing the nuggets of wisdom our guests have shared, he
 - [Phil Monk](https://nerd-journey.com/make-accommodations-for-success-with-phil-monk-1-2/) - Episode 185 and 186
 - [Joe Houghes](https://nerd-journey.com/dead-ends-and-defining-direction-with-joe-houghes-1-3/) - Episode 187, 188, and 189
 - [Brett Hill](http://nerd-journey.com/owner-of-the-space-with-brett-hill-1-2/) - Episode 191 and 192
-- [Neil Thompson](http://nerd-journey.com/communication-for-specialists-with-neil-thompson-1-2/) - Episode 193 and 194
+- [Neil Thompson](http://nerd-journey.com/communication-for-specialists-with-neil-thompson-1-2/) - Episode 193 and 194, [348](https://nerd-journey.com/organizational-flattening-intentionally-model-behaviors-to-build-the-culture-you-want-2-2/)
 - [David Babbitt](http://nerd-journey.com/perceptions-and-realities-of-startup-life-with-david-babbitt-1-3/) - Episode 195, 196, and 197
 - [Nathan Bennett](https://nerd-journey.com/the-transferrable-skill-of-systems-thinking-with-nathan-bennett-1-2/) - Episode 198 and 199
 - [Yvette Edwards](https://nerd-journey.com/generate-depth-on-demand-with-yvette-edwards-1-2/) - Episode 201 and 202
 - [Anudeep Parhar](https://nerd-journey.com/the-business-of-curiosity-progression-with-anudeep-parhar-1-2/) - Episode 208 and 209
-- [Shailvi Wakhlu](https://nerd-journey.com/a-collection-of-ambiguous-experiments-with-shailvi-wakhlu-1-2/) - Episode 210 and 211
+- [Shailvi Wakhlu](https://nerd-journey.com/a-collection-of-ambiguous-experiments-with-shailvi-wakhlu-1-2/) - Episode 210 and 211, [347](https://nerd-journey.com/organizational-flattening-understanding-the-trend-career-challenges-and-opportunities-1-2/) and [348](https://nerd-journey.com/organizational-flattening-intentionally-model-behaviors-to-build-the-culture-you-want-2-2/)
 - [Leah White](https://nerd-journey.com/seek-and-embrace-flexibility-with-leah-white-1-2/) - Episode 212 and 213
 - [Cait Donovan](https://nerd-journey.com/across-the-patterns-of-burnout-with-cait-donovan-1-2/) - Episode 214 and 215, [299](https://nerd-journey.com/chronic-stress-connecting-the-dots-between-layoffs-and-burnout-with-cait-donovan/)
 - [Kristen Carder](https://nerd-journey.com/experiencing-a-neurodivergent-diagnosis-with-kristen-carder-1-2/) - Episode 216 and 217
 - [Jason Langer](https://nerd-journey.com/explaining-hard-concepts-in-simple-terms-with-jason-langer-1-2/) - Episode 218 and 219
 - [John Nicholson](https://nerd-journey.com/tech-marketing-interview-questions-and-executives-as-wild-bears-with-john-nicholson-1-3/) - Episode 224, 225, and 226
 - [Scott Egbert](https://nerd-journey.com/through-profit-and-loss-with-scott-egbert-1-2/) - Episode 227 and 228
-- [Chris Williams](https://nerd-journey.com/a-depth-and-a-breadth-with-chris-williams-1-3/) - Episode 229, 230, and 231
-- [Al Elliott](https://nerd-journey.com/the-best-bad-option-with-al-elliott-1-2/) - Episode 235 and 236
-- [Leanne Elliott](https://nerd-journey.com/the-psychological-transition-of-layoffs-with-leanne-elliott-1-2/) - Episode 237 and 238
+- [Chris Williams](https://nerd-journey.com/a-depth-and-a-breadth-with-chris-williams-1-3/) - Episode 229, 230, and 231 
+- [Al Elliott](https://nerd-journey.com/the-best-bad-option-with-al-elliott-1-2/) - Episode 235 and 236, [340](https://nerd-journey.com/task-cohesion-managing-a-larger-team-in-a-flatter-organization-amidst-a-climate-of-uncertainty-with-al-and-leanne-elliott-1-2/) and 341
+- [Leanne Elliott](https://nerd-journey.com/the-psychological-transition-of-layoffs-with-leanne-elliott-1-2/) - Episode 237 and 238, [340](https://nerd-journey.com/task-cohesion-managing-a-larger-team-in-a-flatter-organization-amidst-a-climate-of-uncertainty-with-al-and-leanne-elliott-1-2/) and 341, [347](https://nerd-journey.com/organizational-flattening-understanding-the-trend-career-challenges-and-opportunities-1-2/)
 - [Kenneth Ellington](https://nerd-journey.com/introduced-to-cybersecurity-with-kenneth-ellington-1-2/) - Episode 239 and 240
 - [Ken Collins](https://nerd-journey.com/a-self-taught-programmers-banyan-tree-of-knowledge-with-ken-collins-1-2/) - Episode 241 and 242
 - [Tim Crawford](https://nerd-journey.com/the-importance-of-building-relationships-with-tim-crawford-1-2/) - Episode 243 and 244
 - [Dr. Sirisha Kuchimanchi](https://nerd-journey.com/technical-careers-and-championing-women-in-stem-with-dr-sirisha-kuchimanchi-1-3/) - Episode 245, 246, and 247
 - [Duncan Sparrell](https://nerd-journey.com/cybersecurity-breadth-and-the-ampersand-between-r-and-d-with-duncan-sparrell-1-2/) - Episode 248 and 249
-- [Todd Cochrane](https://nerd-journey.com/from-naval-electronics-to-podcaster-and-business-owner-with-todd-cochrane-1-2/) - Episode 250 and 251
+- [Todd Cochrane](https://nerd-journey.com/from-naval-electronics-to-podcaster-and-business-owner-with-todd-cochrane-1-2/) - Episode 250 and 251, [346](https://nerd-journey.com/special-dedication-honoring-todd-cochranes-legacy/)
 - [Russell Swinney](https://nerd-journey.com/management-is-war-with-russell-swinney-1-2/) - Episode 252 and 253
 - [Larry Roberts](https://nerd-journey.com/train-and-teach-a-mixture-of-techniques-and-concepts-with-larry-roberts-1-3/) - Episode 254, 255, and 256
 - [Nicholas Aronne](https://nerd-journey.com/an-agile-career-project-manager-product-owner-and-product-manager-with-nicholas-aronne-1-3/) - Episode 257, 258, and 259
@@ -155,7 +155,7 @@ If you're interested in hearing the nuggets of wisdom our guests have shared, he
 - [Max Kanat-Alexander](https://nerd-journey.com/contribute-back-embracing-the-open-source-spirit-with-max-kanat-alexander-1-3/) - Episode 285, 286, and 287
 - [Dale McKay](https://nerd-journey.com/guardrails-for-growth-a-mentors-experience-with-dale-mckay-1-2/) - Episode 288 and 289
 - [Kat Nelson Troyer and Liz Bronson](https://nerd-journey.com/reduction-in-force-navigating-layoff-trends-in-tech-with-real-job-talk-1-2/) - Episode 290 and 291
-- [Abby Clobridge](https://nerd-journey.com/library-science-information-architecture-and-the-synthesis-of-details-with-abby-clobridge-1-2/) - Episode 292 and 293
+- [Abby Clobridge](https://nerd-journey.com/library-science-information-architecture-and-the-synthesis-of-details-with-abby-clobridge-1-2/) - Episode 292 and 293, [347](https://nerd-journey.com/organizational-flattening-understanding-the-trend-career-challenges-and-opportunities-1-2/) and [348](https://nerd-journey.com/organizational-flattening-intentionally-model-behaviors-to-build-the-culture-you-want-2-2/)
 - [Tad Reeves](https://nerd-journey.com/sustained-interest-a-formula-for-technical-mastery-with-tad-reeves-1-3/) - Episode 296, 297, and 298
 - [Amy Lewis](https://nerd-journey.com/always-a-winger-people-person-and-unapologetic-marketer-with-amy-lewis-1-2/) - Episode 301 and 302
 - [Duncan Epping](https://nerd-journey.com/write-to-learn-and-learn-to-present-with-duncan-epping-1-2/) - Episode 303 and 304
@@ -167,7 +167,12 @@ If you're interested in hearing the nuggets of wisdom our guests have shared, he
 - [Erin O’Quinn](https://nerd-journey.com/a-utility-players-advantage-the-work-of-marketing-in-tech-with-erin-oquinn-1-3/) - Episode 330, 331, and 332
 - [Srikanth Bollavaram](https://nerd-journey.com/beyond-system-building-the-practical-applications-of-industry-expertise-with-srikanth-bollavaram-1-2/) - Episode 335 and 336
 - [Daniel Paluszek](https://nerd-journey.com/finding-drive-the-parallels-of-mentoring-and-technology-partnerships-with-daniel-paluszek-1-3/) - Episode 337, 338, and 339
-
+- [Jason Gass](https://nerd-journey.com/planting-seeds-networking-and-maneuvering-unexpected-job-loss-with-jason-gass-1-2/) - Episode 342 and 343
+- [Paul Nadeau](https://nerd-journey.com/stay-calm-and-dont-panic-translating-military-leadership-lessons-to-the-corporate-world-with-paul-nadeau-1-2/) - Episodes 344 and 345
+- [Milin Desai](https://nerd-journey.com/expand-your-curiosity-build-own-and-maintain-relevance-with-milin-desai-1-3/) - Episodes 349, 350, and 351
+- [Christy Honeycutt](https://nerd-journey.com/people-first-systematizing-go-to-market-for-your-role-with-christy-honeycutt-1-2/) - Episode 352 and 353
+- [Dave Stevens](https://nerd-journey.com/layoff-bounce-back-resilience-through-personal-and-professional-networks-with-dave-stevens/) - Episode 354
+- [Ryan Conley](https://nerd-journey.com/mind-the-gaps-organizational-changes-and-your-career-lifecycle-with-ryan-conley/) - Episode 355
 
 ### Why the Journey Continues
 
