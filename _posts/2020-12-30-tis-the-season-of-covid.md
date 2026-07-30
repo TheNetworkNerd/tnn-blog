@@ -6,10 +6,12 @@ permalink: /2020/12/30/tis-the-season-of-covid/
 categories: 
   - "Wellness"
 tags: 
+  - "Anxiety"
   - "Coronavirus"
   - "COVID"
   - "COVID-19"
   - "Exercise"
+  - "Health"
   - "Holiday"
   - "Pandemic"
   - "Recovery"
@@ -48,8 +50,6 @@ We even managed not one but 2 socially distanced family vacations this summer. T
 
 We decided to enroll our daughter in an online public school for her 5th grade year. She stays home with us, I facilitate her schoolwork each day, and she can still safely go hang out with her grandparents, which is where she wants to be most of the time anyway. We thought we were doing all the right things to keep us safe. I’ve watched countless people I know from the sidelines of Facebook do all sorts of things I consider nonessential, but that’s probably a post for another time. And I felt proud of the choices we made, the choices we thought were going to keep us from COVID-19. We were wrong.
 
- 
-
 ### It Begins
 
 I woke up Sunday, November 22, feeling off. On the evening of the 21st, I felt exhausted, physically tired and I hadn’t done anything that day to make me feel that way.  But there it was. My neighbor, one of the few people I’ve allowed in my Covid circle, even invited me to come hang out at the house, but I was just too tired to go. Sunday morning, I took my place on the couch for services, and when it was over, we ate some lunch. But I was so very tired, so immediately after lunch I laid down and didn’t wake up for 3 hours. When I did, I had fever and a headache. My body, mainly my legs and lower back, felt like I had climbed 1000 stairs. I said the words I didn’t want to say to Nick: “I think I need to get tested for Covid.” Thankfully on Friday I had taken our daughter over to her grandmother’s house for the weekend. She was helping them decorate for Christmas and was in no hurry to come home.
@@ -61,9 +61,7 @@ The next few days were a rollercoaster of fever. It ranged from 99.5 to 101/102 
 Besides the awful chills and body aches that came with the fever (I’ve never wanted a chiropractic adjustment more in my life), the headaches were excruciating. They were centered in a circle around the top of my head, and no Tylenol would touch them. The only semblance of relief I could manage was to take my fingertips and press them into my head as hard as possible and wiggle them around, almost as if I were trying to stick them through my skull. It would relieve some of the pressure, but not much. The headaches were worse when I would stand to move around, and along with them came dizziness and sometimes blurry vision. They wouldn’t necessarily last long, but when they hit, they hit hard. My neck and shoulders were tense as well, and my lower back ached. I threw up once early Monday morning.
 
 I also had a painful cough. It was way worse each morning when I would first wake up. Some days it was dry and painful. Other days I would cough up mucus. My voice sounded horrible from the coughing, although I never lost it completely. I had almost no appetite.
-
  
-
 ### The Turning Point and The Setback
 
 This all lasted through Thanksgiving Day, when I began to get some relief from the horrible symptoms I was experiencing. My in-laws and my mom and both brought Thanksgiving dinners to us, so we enjoyed our traditional food without having to cook. My fever finally started going down and by later in the day Thursday was gone. I felt somewhat human, so I convinced Nick to help me get the Christmas decorations out of the attic so I could finally decorate the naked tree we had put up in the living room a week before. Friday, I felt good enough to decorate the tree and the living room, and I had Whataburger for lunch. Sometime around 3pm that day, I realized I couldn’t smell the essential oil I was trying to use for headache relief. I tried several other strong oils; nothing. I put some oregano oil in my mouth, which is the most awful thing you will ever taste but provides some health benefits...and got nothing.
@@ -77,9 +75,7 @@ Besides the steroid, we both upped our daily dosage of Vitamins D and C, added i
 Ritz crackers became my best friend because they were interesting enough texturally that I didn’t mind the lack of flavor. I still didn’t have much of an appetite anyway.
 
 Nick lost his sense of smell on Sunday afternoon. He got his positive diagnosis on Monday morning, eight days after my symptoms began. Thankfully, perhaps maybe due to that steroid, his symptoms were very mild, and he never even ran fever. I do feel terrible that I gave it to him, and had he ended up sicker than he did I would have never forgiven myself. Lesson learned – initially we probably weren’t as careful around each other at home as we should have been. Don’t get me wrong – he avoided me like I was a leper and moved into our guestroom and guest bathroom, but we didn’t lock me in my bedroom and make me stay there. I should have done a better job at that part, but it might not have even made a difference since he had been exposed to me for so long anyway. We will never know, and you don’t get a do over for these kinds of things. Sorry, honey.
-
  
-
 ### Life After COVID
 
 As I type this out to you, I am on Covid day 38, as I call it. Although I haven’t been sick for quite a while now, I’m nowhere near where I was pre-Covid. My lung capacity is still greatly reduced. I’ve been working on breathing exercises to build my lung strength up and have even participated in 3 virtual exercise classes, although at a low impact pace. Now that I’ve been affected by COVID-19, that worry of long-term effects is still very much in the back of my mind. There is a large part of me that wants to go pay for a chest x-ray. I had surgery back in January before the world turned upside-down, and one of the requirements beforehand was a chest x-ray. I would have a recent one to compare to now. I haven’t done it yet, but I also haven’t ruled it out. We also have our daughter back at home, after 3 weeks living at her grandmother’s house so she would be safe from us. We would have had her home sooner, but once Nick tested positive; we started our 14-day countdown over.
@@ -92,7 +88,6 @@ We still don’t know how or who I got my Covid gift from. I had not been around
 
 So be careful. Be smart. And for the love, if you don’t feel well, even if you think it’s just allergies or something minor, keep your rear end at home. If everyone had an ounce of compassion and cared just a little bit for others, so many of these cases could be avoided.
 
- 
 
 ## Part 2 - Nick's Story
 
@@ -122,8 +117,6 @@ Sunday night I realized the smell of my deodorant was extremely faint even with 
 
 I could taste solid food just fine but realized I could not taste the elderberry tea I had been drinking to help soothe my throat (which had drainage throughout this experience).  It seemed to be any liquid basically had no taste (even my protein smoothies for breakfast).  But I never lost the ability to taste solid food.
 
- 
-
 ### Working through Sickness
 
 I wasn't afraid my employer would make me work while sick.  I was working from home and could have taken as much time off as I wanted.  I needed something to take my mind off the sickness so I wouldn't worry about it.  I read my bible for encouragement and prayed constantly, but I didn't want idle time.  There was still work to do, and I planned to do it despite COVID.  At one point a co-worker offered a meal train, and I refused it.  I wanted to eat as healthy as possible so as to not give COVID any additional leg up on me.  After all, I was still mad that I had it.
@@ -134,15 +127,11 @@ Each day if I was awake in the late afternoon, I would take a walk outside (stay
 
 That was the routine the week of testing positive.  As the next week began (week of 12/7) and I finished the steroid (which seemed to help the fluid in the ears a bit), I got so amped up I could barely go to sleep at night.  I didn't feel like I was stressed at work, but there was a lot happening for sure.  My mind would race and race uncontrollably to the point where I would lay awake for hours after doing the same nightly routine before bed as always.  When you rarely ever have trouble sleeping, this is disturbing.  Maybe I was subconsciously worried I would get worse and end up in the hospital.  I don't specifically remember my mind racing about that.  I just remember it racing.  I continued to work each day but reached a daily limit just like the previous week.  But I was also extremely tired.  I'd take naps when I could (and my body would relax enough for me to actually sleep).  I continued the same daily mass intake of vitamins as well as the decongestant / expectorant combo to help deal with the drainage.  I had drainage in my throat, but it was always clear and never really seemed to get worse.
 
- 
-
 ### Exercising Again
 
 Before this happened I had pretty consistently been doing 3 virtual workout classes per week (Tues / Thurs evening and Saturday morning).  I thought maybe the sleep problems in that second week were a result of not exercising.  I had been doing stretches and trying to take a walk each day, but it was not the same.  On the evening of 12/10, I went for it and signed up for the virtual workout class.  I knew I would have to take it extremely easy (and talked to the coach about it before joining), and that is what I did.  Even with me taking it easy (probably 50% intensity or less), I was extremely winded at times and had to take breaks.  But I lasted the entire class, which felt great.  And then despite my feeling of victory, I felt extremely weak.  I was at least somewhat winded after the workout for quite a while, but I felt this weird, weak sort of feeling in my chest like my lungs had not worked that hard in a while or were not ready to do so.  My nose wasn't congested / stuffy.  It just felt partially blocked like I could not take a super deep breath (like before the sickness).  In fact, it was enough to make me pretty anxious.  I wondered if I had overdone it, but Brandi said she felt the same way a few days before when she did a light workout.  That feeling went away by the next day, and the inability to go to sleep at night continued.  My workout coach recommended some peppermint oil on my chest (with a carrier oil mixed in) to help the anxious feeling.
 
-On 12/16 I did 30 minutes of light aerobics with Brandi (which again made me feel very winded and weak).  I took it really easy, and I was winded for some time after that.  I worked out again on 12/17, and it still hit me pretty hard afterward.  I felt a little less winded when I worked out on 12/19 but still felt far from normal.  I worked out on my own on Christmas Eve (feeling like I could breathe well enough to raise the intensity just slightly) and was winded for a good 15-20 minutes afterward.  I've worked out a couple of times since then, and each time I seem to feel a little more like normal.  I'm still winded more than normal when working out and not back to the same intensity level.  Apparently this is going to take a while.
-
- 
+On 12/16 I did 30 minutes of light aerobics with Brandi (which again made me feel very winded and weak).  I took it really easy, and I was winded for some time after that.  I worked out again on 12/17, and it still hit me pretty hard afterward.  I felt a little less winded when I worked out on 12/19 but still felt far from normal.  I worked out on my own on Christmas Eve (feeling like I could breathe well enough to raise the intensity just slightly) and was winded for a good 15-20 minutes afterward.  I've worked out a couple of times since then, and each time I seem to feel a little more like normal.  I'm still winded more than normal when working out and not back to the same intensity level.  Apparently this is going to take a while. 
 
 ### Still Not the Same
 
@@ -155,8 +144,6 @@ I have a chiropractor close by that I have consistently seen in the past and tru
 Brandi isn't the same yet.  I can tell she gets tired easier than before, and we know her lung capacity isn't there either.  While neither of us made to the hospital because of this sickness (for which we are extremely thankful), it has left an impact even several weeks later.  In the mean time, we focus on keeping our daughter and others in our very small circle from getting COVID (i.e. my mother, stepfather, and grandmother) and on avoiding being someone who ends up getting it a second time.
 
 I hope if you have questions about what it's like to have coronavirus, when to get tested, how to make sure you manage the mucus (which I won't ever forget), how to deal with thoughts about readiness to meet your maker and other worries, or something else entirely that you can reach out and ask folks like us who have been there.
-
- 
 
 ### The Doctor's Helpful List
 
