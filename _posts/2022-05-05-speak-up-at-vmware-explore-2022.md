@@ -9,9 +9,14 @@ categories:
 tags: 
   - "Career Progression"
   - "Conference Speaker"
+  - "Conference Sessions"
   - "Conferences"
+  - "Public Speaking"
   - "Speaking Engagements"
   - "Speaking Experience"
+  - "Tech Careers"
+  - "Technology Careers"
+  - "Tech Conference"
   - "Technology Conference"
   - "vExpert"
   - "VMware"
@@ -33,13 +38,9 @@ Though not publicized extremely well from what I have seen, the call for confere
 - Connect and Secure Clouds and Apps
 - Expand Your Horizons
 
- 
-
 ### Minimize Your Workload for Now
 
 I'll say this 100 times to people if I have to do it.  You DO NOT need to have an entire presentation written to submit for a call for speakers (at this conference or any other).  You need a solid title and a good session description submitted by the deadline that you think fits into one of the 5 categories.  That's it.  There is no need to worry about giving the presentation until it gets accepted (if it does at all).  Submit session(s) you feel you will have time to create between the date it is accepted and the deadline for submitting your slides / recording to the events team (probably a month or so before the conference happens).  Don't do more work than you need to do right now.  Wait and see.
-
- 
 
 ### Find Your Way to the FAQs
 
@@ -49,9 +50,7 @@ If we revisit the [VMware Explore site](https://www.vmware.com/explore.html) and
 
 **NOTE:** There is also a US-specific FAQ page [here](https://www.vmware.com/explore/us/attend/faqs.html) that outlines submission deadline and when the content catalog will be live.  That likely means we will have the same for the other regional events once registration goes live.  The submission deadline as I understand it is the same for all events (May 10, 2022).
 
- 
-
-Now we are asked to login to VMware Events as shown below.  Use your Customer Connect (formerly MyVMware) credentials to gain access (which can also be used to gain access to the VMworld Video Archive [here](https://www.vmware.com/vmworld/en/video-library/search.html#year=2021)).  If you do not have an account, you can create one for free.  As I write this, VMware Explore US is the only one whose registration is live.  None of the other Explore events are in the list at the moment, so there's no need to change the event.
+ Now we are asked to login to VMware Events as shown below.  Use your Customer Connect (formerly MyVMware) credentials to gain access (which can also be used to gain access to the VMworld Video Archive [here](https://www.vmware.com/vmworld/en/video-library/search.html#year=2021)).  If you do not have an account, you can create one for free.  As I write this, VMware Explore US is the only one whose registration is live.  None of the other Explore events are in the list at the moment, so there's no need to change the event.
 
 After entering the proper credentials, click the Log in button.
 
@@ -60,8 +59,6 @@ After entering the proper credentials, click the Log in button.
 Now we're getting somewhere.  Look at that.  _**The submission deadline is May 10, 2022!**_  Whether you knew that or not, never fear.  Click on START to begin.
 
 ![](3_StartSub-1024x287.png)
-
- 
 
 ### A Tale of Two Session Delivery Options
 
@@ -85,8 +82,6 @@ Now we need to list participants.  It could be several folks.  Let's click the
 
 ![](7_AddParticipant-1024x153.png)
 
- 
-
 All we need to do is pick whether we are an external speaker (non-VMware employee) or a VMware employee speaker and add an e-mail address.
 
 ![](8_AddParticipant-1024x368.png)
@@ -102,8 +97,6 @@ Now we need to fill out all relevant participant information.  The role of Exte
 With our participant submitted (just John Smith for now), go ahead and continue.
 
 ![](11_ParticipantNext-1024x208.png)
-
- 
 
 When walking through this I wasn't quite sure when I'd reach the end of the workflow.  That looks to be it because we got a Proposal Submission Completion message.  Wait a minute...I never had to pick a category or track.  That was less laborious than previous year submissions.  I assume the content team will categorize based on the submission  and where it fits the best.
 
@@ -128,8 +121,6 @@ If we change the Delivery field to Pre-recorded, the regions for delivery disapp
 ![](16_Pre-recorded-1024x235.png)
 
 And after this we get redirected back to the submissions home page again.  So the only difference between In-Person and Pre-recorded is region selection being required for In-Person.  That tells me one submission could get you a speaking spot in multiple regions.
-
- 
 
 ### Do It for Your Career and for the Community
 

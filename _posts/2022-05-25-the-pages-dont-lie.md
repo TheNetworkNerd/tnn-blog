@@ -13,12 +13,14 @@ tags:
   - "Mental Clarity"
   - "Mental Health"
   - "Mindfulness"
+  - "Mindset"
   - "Morning Pages"
   - "Nerd Journey"
   - "Podcast"
   - "Routine"
   - "Self Care"
   - "Stress"
+  - "Stress Relief"
   - "Wellbeing"
   - "Wellness"
   - "Work"
@@ -27,8 +29,6 @@ image: "notepad-ge0d342b00_640.jpg"
 ---
 
 This post marks day 67 of an experiment I decided to do for myself.  Consider what follows to be my write up of observations throughout the experimentation process.  Instead of trying to convince you to do the same, I'll tell you my story, the outcome and progress, and let you decide for yourself.
-
- 
 
 ### Pages of Investigation
 
@@ -67,61 +67,35 @@ So what does one learn during an experiment like this?  When I reflect back on 
 
 - A byproduct of this process is better communication.  More writing means improved writing.  It might improve your communication in ways you can't readily see.
 
- 
-
 ### What the Pages Can Do for You
 
 I've shared some specifics on what this process has done for me.  Maybe this takes it a level higher for the reader to summarize, and it's also an attempt at channeling my inner Seth Godin style.
-
-The pages create space.
-
-The pages dare you to explore.
-
-The pages give you the chance to be honest.
-
-The pages represent a practice, a routine, a safe haven.
-
-The pages are yours.
-
-The pages are for you, but they may not always be about you.
-
-The pages stop the cycle while allowing you to ride it out.
-
-The pages give you an outlet.
-
-The pages form a habit.
-
-The pages are therapeutic.
-
-The pages are a form of self-care.
-
-The pages are your detox program.
-
-The pages build mental muscle.
-
-The pages can help you recover.
-
-The pages won’t burn you out.
-
-The pages are a form of craftsmanship.
-
-The pages clear your brain’s cache, allowing time for the data to de-stage to persistent disk.
-
-The pages don't lie.
-
-The pages need an author.
-
-The pages await.
-
- 
+- The pages create space.
+- The pages dare you to explore.
+- The pages give you the chance to be honest.
+- The pages represent a practice, a routine, a safe haven.
+- The pages are yours.
+- The pages are for you, but they may not always be about you.
+- The pages stop the cycle while allowing you to ride it out.
+- The pages give you an outlet.
+- The pages form a habit.
+- The pages are therapeutic.
+- The pages are a form of self-care.
+- The pages are your detox program.
+- The pages build mental muscle.
+- The pages can help you recover.
+- The pages won’t burn you out.
+- The pages are a form of craftsmanship.
+- The pages clear your brain’s cache, allowing time for the data to de-stage to persistent disk.
+- The pages don't lie.
+- The pages need an author.
+- The pages await.
 
 ### Does the Experiment Continue?
 
 This experiment helped me see that I was dangerously close to burnout. Recognizing that something seemed off and being mindful of it has been a great help to steer myself away from it.  While it may not have decreased my to-do list, I needed the space doing morning pages provided (think of it as time I was not previously taking for myself).  Will I continue doing this?  Absolutely.  I find it therapeutic, and I need to keep going.  I don't feel as overwhelmed when I can get things out of my head like this.  It slows things down in a way I find really helpful.
 
 If you don't choose to do this, I hope you, dear reader, can find something that is better than what you are doing now to create space, make things slower, and detox from digital things for a while (all in an effort to lower stress and anxiety).  There's something to that formula (what I have learned from co-hosting [Nerd Journey](https://nerd-journey.com/)), and there are [stories of burnout]({% link _posts/2021-12-24-burned-out-for-the-holidays.md %}) to support this idea.
-
- 
 
 ### Further Reading
 

@@ -8,12 +8,15 @@ categories:
   - "VMware"
 tags: 
   - "Code Connect"
+  - "Conferences"
   - "DevOps Loop"
   - "OCTO"
-  - "Office Of The CTO"
+  - "Office of the CTO"
   - "Prizes"
   - "Slack"
   - "Swag"
+  - "Tech Conference"
+  - "Technology Conference"
   - "vBrownBag"
   - "vExpert"
   - "Virtual VMworld"
@@ -35,22 +38,16 @@ It was only a few days ago that SpringOne took place.  If you're watching some 
 - [SpringOne Day 1 Recap](https://dy.si/ZwgPde2)
 - [SpringOne Day 2 Recap](https://dy.si/yX6gm)
 
- 
-
 ### Enter the Loop
 
 Tech conferences are well known for having activities before and after the conference.  Before VMworld officially kicks off on October 5, [DevOps Loop](https://devopsloop.io/) happens October 4 (free to attend).  This requires a separate registration and is about having DevOps community thought leaders educate the rest of us on solutions to key issues.  Check out the full agenda [here](https://devopsloop.io/agenda).
 
-![](DevOps-Loop-1024x451.png)
-
+![](DevOps-Loop-1024x451.png)    
  
-
 ### Look in the Miro
 
 [Nathan Hudson](https://www.linkedin.com/in/natehudson/) created a [Miro board](https://miro.com/app/board/o9J_l-trNiE=/) that shows a nice visualization some of the activities you can undertake during this year's VMworld event.
-
  
-
 ### Lean in to VMUG
 
 If you're not a member of [VMUG](https://www.vmug.com/get-involved/benefits-of-vmug-communities/) (VMware User Group), there is no better time to sign up (free).  In fact, VMUG will have a virtual lounge at VMworld this year and some watch parties across the country.  Get the full details on VMUG at VMworld 2021 [here](https://www.vmug.com/events/vmworld/). **Note:**  There are separate registrations needed for each day of the VMUG Virtual Lounge.
@@ -59,25 +56,17 @@ This is your chance to connect with other VMware users across the world and stay
 
 VMUG is also hosting a VMworld 2021 know before you go webinar on 9/30.  Full details and sign up can be found [here](https://innovatisgroup.zoom.us/webinar/register/WN_IRoVHbL5TaGurvJv0--zkA).
 
-Get yourself a free t-shirt if you're registered for VMworld by filling out [this survey](https://www.surveymonkey.com/r/CHBZMPG) (only while supplies last per [this Tweet](https://twitter.com/MyVMUG/status/1437566816478539785?s=20)).
-
- 
+Get yourself a free t-shirt if you're registered for VMworld by filling out [this survey](https://www.surveymonkey.com/r/CHBZMPG) (only while supplies last per [this Tweet](https://twitter.com/MyVMUG/status/1437566816478539785?s=20)). 
 
 ### Conquer the Content Catalog
 
 With over 1150 sessions in the catalog as of this article's publishing, how do you navigate it?  It's like trying to decide what to eat when staring down a large buffet.  Here are some general recommendations.
 
-Some sessions are strictly happening on-demand (547 on-demand sessions as of the publish date of this article).  For those, you can mark as a favorite and consume when you're ready. ![](6_ondemand-1024x538.png)
-
+Some sessions are strictly happening on-demand (547 on-demand sessions as of the publish date of this article).  For those, you can mark as a favorite and consume when you're ready.  ![](6_ondemand-1024x538.png)
  
+For those sessions that are aired live, be sure to add them to your schedule (should see the button to "add to schedule" when viewing details of a session) to hold your place in the time slot that works for you.  The session shown here (a hidden gem for you...a design studio session) is offered in multiple time slots.  Some time slots are full (only option is to join waitlist), while others still have available space.  Snag a spot in the ones you want to attend the most!  ![](7_AddtoSchedule-1024x780.png)
 
-For those sessions that are aired live, be sure to add them to your schedule (should see the button to "add to schedule" when viewing details of a session) to hold your place in the time slot that works for you.  The session shown here (a hidden gem for you...a design studio session) is offered in multiple time slots.  Some time slots are full (only option is to join waitlist), while others still have available space.  Snag a spot in the ones you want to attend the most! ![](7_AddtoSchedule-1024x780.png)
-
- 
-
-If you invested in the Tech+ pass, there is a way to filter the content catalog to see only those sessions (250 of these in total available).  This session was recommended for me because of my top 3 interests during registration.  I would not expect all sessions on the Tech+ pass track to be recorded for later viewing.  Keep that in mind. ![](8_TechPlus-1024x607.png)
-
- 
+If you invested in the Tech+ pass, there is a way to filter the content catalog to see only those sessions (250 of these in total available).  This session was recommended for me because of my top 3 interests during registration.  I would not expect all sessions on the Tech+ pass track to be recorded for later viewing.  Keep that in mind. ![](8_TechPlus-1024x607.png) 
 
 There are also different session types to understand.  Many of them are covered [here](https://www.vmware.com/vmworld/en/learn/session-types.html), but let's dig into some of those which were not mentioned.  The content catalog can be filtered by any of the session types in bold.
 
@@ -95,12 +84,8 @@ There are also different session types to understand.  Many of them are covered
     - [Ryan Conley](https://www.linkedin.com/in/ryanconley1/) and [Michael Fleisher](https://www.linkedin.com/in/michael-fleisher/) - From vSphere Admin to Site Reliability Engineer - Where Do I Start? \[CODE2795\]
         - Two engineers who have made this transition give advice to those who want to walk the path.  It's great to learn how others built a new skillset.
 - Don't forget about sessions with special guests like [Will Smith](https://myevents.vmware.com/widget/vmware/vmworld2021/catalog), Michael J. Fox, Dr. Moogega Cooper, Mick Ebelin, Robin Arzón, and Dr. Nicole Forsgren.  See a list of all featured speakers [here](https://www.vmware.com/vmworld/en/engage/speakers.html) with links to their sessions.
-
  
-
 Did you know it's easy to see what sessions were newly added or updated?  Even after the content catalog is released and schedule builder is live, there may be changes to take into consideration. ![](10_RecentlyAdded-1024x530.png)
-
- 
 
 If you need help with the content catalog, consider reaching out to your VMware team or joining the [content catalog office hours](https://www.vmware.com/content/vmworld-redesign/en/plan-your-experience.html) happening September 14 and September 28. ![](ContentCatalogOfficeHours-1024x551.png)
 
@@ -143,43 +128,42 @@ As you pick sessions, think about the things you're working on today, but stretc
 - [Highlighted vSphere Sessions](https://blogs.vmware.com/vsphere/vmworld-sessions-2021)
 
  
-
 ##### Sessions I believe are worth considering:
 
-- - Solution Keynote: What's Next? A Look inside VMware's Innovation Engine \[VI3091\]
-        - Don't miss the insights into our innovations with [Chris Wolf](https://www.linkedin.com/in/cswolf/) and our new CTO [Kit Colbert](https://www.linkedin.com/in/kitcolbert/).
-    - Next-Generation SaltStack: What Idem Brings to SaltStack \[VI1865\]
-        - Hear from [Thomas Hatch](https://www.linkedin.com/in/thhatch/) (founder and CTO of SaltStack) and [Tom Hite](https://www.linkedin.com/in/tom-hite-1655/) about Idem and how it provides some very interesting capabilities.
-    - Next-Generation Machine Learning with VMware: FML \[VI1860\]
-        - What exactly is federated machine learning, and how does it work?  Come find out for yourself.
-    - Deep Dive: Treating Security Like a Product \[APP1436\]
-        - The US Army will share what they did to let security drive changes to its software development lifecycle.
-    - 10 Things You Need to Know About Project Monterey \[MCL1833\]
-        - What's happened since the announcement of Project Monterey last year?  Get the full story from [Niels Hagoort](https://www.linkedin.com/in/nielshagoort/) and [Sudhanshu Jain](https://www.linkedin.com/in/sudhanshujain/).
-    - Bring Intel PMem into the Mainstream with Memory Monitoring and Remediation \[MCL3014S\]
-        - Persistent memory is gaining traction.  Find out what Intel is doing to enhance the experience with Optane.
-    - Start from Square 001: A Conversation on Virtual Career Development \[IC1938\]
-        - What is it like to start your career in a Zoom world?  Four different people give their perspective on thriving with your career (and newly landed job) in a pandemic.
-    - Achieving Happiness: The Quest for Something New \[IC1484\]
-        - If you haven't seen one of the past iterations of this from [Amanda Blevins](https://www.linkedin.com/in/amandablevins/), don't miss the opportunity this year.  She and VMUG President will team up to address how you can evolve your career in 2021 in a way that is in alignment with your own happiness.
-    - Implementing an AIOps Strategy with VMware Edge Network Intelligence \[2952\]
-        - If you've never seen it, this is the technology that originally came from the acquisition of [Nyansa](https://www.nyansa.com/).  Find out what it does, and see it in action.  It's an extremely interesting product.
-    - Anatomy of the VMware SOC \[SEC1048\]
-        - Come learn about the VMware Security Operations Center and how it was transformed to fit into a better security strategy.
-    - VMware SASE: What’s New and What’s Next \[EDG1647\]
-        - Maybe you heard about VMware's SASE solution already.  Find out where it's going from here.
-    - Taming Public Clouds with CloudHealth and vRealize: An End-to-End Demo \[2800\]
-        - This one looks to be very good.  It's a demo of all vRealize products including SaltStack and CloudHealth.  How can all of these tools work together in harmony?  Come take a look.
-    - Detecting and Preventing Threats with NSX Advanced Threat Prevention \[2924\]
-        - This session will spotlight some of the technology that came to us through the acquisition of LastLine (a malware research firm) and how it adds capabilities to NSX.
-    - The Evolution of Intelligent Edge and Electrical Grid Modernization \[VI1455\]
-        - How should we be modernizing the edge for power grid automation and control with increased cybersecurity?  Check out some of the innovations in the utility sector.
-    - Decoding VMUG \[IC2827S\]
-        - If you're still not sure about VMUG, check out this session delivered by VMUG President Steve Athanas.
-    - Observability for Modern Application and Kubernetes Environments \[APP1308\]
-        - Tanzu Observability remains one of the coolest products at VMware.  Of course you should attend a session on it!
-    - Antrea and NSX-T update for Container Networking \[CODE2743\]
-        - If you've not heard about Antrea and what we've done in that area, definitely take a peak here.  Kudos to [David Kirkland](https://www.linkedin.com/in/davidkhkirkland/) for the recommendation on this one.
+- Solution Keynote: What's Next? A Look inside VMware's Innovation Engine \[VI3091\]
+    - Don't miss the insights into our innovations with [Chris Wolf](https://www.linkedin.com/in/cswolf/) and our new CTO [Kit Colbert](https://www.linkedin.com/in/kitcolbert/).
+- Next-Generation SaltStack: What Idem Brings to SaltStack \[VI1865\]
+    - Hear from [Thomas Hatch](https://www.linkedin.com/in/thhatch/) (founder and CTO of SaltStack) and [Tom Hite](https://www.linkedin.com/in/tom-hite-1655/) about Idem and how it provides some very interesting capabilities.
+- Next-Generation Machine Learning with VMware: FML \[VI1860\]
+    - What exactly is federated machine learning, and how does it work?  Come find out for yourself.
+- Deep Dive: Treating Security Like a Product \[APP1436\]
+    - The US Army will share what they did to let security drive changes to its software development lifecycle.
+- 10 Things You Need to Know About Project Monterey \[MCL1833\]
+    - What's happened since the announcement of Project Monterey last year?  Get the full story from [Niels Hagoort](https://www.linkedin.com/in/nielshagoort/) and [Sudhanshu Jain](https://www.linkedin.com/in/sudhanshujain/).
+- Bring Intel PMem into the Mainstream with Memory Monitoring and Remediation \[MCL3014S\]
+    - Persistent memory is gaining traction.  Find out what Intel is doing to enhance the experience with Optane.
+- Start from Square 001: A Conversation on Virtual Career Development \[IC1938\]
+    - What is it like to start your career in a Zoom world?  Four different people give their perspective on thriving with your career (and newly landed job) in a pandemic.
+- Achieving Happiness: The Quest for Something New \[IC1484\]
+    - If you haven't seen one of the past iterations of this from [Amanda Blevins](https://www.linkedin.com/in/amandablevins/), don't miss the opportunity this year.  She and VMUG President will team up to address how you can evolve your career in 2021 in a way that is in alignment with your own happiness.
+- Implementing an AIOps Strategy with VMware Edge Network Intelligence \[2952\]
+    - If you've never seen it, this is the technology that originally came from the acquisition of [Nyansa](https://www.nyansa.com/).  Find out what it does, and see it in action.  It's an extremely interesting product.
+- Anatomy of the VMware SOC \[SEC1048\]
+    - Come learn about the VMware Security Operations Center and how it was transformed to fit into a better security strategy.
+- VMware SASE: What’s New and What’s Next \[EDG1647\]
+    - Maybe you heard about VMware's SASE solution already.  Find out where it's going from here.
+- Taming Public Clouds with CloudHealth and vRealize: An End-to-End Demo \[2800\]
+    - This one looks to be very good.  It's a demo of all vRealize products including SaltStack and CloudHealth.  How can all of these tools work together in harmony?  Come take a look.
+- Detecting and Preventing Threats with NSX Advanced Threat Prevention \[2924\]
+    - This session will spotlight some of the technology that came to us through the acquisition of LastLine (a malware research firm) and how it adds capabilities to NSX.
+- The Evolution of Intelligent Edge and Electrical Grid Modernization \[VI1455\]
+    - How should we be modernizing the edge for power grid automation and control with increased cybersecurity?  Check out some of the innovations in the utility sector.
+- Decoding VMUG \[IC2827S\]
+    - If you're still not sure about VMUG, check out this session delivered by VMUG President Steve Athanas.
+- Observability for Modern Application and Kubernetes Environments \[APP1308\]
+    - Tanzu Observability remains one of the coolest products at VMware.  Of course you should attend a session on it!
+- Antrea and NSX-T update for Container Networking \[CODE2743\]
+    - If you've not heard about Antrea and what we've done in that area, definitely take a peak here.  Kudos to [David Kirkland](https://www.linkedin.com/in/davidkhkirkland/) for the recommendation on this one.
 
 #### Listen
 
@@ -188,9 +172,7 @@ Perhaps you prefer hearing recommendations instead of reading about them.
 - Check out [Episode 572 of the VMware Roundtable Communities Podcast](https://www.talkshoe.com/episode/16524312) covering top VMworld sessions.
     - See also Episode 573 on [vSphere Security & Edge Sessions w/Bob Plankers and Maneyb Minhazuddin](https://www.talkshoe.com/episode/16572722).
 - I'd imagine the [Virtually Speaking Podcast](https://www.vspeakingpodcast.com/) will give their top session recommendations sometime before the conference as well.
-
  
-
 ### Browse the Sponsors
 
 The full list of VMworld sponsors can be found [here](https://myevents.vmware.com/widget/vmware/vmworld2021/sponsors).  The list can be filtered by sponsor level, VMware product, or relevant topic on which they are presenting.  Click on any sponsor to learn more about what they do.
@@ -205,15 +187,11 @@ For example, an Intel-sposored session from the content catalog (filter content 
 
 ![](Sponsors3.png)
 
- 
-
 ### Get into Slack
 
 If you're someone who has not registered for VMworld yet, make sure you opt in for Slack and VMware Talk.  It's a great way to interact with other attendees (and probably some VMware employees that can help answer questions during the conference).  For more on what VMware Talk is all about, check out [this article](https://blogs.vmware.com/vmworld/2021/09/lets-connect-vmware-talk-at-vmworld-2021.html).
 
 ![](Slack-Opt-in.png)
-
- 
 
 If you select the option to opt in, you can optionally upload a picture of yourself for interacting with others via Slack.
 
@@ -231,19 +209,13 @@ There are also some questions to answer once you opt-in to Slack to help shape s
 
 How can you win prizes during a virtual VMworld?  Enter the VMworld Challenge, of course.  How exactly does that work?  Get the full scoop [here](https://blogs.vmware.com/vmworld/2021/09/vmworld-challenge-win-exclusive-prizes.html).
 
- 
-
 ### Set a Goal to Become an Expert
 
 Though there is a special vExpert party / networking event at each VMworld, the vExperts are actively contributing to the VMware community in some way to share their experience and knowledge with others on a regular basis.  If you're not a vExpert, this is a chance to raise your game and career.  Check out the [vExpert site](https://vexpert.vmware.com/) to learn more about the program, and click the option to get notified when applications open (twice per year).  If you want to know what it takes to become a vExpert or find people in your network that are vExperts, check out the [vExpert directory](https://vexpert.vmware.com/directory).  Follow people on Twitter and see what they are doing to build up the greater community.  Ask current program members if you need advice on how to get into the program.  What you take from VMworld doesn't have to end here.
 
- 
-
 ### Use Your Library Card
 
 Many of the sessions happening at VMworld 2021 will be recorded and stored for later viewing in the [VMworld On-Demand Video Library](https://www.vmware.com/vmworld/en/video-library/search.html).  In fact, videos from 2020 and 2019 are there now for your consumption.  You can login to the site with the same account used to login to the VMworld site.  Pay special attention as most sessions should have an accompanying PDF of the slides for that session.  Personally, I find those extremely helpful to go and reference at a later time.  Even if there was an interesting session you know you won't have time to watch for a while, make a note to watch it once it drops into the on-demand video library.
-
- 
 
 ### Answer the Call
 

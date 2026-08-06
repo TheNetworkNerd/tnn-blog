@@ -7,6 +7,7 @@ categories:
   - "Career"
 tags: 
   - "Career"
+  - "Careers"
   - "Career Advice"
   - "Career Capital"
   - "Career Progression"

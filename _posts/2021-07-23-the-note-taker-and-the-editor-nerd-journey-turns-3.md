@@ -9,6 +9,8 @@ tags:
   - "Audacity"
   - "Audio Editing"
   - "Audio Levels"
+  - "Career"
+  - "Careers"
   - "Editing"
   - "Interviewing"
   - "Nerd Journey"
@@ -16,10 +18,12 @@ tags:
   - "Outlines"
   - "Pipeline"
   - "Podacasting"
+  - "Podcaster"
   - "Podcast"
   - "Professional Development"
   - "Public Speaking"
   - "Show Notes"
+  - "Tech Careers"
 image: "editing-1141505_640.jpg"
 ---
 

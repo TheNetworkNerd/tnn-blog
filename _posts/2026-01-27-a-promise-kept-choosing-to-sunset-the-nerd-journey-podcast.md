@@ -9,13 +9,17 @@ tags:
   - "Difficult Decisions"
   - "Hobby"
   - "Intentional Ending"
+  - "Nerd Journey"
+  - "Nerd Journey Podcast"
   - "Podcast"
   - "Podcast Producer"
+  - "Podcast Production"
   - "Podcaster"
   - "Podcasting"
   - "Stress"
-  - "Nerd Journey"
   - "Ending"
+  - "Ending a Podcast"
+  - "Ending a Project"
 image: "Nerd-Journey-Sunset-Post-_1564_1024.png"
 ---
 

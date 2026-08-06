@@ -6,7 +6,7 @@ permalink: /2017/05/05/tales-of-a-vcenter-upgrade-gone-wrong-journey-to-vsan-6-6
 categories: 
   - "VMware"
 tags: 
-  - "Journeytovsan"
+  - "JourneytovSAN"
   - "vCenter Upgrade"
   - "VMware"
   - "VMware vCenter"

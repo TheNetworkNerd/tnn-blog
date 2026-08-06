@@ -9,6 +9,7 @@ tags:
   - "Customer Connect"
   - "Documentation"
   - "KB"
+  - "Knowledge Base"
   - "KB Site"
   - "Knowledge Base Site"
   - "VMware"
@@ -32,8 +33,6 @@ After clicking the Login option, you will immediately be taken to a screen like 
 Now that I've logged into the KB site, my initials are displayed in the upper right-hand corner.  Click on My Subscriptions to continue.  If you prefer, the direct link to get to your subscriptions after logging into the KB site is [https://kb.vmware.com/s/my-subscriptions](https://kb.vmware.com/s/my-subscriptions).  If you hit that link directly without having logged in first you will be prompted to login with your Customer Connect credentials.
 
 ![](3_homescreentomysubscriptions-1-1024x169.png)
-
- 
 
 ### Personalizing My Subscriptions
 
@@ -69,9 +68,7 @@ As it now stands, we are about to subscribe to all Workspace ONE articles in the
 
 ![](9_KBCategoriesAdded.png)
 
- 
-
-Suppose we also want to subscribe to all Workspace ONE Access articles in addition to the Workspace ONE Articles.  In order to do that click the ADD NEW PRODUCT option, and follow the steps above, selecting Workspace ONE Access as your product (steps not shown).  You'll notice below I did not select specific categories.  Now that we have the subscriptions in place, click ADD to make the change.
+ Suppose we also want to subscribe to all Workspace ONE Access articles in addition to the Workspace ONE Articles.  In order to do that click the ADD NEW PRODUCT option, and follow the steps above, selecting Workspace ONE Access as your product (steps not shown).  You'll notice below I did not select specific categories.  Now that we have the subscriptions in place, click ADD to make the change.
 
 ![](11_AddProduct.png)
 
@@ -79,21 +76,15 @@ Here's a view of the My Subscriptions area to this point.  We can see that I'm 
 
 ![](12_ProductSubscriptionCreated-1024x407.png)
 
- 
-
 ### Send Me the Digest
 
 Let's go one step further.  You'll notice above there is an option to get a daily digest.  This details any new KBs created as well as any KBs updated which fit in my subscription parameters.  So if there were multiple changes made in a day, we should have them all in the digest.  Go ahead and click the radio button to turn on this functionality.
 
 ![](13_DigestEmail.png)
-
  
-
 ### A Small Caveat
 
 The steps above are unique to my Customer Connect account.  I will be the only one with subscriptions setup based on the parameters specified earlier in this article, and the digest e-mail gets sent only to me.  Any other member of my team wishing for similar subscriptions would need to perform the steps using their Customer Connect account.  That person may have very different subscription preferences and can tailor them to specific, personalized needs.
-
- 
 
 ### Anatomy of a KB Article
 
@@ -101,9 +92,7 @@ Once logged into the KB site with your Customer Connect account, it is easy to s
 
 ![](14_AnatomyofKB-1024x550.png)
 
-When you look at a KB article, remember to take the opportunity to give feedback on whether it was helpful using the yes / no options shown above.  Providing more details helps our technical writers make things better for customers and partners.  And, your comments (visible after you click yes / no) get sent back to the author of the specific article.
-
- 
+When you look at a KB article, remember to take the opportunity to give feedback on whether it was helpful using the yes / no options shown above.  Providing more details helps our technical writers make things better for customers and partners.  And, your comments (visible after you click yes / no) get sent back to the author of the specific article. 
 
 ### Example Notification
 

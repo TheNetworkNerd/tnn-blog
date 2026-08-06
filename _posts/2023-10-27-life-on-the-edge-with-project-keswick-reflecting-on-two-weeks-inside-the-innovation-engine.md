@@ -26,9 +26,11 @@ tags:
   - "Kubernetes"
   - "Lab"
   - "OCTO"
+  - "Office of the CTO"
   - "Product Bugs"
   - "Product Feedback Product Design"
   - "Project Keswick"
+  - "Special Assignment"
   - "Sponsorship"
   - "Strategy"
   - "Systems Administration"
@@ -36,7 +38,7 @@ tags:
   - "Tinkering"
   - "Ubuntu"
   - "VMware"
-  - "VMware Ai Labs"
+  - "VMware AI Labs"
   - "VMware ESX"
   - "Windows"
   - "XLabs"
@@ -58,8 +60,6 @@ Kudos to Tasha Drew for saying she would support it and for taking that call wit
 
 There is one more step here that cannot be overlooked.  You don't do something like this without the support of your boss.  Asking for what you want needs to get to your manager's ears too.  But the process can be made easier if you give them everything needed to make a decision in one shot.  I let the boss know this was what I wanted to do and that I had support from xLabs leadership to do it.  He supported it 100%, and we talked through some dates that made the most sense to ensure team coverage and allow my focus on this special project.
 
- 
-
 ### Choosing a Project
 
 Here's where it gets interesting.  I had it narrowed down to 2 projects after speaking with Tasha.  Both were extremely interesting.  Both were chances to work with amazing people.  Both were chances to learn something new.  The product managers / leads of each project shared details about their project and what they thought I could work on within a 2-week period.  The product manager for one of the projects was Alan Renouf, the very same guy who sniff tested an idea I had for the 2017 VMworld hackathon before I submitted the idea and started a team.  I had met Alan in person at Explore 2022 and got to pick his brain a little on his career path, and the chance to work on a project with him was what tipped the scales for me.  Sometimes we take opportunities for the chance to work with and learn from certain people.  This one was no different.  I was on course to do my Take2 on Project Keswick.  If you would like to read up on what Project Keswick is, the problems it solves, and possibly get involved...check out these articles:
@@ -69,8 +69,6 @@ Here's where it gets interesting.  I had it narrowed down to 2 projects after s
 - [Getting Started with Project Keswick](https://docs.vmware.com/en/VMware-Tech-Showcase/services/project-keswick/GUID-3DBACE14-E544-4407-9985-F67D4BE3A6EE.html)
 
 Alan shared a more detailed read out of what he and the team needed help with during the 2-week period and opened the requisition for me with support from Tasha.  I applied, and it was approved and accepted by my boss and Alan and Tasha.  It was game on.  In early February 2023, I was to be plugged into the innovation matrix for 2 weeks.  I knew it would be an exciting experience, but I don't think I knew then just how amazing it would be.  If you don't think you can make an impact in just 2 weeks spent on a project, think again, friend.
-
- 
 
 ### A Two Week Adrenaline Rush
 
@@ -85,8 +83,6 @@ When a project is in the incubation stage like Keswick was at the time, they nee
 Speaking of test deployments, the xLabs team was working with a technology design partner who was planning to use Keswick for one of their customers.  I enjoyed hearing their use case first hand (fire suppression in wind turbines), how they planned to deploy it for their customers in conjunction with other technologies, the challenges they ran into, and the feedback they gave to the Keswick team.  I was able to provide them some guidance on how the greater VMware ecosystem of solutions could integrate with what they already planned to do as well.  I wasn't just a passive listener in this meeting.  I got to be an active participant.  It would have been fun to join additional touchpoints after the Take2 was complete to track progress, but I wasn't able to do that (time constraints with the day job).  If you read the first article linked above, I can tell you it was one of the partners called out by name in the blog.
 
 The Keswick team also needed someone to create a working prototype of Project Keswick integrated with a product from one particular hyperscaler (Azure Arc, which I had never used before).  When someone gives me a task and tells me to go figure something out / make it work and the problem is interesting, it's like drinking a couple of espresso shots.  My energy was high.  It was high enough to tinker throughout the day and into the night, seeking to crush that interesting problem.  It took a little time to get working, but I built a working prototype integrating Azure Arc with a Windows VM, a Linux VM, and the Kubernetes cluster running on my Keswick host at the house.  But it wasn't just me who might need to make the integration work over a longer team.  I wrote a couple of very detailed documents for others who wanted to recreate the integration (with screenshots, of course), detailing where I ran into errors and how I got past them.  But my prototype demo worked when I got to show it to Alan.  I made sure before rolling off the project that I delivered those documents back to the team (to the point of working on finishing touches to them the morning I was about to get on a cruise ship).  Alan probably thought I was crazy (as did my wife), but I wanted to make sure I finished the job.
-
- 
 
 ### Reflecting on the Experience
 

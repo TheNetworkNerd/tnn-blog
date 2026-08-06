@@ -11,6 +11,7 @@ tags:
   - "Embedded Host Client"
   - "ESXi"
   - "Mangle"
+  - "Markdown"
   - "Open Source"
   - "Open Source Software"
   - "OVA"
@@ -34,7 +35,6 @@ The [main Mangle site](https://vmware.github.io/mangle/) describes what Mangle d
 
 Being a former vSphere administrator, I figured the fastest path to stand up Mangle would be to deploy the OVA on vSphere.  Keep in mind that is the deployment option I'm choosing for this post and not the only option (could be deployed in public cloud somewhere if you like).  This post will detail my deployment process, including any errors I run into along the way.  I would encourage you to read the whole thing before deciding what steps to replicate for yourself.
 
- 
 
 ### Standing up a Small Lab
 
@@ -44,7 +44,6 @@ There's something soothing about the console view of an ESXi host, isn't there?�
 
 ![](1_hostconsole.png)
 
- 
 
 ### Taking a Shortcut
 
@@ -61,8 +60,6 @@ We saw the ip of the host above, so if I visit https://192.168.72.128/ui/#/login
 Once logged into the host, we can select the option to Create / Register VM.
 
 ![](4_createvm-1024x690.png)
-
- 
 
 [This Mangle documentation page](https://vmware-1.gitbook.io/mangle/mangle-administration/supported-deployment-models) contains the link to download the OVA for the latest version of Mangle and steps to deploy it.  I have the OVA downloaded and stored locally on my computer.  Follow along with the document mentioned if you like, but I'm going to step through it here.  Select the option below to Deploy a virtual machine from an OVF or OVA, and click next.
 
@@ -85,8 +82,6 @@ We will keep the default Deployment options (no changes to network mapping, thin
 ![](9_DeploymentOptions-1024x645.png)
 
 Now we've reached some of the Mangle appliance configuration settings.  As shown below, we've already expanded the Application section and typed in an initial root password.  The information buttons on the far right explain the meaning of each field on this screen.  We'll go ahead and leave Enable SSH service in mangle appliance and Enable first boot for mangle selected.  Expand Networking Properties to see other information needed on this screen.
-
- 
 
 ![](10_AdditionalSettings1-1024x656.png)
 
@@ -150,7 +145,6 @@ There is only one setting - hostname.  Everything else is blank.  What now?
 
 ![](24_ConsoleLogin2-1024x801.png)
 
- 
 
 ### Hitting a Wall
 
@@ -168,9 +162,7 @@ Sometimes shortcuts don't get you where you need to go quickly, and in this case
 When you hit a wall, you ask for help.  I found from someone on the Mangle team that at the time of this article's publishing, what I describe above is a known issue when deploying the OVA directly on an ESXi host (and is also a known issue deploying other Photon OS OVAs using this method).  The recommendation was to deploy the OVA using vCenter to avoid this issue.
 
 So much for taking a shortcut.  The documentation didn't call out vCenter specifically but did hint at it based on screenshots.  Sometimes you need to do things the wrong way first to do them the right way the next time.
-
  
-
 ### Deploying the Mangle OVA Using vCenter
 
 To this point I have deployed a vCenter running on top of the virtual ESXi host mentioned earlier (NN-ESXi1) after allocating more RAM to it.  The name of the vCenter is NN-vCenter1 with deployment size set to Tiny.  Our host NN-ESXi1 is under its management now inside a datacenter called NN-DC1.  Let's walk through the steps to deploy the Mangle OVA using vCenter.
@@ -178,8 +170,6 @@ To this point I have deployed a vCenter running on top of the virtual ESXi host 
 Login to vCenter as the SSO administrator, and we should go straight to the hosts and clusters view.  Right-click the host, and select Deploy OVF template.
 
 ![](25_mangle3.x_step1_deployovftemplate-1024x400.png)
-
- 
 
 At this point, there are two options for grabbing the OVA file.  If vCenter can reach the internet, we can leverage a URL to download the OVA ([this doc](https://vmware-1.gitbook.io/mangle/mangle-administration/supported-deployment-models) has the URL for the latest version of Mangle).  Click Next to continue.
 
@@ -257,7 +247,6 @@ And just like that, we are officially logged into the Mangle appliance.  It was
 
 ![](40_mangle3.x_step15_loggedinnow-1024x565.png)
 
- 
 
 ### Lessons Learned
 

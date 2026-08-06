@@ -14,6 +14,7 @@ tags:
   - "Lessons"
   - "Memories"
   - "Mentor"
+  - "Mentors"
   - "Mentoring"
   - "Reading List"
 image: "photo-album-631084_640.jpg"
@@ -39,8 +40,6 @@ I can still hear them loud and clear.  It's those little lessons others taught 
 - I had a college professor who cared enough to share a hard truth with me.  I was missing a lot of the foundational concepts in a specific subject area, and he was the one who told me I wasn't as knowledgeable as previous grades indicated.  The professor assured me I would not fail his class because he saw my efforts, but he let me know that A and B were out of the question.  Honest assessments contain hard truths that may be tough to accept, but they only serve to make you better.
 
 I'm sure there are more not listed here.  There are other voices that will pop into my head when I least expect it, other lessons I learned from someone.
-
- 
 
 ### Are You a Voice in Someone's Head?
 

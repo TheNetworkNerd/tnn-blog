@@ -40,8 +40,6 @@ What if you could do something in a fresh, new domain that you know would help s
 
 I know what you may be thinking.  Wait!  I'm already giving it my all at work.  I'm putting in extra hours and still cannot finish everything.  You're telling me to add something EXTRA to my plate?  Yes.  Adam Grant is telling you, actually.  And so am I.
 
- 
-
 ### Guidelines for Giving
 
 This extra giving is NOT an exercise in giving more to work.  You're probably already doing that and not seeing the return on your investment.  If you work for company XYZ, you control how, what, and when you give (time and effort) to that employer.  But you are giving out of a sense of duty and obligation to the employer.  It's part of the job, right?

@@ -36,8 +36,6 @@ Tennis fans watch the dance of shots back and forth over the net until someone m
 
 In the realm of career, we aren't that different than a tennis player.  We have control of our success.  There are coaches and trainers to help us along the path, but the match, every shot we take, and the level of effort we put into it is ours.  The player on the other side of the net is you.  That's right...it isn't everyone else in your field.  I think Steven Murawksi said it best in [episode 106 of Nerd Journey](https://nerd-journey.com/exploring-the-beginner-mindset-with-steven-murawski-part-2/) - "it’s not that I need to be perfect tomorrow. I need to be a little bit better than I was today."   If today you were playing yesterday's you, would you win?  [Success is something you can define for yourself](https://donjones.com/2019/12/19/on-success/) and won't be the same as success for someone else.
 
- 
-
 ### Looking Effortless Isn't Lack of Effort
 
 It's easy to see the physical effort a tennis player puts into running down a ball or hitting a specific shot.  They are, after all, incredible athletes.  But you can't see the mental game that happens inside a player's head.  There are hints of what might be going on based on body language and attitude exhibited, but there's no way for us to truly know.
@@ -51,8 +49,6 @@ Making something look effortless takes tremendous effort and consistent, [delibe
 Whether you believe it or not, people are watching you.  Some of the things you do may look effortless to them, even if it takes tremendous effort for you.  No one can truly know the amount of practice you've put into it, but if they watch you over time, they will see the improvements.  If they have just met you, they lack context on what it really took for you to accomplish something (i.e. completing that challenging project or task, delivering a conference talk, writing that article, etc.).  If you're having regular 1-1 meetings with your manager, he / she should be able to see your progression to that next level.  While the accomplishments may not be trophies like in tennis, the milestones along the way are things we should be documenting for a promotion package and consitently communicating to the boss.  Communicating your "wins" isn't bragging.  They are to be celebrated, and hopefully your manager sees that.  We need to understand how far we've come to appreciate our own efforts along the way.
 
 The saying goes that perception is reality.  But it's also without context.  Maybe we should be more empathetic to others becasue what we see is not always the situation someone wanted it to be.
-
- 
 
 ### Answering the Questions
 

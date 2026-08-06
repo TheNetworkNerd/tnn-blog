@@ -9,6 +9,9 @@ categories:
   - "Wellness"
 tags: 
   - "Burnout"
+  - "Burnout Indicators"
+  - "Burnout Resources"
+  - "Burnout Podcasts"
   - "Career"
   - "Career Advice"
   - "Career Stories"
@@ -18,6 +21,7 @@ tags:
   - "Mental Health"
   - "Nerd Journey"
   - "Podcast"
+  - "Podcasts"
   - "Social Media"
   - "Stress"
   - "Wellness"
@@ -112,8 +116,6 @@ One way to know if you're in the depths of burnout or headed there is to listen 
     - Episode 145 - [Book Discussion: Deep Work, Part 5 - Quit Social Media](https://nerd-journey.com/book-discussion-deep-work-part-5-quit-social-media/)
         - The Deep Work series starts with [Episode 141](https://nerd-journey.com/book-discussion-deep-work-part-1-the-why/) and ends with [Episode 147](https://nerd-journey.com/book-discussion-deep-work-part-7-become-hard-to-reach/).
 
- 
-
 ### More Stories of Burnout
 
 Our show isn't the only place to find stories of burnout or helpful content on the topic.  Here are more resources for you.  If you have a great resource not listed here, please contact me so I can add it for the benefit of others.
@@ -136,8 +138,6 @@ Our show isn't the only place to find stories of burnout or helpful content on t
     - Listen to the discussion on burnout prevention.
 - [Giving Past Burnout]({% link _posts/2021-06-05-giving-past-burnout.md %})
     - Can your reciprocity style help you fight burnout?
-
- 
 
 ### Where Do You Go from Here?
 

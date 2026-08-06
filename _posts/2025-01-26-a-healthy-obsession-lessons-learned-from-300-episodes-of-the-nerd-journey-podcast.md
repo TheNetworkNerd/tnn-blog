@@ -8,10 +8,15 @@ categories:
 tags: 
   - "Career"
   - "Career Advice"
+  - "Content Creation"
+  - "Content Creator"
+  - "Creative Outlet"
   - "Nerd Journey"
+  - "Nerd Journey Podcast"
   - "Podcast"
   - "Podcast Marketing"
   - "Podcast Producer"
+  - "Podcast Production"
   - "Podcaster"
   - "Podcasting"
   - "Reflection"
@@ -26,7 +31,7 @@ Releasing a weekly podcast also brings with it a constant struggle with perfecti
 
 I came across the following quote from [Slow Productivity](https://www.amazon.com/Slow-Productivity-Accomplishment-Without-Burnout/dp/0593544854) by Cal Newport that perfectly describes what I experience weekly.
 
-“Obsession requires you to get lost in your head, convinced that you can do just a little bit better given some more time. Greatness requires the ability to subsequently pull yourself out of your self-critical reverie before it’s too late… Progress is what matters. Not perfection.” - Cal Newport
+> Obsession requires you to get lost in your head, convinced that you can do just a little bit better given some more time. Greatness requires the ability to subsequently pull yourself out of your self-critical reverie before it’s too late… Progress is what matters. Not perfection. - Cal Newport
 
 With that thought in mind, I wanted to take a moment to reflect on what I’ve learned over the course of 300 episodes of the [Nerd Journey Podcast](https://nerd-journey.com/).
 
@@ -90,7 +95,7 @@ So why should the journey continue after 300 episodes and 6+ years? Why keep pro
 
 I think the answer is twofold. The first part lies in something Duncan Epping said in [Episode 304](https://nerd-journey.com/next-level-shifting-specialties-and-broadening-your-outcome-goal-with-duncan-epping-2-2/). He was talking about how his goals for learning are not bound by a job or a company. They are much larger. It’s the intention with which he approached writing blogs that struck me.
 
-> “Even if no one reads this, at least I got to learn something.” - Duncan Epping, Nerd Journey Episode 304
+> Even if no one reads this, at least I got to learn something. - Duncan Epping, Nerd Journey Episode 304
 
 Maybe no one will read this post or listen to the podcast. But in every conversation, I got to learn something. And in the editing and producing of the show, those lessons speak to me. I love talking to people about their careers and getting to hear their stories. I really love interviewing people, and I want to continue sharpening my skills as an interviewer. The only way to get better is to keep asking questions from a place of humble curiosity.
 

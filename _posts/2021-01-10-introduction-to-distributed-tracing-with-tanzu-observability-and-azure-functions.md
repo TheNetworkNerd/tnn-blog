@@ -79,7 +79,10 @@ Toward the end of the install, there were some warnings, but this screen capture
 
 ![](3_AddPackageSuccess2-1024x67.png)
 
-`info : Package 'Wavefront.OpenTracing.SDK.CSharp' is compatible with all the specified frameworks in project 'C:\Users\Nick\Documents\VSCode\Azure Repos\networknerd-repo1\VS Code Testing\networknerd3\networknerd3.csproj'. info : PackageReference for package 'Wavefront.OpenTracing.SDK.CSharp' version '2.0.0' added to file 'C:\Users\Nick\Documents\VSCode\Azure Repos\networknerd-repo1\VS Code Testing\networknerd3\networknerd3.csproj'.`
+```
+info : Package 'Wavefront.OpenTracing.SDK.CSharp' is compatible with all the specified frameworks in project 'C:\Users\Nick\Documents\VSCode\Azure Repos\networknerd-repo1\VS Code Testing\networknerd3\networknerd3.csproj'. 
+info : PackageReference for package 'Wavefront.OpenTracing.SDK.CSharp' version '2.0.0' added to file 'C:\Users\Nick\Documents\VSCode\Azure Repos\networknerd-repo1\VS Code Testing\networknerd3\networknerd3.csproj'.
+```
 
 Taking a look at the source control area inside VS Code, we see two files changed.  I created a new HTTP Trigger function called FN2-HTTP2-NN3 (see [this post]({% link _posts/2020-03-31-deploying-azure-functions-with-visual-studio-code.md %}) for steps to create a function in VS Code using the [plugin for Azure Functions](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azurefunctions)), so seeing the .cs file is an expected change.  From the output message above, there was also a package reference for our OpenTracing SDK added to the project file networknerd3.csproj.
 
@@ -111,21 +114,106 @@ The API token will show up where the red boxes are in the below screenshot.  It
 
 ![](9_APIKey.png)
 
-Now that we have the API key ready, let's begin coding.
+Now that we have the API key ready, we will begin coding.
 
 ### Instrumenting a Function's Code
 
 If we assume the function FN1-HTTP1-NN3 has just been created using the HTTPTrigger template in VS Code (see [this post]({% link _posts/2020-03-31-deploying-azure-functions-with-visual-studio-code.md %}) for step-by-step instructions), the code output inside FN1-HTTP1-NN3.cs is as follows:
 
-`using System; using System.IO; using System.Threading.Tasks; using Microsoft.AspNetCore.Mvc; using Microsoft.Azure.WebJobs; using Microsoft.Azure.WebJobs.Extensions.Http; using Microsoft.AspNetCore.Http; using Microsoft.Extensions.Logging; using Newtonsoft.Json;`
+```
+using System; 
+using System.IO; 
+using System.Threading.Tasks; 
+using Microsoft.AspNetCore.Mvc; 
+using Microsoft.Azure.WebJobs; 
+using Microsoft.Azure.WebJobs.Extensions.Http; 
+using Microsoft.AspNetCore.Http; 
+using Microsoft.Extensions.Logging; 
+using Newtonsoft.Json;
 
-`namespace NetworkNerd.Functions { public static class FN1_HTTP1_NN3 { [FunctionName("FN1_HTTP1_NN3")] public static async Task Run( [HttpTrigger(AuthorizationLevel.Function, "get", "post", Route = null)] HttpRequest req, ILogger log) { log.LogInformation("C# HTTP trigger function processed a request.");  string name = req.Query["name"];  string requestBody = await new StreamReader(req.Body).ReadToEndAsync(); dynamic data = JsonConvert.DeserializeObject(requestBody); name = name ?? data?.name;  string responseMessage = string.IsNullOrEmpty(name) ? "This HTTP triggered function executed successfully. Pass a name in the query string or in the request body for a personalized response." : $"Hello, {name}. This HTTP triggered function executed successfully.";  return new OkObjectResult(responseMessage); } } }`
+namespace NetworkNerd.Functions { public static class FN1_HTTP1_NN3 { [FunctionName("FN1_HTTP1_NN3")] public static async Task Run( [HttpTrigger(AuthorizationLevel.Function, "get", "post", Route = null)] HttpRequest req, ILogger log) 
+{ 
+    log.LogInformation("C# HTTP trigger function processed a request.");  
+    string name = req.Query["name"];  
+    string requestBody = await new StreamReader(req.Body).ReadToEndAsync(); 
+    dynamic data = JsonConvert.DeserializeObject(requestBody); 
+    name = name ?? data?.name;  
+    string responseMessage = string.IsNullOrEmpty(name) ? "This HTTP triggered function executed successfully. Pass a name in the query string or in the request body for a personalized response." : $"Hello, {name}. This HTTP triggered function executed successfully.";  
+
+    return new OkObjectResult(responseMessage); 
+    } } 
+}
+```
 
 Now, let's look at that same functions code after being instrumented with the OpenTracing SDK and see how it looks different.  I've included comments inside the code to help those who want to do this on their own understand the steps.  I also posted some [code snippets on GitHub](https://github.com/TheNetworkNerd/CodeSnippets/tree/master/Tanzu%20Observability).
 
-`using System; using System.IO; using System.Threading.Tasks; using Microsoft.AspNetCore.Mvc; using Microsoft.Azure.WebJobs; using Microsoft.Azure.WebJobs.Extensions.Http; using Microsoft.AspNetCore.Http; using Microsoft.Extensions.Logging; using Newtonsoft.Json;`
+```
+using System; 
+using System.IO; 
+using System.Threading.Tasks; 
+using Microsoft.AspNetCore.Mvc; 
+using Microsoft.Azure.WebJobs; 
+using Microsoft.Azure.WebJobs.Extensions.Http; 
+using Microsoft.AspNetCore.Http; 
+using Microsoft.Extensions.Logging; 
+using Newtonsoft.Json;
 
-`//Added these so code would work using Wavefront.SDK.CSharp.Common.Application; using Wavefront.SDK.CSharp.Common; using Wavefront.OpenTracing.SDK.CSharp.Reporting; using Wavefront.OpenTracing.SDK.CSharp; using Wavefront.SDK.CSharp.DirectIngestion;  namespace NetworkNerd.Functions { public static class FN1_HTTP1_NN3 { [FunctionName("FN1_HTTP1_NN3")] public static async Task Run( [HttpTrigger(AuthorizationLevel.Function, "get", "post", Route = null)] HttpRequest req, ILogger log) {  //Begin code instrumentation - reference https://github.com/wavefrontHQ/wavefront-opentracing-sdk-csharp //Application, service, and cluster variables are for building application tags. //The URL and token are for direct ingestion access. Parameters for using a proxy might be slightly different. string application = "TestApp1"; string service = "TestService1"; string cluster = "networknerd3"; //This URL should be unique to your company's Wavefront instance and has been sanitized in this code sample. string wfURL = "https://yourcompany.wavefront.com"; //This token is unique to your instance of Wavefront and has been sanitized in this code sample. Login to your instance and navigate to your user profile (cog icon in upper right -> click your e-mail address). Then click the API Access option. string token = "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxxx";  //Create ApplicationTags based on above parameters. //The commmand below adds the optional cluster field so it shows up inside Wavefront. ApplicationTags applicationTags = new ApplicationTags.Builder(application, service).Cluster(cluster).Build(); //Initialize WavefrontDirectIngestionClient WavefrontDirectIngestionClient.Builder wfDirectIngestionClientBuilder = new WavefrontDirectIngestionClient.Builder(wfURL, token);  // Create an IWavefrontSender instance for sending trace data via direct ingestion. IWavefrontSender wavefrontSender = wfDirectIngestionClientBuilder.Build(); //Create a WavefrontSpanReporter for reporting trace data that originates on . We're using the function name in this case as the source. This will show up as a source for metrics inside the Wavefront interface. IReporter wfSpanReporter = new WavefrontSpanReporter.Builder().WithSource("FN1_HTTP1_NN3").Build(wavefrontSender); //Create the WavefrontTracer. WavefrontTracer MyTracer = new WavefrontTracer.Builder(wfSpanReporter, applicationTags).Build();  //Start building a new span called FN1_HTTP1_NN3.Execute OpenTracing.IScope scope = MyTracer.BuildSpan("FN1_HTTP1_NN3.Execute").StartActive();  log.LogInformation("C# HTTP trigger function processed a request.");  string name = req.Query["name"];  string requestBody = await new StreamReader(req.Body).ReadToEndAsync(); dynamic data = JsonConvert.DeserializeObject(requestBody); name = name ?? data?.name;  string responseMessage = string.IsNullOrEmpty(name) ? "This HTTP triggered function executed successfully. Pass a name in the query string or in the request body for a personalized response." : $"Hello, {name}. If you see this message, your build and release pipelines for FN1-HTTP1-NN3 have updated the function's code successfully.";  //Dispose of the scope object. scope.Dispose(); //Close the tracer before application exit and flush all buffered spans to Wavefront. MyTracer.Close();  return new OkObjectResult(responseMessage); } } }  `
+//Added these so code would work using Wavefront.SDK.CSharp.Common.Application; 
+using Wavefront.SDK.CSharp.Common; 
+using Wavefront.OpenTracing.SDK.CSharp.Reporting; 
+using Wavefront.OpenTracing.SDK.CSharp; 
+using Wavefront.SDK.CSharp.DirectIngestion;  
+
+namespace NetworkNerd.Functions { public static class FN1_HTTP1_NN3 { [FunctionName("FN1_HTTP1_NN3")] public static async Task Run( [HttpTrigger(AuthorizationLevel.Function, "get", "post", Route = null)] HttpRequest req, ILogger log) 
+{  
+    //Begin code instrumentation - reference https://github.com/wavefrontHQ/wavefront-opentracing-sdk-csharp 
+    //Application, service, and cluster variables are for building application tags. 
+    //The URL and token are for direct ingestion access. Parameters for using a proxy might be slightly different. 
+    
+    string application = "TestApp1"; 
+    string service = "TestService1"; 
+    string cluster = "networknerd3"; 
+    
+    //This URL should be unique to your company's Wavefront instance and has been sanitized in this code sample. 
+    string wfURL = "https://yourcompany.wavefront.com"; 
+    
+    //This token is unique to your instance of Wavefront and has been sanitized in this code sample. Login to your instance and navigate to your user profile (cog icon in upper right -> click your e-mail address). Then click the API Access option. 
+    string token = "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxxx";  
+   
+    //Create ApplicationTags based on above parameters. 
+    //The commmand below adds the optional cluster field so it shows up inside Wavefront. 
+    ApplicationTags applicationTags = new ApplicationTags.Builder(application, service).Cluster(cluster).Build(); 
+    
+    //Initialize WavefrontDirectIngestionClient 
+    WavefrontDirectIngestionClient.Builder wfDirectIngestionClientBuilder = new WavefrontDirectIngestionClient.Builder(wfURL, token);  
+    
+    // Create an IWavefrontSender instance for sending trace data via direct ingestion. 
+    IWavefrontSender wavefrontSender = wfDirectIngestionClientBuilder.Build(); 
+    
+    //Create a WavefrontSpanReporter for reporting trace data that originates on . We're using the function name in this case as the source. This will show up as a source for metrics inside the Wavefront interface.
+    IReporter wfSpanReporter = new WavefrontSpanReporter.Builder().WithSource("FN1_HTTP1_NN3").Build(wavefrontSender); 
+    
+    //Create the WavefrontTracer. WavefrontTracer 
+    MyTracer = new WavefrontTracer.Builder(wfSpanReporter, applicationTags).Build();  
+    
+    //Start building a new span called FN1_HTTP1_NN3.Execute 
+    OpenTracing.IScope scope = MyTracer.BuildSpan("FN1_HTTP1_NN3.Execute").StartActive();  
+    log.LogInformation("C# HTTP trigger function processed a request.");  
+    string name = req.Query["name"];  
+    string requestBody = await new StreamReader(req.Body).ReadToEndAsync(); 
+    dynamic data = JsonConvert.DeserializeObject(requestBody); 
+    name = name ?? data?.name;  
+    string responseMessage = string.IsNullOrEmpty(name) ? "This HTTP triggered function executed successfully. Pass a name in the query string or in the request body for a personalized response." : $"Hello, {name}. If you see this message, your build and release pipelines for FN1-HTTP1-NN3 have updated the function's code successfully.";  
+    
+    //Dispose of the scope object. 
+    scope.Dispose(); 
+
+    //Close the tracer before application exit and flush all buffered spans to Wavefront. 
+    MyTracer.Close();  
+
+    return new OkObjectResult(responseMessage); } } 
+}  
+```
 
 Pause here, and we'll do a quick analysis of the newly instrumented function's code.
 
@@ -214,7 +302,6 @@ Perhaps at this point you're questioning the usefulness of distributed tracing i
 - Part 5 – [From VS Code to Azure Pipelines – Basic CI/CD with Azure Functions]({% link _posts/2020-07-04-from-vs-code-to-azure-pipelines-basic-ci-cd-with-azure-functions.md %})
 - Part 6 - [The Next Wave: Exploring Tanzu Observability’s Integration with Azure Functions]({% link _posts/2020-07-20-the-next-wave-exploring-tanzu-observabilitys-integration-with-azure-functions.md %})
 - Part 7 - This post 
-- Part 8 – Coming soon!
 
 ### Helpful Links on Distributed Tracing
 

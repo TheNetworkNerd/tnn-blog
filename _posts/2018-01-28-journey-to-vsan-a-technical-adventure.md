@@ -10,7 +10,7 @@ tags:
   - "HCI"
   - "JourneytovSAN"
   - "VMware vSAN"
-  - "VMware Vsphere"
+  - "VMware vSphere"
   - "vSAN"
   - "vSphere"
   - "vSAN Licensing"

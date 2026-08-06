@@ -18,7 +18,7 @@ tags:
   - "Code"
   - "Code Repository"
   - "Commit"
-  - "Faas"
+  - "FaaS"
   - "Function Apps"
   - "Functions As A Service"
   - "Git"

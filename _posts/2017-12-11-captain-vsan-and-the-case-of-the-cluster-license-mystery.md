@@ -6,7 +6,7 @@ permalink: /2017/12/11/captain-vsan-and-the-case-of-the-cluster-license-mystery/
 categories: 
   - "VMware"
 tags: 
-  - "Journeytovsan"
+  - "JourneytovSAN"
   - "VMware Licensing"
   - "VMware vSAN"
   - "VMware vSAN 6.6"
