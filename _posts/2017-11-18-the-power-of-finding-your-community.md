@@ -1,7 +1,7 @@
 ﻿---
 title: "The Power of Finding Your Community"
 date: 2017-11-18
-media_subpath: /assets/images
+media_subpath: assets/images
 permalink: /2017/11/18/the-power-of-finding-your-community/
 categories: 
   - "Career"

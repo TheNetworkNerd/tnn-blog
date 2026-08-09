@@ -1,7 +1,7 @@
 ﻿---
 title: "A Promise Kept: Choosing to Sunset the Nerd Journey Podcast"
 date: 2026-01-27
-media_subpath: /assets/images
+media_subpath: assets/images
 permalink: /2026/01/27/a-promise-kept-choosing-to-sunset-the-nerd-journey-podcast/
 categories: 
   - "Career"

@@ -1,7 +1,7 @@
 ﻿---
 title: "Fighting the Impostor Within"
 date: 2018-06-30
-media_subpath: /assets/images
+media_subpath: assets/images
 permalink: /2018/06/30/fighting-the-impostor-within/
 categories: 
   - "Career"

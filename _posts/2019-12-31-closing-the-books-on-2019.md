@@ -1,7 +1,7 @@
 ﻿---
 title: "Closing the Books on 2019"
 date: 2019-12-31
-media_subpath: /assets/images
+media_subpath: assets/images
 permalink: /2019/12/31/closing-the-books-on-2019/
 categories: 
   - "Career"

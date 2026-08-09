@@ -1,7 +1,7 @@
 ﻿---
 title: "DFW SpiceCorps - A 2017 Year in Review"
 date: 2018-01-09
-media_subpath: /assets/images
+media_subpath: assets/images
 permalink: /2018/01/09/dfw-spicecorps-a-2017-year-in-review/
 categories: 
   - "Career"

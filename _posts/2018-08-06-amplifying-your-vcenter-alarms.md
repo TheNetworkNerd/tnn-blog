@@ -1,7 +1,7 @@
 ﻿---
 title: "Amplifying Your vCenter Alarms"
 date: 2018-08-06
-media_subpath: /assets/images
+media_subpath: assets/images
 permalink: /2018/08/06/amplifying-your-vcenter-alarms/
 categories: 
   - "VMware"

@@ -1,7 +1,7 @@
 ﻿---
 title: "Speak up at VMware Explore 2022"
 date: 2022-05-05
-media_subpath: /assets/images
+media_subpath: assets/images
 permalink: /2022/05/05/speak-up-at-vmware-explore-2022/
 categories: 
   - "Career"

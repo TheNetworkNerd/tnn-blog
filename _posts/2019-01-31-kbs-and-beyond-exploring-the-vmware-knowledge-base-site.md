@@ -1,7 +1,7 @@
 ﻿---
 title: "KBs and Beyond - Exploring the VMware Knowledge Base Site"
 date: 2019-01-31
-media_subpath: /assets/images
+media_subpath: assets/images
 permalink: /2019/01/31/kbs-and-beyond-exploring-the-vmware-knowledge-base-site/
 categories: 
   - "VMware"

@@ -1,7 +1,7 @@
 ---
 title: "Tales of a vCenter Upgrade Gone Wrong - Journey to vSAN 6.6"
 date: 2017-05-05
-media_subpath: /assets/images
+media_subpath: assets/images
 permalink: /2017/05/05/tales-of-a-vcenter-upgrade-gone-wrong-journey-to-vsan-6-6/
 categories: 
   - "VMware"

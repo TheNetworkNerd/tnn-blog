@@ -1,7 +1,7 @@
 ﻿---
 title: "Tis the Season of COVID"
 date: 2020-12-30
-media_subpath: /assets/images
+media_subpath: assets/images
 permalink: /2020/12/30/tis-the-season-of-covid/
 categories: 
   - "Wellness"

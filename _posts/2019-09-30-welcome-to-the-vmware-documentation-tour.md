@@ -1,7 +1,7 @@
 ﻿---
 title: "Welcome to the VMware Documentation Tour!"
 date: 2019-09-30
-media_subpath: /assets/images
+media_subpath: assets/images
 permalink: /2019/09/30/welcome-to-the-vmware-documentation-tour/
 categories: 
   - "Community"

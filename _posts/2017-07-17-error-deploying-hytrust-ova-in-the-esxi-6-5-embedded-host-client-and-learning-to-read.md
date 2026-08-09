@@ -1,7 +1,7 @@
 ﻿---
 title: "Error Deploying Hytrust OVA in the ESXi 6.5 Embedded Host Client and Learning to Read"
 date: 2017-07-17
-media_subpath: /assets/images
+media_subpath: assets/images
 permalink: /2017/07/17/error-deploying-hytrust-ova-in-the-esxi-6-5-embedded-host-client-and-learning-to-read/
 categories: 
   - "VMware"

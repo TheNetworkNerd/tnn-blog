@@ -1,7 +1,7 @@
 ﻿---
 title: "Building Custom Search Engines for VMware Content in Google Chrome"
 date: 2019-02-27
-media_subpath: /assets/images
+media_subpath: assets/images
 permalink: /2019/02/27/building-custom-search-engines-for-vmware-content-in-google-chrome/
 categories: 
   - "VMware"

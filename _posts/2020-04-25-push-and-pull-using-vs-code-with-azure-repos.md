@@ -1,7 +1,7 @@
 ﻿---
 title: "Push and Pull - Using VS Code with Azure Repos"
 date: 2020-04-25
-media_subpath: /assets/images
+media_subpath: assets/images
 permalink: /2020/04/25/push-and-pull-using-vs-code-with-azure-repos/
 categories: 
   - "Cloud"

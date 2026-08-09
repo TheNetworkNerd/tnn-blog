@@ -1,7 +1,7 @@
 ﻿---
 title: "A Letter to the Dreamer - Be Brave Enough"
 date: 2017-12-04
-media_subpath: /assets/images
+media_subpath: assets/images
 permalink: /2017/12/04/a-letter-to-the-dreamer-be-brave-enough/
 categories: 
   - "Career"

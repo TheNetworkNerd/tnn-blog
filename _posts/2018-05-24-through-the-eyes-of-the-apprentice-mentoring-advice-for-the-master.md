@@ -1,7 +1,7 @@
 ﻿---
 title: "Through the Eyes of the Apprentice - Mentoring Advice for the Master"
 date: 2018-05-24
-media_subpath: /assets/images
+media_subpath: assets/images
 permalink: /2018/05/24/through-the-eyes-of-the-apprentice-mentoring-advice-for-the-master/
 categories: 
   - "Career"

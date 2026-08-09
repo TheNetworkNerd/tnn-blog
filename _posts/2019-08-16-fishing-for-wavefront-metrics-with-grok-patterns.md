@@ -1,7 +1,7 @@
 ---
 title: "Fishing for Wavefront Metrics with Grok Patterns"
 date: 2019-08-16
-media_subpath: /assets/images
+media_subpath: assets/images
 permalink: /2019/08/16/fishing-for-wavefront-metrics-with-grok-patterns/
 categories: 
   - "VMware"

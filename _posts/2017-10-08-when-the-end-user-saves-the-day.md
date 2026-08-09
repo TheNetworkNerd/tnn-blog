@@ -1,7 +1,7 @@
 ﻿---
 title: "When the End User Saves the Day"
 date: 2017-10-08
-media_subpath: /assets/images
+media_subpath: assets/images
 permalink: /2017/10/08/when-the-end-user-saves-the-day/
 categories: 
   - "Career"

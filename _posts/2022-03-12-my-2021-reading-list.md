@@ -1,7 +1,7 @@
 ﻿---
 title: "My 2021 Reading List"
 date: 2022-03-12
-media_subpath: /assets/images
+media_subpath: assets/images
 permalink: /2022/03/12/my-2021-reading-list/
 categories: 
   - "Career"

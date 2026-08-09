@@ -1,7 +1,7 @@
 ﻿---
 title: "DFW Mango Meetup - What's New in vSAN 6.6?"
 date: 2017-07-05
-media_subpath: /assets/images
+media_subpath: assets/images
 permalink: /2017/07/05/dfw-mango-meetup-whats-new-in-vsan-6-6/
 categories: 
   - "VMware"

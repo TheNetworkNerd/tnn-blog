@@ -1,7 +1,7 @@
 ﻿---
 title: "Captain vSAN and the Case of the Cluster License Mystery"
 date: 2017-12-11
-media_subpath: /assets/images
+media_subpath: assets/images
 permalink: /2017/12/11/captain-vsan-and-the-case-of-the-cluster-license-mystery/
 categories: 
   - "VMware"

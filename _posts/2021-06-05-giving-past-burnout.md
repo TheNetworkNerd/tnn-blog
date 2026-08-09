@@ -1,7 +1,7 @@
 ﻿---
 title: "Giving Past Burnout"
 date: 2021-06-05
-media_subpath: /assets/images
+media_subpath: assets/images
 permalink: /2021/06/05/giving-past-burnout/
 categories: 
   - "Career"

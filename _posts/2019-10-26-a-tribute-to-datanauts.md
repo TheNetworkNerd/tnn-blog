@@ -1,7 +1,7 @@
 ﻿---
 title: "A Tribute to Datanauts"
 date: 2019-10-26
-media_subpath: /assets/images
+media_subpath: assets/images
 permalink: /2019/10/26/a-tribute-to-datanauts/
 categories: 
   - "Career"

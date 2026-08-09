@@ -1,7 +1,7 @@
 ﻿---
 title: "Verifying Wavefront Proxy Log Ingestion"
 date: 2019-08-12
-media_subpath: /assets/images
+media_subpath: assets/images
 permalink: /2019/08/12/verifying-wavefront-proxy-log-ingestion/
 categories: 
   - "VMware"

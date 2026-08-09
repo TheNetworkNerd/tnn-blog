@@ -1,7 +1,7 @@
 ﻿---
 title: "Pi in the Sky: Using Wavefront to Analyze Pi-Hole Data"
 date: 2019-11-21
-media_subpath: /assets/images
+media_subpath: assets/images
 permalink: /2019/11/21/pi-in-the-sky-using-wavefront-to-analyze-pi-hole-data/
 categories: 
   - "Conferences"

@@ -1,7 +1,7 @@
 ﻿---
 title: "A Tale of Two vCenters, VxRail Edition"
 date: 2018-04-01
-media_subpath: /assets/images
+media_subpath: assets/images
 permalink: /2018/04/01/a-tale-of-two-vcenters-vxrail-edition/
 categories: 
   - "VMware"

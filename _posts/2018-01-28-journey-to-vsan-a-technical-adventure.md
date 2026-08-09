@@ -1,7 +1,7 @@
 ﻿---
 title: "Journey to vSAN - A Technical Adventure"
 date: 2018-01-28
-media_subpath: /assets/images
+media_subpath: assets/images
 permalink: /2018/01/28/journey-to-vsan-a-technical-adventure/
 categories: 
   - "Dell"

@@ -1,7 +1,7 @@
 ﻿---
 title: "The Extensive Guide to Using VMware Documentation Like a Pro"
 date: 2018-11-30
-media_subpath: /assets/images
+media_subpath: assets/images
 permalink: /2018/11/30/the-extensive-guide-to-using-vmware-documentation-like-a-pro/
 categories: 
   - "VMware"

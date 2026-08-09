@@ -1,7 +1,7 @@
 ﻿---
 title: "Personalize Your VMware Knowledge Base Subscriptions"
 date: 2021-10-11
-media_subpath: /assets/images
+media_subpath: assets/images
 permalink: /2021/10/11/personalize-your-vmware-knowledge-base-subscriptions/
 categories: 
   - "VMware"

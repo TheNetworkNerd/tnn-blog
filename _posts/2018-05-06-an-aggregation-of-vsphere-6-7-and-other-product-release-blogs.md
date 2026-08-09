@@ -1,7 +1,7 @@
 ﻿---
 title: "An Aggregation of vSphere 6.7 and Other Product Release Blogs"
 date: 2018-05-06
-media_subpath: /assets/images
+media_subpath: assets/images
 permalink: /2018/05/06/an-aggregation-of-vsphere-6-7-and-other-product-release-blogs/
 categories: 
   - "VMware"

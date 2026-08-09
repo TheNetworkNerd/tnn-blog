@@ -1,7 +1,7 @@
 ﻿---
 title: "When Practice Doesn't Make Perfect"
 date: 2021-02-20
-media_subpath: /assets/images
+media_subpath: assets/images
 permalink: /2021/02/20/when-practice-doesnt-make-perfect/
 categories: 
   - "Career"

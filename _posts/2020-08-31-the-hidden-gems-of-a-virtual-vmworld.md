@@ -1,7 +1,7 @@
 ﻿---
 title: "The Hidden Gems of a Virtual VMworld"
 date: 2020-08-31
-media_subpath: /assets/images
+media_subpath: assets/images
 permalink: /2020/08/31/the-hidden-gems-of-a-virtual-vmworld/
 categories: 
   - "Conferences"

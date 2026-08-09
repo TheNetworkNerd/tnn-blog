@@ -1,7 +1,7 @@
 ﻿---
 title: "Life on the Edge with Project Keswick: Reflecting on Two Weeks inside the Innovation Engine"
 date: 2023-10-27
-media_subpath: /assets/images
+media_subpath: assets/images
 permalink: /2023/10/27/life-on-the-edge-with-project-keswick-reflecting-on-two-weeks-inside-the-innovation-engine/
 categories: 
   - "Career"

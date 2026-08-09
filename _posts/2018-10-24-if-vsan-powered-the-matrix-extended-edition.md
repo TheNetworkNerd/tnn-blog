@@ -1,7 +1,7 @@
 ﻿---
 title: "If vSAN Powered The Matrix, Extended Edition"
 date: 2018-10-24
-media_subpath: /assets/images
+media_subpath: assets/images
 permalink: /2018/10/24/if-vsan-powered-the-matrix-extended-edition/
 categories: 
   - "Conferences"

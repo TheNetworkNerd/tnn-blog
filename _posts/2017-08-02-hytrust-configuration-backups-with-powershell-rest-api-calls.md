@@ -1,7 +1,7 @@
 ﻿---
 title: "Hytrust Configuration Backups with Powershell REST API Calls"
 date: 2017-08-02
-media_subpath: /assets/images
+media_subpath: assets/images
 permalink: /2017/08/02/hytrust-configuration-backups-with-powershell-rest-api-calls/
 categories: 
   - "Disaster Recovery"
