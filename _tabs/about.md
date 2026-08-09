@@ -23,9 +23,9 @@ I owe much of my career progression and success to those friends and industry pe
 
 
 ## Certifications and Awards
-<div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="cc7d407d-bf6b-49c5-884b-01a5148ab806" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
-<div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="72b60c44-05be-42c2-b6e1-11e7c0199cd2" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
-<div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="75ba25f7-f621-43e9-961a-e1b8ffc186d1" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>  
+<div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="cc7d407d-bf6b-49c5-884b-01a5148ab806" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="https://cdn.credly.com/assets/utilities/embed.js"></script>
+<div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="72b60c44-05be-42c2-b6e1-11e7c0199cd2" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="https://cdn.credly.com/assets/utilities/embed.js"></script>
+<div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="75ba25f7-f621-43e9-961a-e1b8ffc186d1" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="https://cdn.credly.com/assets/utilities/embed.js"></script>  
 
 ![](/assets/images/vexpert-badge_vExpert2026.png){: .normal width="300: height="250"}![](/assets/images/vexpert-badge_Years-10.png){: width="300: height="250"}      
 
