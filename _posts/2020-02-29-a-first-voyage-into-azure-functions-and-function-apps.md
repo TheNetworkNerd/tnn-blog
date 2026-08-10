@@ -1,8 +1,8 @@
 ﻿---
 title: "A First Voyage into Azure Functions and Function Apps"
-date: 2020-02-29
+date: 2020-02-28
 media_subpath: /assets/images
-permalink: /2020/02/29/a-first-voyage-into-azure-functions-and-function-apps/
+permalink: /2020/02/28/a-first-voyage-into-azure-functions-and-function-apps/
 categories: 
   - "Cloud"
   - "Code"
