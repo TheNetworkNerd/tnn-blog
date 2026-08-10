@@ -1,8 +1,8 @@
 ﻿---
 title: "From VS Code to Azure Pipelines - Basic CI/CD with Azure Functions"
-date: 2020-07-04
+date: 2020-07-03
 media_subpath: /assets/images
-permalink: /2020/07/04/from-vs-code-to-azure-pipelines-basic-ci-cd-with-azure-functions/
+permalink: /2020/07/03/from-vs-code-to-azure-pipelines-basic-ci-cd-with-azure-functions/
 categories: 
   - "Cloud"
   - "Code"
