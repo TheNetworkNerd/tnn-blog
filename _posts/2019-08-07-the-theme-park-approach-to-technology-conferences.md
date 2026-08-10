@@ -1,7 +1,7 @@
 ﻿---
 title: "The Theme Park Approach to Technology Conferences"
 date: 2019-08-07
-media_subpath: assets/images
+media_subpath: /assets/images
 permalink: /2019/08/07/the-theme-park-approach-to-technology-conferences/
 categories: 
   - "Community"

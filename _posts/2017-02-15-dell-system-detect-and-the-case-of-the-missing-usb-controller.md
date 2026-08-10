@@ -1,7 +1,7 @@
 ﻿---
 title: "Dell System Detect and the Case of the Missing USB Controller"
 date: 2017-02-15
-media_subpath: assets/images
+media_subpath: /assets/images
 permalink: /2017/02/15/dell-system-detect-and-the-case-of-the-missing-usb-controller/
 categories: 
   - "Dell"

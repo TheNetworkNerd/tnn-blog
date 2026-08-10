@@ -1,7 +1,7 @@
 ﻿---
 title: "Adventures in Graceful VM Shutdown"
 date: 2016-08-27
-media_subpath: assets/images
+media_subpath: /assets/images
 permalink: /2016/08/27/adventures-in-graceful-vm-shutdown/
 categories: 
   - "VMware"

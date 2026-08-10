@@ -1,7 +1,7 @@
 ﻿---
 title: "Two Nerds on a Journey"
 date: 2018-07-17
-media_subpath: assets/images
+media_subpath: /assets/images
 permalink: /2018/07/17/two-nerds-on-a-journey/
 categories: 
   - "Career"

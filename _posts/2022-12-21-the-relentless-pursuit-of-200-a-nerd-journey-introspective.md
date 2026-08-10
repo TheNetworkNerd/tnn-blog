@@ -1,7 +1,7 @@
 ﻿---
 title: "The Relentless Pursuit of 200 - A Nerd Journey Introspective"
 date: 2022-12-21
-media_subpath: assets/images
+media_subpath: /assets/images
 permalink: /2022/12/21/the-relentless-pursuit-of-200-a-nerd-journey-introspective/
 categories: 
   - "Career"

@@ -1,7 +1,7 @@
 ﻿---
 title: "Deploying Azure Functions with Visual Studio Code"
 date: 2020-03-31
-media_subpath: assets/images
+media_subpath: /assets/images
 permalink: /2020/03/31/deploying-azure-functions-with-visual-studio-code/
 categories: 
   - "Cloud"

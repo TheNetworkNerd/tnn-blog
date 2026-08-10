@@ -1,7 +1,7 @@
 ﻿---
 title: "Creating a Wavefront Proxy in AWS"
 date: 2019-05-26
-media_subpath: assets/images
+media_subpath: /assets/images
 permalink: /2019/05/26/creating-a-wavefront-proxy-in-aws/
 categories: 
   - "VMware"

@@ -1,7 +1,7 @@
 ﻿---
 title: "Career Ideas from a Trip to IKEA"
 date: 2020-01-31
-media_subpath: assets/images
+media_subpath: /assets/images
 permalink: /2020/01/31/career-ideas-from-a-trip-to-ikea/
 categories: 
   - "Career"

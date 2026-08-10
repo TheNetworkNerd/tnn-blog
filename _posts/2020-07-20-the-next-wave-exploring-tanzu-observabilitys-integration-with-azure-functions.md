@@ -1,7 +1,7 @@
 ﻿---
 title: "The Next Wave: Exploring Tanzu Observability's Integration with Azure Functions"
 date: 2020-07-20
-media_subpath: assets/images
+media_subpath: /assets/images
 permalink: /2020/07/20/the-next-wave-exploring-tanzu-observabilitys-integration-with-azure-functions/
 categories: 
   - "Cloud"

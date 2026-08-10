@@ -1,7 +1,7 @@
 ﻿---
 title: "Conference Heartbeat - VMworld, VMUG UserCon, and Spiceworld"
 date: 2017-09-24
-media_subpath: assets/images
+media_subpath: /assets/images
 permalink: /2017/09/24/conf-heartbeat-vmworld-vmugusercon-spiceworld/
 categories: 
   - "Community"

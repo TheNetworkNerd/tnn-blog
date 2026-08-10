@@ -1,7 +1,7 @@
 ﻿---
 title: "Deploying the Mangle OVA on vSphere - A Story of Heartache and Triumph"
 date: 2021-06-22
-media_subpath: assets/images
+media_subpath: /assets/images
 permalink: /2021/06/22/deploying-the-mangle-ova-on-vsphere-a-story-of-heartache-and-triumph/
 categories: 
   - "VMware"

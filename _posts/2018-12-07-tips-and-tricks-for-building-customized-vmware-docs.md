@@ -1,7 +1,7 @@
 ﻿---
 title: "Tips and Tricks for Building Customized VMware Docs"
 date: 2018-12-07
-media_subpath: assets/images
+media_subpath: /assets/images
 permalink: /2018/12/07/tips-and-tricks-for-building-customized-vmware-docs/
 categories: 
   - "VMware"

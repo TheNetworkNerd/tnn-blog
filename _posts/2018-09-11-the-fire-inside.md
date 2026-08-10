@@ -1,7 +1,7 @@
 ﻿---
 title: "The Fire Inside"
 date: 2018-09-11
-media_subpath: assets/images
+media_subpath: /assets/images
 permalink: /2018/09/11/the-fire-inside/
 categories: 
   - "Career"

@@ -1,7 +1,7 @@
 ﻿---
 title: "Burned Out for the Holidays"
 date: 2021-12-24
-media_subpath: assets/images
+media_subpath: /assets/images
 permalink: /2021/12/24/burned-out-for-the-holidays/
 categories: 
   - "Career"

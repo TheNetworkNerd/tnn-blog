@@ -1,7 +1,7 @@
 ﻿---
 title: "Site-to-Site VPN between Cisco ASA and Meraki MX: The KB I Wish Meraki Had Written"
 date: 2016-08-08
-media_subpath: assets/images
+media_subpath: /assets/images
 permalink: /2016/08/08/site-to-site-vpn-between-cisco-asa-and-meraki-mx-the-kb-i-wish-meraki-had-written/
 categories: 
   - "Meraki"

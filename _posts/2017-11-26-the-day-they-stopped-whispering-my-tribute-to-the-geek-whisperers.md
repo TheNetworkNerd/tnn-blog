@@ -1,7 +1,7 @@
 ﻿---
 title: "The Day They Stopped Whispering - My Tribute to The Geek Whisperers"
 date: 2017-11-26
-media_subpath: assets/images
+media_subpath: /assets/images
 permalink: /2017/11/26/the-day-they-stopped-whispering-my-tribute-to-the-geek-whisperers/
 categories: 
   - "Career"

@@ -1,7 +1,7 @@
 ﻿---
 title: "Catch the Wave with GCP - A Wavefront Integration Exploration"
 date: 2018-04-15
-media_subpath: assets/images
+media_subpath: /assets/images
 permalink: /2018/04/15/catch-the-wave-with-gcp-a-wavefront-integration-exploration/
 categories: 
   - "Cloud"

@@ -1,7 +1,7 @@
 ﻿---
 title: "My 2020 Reading List"
 date: 2021-01-02
-media_subpath: assets/images
+media_subpath: /assets/images
 permalink: /2021/01/02/my-2020-reading-list/
 categories: 
   - "Career"

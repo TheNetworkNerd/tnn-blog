@@ -1,7 +1,7 @@
 ﻿---
 title: "Patching vCenter with External Platform Services Controller to Version 6.5.0d - Journey to vSAN 6.6"
 date: 2017-04-17
-media_subpath: assets/images
+media_subpath: /assets/images
 permalink: /2017/04/17/patching-vcenter-with-external-platform-services-controller-to-version-6-5-0d-journey-to-vsan-6-6/
 categories: 
   - "VMware"

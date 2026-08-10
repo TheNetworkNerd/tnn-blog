@@ -1,7 +1,7 @@
 ﻿---
 title: "A Healthy Obsession: Lessons Learned from 300 Episodes of the Nerd Journey Podcast"
 date: 2025-01-26
-media_subpath: assets/images
+media_subpath: /assets/images
 permalink: /2025/01/26/a-healthy-obsession-lessons-learned-from-300-episodes-of-the-nerd-journey-podcast/
 categories: 
   - "Career"

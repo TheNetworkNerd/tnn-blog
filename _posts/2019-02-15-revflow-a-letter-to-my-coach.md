@@ -1,7 +1,7 @@
 ﻿---
 title: "REV+FLOW: A Letter to My Coach"
 date: 2019-02-15
-media_subpath: assets/images
+media_subpath: /assets/images
 permalink: /2019/02/15/revflow-a-letter-to-my-coach/
 categories: 
   - "Wellness"

@@ -1,7 +1,7 @@
 ﻿---
 title: "Configuring a Dell PERC H730 Mini - Journey to vSAN 6.6"
 date: 2017-04-26
-media_subpath: assets/images
+media_subpath: /assets/images
 permalink: /2017/04/26/configuring-a-dell-perc-h730-mini-journey-to-vsan-6-6/
 categories: 
   - "Dell"

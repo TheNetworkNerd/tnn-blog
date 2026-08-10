@@ -1,7 +1,7 @@
 ﻿---
 title: "Learning from The Maestro"
 date: 2021-10-23
-media_subpath: assets/images
+media_subpath: /assets/images
 permalink: /2021/10/23/learning-from-the-maestro/
 categories: 
   - "Career"

@@ -1,7 +1,7 @@
 ﻿---
 title: "Make the Most of VMworld 2021"
 date: 2021-09-12
-media_subpath: assets/images
+media_subpath: /assets/images
 permalink: /2021/09/12/make-the-most-of-vmworld-2021/
 categories: 
   - "Conferences"

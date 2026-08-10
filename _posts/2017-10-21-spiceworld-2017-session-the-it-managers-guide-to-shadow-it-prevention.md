@@ -1,7 +1,7 @@
 ﻿---
 title: "Spiceworld 2017 Session -The IT Manager's Guide to Shadow IT Prevention"
 date: 2017-10-21
-media_subpath: assets/images
+media_subpath: /assets/images
 permalink: /2017/10/21/spiceworld-2017-session-the-it-managers-guide-to-shadow-it-prevention/
 categories: 
   - "Conferences"

@@ -1,7 +1,7 @@
 ﻿---
 title: "If vSAN Powered The Matrix..."
 date: 2017-09-04
-media_subpath: assets/images
+media_subpath: /assets/images
 permalink: /2017/09/04/if-vsan-powered-the-matrix/
 categories: 
   - "Conferences"
