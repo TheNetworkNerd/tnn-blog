@@ -1,8 +1,8 @@
 ﻿---
 title: "The Pages Don't Lie"
-date: 2022-05-25
+date: 2022-05-24
 media_subpath: /assets/images
-permalink: /2022/05/25/the-pages-dont-lie/
+permalink: /2022/05/24/the-pages-dont-lie/
 categories: 
   - "Career"
   - "Wellness"
