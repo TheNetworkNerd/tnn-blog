@@ -1,8 +1,8 @@
 ﻿---
 title: "Azure Functions and C# Code Intricacies - An Azure Pipelines Prequel"
-date: 2020-05-25
+date: 2020-05-24
 media_subpath: /assets/images
-permalink: /2020/05/25/azure-functions-and-c-code-intricacies-an-azure-pipelines-prequel/
+permalink: /2020/05/24/azure-functions-and-c-code-intricacies-an-azure-pipelines-prequel/
 categories: 
   - "Cloud"
   - "Code"
