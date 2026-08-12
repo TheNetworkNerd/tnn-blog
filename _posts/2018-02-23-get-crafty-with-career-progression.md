@@ -1,8 +1,8 @@
 ﻿---
 title: "Get Crafty with Career Progression"
-date: 2018-02-23
+date: 2018-02-22
 media_subpath: /assets/images
-permalink: /2018/02/23/get-crafty-with-career-progression/
+permalink: /2018/02/22/get-crafty-with-career-progression/
 categories: 
   - "Career"
 tags: 

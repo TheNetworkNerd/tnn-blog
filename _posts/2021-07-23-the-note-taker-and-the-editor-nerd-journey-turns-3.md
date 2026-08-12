@@ -1,8 +1,8 @@
 ﻿---
 title: "The Note Taker and the Editor - Nerd Journey Turns 3!"
-date: 2021-07-23
+date: 2021-07-22
 media_subpath: /assets/images
-permalink: /2021/07/23/the-note-taker-and-the-editor-nerd-journey-turns-3/
+permalink: /2021/07/22/the-note-taker-and-the-editor-nerd-journey-turns-3/
 categories: 
   - "Career"
 tags: 

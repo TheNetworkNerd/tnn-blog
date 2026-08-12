@@ -1,8 +1,8 @@
 ﻿---
 title: "The Voices of Mentors Past"
-date: 2021-06-28
+date: 2021-06-27
 media_subpath: /assets/images
-permalink: /2021/06/28/the-voices-of-mentors-past/
+permalink: /2021/06/27/the-voices-of-mentors-past/
 categories: 
   - "Career"
 tags: 

@@ -1,8 +1,8 @@
 ﻿---
 title: "The Journey Continues...One Year Later"
-date: 2019-07-01
+date: 2019-06-30
 media_subpath: /assets/images
-permalink: /2019/07/01/the-journey-continues-one-year-later/
+permalink: /2019/06/30/the-journey-continues-one-year-later/
 categories: 
   - "Career"
   - "Community"

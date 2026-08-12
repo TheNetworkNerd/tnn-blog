@@ -1,8 +1,8 @@
 ﻿---
 title: "Introduction to Distributed Tracing with Tanzu Observability and Azure Functions"
-date: 2021-01-10
+date: 2021-01-09
 media_subpath: /assets/images
-permalink: /2021/01/10/introduction-to-distributed-tracing-with-tanzu-observability-and-azure-functions/
+permalink: /2021/01/09/introduction-to-distributed-tracing-with-tanzu-observability-and-azure-functions/
 categories: 
   - "Cloud"
   - "Code"

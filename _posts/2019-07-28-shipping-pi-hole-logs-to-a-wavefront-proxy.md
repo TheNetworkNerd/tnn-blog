@@ -1,8 +1,8 @@
 ﻿---
 title: "Shipping Pi-hole Logs to a Wavefront Proxy"
-date: 2019-07-28
+date: 2019-07-27
 media_subpath: /assets/images
-permalink: /2019/07/28/shipping-pi-hole-logs-to-a-wavefront-proxy/
+permalink: /2019/07/27/shipping-pi-hole-logs-to-a-wavefront-proxy/
 categories: 
   - "VMware"
 tags: 

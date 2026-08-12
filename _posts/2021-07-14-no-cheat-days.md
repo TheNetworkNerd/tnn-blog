@@ -1,8 +1,8 @@
 ﻿---
 title: "No Cheat Days"
-date: 2021-07-14
+date: 2021-07-13
 media_subpath: /assets/images
-permalink: /2021/07/14/no-cheat-days/
+permalink: /2021/07/13/no-cheat-days/
 categories: 
   - "Career"
 tags: 

@@ -1,8 +1,8 @@
 ﻿---
 title: "Catch the Wave with GCP - A Wavefront Integration Exploration"
-date: 2018-04-15
+date: 2018-04-14
 media_subpath: /assets/images
-permalink: /2018/04/15/catch-the-wave-with-gcp-a-wavefront-integration-exploration/
+permalink: /2018/04/14/catch-the-wave-with-gcp-a-wavefront-integration-exploration/
 categories: 
   - "Cloud"
   - "VMware"

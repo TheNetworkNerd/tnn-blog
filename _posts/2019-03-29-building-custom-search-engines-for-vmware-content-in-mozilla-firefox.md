@@ -1,8 +1,8 @@
 ﻿---
 title: "Building Custom Search Engines for VMware Content in Mozilla Firefox"
-date: 2019-03-29
+date: 2019-03-28
 media_subpath: /assets/images
-permalink: /2019/03/29/building-custom-search-engines-for-vmware-content-in-mozilla-firefox/
+permalink: /2019/03/28/building-custom-search-engines-for-vmware-content-in-mozilla-firefox/
 categories: 
   - "VMware"
 tags: 

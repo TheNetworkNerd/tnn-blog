@@ -1,8 +1,8 @@
 ﻿---
 title: "Over 100 Episodes Later, and The Journey Continues"
-date: 2020-12-16
+date: 2020-12-15
 media_subpath: /assets/images
-permalink: /2020/12/16/over-100-episodes-later-and-the-journey-continues/
+permalink: /2020/12/15/over-100-episodes-later-and-the-journey-continues/
 categories: 
   - "Career"
 tags: 
