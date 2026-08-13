@@ -1,8 +1,8 @@
 ﻿---
 title: "A Collection of VMworld Podcasts"
-date: 2017-08-23
+date: 2017-08-22
 media_subpath: /assets/images
-permalink: /2017/08/23/a-collection-of-vmworld-podcasts/
+permalink: /2017/08/22/a-collection-of-vmworld-podcasts/
 categories: 
   - "Career"
   - "Conferences"

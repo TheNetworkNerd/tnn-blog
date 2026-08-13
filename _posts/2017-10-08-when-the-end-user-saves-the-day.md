@@ -1,8 +1,8 @@
 ﻿---
 title: "When the End User Saves the Day"
-date: 2017-10-08
+date: 2017-10-07
 media_subpath: /assets/images
-permalink: /2017/10/08/when-the-end-user-saves-the-day/
+permalink: /2017/10/07/when-the-end-user-saves-the-day/
 categories: 
   - "Career"
 tags: 

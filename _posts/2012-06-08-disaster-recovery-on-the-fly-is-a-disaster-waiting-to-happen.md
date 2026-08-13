@@ -1,8 +1,8 @@
 ﻿---
 title: "Disaster Recovery on the Fly is a Disaster Waiting to Happen"
-date: 2012-06-08
+date: 2012-06-07
 media_subpath: /assets/images
-permalink: /2012/06/08/disaster-recovery-on-the-fly-is-a-disaster-waiting-to-happen/
+permalink: /2012/06/07/disaster-recovery-on-the-fly-is-a-disaster-waiting-to-happen/
 categories: 
   - "Disaster Recovery"
 tags: 

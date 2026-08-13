@@ -1,8 +1,8 @@
 ﻿---
 title: "How Suite It Is - SuiteCRM and Bitnami"
-date: 2017-06-13
+date: 2017-06-12
 media_subpath: /assets/images
-permalink: /2017/06/13/how-suite-it-is-suitecrm-and-bitnami/
+permalink: /2017/06/12/how-suite-it-is-suitecrm-and-bitnami/
 categories: 
   - "Cloud"
 tags: 

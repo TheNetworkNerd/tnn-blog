@@ -1,8 +1,8 @@
 ﻿---
 title: "As the Rollers Turn: Service Provider, Do You Copy?"
-date: 2012-10-05
+date: 2012-10-04
 media_subpath: /assets/images
-permalink: /2012/10/05/as-the-rollers-turn-service-provider-do-you-copy/
+permalink: /2012/10/04/as-the-rollers-turn-service-provider-do-you-copy/
 categories: 
   - "Printers And Copiers"
 tags: 

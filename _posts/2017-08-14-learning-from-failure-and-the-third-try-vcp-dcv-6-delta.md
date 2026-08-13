@@ -1,8 +1,8 @@
 ﻿---
 title: "Learning from Failure and the Third Try VCP-DCV 6 Delta"
-date: 2017-08-14
+date: 2017-08-13
 media_subpath: /assets/images
-permalink: /2017/08/14/learning-from-failure-and-the-third-try-vcp-dcv-6-delta/
+permalink: /2017/08/13/learning-from-failure-and-the-third-try-vcp-dcv-6-delta/
 categories: 
   - "Career"
 tags: 
