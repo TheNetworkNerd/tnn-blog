@@ -35,7 +35,7 @@ image: "0_FocusedPathFeatured.png"
 ---
 
 ## Preserving What Was Lost
- In late 2021, I hosted a call to interview a number of the top individual contributors inside VMware with a single goal - pass along the career advice they had gained from becoming elite-level individual contributors to others. The insights from that discussion were translated into written form with the help of [Louise Bunyan](https://www.linkedin.com/in/louisebunyan/) and posted on the VMware Careers blog. Since that page no longer exists, I have preserved the final draft here in its original form. Even though the advice is from a conversation that took place nearly 5 years ago, it still rings true. If you find yourself reading this post, I would love to hear which of these resonate for you.
+ In late 2021, I hosted a call to interview a number of the top individual contributors inside VMware with a single goal - pass along the career advice they had gained from becoming elite-level individual contributors to others. The insights from that discussion were translated into written form with the help of [Louise Bunyan](https://www.linkedin.com/in/louisebunyan/) and posted on the VMware Careers blog. Since that page no longer exists, I have preserved the final draft here in its original form for the benefit of those who are seeking to progress in their careers and remain individual contributors.
  
  ---
 
@@ -110,13 +110,9 @@ Lack of focus can make you scattered.  You can be busy but accomplish very littl
 ## Re-Evaluate Your Career
 Periodically, take notice of your happiness and level of satisfaction with what you’re doing.  If something isn’t quite right, consider having a conversation with your manager.  If the issue seems bigger, ask yourself if you’re looking to have a louder voice or more responsibility.  Is your current role limited or not allowing growth?  Could it be you are getting frustrated and need some time to recharge and gain clarity? 
 
-Moving up the career ladder may require a change in roles.  This helps demonstrate growth and expanded responsibilities.  If you have a specific goal in mind and need to take a step that will better position you to achieve that goal, don’t be afraid to make that change.  The prospect of change plays on our loss aversion.  We don’t want to lose what we have if it’s somewhat enjoyable, so we spend less time focusing on what could be good about the change and more time thinking about things we would miss in making the change.  We tend to run away from a job rather than toward one. 
+Moving up the career ladder may require a change in roles. This helps demonstrate growth and expanded responsibilities. If you have a specific goal in mind and need to take a step that will better position you to achieve that goal, don’t be afraid to make that change. The prospect of change plays on our loss aversion. We don’t want to lose what we have if it’s somewhat enjoyable, so we spend less time focusing on what could be good about the change and more time thinking about things we would miss in making the change. We tend to run away from a job rather than toward one. 
 
 There are no bad decisions but rather only unintended outcomes.  A single decision doesn’t mean there is no way back.  
-
-Periodically, take notice of your happiness and level of satisfaction with what you’re doing.  If something isn’t quite right, consider having a conversation with your manager.  If the issue seems bigger, ask yourself if you’re looking to have a louder voice or more responsibility.  Is your current role limited or not allowing growth?  Could it be you are getting frustrated and need some time to recharge and gain clarity? 
-
-Moving up the career ladder may require a change in roles.  This helps demonstrate growth and expanded responsibilities.  If you have a specific goal in mind and need to take a step that will better
 
 ## The Role of Mentors
 Actively seeking mentors cannot be overstated, regardless of where you want to go.  Mentors can be for a reason, a season, or a lifetime.  If you’re looking to gain a skill someone else demonstrates at a high level, take the time to learn from that person.  There is something they can learn from you as well.  It’s ok if a mentoring session happens just once.  Perhaps a mentor stays with you for a specific amount of time while some will always be there.   
