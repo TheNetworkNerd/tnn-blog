@@ -2,6 +2,7 @@
 title: "A Focused Path for Growth: 10 Insights from Top VMware Individual Contributors"
 date: 2026-08-19
 media_subpath: /assets/images
+permalink: /a-focused-path-for-growth-insights-from-top-vmware-individual-contributors/
 categories: 
   - "Career"
 tags: 
