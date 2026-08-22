@@ -2,6 +2,7 @@
 title: "Breaking Isn’t Always Bad: Reflecting on the Break-a-Thon"
 date: 2026-08-22
 media_subpath: /assets/images
+permalink: /breaking-isnt-always-bad/
 categories: 
   - "VMware"
 tags: 
