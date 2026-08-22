@@ -20,7 +20,7 @@ tags:
   - "Community"
   - "Technical Community"
 
-image: "0_FeaturedBreakAThon.JPG"
+image: "0_FeaturedBreakAThon.jpg"
 ---
 
 ---
