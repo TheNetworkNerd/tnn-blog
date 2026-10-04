@@ -134,10 +134,11 @@ I listened to something very insightful from [Jay Shetty](https://www.jayshetty.
 - Being part of the show helped me extract lessons from guests, but I also spent time contemplating, interacting with, and internalizing those lessons. I know this part of the learning process can continue beyond the system it was once part of, even if I'm not sharing the learnings on a podcast. I can still share the lessons learned through various mediums if I want, and it doesn't have to be once per week or on any pre-defined schedule.
 - Running a podcast gives you a reason to ask for someone's time for a specific discussion, and it's a great professional networking tool. I can continue to strengthen existing professional connections and make new ones even without the show. All I need to do is make it easy for people to say yes and give them an idea of the type of discussion I'd like to have.
 - My favorite discussions were those focused on the role of principal engineer / what the principal title means in our industry, the decision between the individual contributor career path and the people management career path, and looking at every aspect and angle of layoffs in tech. These are still topics that fascinate me.
+- I will miss the collaboration with other podcasters and content creators, especially having them as guests. The collaboration can't be the same as it was, but I can still support them by being a listener and recommending guests or topics relevant to their shows.
 - I loved the elements of depth in what we did. Depth of subject matter still calls to me. In a world of AI summaries, I still want to develop greater depth in something.
 
 So if you ever get asked to be part of a podcast and you say yes to doing it consistently, be prepared to walk away changed in an amazing way. I know I did. The change is a gift.
 
 "Time, effort, and money spent by the former you is simply a gift...a gift from the old you to the you of today." - Seth Godin, The Knot
 
-*This post took far longer than I thought it might to write, but I realize how much I needed to do it to remind myself of what happened, how I grew, and to gain additional closure. Special shout out to Michael Osborne and John White for reviewing this and providing feedback before it went live.*
+*A special thank you goes to Michael Osborne and John White for reviewing this and providing feedback before it went live. I might have otherwise lost my way with what I wanted to say in this article.*
